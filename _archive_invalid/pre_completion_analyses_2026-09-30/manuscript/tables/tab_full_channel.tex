@@ -1,0 +1,19 @@
+\begin{table*}[htbp]
+\centering
+\small
+\caption{\chg{Full-array (16-electrode) leave-one-subject-out performance of three classifiers on GRABMyo (43 participants, 16 active gestures; chance Macro-F1 $\approx$ 0.063). CI: 95\% participant cluster-bootstrap confidence interval. RBF-SVM: support vector machine with a radial basis function kernel. Training windows: windows used to fit each fold's model.}}
+\label{tab:full_channel}
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{llcccc}
+\toprule
+Model & Training windows & Macro-F1 & 95\% CI & SD & Range \\
+\midrule
+XGBoost & \chg{all (550{,}368 per fold)} & 0.542 & 0.517--0.567 & 0.085 & 0.385--0.702 \\
+RBF-SVM & 40{,}000 & 0.538 & 0.513--0.562 & 0.085 & 0.383--0.718 \\
+Random forest & 200{,}000 & 0.502 & 0.475--0.528 & 0.090 & 0.346--0.670 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\parbox{0.95\linewidth}{\footnotesize Paired comparisons (Wilcoxon signed-rank, Holm over 3): Random forest $-$ RBF-SVM = $-$0.0362 (95\% CI $-$0.0444 to $-$0.0284), $p_{\mathrm{Holm}}$ $<$ 0.001, $r_{rb}$ = $-$0.97; Random forest $-$ XGBoost = $-$0.0408 (95\% CI $-$0.0475 to $-$0.0340), $p_{\mathrm{Holm}}$ $<$ 0.001, $r_{rb}$ = $-$0.98; RBF-SVM $-$ XGBoost = $-$0.0045 (95\% CI $-$0.0107 to +0.0015), $p_{\mathrm{Holm}}$ = 0.154, $r_{rb}$ = $-$0.25.}
+\end{table*}

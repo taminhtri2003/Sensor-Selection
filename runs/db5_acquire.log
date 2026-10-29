@@ -1,0 +1,38 @@
+zenodo record lists 10 files
+  s1.zip: OK
+  s2.zip: OK
+  s3.zip: OK
+  downloading s4.zip (19.2 MB) attempt 1
+  s4.zip: OK
+  downloading s5.zip (18.4 MB) attempt 1
+  s5.zip: OK
+  downloading s6.zip (21.6 MB) attempt 1
+  s6.zip: OK
+  downloading s7.zip (20.5 MB) attempt 1
+  s7.zip: OK
+  downloading s8.zip (19.7 MB) attempt 1
+  s8.zip: OK
+  downloading s9.zip (20.1 MB) attempt 1
+  s9.zip: OK
+  downloading s10.zip (20.2 MB) attempt 1
+  s10.zip: OK
+
+extracting...
+  extracted s1.zip
+  extracted s10.zip
+  extracted s2.zip
+  extracted s3.zip
+  extracted s4.zip
+  extracted s5.zip
+  extracted s6.zip
+  extracted s7.zip
+  extracted s8.zip
+  extracted s9.zip
+
+validating .mat files...
+
+archives ok: 10/10
+mat files: 30  structurally ok: 30
+subjects: 10  channels: [16]  fs: [200.0]
+
+DB5 INTEGRITY: PASS

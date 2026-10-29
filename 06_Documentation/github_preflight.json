@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/taminhtri2003/Sensor-Selection",
+  "status": "PASS",
+  "staged_files": 2678,
+  "staged_bytes": 371886537,
+  "archives_including_nested_checked": 13,
+  "dataset_violations": [],
+  "possible_secrets": [],
+  "files_at_least_50MiB": [],
+  "staged_vs_working_byte_mismatches": [],
+  "exact_bytes_preserved": true,
+  "scope": "Downloaded recordings, feature/label caches and dataset-bearing archives are excluded. Participant metrics, predictions and dataset metadata/manifests are retained."
+}

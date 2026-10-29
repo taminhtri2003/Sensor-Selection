@@ -1,0 +1,55 @@
+participants=43 sessions=[1, 2, 3]
+[1/43] participant 01 elapsed=1.0m eta=41.9m
+[2/43] participant 02 elapsed=2.0m eta=41.5m
+[3/43] participant 03 elapsed=3.0m eta=40.6m
+[4/43] participant 04 elapsed=4.1m eta=39.5m
+[5/43] participant 05 elapsed=5.0m eta=38.4m
+[6/43] participant 06 elapsed=6.0m eta=37.2m
+[7/43] participant 07 elapsed=7.0m eta=36.1m
+[8/43] participant 08 elapsed=8.0m eta=35.0m
+[9/43] participant 09 elapsed=9.0m eta=33.9m
+[10/43] participant 10 elapsed=10.0m eta=32.9m
+[11/43] participant 11 elapsed=11.0m eta=31.9m
+[12/43] participant 12 elapsed=11.9m eta=30.9m
+[13/43] participant 13 elapsed=13.0m eta=29.9m
+[14/43] participant 14 elapsed=14.0m eta=28.9m
+[15/43] participant 15 elapsed=14.9m eta=27.9m
+[16/43] participant 16 elapsed=15.9m eta=26.9m
+[17/43] participant 17 elapsed=16.9m eta=25.8m
+[18/43] participant 18 elapsed=17.9m eta=24.8m
+[19/43] participant 19 elapsed=18.9m eta=23.8m
+[20/43] participant 20 elapsed=19.8m eta=22.8m
+[21/43] participant 21 elapsed=20.8m eta=21.8m
+[22/43] participant 22 elapsed=21.8m eta=20.8m
+[23/43] participant 23 elapsed=22.8m eta=19.8m
+[24/43] participant 24 elapsed=23.8m eta=18.8m
+[25/43] participant 25 elapsed=24.8m eta=17.8m
+[26/43] participant 26 elapsed=25.7m eta=16.8m
+[27/43] participant 27 elapsed=26.7m eta=15.8m
+[28/43] participant 28 elapsed=27.7m eta=14.8m
+[29/43] participant 29 elapsed=28.7m eta=13.8m
+[30/43] participant 30 elapsed=29.7m eta=12.9m
+[31/43] participant 31 elapsed=30.6m eta=11.9m
+[32/43] participant 32 elapsed=31.6m eta=10.9m
+[33/43] participant 33 elapsed=32.6m eta=9.9m
+[34/43] participant 34 elapsed=33.6m eta=8.9m
+[35/43] participant 35 elapsed=34.6m eta=7.9m
+[36/43] participant 36 elapsed=35.5m eta=6.9m
+[37/43] participant 37 elapsed=36.5m eta=5.9m
+[38/43] participant 38 elapsed=37.5m eta=4.9m
+[39/43] participant 39 elapsed=38.5m eta=3.9m
+[40/43] participant 40 elapsed=39.5m eta=3.0m
+[41/43] participant 41 elapsed=40.5m eta=2.0m
+[42/43] participant 42 elapsed=41.4m eta=1.0m
+[43/43] participant 43 elapsed=42.4m eta=0.0m
+
+design train_sessions  test_session  matched_session  n_participants  mean_macro_f1  sd_macro_f1  mean_accuracy
+   CS1              1             1             True              43       0.492307     0.100837       0.514774
+   CS1              1             2            False              43       0.527817     0.087967       0.546618
+   CS1              1             3            False              43       0.509520     0.090430       0.530699
+   CS2            1+2             3            False              43       0.530484     0.095073       0.552177
+CS1 session 1 -> session 2: mean change +0.0355 (sd 0.0893, n=43)
+CS1 session 1 -> session 3: mean change +0.0172 (sd 0.0731, n=43)
+
+ASSERTION PASSED: 43 participants
+wall clock: 42.4 min

@@ -1,0 +1,11 @@
+participant_id,n_windows,n_gestures,n_repetitions,all_features_exact,labels_exact,max_absolute_feature_difference,raw_file,raw_sha256
+1,1881,12,6,True,True,0.0,data/raw/ninapro_db5/s1/S1_E1_A1.mat,432dda4856ea38d38eeaed41acf464eaf7d84cac9de1c81c06d6f7cd68d5afe8
+2,2372,12,6,True,True,0.0,data/raw/ninapro_db5/s2/S2_E1_A1.mat,fd5d8f3c7e2cb272adbc6f58d6e5df3720cb311fd343eff8e6bd67654cee162a
+3,1817,12,6,True,True,0.0,data/raw/ninapro_db5/s3/S3_E1_A1.mat,6dab904867f305e75d466f741556bdaa78e3510cd1df51516baf71c1413fee49
+4,2273,12,6,True,True,0.0,data/raw/ninapro_db5/s4/S4_E1_A1.mat,b91e0b9d97932ad6a482b5a794098d135bccd8d9eb641a253decc6eedfaf72f5
+5,1890,12,6,True,True,0.0,data/raw/ninapro_db5/s5/S5_E1_A1.mat,2550a2a6f4e2a69b04a7173a6ac592fb7d2d5e3b59c8702938acd85512acc957
+6,2426,12,6,True,True,0.0,data/raw/ninapro_db5/s6/S6_E1_A1.mat,b8c0327f59ffa903c7ca3d8000694272e200153acfd6d6794f21a50cfdf3ed60
+7,2096,12,6,True,True,0.0,data/raw/ninapro_db5/s7/S7_E1_A1.mat,9e0c4282d7a57d1796b2b66b75931fbce05245e4850faf0b46a20e1df604bedd
+8,2002,12,6,True,True,0.0,data/raw/ninapro_db5/s8/S8_E1_A1.mat,aa8619db1a869c03af371660090914963a7dbffb3d33fbb22545c09112094e43
+9,1992,12,6,True,True,0.0,data/raw/ninapro_db5/s9/S9_E1_A1.mat,b22729d301da6874601b4971624d7065586caaf2466664ecbb30fc8d9201b3c1
+10,2340,12,6,True,True,0.0,data/raw/ninapro_db5/s10/S10_E1_A1.mat,99c3c7d1f33ea98d33de2e74b4f00b83874c0e95ac07984789c73b91aea5f856

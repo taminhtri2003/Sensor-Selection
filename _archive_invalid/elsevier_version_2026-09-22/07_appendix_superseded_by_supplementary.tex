@@ -1,0 +1,43 @@
+\appendix
+\section{\rev{Supplementary methods and analyses}}
+
+\subsection{\rev{Departures from the analysis plan}}
+\label{app:deviations}
+\rev{The following changes were made after the statistical analysis plan was written. None altered a prespecified decision rule (margin, statistical unit, bootstrap or definition of $k^*$).}
+\begin{enumerate}
+\item \rev{The plan required Holm correction within H1. It was applied after the primary analysis and left $k^*$ unchanged at all three margins (Table~\ref{tab:h1_holm}). A fixed-sequence analysis, testing $k = 15, 14, \ldots$ and stopping at the first failure, is reported in the same table as a sensitivity analysis.}
+\item \rev{Training-sample sizes (40,000 windows for the SVM, 200,000 for the random forest and for the channel analyses) were chosen from held-out Macro-F1 on two folds (participants 1 and 7) before the main analyses. For these two participants the held-out data therefore informed a design choice.}
+\item \rev{The plan did not specify a criterion for choosing $\lambda$, so none was chosen and all four values are reported. The value $\lambda = 0.5$ used for SR-CFA in the H2 comparison was not chosen by a stated criterion, so the $\lambda = 0$ ranking is reported alongside it.}
+\item \rev{The detailed H2--H4 test families (tests and subset sizes) were specified after the sparse-curve and selection-method results were available.}
+\item \rev{The comparison model for H2 and H4 was reduced from 150 to 50 trees for computational cost before any comparison result was available.}
+\item \rev{An initial count-feature threshold 87 times smaller than the final value saturated WAMP and was replaced by the value in Section~\ref{sec:preprocessing}. The leave-one-out check of the thresholds (\ref{app:threshold}) was added after the primary analysis.}
+\item \rev{An initial deletion analysis combined deletion orders computed with different training sizes; it was replaced by the analysis reported here, in which all orders share one configuration (\ref{app:faith}).}
+\item \rev{An initial bipolar analysis used the monopolar count-feature threshold; it was replaced after the threshold was re-derived for the bipolar signal.}
+\item \rev{The fixed-layout and feature-redundancy analyses (\ref{app:fixed}, \ref{app:redund}) and the putEMG replication were not in the plan. The putEMG design was fixed before any putEMG model was trained.}
+\item \rev{The window-length sensitivity analysis and the 17-class task, listed as exploratory in the plan, were not run.}
+\end{enumerate}
+
+\subsection{\rev{Leave-one-out check of the count-feature thresholds}}
+\label{app:threshold}
+\rev{The GRABMyo threshold was derived from 54 recordings of 6 participants. For every outer fold we recomputed the median absolute first difference without the held-out participant and applied the same rule (1.15 times the median, one significant figure). The rule gave $10^{-2}$~mV in \LOOMonoIdentical\ of \LOOMonoFolds\ folds (leave-one-out medians \LOOMonoMin--\LOOMonoMax${}\times 10^{-3}$~mV); only \LOOMonoInProbe\ folds held out a participant who contributed to the sample. For DB5 the rule gave 7 quantisation steps in \LOODBFiveIdentical\ of \LOODBFiveFolds\ folds, and for putEMG \PutThresh${}\times 10^{-3}$~mV in \PutThreshIdentical\ of 44 folds. Deriving the thresholds within each fold would therefore have produced identical features. For the derived bipolar signal the same rule, applied to the same 54 recordings (median \LOOBipPooled${}\times 10^{-3}$~mV), gives $\LOOBipRule \times 10^{-3}$~mV rather than the $5 \times 10^{-3}$~mV used; this affects only the exploratory bipolar analysis, and the leave-one-out medians varied too little for any single participant to determine the value.}
+
+\subsection{\rev{Consistency of the deletion analysis}}
+\label{app:faith}
+\rev{The Remove-Bottom subsets coincide with the H2 cross-fitted SHAP subsets in all \FaithProtocolCells\ participant-by-size cells, and their Macro-F1 values agree to within a mean absolute difference of \FaithProtocolMeanDiff\ (maximum \FaithProtocolMaxDiff). The small differences arise because features were standardised separately for each subset in the deletion analysis and once over all features in the H2 comparison.}
+
+\subsection{\rev{Fixed layout}}
+\label{app:fixed}
+\rev{A single 12-electrode layout was derived from a cross-fitted ranking ($\lambda = 0.5$) on the \FixedDev\ odd-numbered participants, removing electrodes \FixedDropped. Models with 16 and with 12 electrodes were trained on those participants and tested on the \FixedTest\ even-numbered participants. The 12-electrode model scored $\FixedDiff$ against the 16-electrode model (95\% CI $\FixedLCB$ to $\FixedUCB$), within the margin. This is a single split, not a LOSO estimate, and serves only as a consistency check.}
+
+\subsection{\rev{Feature redundancy}}
+\label{app:redund}
+\rev{IEMG equals 512 times MAV for these windows. Repeating the comparison-model LOSO without IEMG changed Macro-F1 by $\RedundDiff$ (95\% CI $\RedundLCB$ to $\RedundUCB$; 43 folds). The median per-fold Spearman $\rho$ between rankings with and without IEMG was \RedundRho, and the top-12 set was identical in \RedundTopTwelveSame\ of 43 folds, so the duplicated feature had little measurable effect on the ranking.}
+
+\subsection{\rev{Supplementary tables}}
+\input{tables/tab_h1_holm.tex}
+\input{tables/tab_lambda.tex}
+\input{tables/tab_putemg.tex}
+\input{tables/tab_replication.tex}
+\input{tables/tab_bipolar.tex}
+\input{tables/tab_cross_session.tex}
+\clearpage

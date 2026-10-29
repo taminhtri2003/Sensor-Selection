@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "date": "2026-10-29",
+  "timezone": "Asia/Bangkok",
+  "grabmyo_published_checksum_entries": 30715,
+  "grabmyo_missing": 0,
+  "grabmyo_mismatched": 0,
+  "db5_official_archives_verified": 10,
+  "db5_extracted_exercises_verified": 30,
+  "db5_official_record": 1000116,
+  "audit_elapsed_seconds": 1758.4,
+  "dataset_payloads_included_in_review": false,
+  "source_manifest_sha256": "757ea64fa5134b7b3b84d9f79e30cfa1ac4d2c65a40ce9b427db11dd8258974e"
+}

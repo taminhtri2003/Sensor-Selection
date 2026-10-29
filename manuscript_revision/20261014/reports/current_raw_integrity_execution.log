@@ -1,0 +1,29 @@
+manifest entries: 30715
+  2000/30715  ok=2000 missing=0 bad=0
+  4000/30715  ok=4000 missing=0 bad=0
+  6000/30715  ok=6000 missing=0 bad=0
+  8000/30715  ok=8000 missing=0 bad=0
+  10000/30715  ok=10000 missing=0 bad=0
+  12000/30715  ok=12000 missing=0 bad=0
+  14000/30715  ok=14000 missing=0 bad=0
+  16000/30715  ok=16000 missing=0 bad=0
+  18000/30715  ok=18000 missing=0 bad=0
+  20000/30715  ok=20000 missing=0 bad=0
+  22000/30715  ok=22000 missing=0 bad=0
+  24000/30715  ok=24000 missing=0 bad=0
+  26000/30715  ok=26000 missing=0 bad=0
+  28000/30715  ok=28000 missing=0 bad=0
+  30000/30715  ok=30000 missing=0 bad=0
+
+PASS: ok=30715 missing=0 mismatch=0
+DB5 verified s1.zip
+DB5 verified s2.zip
+DB5 verified s3.zip
+DB5 verified s4.zip
+DB5 verified s5.zip
+DB5 verified s6.zip
+DB5 verified s7.zip
+DB5 verified s8.zip
+DB5 verified s9.zip
+DB5 verified s10.zip
+PASS: current complete downloaded-data integrity verified

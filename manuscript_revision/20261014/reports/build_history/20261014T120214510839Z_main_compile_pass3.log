@@ -1,0 +1,127 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-05-26>
+(./iopjournal.cls
+Document Class: iopjournal 2024/01/31 IOP Publishing journal article LaTeX temp
+late
+(c:/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(c:/texlive/2026/texmf-dist/tex/latex/base/size10.clo))
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(c:/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(c:/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(c:/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(c:/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(c:/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(c:/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(c:/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(c:/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(c:/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(c:/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+(c:/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(c:/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty))))
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+(c:/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(c:/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(c:/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex)))
+(c:/texlive/2026/texmf-dist/tex/latex/adjustbox/adjcalc.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/adjustbox/trimclip.sty
+(c:/texlive/2026/texmf-dist/tex/latex/collectbox/collectbox.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/adjustbox/tc-pdftex.def))
+(c:/texlive/2026/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/varwidth/varwidth.sty)
+==> First Aid for varwidth.sty applied!
+) (c:/texlive/2026/texmf-dist/tex/latex/makecell/makecell.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(c:/texlive/2026/texmf-dist/tex/latex/natbib/natbib.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/placeins/placeins.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/ragged2e/ragged2e.sty)
+(./generated/results_macros.tex) (./generated/revision_macros.tex)
+(c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./main.aux) (c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(c:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(./main.out) (./main.out)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <18> not available
+(Font)              size <17.28> substituted on input line 15.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <18> not available
+(Font)              size <17.28> substituted on input line 15.
+
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+(./sections/introduction.tex [1{c:/texlive/2026/texmf-var/fonts/map/pdftex/updm
+ap/pdftex.map}]) (./sections/methods.tex [2 <../figures/vector/fig1_montage.pdf
+>] [3] [4 <../figures/vector/fig2_crossfit.pdf>] [5]) (./sections/results.tex
+(./generated/primary_matched.tex) (./generated/matched_interpretation.tex)
+(./generated/matched_budget.tex) [6] [7 <../figures/vector/fig3_noninferiority.
+pdf>] (./generated/selection_change_interpretation.tex) [8 <../figures/vector/f
+ig4_selection_utility.pdf>] [9 <../figures/vector/fig5_task_and_attribution.pdf
+>] (./generated/sensitivity.tex)) (./sections/discussion.tex [10 <../figures/ve
+ctor/fig6_generalization_limits.pdf>]) [11] (./main.bbl [12]) [13] (./main.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.72pt have occurred.
+
+ )<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
+live/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2026/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2026/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
+pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/tex
+live/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2026/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2026/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmss17.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texl
+ive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb><c:/texlive/2026/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on main.pdf (13 pages, 574710 bytes).
+Transcript written on main.log.

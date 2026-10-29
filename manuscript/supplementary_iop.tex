@@ -1,0 +1,115 @@
+% Supplementary material for the Physiological Measurement submission (compiled separately).
+\documentclass{iopjournal}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{adjustbox}
+\usepackage{makecell}
+\usepackage{placeins}
+\hypersetup{hidelinks}
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+\newcommand{\rev}[1]{#1}
+% justified text (the class sets \raggedright globally)
+\usepackage{ragged2e}
+\AtBeginDocument{\justifying}
+% Revision marking (2026-09-23 editorial and statistical revision): revised text is shown in blue.
+\newif\ifshowchanges
+\showchangestrue
+\ifdefined\cleanbuild \showchangesfalse \fi
+\newcommand{\chg}[1]{\ifshowchanges{\color{blue}#1}\else{#1}\fi}
+\input{generated/results_macros.tex}
+\fancyhead[L]{\small Supplementary material}
+\fancyhead[C]{}
+\fancyhead[R]{\small Subject-independent surface EMG electrode reduction}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+
+\begin{document}
+
+{\noindent\fontsize{16}{19}\selectfont\sffamily Supplementary material\par}
+\vspace{2mm}
+{\noindent\large Subject-independent surface EMG electrode reduction using cross-fitted attribution: a prespecified non-inferiority study\par}
+\vspace{6mm}
+
+Supplementary methods S1--S6 are followed by supplementary figures S1--S2 and supplementary tables S1--S10, numbered in the order in which they are cited in the main text. Main-text tables are referred to as main table~1--3.
+
+\section{Departures from the analysis plan}
+\label{app:deviations}
+The following changes were made after the statistical analysis plan was written. None altered a prespecified decision rule (margin, statistical unit, bootstrap or definition of $k^*$).
+\begin{enumerate}
+\item The plan required Holm correction within H1. It was applied after the primary analysis and left $k^*$ unchanged at all three margins (supplementary table~S3). A fixed-sequence analysis, testing $k = 15, 14, \ldots$ and stopping at the first failure, is reported in the same table as a sensitivity analysis.
+\item Training-sample sizes (40,000 windows for the support vector machine, 200,000 for the random forest and for the electrode-selection analyses) were chosen from held-out Macro-F1 on two folds (participants 1 and 7) before the main analyses. For these two participants the held-out data therefore informed a design choice.
+\item The plan did not specify a criterion for choosing $\lambda$, so none was chosen and all four values are reported. The value $\lambda = 0.5$ used for SR-CFA in the H2 comparison was not chosen by a stated criterion, so the $\lambda = 0$ ranking is reported alongside it.
+\item The plan named H1--H4 as confirmatory hypotheses with Holm correction within each family. The detailed H2--H4 test families (tests, rankings compared and subset sizes) were specified after the performance-curve and selection-method results were available; H2--H4 are therefore reported as secondary tests.
+\item The comparison model for H2 and H4 was reduced from 150 to 50 trees for computational cost before any comparison result was available.
+\item An initial count-feature threshold 87 times smaller than the final GRABMyo value saturated WAMP and was replaced. The leave-one-out check of the thresholds (section~\ref{app:threshold}) was added after the primary analysis.
+\item An initial deletion analysis combined deletion orders computed with different training sizes; it was replaced by the analysis reported here, in which all orders share one configuration (section~\ref{app:faith}).
+\item The bipolar analysis was run three times. The first run used the monopolar count-feature threshold; the second used $5 \times 10^{-3}$~mV, whose stated derivation could not be reproduced; the reported analysis uses $4 \times 10^{-3}$~mV, the value given by the documented rule. Earlier outputs are archived.
+\item \chg{Repeating the DB5 and bipolar bootstraps with 200 different random seeds was a post-hoc diagnostic of Monte Carlo variation and was not in the plan.}
+\item The fixed-layout and feature-redundancy analyses (sections~\ref{app:fixed} and \ref{app:redund}) were not in the plan. The fixed-layout check used $\lambda = 0.5$; no rationale for this value was recorded. \chg{After the other results were available, the check was repeated with every $\lambda$ and in the reverse split direction (section~\ref{app:fixed}).}
+\item The participant-level attribution extension (section~\ref{app:participant_extension}) was specified after the original results were available.
+\item The window-length sensitivity analysis and the 17-class task, listed as exploratory in the plan, were not run.
+\end{enumerate}
+
+\section{Leave-one-out check of the count-feature thresholds}
+\label{app:threshold}
+All thresholds follow one rule: 1.15 times the median absolute first difference of the signal, rounded to one significant figure. The GRABMyo threshold was derived from 54 unfiltered recordings of 6 participants. For every outer fold we recomputed the median without the held-out participant and applied the same rule. It gave $10^{-2}$~mV in \LOOMonoIdentical\ of \LOOMonoFolds\ folds (leave-one-out medians \LOOMonoMin--\LOOMonoMax${}\times 10^{-3}$~mV); only \LOOMonoInProbe\ folds held out a participant who contributed to the sample. For the derived bipolar signal (median \LOOBipPooled${}\times 10^{-3}$~mV on the same recordings) it gave $\LOOBipRule \times 10^{-3}$~mV in \LOOBipIdentical\ of \LOOBipFolds\ folds. For DB5 it gave 7 quantisation steps in \LOODBFiveIdentical\ of \LOODBFiveFolds\ folds. Deriving the thresholds within each fold would therefore have produced identical features. Because the thresholds were not estimated within folds, we describe this as a verification rather than as fold-local estimation.
+
+\section{Consistency of the deletion analysis}
+\label{app:faith}
+The Remove-Bottom subsets coincide with the H2 cross-fitted SHAP subsets in all \FaithProtocolCells\ participant-by-size cells, and their Macro-F1 values agree to within a mean absolute difference of \FaithProtocolMeanDiff\ (maximum \FaithProtocolMaxDiff). The small differences \chg{are consistent with numerical differences in feature standardisation, which was applied} separately for each subset in the deletion analysis and once over all features in the H2 comparison.
+
+\section{Fixed-layout consistency check}
+\label{app:fixed}
+A single 12-electrode layout was derived from a cross-fitted ranking on the \FixedDev\ odd-numbered participants, removing electrodes \FixedDropped. Models with 16 and with 12 electrodes were trained on those participants and tested on the \FixedTest\ even-numbered participants. \chg{The mean paired difference between the 12- and 16-electrode models was $\FixedDiff$ (95\% confidence interval $\FixedLCB$ to $\FixedUCB$), so the lower bound lay above $-0.02$.} The electrode count was chosen after inspecting the full-cohort performance curve, which included the even-numbered participants. Although electrode identities were selected using development participants only, this is therefore not an independent confirmation of the chosen count. \chg{It is a consistency check on one split of the cohort} and does not constitute a prospective validation of a fixed sparse hardware layout.
+
+The ranking for this check used $\lambda = 0.5$, whereas the primary analysis uses $\lambda = 0$; no rationale for this choice was recorded. \chg{The check was therefore repeated with the same split, code, random seed and model configuration, deriving the layout from every $\lambda$ candidate (a post-hoc repetition whose rules were recorded before it was run). The rerun reproduced the original layout, and all \FixedNLambdaSameOrig\ values of $\lambda$, including the primary $\lambda = 0$, removed the same electrodes (\FixedDropped); the result above therefore applies equally to the primary ranking. This set differs by one electrode from the set excluded in the primary outer folds (\DroppedFourSet).}
+
+\chg{The check was also run in the reverse direction, with the layout derived on the \FixedSwapDev\ even-numbered participants and tested on the \FixedSwapTest\ odd-numbered participants. All \FixedSwapNLambdaSame\ values of $\lambda$ removed electrodes \FixedSwapDropped. The 12-electrode model scored \FixedSwapTwelve\ and the 16-electrode model \FixedSwapFull, a difference of $\FixedSwapDiff$ (95\% confidence interval $\FixedSwapLCBSix$ to $\FixedSwapUCB$). The lower bound lay marginally below $-0.02$, so the layout did not meet the non-inferiority criterion in this direction. Electrodes \FixedDroppedBoth\ were removed in both directions and in the primary outer folds. Taken together, the two single-split checks show a mean loss of similar size to that of the LOSO analysis but do not establish that one fixed 12-electrode layout is non-inferior to the full array.}
+
+\section{Feature redundancy}
+\label{app:redund}
+Integrated EMG equals 512 times the mean absolute value for these windows. Repeating the comparison-model evaluation without integrated EMG changed Macro-F1 by $\RedundDiff$ (95\% confidence interval $\RedundLCB$ to $\RedundUCB$; 43 folds). The median per-fold Spearman $\rho$ between rankings with and without integrated EMG was \RedundRho, and the top-12 set was identical in \RedundTopTwelveSame\ of 43 folds, so the duplicated feature had little measurable effect on the ranking.
+
+\section{Participant-level attribution extension}
+\label{app:participant_extension}
+The post-hoc extension uses the same out-of-fold attributions as the original ranking, but gives each outer-training participant equal weight before computing the median and median absolute deviation. All penalties and subset sizes were evaluated with the same training budget as the original curve. Every reused fit records its source, and inputs are fingerprinted to prevent mixing incompatible runs. Between-person dispersion is descriptive heterogeneity, not a standard error of attribution. It includes both participant differences and differences between the inner fitted models.
+
+\input{generated/participant_extension_results.tex}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/fig9_participant_extension.pdf}
+\caption{Participant-level versus fold-level attribution aggregation (post hoc; GRABMyo, 43 participants). Every cell is the mean paired Macro-F1 difference across participants, comparing person-level with fold-level aggregation under the same penalty, subset size and model protocol. Blue favours person-level aggregation and orange favours fold aggregation. Asterisks identify Holm-corrected differences within the complete family. All candidates are shown; outer-test outcomes did not select a penalty.}
+\label{fig:participant_extension}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/fig10_penalty_gate.pdf}
+\caption{Stability penalty versus attribution magnitude alone under participant-level aggregation (post hoc). (a) $\lambda = 0.25$, (b) $\lambda = 0.5$, (c) $\lambda = 1$. Each point compares a positive penalty with magnitude alone. Bars are unadjusted participant-bootstrap 95\% confidence intervals; asterisks indicate Holm-adjusted $p<0.05$ across all penalty-by-size comparisons. Positive differences favour the penalty. Zero-width intervals arise when all paired results coincide. This diagnostic is exploratory and does not replace the original H3 test.}
+\label{fig:penalty_gate}
+\end{figure}
+
+\FloatBarrier
+\section*{Supplementary tables}
+\input{tables/tab_full_channel.tex}
+\input{tables/tab_gesture_audit.tex}
+\FloatBarrier
+\input{tables/tab_h1_holm.tex}
+\input{tables/tab_selection_explor.tex}
+\FloatBarrier
+\input{tables/tab_faithfulness.tex}
+\input{tables/tab_lambda.tex}
+\FloatBarrier
+\input{tables/tab_participant_extension.tex}
+\input{tables/tab_replication.tex}
+\FloatBarrier
+\input{tables/tab_cross_session.tex}
+\input{tables/tab_bipolar.tex}
+
+\end{document}

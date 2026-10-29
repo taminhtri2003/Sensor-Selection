@@ -1,0 +1,99 @@
+  L001 NO_DOI                 Pradhan A, He J, Jiang N. Multi-day dataset of forearm and wrist elect
+  L002 OK               1.0   Pizzolato S et al. Comparison of six electromyography acquisition setu
+  L003 OK               1.0   Qu et al. Reduce Surface Electromyography Channels for Gesture Recogni
+  L004 NO_DOI                 SHAP-AAD: DeepSHAP-Guided Channel Reduction for EEG Auditory Attention
+  L005 NO_DOI                 RoSHAP: A Distributional Framework and Robust Metric for Stable Featur
+  L006 OK               1.0   Consensus features nested cross-validation. Bioinformatics
+  L007 NO_DOI                 Channel-Selected Stratified Nested Cross-Validation for Clinically Rel
+  L008 NO_DOI                 Liu J, Zhou P. EMG Feature Assessment for Myoelectric Pattern Recognit
+  L009 NO_DOI                 Conservative Subject Invariant EMG-based Gesture Recognition (CSIN)
+  L010 OK               1.0   Rethinking Gesture Recognition: Toward Fatigue-Aware sEMG Gesture Reco
+  L011 DOI_NOT_FOUND          Deep end-to-end transfer learning for robust inter-subject and inter-d
+  L012 OK               1.0   Ameri A et al. A Deep Transfer Learning Approach to Reducing the Effec
+  L013 OK               1.0   Hargrove L et al. / Stango A. Improving robustness against electrode s
+  L014 NO_DOI                 Tackling electrode shift in gesture recognition with HD-EMG electrode 
+  L015 TITLE_MISMATCH   0.63  Optimizing sEMG Gesture Recognition: Leveraging Channel Selection and 
+  L016 OK               1.0   Meinshausen N, Buhlmann P. Stability selection. J R Stat Soc B
+  L017 NO_DOI                 Shaping Up SHAP: Enhancing Stability through Layer-Wise Neighbor Selec
+  L018 NO_DOI                 Stabilising Explainability Fragility: Impact and Mitigation of Multico
+  L019 OK               1.0   Leveraging convolutional sparse autoencoders for robust movement class
+  L020 OK               1.0   HAMSNet: An Explainable Multi-Scale 1D Hydra-CNN for sEMG-Based Hand G
+  L021 NO_DOI                 Recognition and Label-Free Adaptation Across Recording Sessions in Sur
+  L022 OK               1.0   A novel channel selection method for multiple motion classification us
+  L023 NO_DOI                 Automated Channel Selection in High-Density sEMG for Improved Force Es
+  L024 OK               1.0   Cisotto G, Capuzzo M, Guglielmi AV, Zanella A. Feature stability and s
+  L025 NO_DOI                 Lightweight Test-Time Adaptation for EMG-Based Gesture Recognition
+  L026 OK               0.94  Stretchable array electromyography sensor with graph neural network fo
+  L027 NO_DOI                 What to make of non-inferiority and equivalence testing with a post-sp
+  L028 NO_DOI                 Equivalence testing with data-dependent and post-hoc equivalence margi
+  L029 OK               0.89  Farina D, Merletti R, Enoka RM. The extraction of neural information f
+  L030 DOI_NOT_FOUND          Li G, Schultz AE, Kuiken TA. Quantifying active degrees of freedom in 
+  L031 OK               1.0   Phinyomark A, Phukpattaranont P, Limsakul C. Feature reduction and sel
+  L032 DOI_NOT_FOUND          Al-Timemy AH, Bugmann G, Escudero J, Dalley S. Classification of hand 
+  L033 DOI_NOT_FOUND          Huang H, Kuiken TA, Lipschutz RD. A strategy for identifying locomotio
+  L034 DOI_NOT_FOUND          Geng W, Du Y, Jin W, Wei W, Hu Y, Li G. Gesture recognition using high
+  L035 TITLE_MISMATCH   0.69  Amma C, Krings T, Böer J, Schultz T. Advancing muscle-computer interfa
+  L036 TITLE_MISMATCH   0.64  Atzori M, Cognolato M, Müller H. Deep learning with convolutional neur
+  L037 DOI_NOT_FOUND          Cote-Allard U et al. Deep learning for electromyographic hand gesture 
+  L038 NO_DOI                 Lundberg SM, Lee SI. A unified approach to interpreting model predicti
+  L039 OK               1.0   Lundberg SM et al. From local explanations to global understanding wit
+  L040 NO_DOI                 Sundararajan M, Taly A, Yan Q. Axiomatic attribution for deep networks
+  L041 NO_DOI                 Hooker S, Erhan D, Kindermans PJ, Been K. A benchmark for interpretabi
+  L042 OK               1.0   Samek W, Binder A, Montavon G, Lapuschkin S, Müller KR. Evaluating the
+  L043 DOI_NOT_FOUND          Visani G, Bagli E, Chesani F. Statistical stability indices for local 
+  L044 DOI_NOT_FOUND          Vidovic MMC et al. Improving the robustness of myoelectric pattern rec
+  L045 TITLE_MISMATCH   0.31  Kaufmann P, Englehart K, Platzner M. Fluctuating EMG signals: Investig
+  L046 DOI_NOT_FOUND          He J, Sheng X, Zhu X, Jiang N. Spatial information enhances multi-day 
+  L047 DOI_NOT_FOUND          Campbell E, Phinyomark A, Scheme E. Differences in the user-dependent 
+  L048 DOI_NOT_FOUND          Cote-Allard U et al. Transfer learning for sEMG hand gestures recognit
+  L049 TITLE_MISMATCH   0.17  Schuirmann DJ. A comparison of the two one-sided tests procedure and t
+  L050 OK               1.0   Walker E, Nowacki AS. Understanding equivalence and noninferiority tes
+  L051 NO_DOI                 Holm S. A simple sequentially rejective multiple test procedure. Scand
+  L052 OK               1.0   Efron B, Tibshirani RJ. An introduction to the bootstrap. Chapman & Ha
+  L053 OK               1.0   Yin S, Huang W, Xie H, Li Y.. Myoelectric Gesture Recognition Based on
+  L054 OK               1.0   Zhang Y, Liu Y.. User Needs and Preferences for Multimodal Interaction
+  L055 OK               1.0   Zhang C, Zhou D, Fang Y, Gao D, Ju Z.. Assessing the Resilience of sEM
+  L056 OK               1.0   Wu S, Lv Z, Li Y, Fang C, You T, Gui J.. A Lightweight Frozen Multi-Co
+  L057 OK               1.0   Zhang R, Hong Y, Dong H, Yang X, Zhang H, Dang L.. Advances in electro
+  L058 OK               1.0   Li C, Lu C, Li J, Guo K.. A Flexible Copper Electrode Array for High-D
+  L059 OK               1.0   Gehlot N, Jena A, Kumar R, Hans S, Bukya M, Nkomozepi P.. Mixture of e
+  L060 OK               1.0   Qiu F, Liu X, Ye X.. Influence of electrode placement on the recogniti
+  L061 OK               1.0   Lee H, Lim B, Jiang M, Yang Z, Zhao Q.. Few-shot prototype adaptation 
+  L062 OK               1.0   Yu Z, Gu Y, Ren Y, Ding H, Wu D, Wu Z, Mou J.. Hydrogel-based electrod
+  L063 OK               1.0   Yang S, Chen C, Li D, Zhu X.. A Consecutive Multi-Day High-Density Sur
+  L064 OK               1.0   Yang X, Zhang L, Wu F, Wei X, Huang H, Li J, Hu T.. Assisting hand ges
+  L065 OK               1.0   Taleshi M, Yeung D, Trong MD, Negro F, Deny S, Vujaklija I.. Impact of
+  L066 OK               1.0   Yadav AP, Patil SR.. "A novel adaptive gesture recognition framework f
+  L067 OK               1.0   Garcia JG, Luque EF, Romero E, Parra M, Suarez D, Abarca VE, Elias DA.
+  L068 OK               1.0   Çelik Y, Can U.. Surface EMG-Based Hand Gesture Recognition Using a Hy
+  L069 OK               1.0   Ullah A, Song Z, Riaz W, Shao Y, Qi X.. TransTCNet: Transformer-Based 
+  L070 OK               1.0   Tatavarty K, Johnson M, Rubinsky B.. Cloud-Based Personalized sEMG Cla
+  L071 OK               1.0   Rodriguez Serrezuela R, Zamora RS, Hermosilla DM, Gomez AER, Reyes EM.
+  L072 OK               1.0   Mahdi N, Mahdi U, Sadiq IJ, Qaduri R, Mustafa N, Asi M, Bader M, Ismae
+  L073 OK               1.0   Li H, Zhou X, Yue S, Tian Q, Li Q, Gong J, Yang Y, Han F, Wei H, Liu Z
+  L074 OK               1.0   MajidiRad A, Azam I, Adhikari J, Damircheli M.. Toward Personalized Ro
+  L075 OK               1.0   Mohammadiazni M, Zhou Y, Trejos AL.. A dual-function dry electrode for
+  L076 OK               1.0   Cicėnas D, Daunoravičienė K.. EMG-Driven Musculoskeletal Modelling Fra
+  L077 OK               1.0   Verma A, Kumar R, Ramkumar J.. Design Implications of Comfort and Usab
+  L078 OK               1.0   Ibrahim R, Vėbraitė I, Re D, Funk PF, Volk GF, Guntinas-Lichius O, Han
+  L079 OK               1.0   Chen R, Wang Q, Li D, Jia B.. Multifocal transcranial direct current s
+  L080 OK               1.0   Li L, Wang J, Chen J, Sun S, Peng W.. Phase-specific multimodal biomar
+  L081 OK               1.0   Soangra R, Hossain A, Sonagra J, Krishnan V.. Explainable machine lear
+  L082 OK               1.0   Khalikov R, Soghoyan G, Sintsov M, Lebedev M.. Wearable optomyography 
+  L083 OK               1.0   Eby J, Beutel M, Koivisto D, Achituve I, Fetaya E, Zariffa J.. Electro
+  L084 OK               1.0   Ma C, Jiang X, Nazarpour K.. Pre-training, personalization, and self-c
+  L085 OK               1.0   Kaifosh P, Reardon TR, CTRL-labs at Reality Labs.. A generic non-invas
+  L086 OK               1.0   Kyranou I, Szymaniak K, Nazarpour K.. EMG Dataset for Gesture Recognit
+  L087 OK               1.0   Eddy E, Campbell E, Bateman S, Scheme E.. Big data in myoelectric cont
+  L088 OK               1.0   Yao P, Wang K, Xia W, Guo Y, Liu T, Han M, Gou G, Liu C, Xue N.. Effec
+  L089 OK               1.0   Hellara H, Kahouli O, Njeh S, Kallel AY, Kanoun O.. Overcoming behavio
+  L090 OK               1.0   Hu Q, Xiao L, Zhang P, Zhang Q, Liu G, Qin X, Yin Z, Li X, Wang Y, Jia
+  L091 OK               1.0   Taleshi M, Yeung D, Negro F, Vujaklija I.. Effects of Spatial and Sign
+  L092 OK               1.0   Shakeriaski F, Mohammadian M.. Evaluation of Different Controllers for
+  L093 OK               1.0   Qin W, Tan X, Yu Y, Zhang Y, Lin Z, Dai C, Yang Y, Liu L, Jin L.. Eval
+
+ status
+OK                59
+NO_DOI            18
+DOI_NOT_FOUND     11
+TITLE_MISMATCH     5

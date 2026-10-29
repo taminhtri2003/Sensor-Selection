@@ -1,0 +1,7 @@
+{
+  "date": "2026-10-14",
+  "stage": "before any matched-budget method outcomes are available",
+  "clarification": "Permute all ten electrode features jointly within each inner-held-out participant; score by equally weighted participant Macro-F1. This preserves person identity and within-electrode feature dependence. Both methods share the same fitted model and equal-person validation samples.",
+  "training_sampling": "Uniform capped sampling with seed20260728+fold; validation uses a separate deterministic random generator to avoid method-dependent fitting samples.",
+  "comparison_scope": "This new controlled probe uses 2000 validation windows per fold and grouped permutation. It does not retroactively equate its protocols with the earlier single-model featurewise permutation baseline."
+}

@@ -1,0 +1,143 @@
+\begin{thebibliography}{xx}
+
+\harvarditem{Al-Timemy et~al.}{2013}{altimemy2013classification}
+Al-Timemy A~H, Bugmann G, Escudero J \harvardand\ Outram N  2013 {\em IEEE
+  Journal of Biomedical and Health Informatics} {\bf 17}(3),~608--618.
+
+\harvarditem{Campbell \harvardand\ Gustafson}{2018}{campbell2018noninferiority}
+Campbell H \harvardand\ Gustafson P  2018 `{What to make of non-inferiority and
+  equivalence testing with a post-specified margin?}' arXiv preprint
+  arXiv:1807.03413.
+
+\harvarditem{Cote-Allard et~al.}{2019}{cote2019deep}
+Cote-Allard U, Fall C~L, Drouin A, Campeau-Lecours A, Gosselin C, Glette K,
+  Laviolette F \harvardand\ Gosselin B  2019 {\em IEEE Transactions on Neural
+  Systems and Rehabilitation Engineering} {\bf 27}(4),~760--771.
+
+\harvarditem{Englehart \harvardand\ Hudgins}{2003}{englehart2003robust}
+Englehart K \harvardand\ Hudgins B  2003 {\em IEEE Transactions on Biomedical
+  Engineering} {\bf 50}(7),~848--854.
+
+\harvarditem{Farina et~al.}{2014}{farina2014extraction}
+Farina D, Jiang N, Rehbaum H, Holobar A, Graimann B, Dietl H \harvardand\
+  Aszmann O~C  2014 {\em IEEE Transactions on Neural Systems and Rehabilitation
+  Engineering} {\bf 22}(4),~797--809.
+
+\harvarditem{Farina et~al.}{2004}{farina2004extraction}
+Farina D, Merletti R \harvardand\ Enoka R~M  2004 {\em Journal of Applied
+  Physiology} {\bf 96}(4),~1486--1495.
+
+\harvarditem{Goldberger et~al.}{2000}{goldberger2000physionet}
+Goldberger A~L, Amaral L~A~N, Glass L, Hausdorff J~M, Ivanov P~C, Mark R~G,
+  Mietus J~E, Moody G~B, Peng C~K \harvardand\ Stanley H~E  2000 {\em
+  Circulation} {\bf 101}(23).
+
+\harvarditem{Hargrove et~al.}{2006}{hargrove2006effect}
+Hargrove L, Englehart K \harvardand\ Hudgins B  2006 {\em in} `2006
+  International Conference of the IEEE Engineering in Medicine and Biology
+  Society'.
+
+\harvarditem{Hooker et~al.}{2019}{hooker2019benchmark}
+Hooker S, Erhan D, Kindermans P~J \harvardand\ Kim B  2019 {\em in} `Advances
+  in Neural Information Processing Systems' Vol.~32.
+
+\harvarditem{Hudgins et~al.}{1993}{hudgins1993new}
+Hudgins B, Parker P \harvardand\ Scott R  1993 {\em IEEE Transactions on
+  Biomedical Engineering} {\bf 40}(1),~82--94.
+
+\harvarditem{Jiang et~al.}{2024}{jiang2024grabmyo}
+Jiang N, Pradhan A \harvardand\ He J  2024 `{Gesture Recognition and Biometrics
+  ElectroMyogram (GRABMyo) (version 1.1.0)}' PhysioNet.
+
+\harvarditem{Kaufmann et~al.}{2010}{kaufmann2010fluctuating}
+Kaufmann P, Englehart K \harvardand\ Platzner M  2010 {\em in} `2010 Annual
+  International Conference of the IEEE Engineering in Medicine and Biology'
+  pp.~6357--6360.
+
+\harvarditem{Kelodjou et~al.}{2023}{kelodjou2023shaping}
+Kelodjou G, Rozé L, Masson V, Galárraga L, Gaudel R, Tchuente M \harvardand\
+  Termier A  2023 `{Shaping Up SHAP: Enhancing Stability through Layer-Wise
+  Neighbor Selection}' arXiv preprint arXiv:2312.12115.
+
+\harvarditem{Liu et~al.}{2014}{liu2014emg}
+Liu J, Li X, Li G \harvardand\ Zhou P  2014 {\em Medical Engineering \&
+  Physics} {\bf 36}(7),~975--980.
+
+\harvarditem{Lundberg \harvardand\ Lee}{2017}{lundberg2017unified}
+Lundberg S \harvardand\ Lee S~I  2017 {\em in} `Advances in Neural Information
+  Processing Systems' Vol.~30.
+
+\harvarditem{Lundberg et~al.}{2020}{lundberg2020local}
+Lundberg S~M, Erion G, Chen H, DeGrave A, Prutkin J~M, Nair B, Katz R,
+  Himmelfarb J, Bansal N \harvardand\ Lee S~I  2020 {\em Nature Machine
+  Intelligence} {\bf 2}(1),~56--67.
+
+\harvarditem{Meinshausen \harvardand\
+  Bühlmann}{2010}{meinshausen2010stability}
+Meinshausen N \harvardand\ Bühlmann P  2010 {\em Journal of the Royal
+  Statistical Society Series B: Statistical Methodology} {\bf 72}(4),~417--473.
+
+\harvarditem{Phinyomark et~al.}{2012}{phinyomark2012feature}
+Phinyomark A, Phukpattaranont P \harvardand\ Limsakul C  2012 {\em Expert
+  Systems with Applications} {\bf 39}(8),~7420--7431.
+
+\harvarditem{Phinyomark \harvardand\ Scheme}{2018}{phinyomark2018emg}
+Phinyomark A \harvardand\ Scheme E  2018 {\em Big Data and Cognitive Computing}
+  {\bf 2}(3),~21.
+
+\harvarditem{Pizzolato et~al.}{2017}{pizzolato2017comparison}
+Pizzolato S, Tagliapietra L, Cognolato M, Reggiani M, Müller H \harvardand\
+  Atzori M  2017 {\em PLOS ONE} {\bf 12}(10),~e0186132.
+
+\harvarditem{Pradhan et~al.}{2022}{pradhan2022multiday}
+Pradhan A, He J \harvardand\ Jiang N  2022 {\em Scientific Data} {\bf 9}(1).
+
+\harvarditem{Qu et~al.}{2021}{qu2021reduce}
+Qu Y, Shang H, Li J \harvardand\ Teng S  2021 {\em Journal of Healthcare
+  Engineering} {\bf 2021},~1--9.
+
+\harvarditem{Salmi et~al.}{2025}{salmi2025shapaad}
+Salmi R, Lu G \harvardand\ Chen Q  2025 `{SHAP-AAD: DeepSHAP-Guided Channel
+  Reduction for EEG Auditory Attention Detection}' arXiv preprint
+  arXiv:2507.03814.
+
+\harvarditem{Samek et~al.}{2017}{samek2017evaluating}
+Samek W, Binder A, Montavon G, Lapuschkin S \harvardand\ Muller K~R  2017 {\em
+  IEEE Transactions on Neural Networks and Learning Systems} {\bf
+  28}(11),~2660--2673.
+
+\harvarditem{Scheme \harvardand\ Englehart}{2011}{scheme2011electromyogram}
+Scheme E \harvardand\ Englehart K  2011 {\em The Journal of Rehabilitation
+  Research and Development} {\bf 48}(6),~643.
+
+\harvarditem{Schuirmann}{1987}{schuirmann1987comparison}
+Schuirmann D~J  1987 {\em Journal of Pharmacokinetics and Biopharmaceutics}
+  {\bf 15}(6),~657--680.
+
+\harvarditem{Stango et~al.}{2015}{stango2015spatial}
+Stango A, Negro F \harvardand\ Farina D  2015 {\em IEEE Transactions on Neural
+  Systems and Rehabilitation Engineering} {\bf 23}(2),~189--198.
+
+\harvarditem{Vidovic et~al.}{2016}{vidovic2016improving}
+Vidovic M~M~C, Hwang H~J, Amsuss S, Hahne J~M, Farina D \harvardand\ Muller K~R
+   2016 {\em IEEE Transactions on Neural Systems and Rehabilitation
+  Engineering} {\bf 24}(9),~961--970.
+
+\harvarditem{Visani et~al.}{2022}{visani2022statistical}
+Visani G, Bagli E, Chesani F, Poluzzi A \harvardand\ Capuzzo D  2022 {\em
+  Journal of the Operational Research Society} {\bf 73}(1),~91--101.
+
+\harvarditem{Vujaklija et~al.}{2016}{vujaklija2016new}
+Vujaklija I, Farina D \harvardand\ Aszmann O  2016 {\em Orthopedic Research and
+  Reviews} {\bf Volume 8},~31--39.
+
+\harvarditem{Walker \harvardand\ Nowacki}{2011}{walker2011understanding}
+Walker E \harvardand\ Nowacki A~S  2011 {\em Journal of General Internal
+  Medicine} {\bf 26}(2),~192--196.
+
+\harvarditem{Xiang et~al.}{2026}{xiang2026roshap}
+Xiang L, Shi L, Ye Y, Jiang B, Zhou D \harvardand\ Guo F  2026 `{RoSHAP: A
+  Distributional Framework and Robust Metric for Stable Feature Attribution}'
+  arXiv preprint arXiv:2605.15154.
+
+\end{thebibliography}

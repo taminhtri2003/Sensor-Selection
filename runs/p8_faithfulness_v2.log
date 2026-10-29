@@ -1,0 +1,75 @@
+random subset rows reused from P4: 34400
+[1/43] participant 01 elapsed=0.8m eta=35.7m
+[2/43] participant 02 elapsed=1.6m eta=32.2m
+[3/43] participant 03 elapsed=2.3m eta=30.0m
+[4/43] participant 04 elapsed=2.9m eta=28.3m
+[5/43] participant 05 elapsed=3.6m eta=27.0m
+[6/43] participant 06 elapsed=4.2m eta=25.9m
+[7/43] participant 07 elapsed=4.9m eta=25.1m
+[8/43] participant 08 elapsed=5.5m eta=24.2m
+[9/43] participant 09 elapsed=6.2m eta=23.5m
+[10/43] participant 10 elapsed=6.9m eta=22.6m
+[11/43] participant 11 elapsed=7.5m eta=21.8m
+[12/43] participant 12 elapsed=8.1m eta=21.0m
+[13/43] participant 13 elapsed=8.8m eta=20.3m
+[14/43] participant 14 elapsed=9.4m eta=19.5m
+[15/43] participant 15 elapsed=10.1m eta=18.9m
+[16/43] participant 16 elapsed=10.8m eta=18.2m
+[17/43] participant 17 elapsed=11.5m eta=17.6m
+[18/43] participant 18 elapsed=12.2m eta=16.9m
+[19/43] participant 19 elapsed=12.8m eta=16.2m
+[20/43] participant 20 elapsed=13.5m eta=15.5m
+[21/43] participant 21 elapsed=14.1m eta=14.8m
+[22/43] participant 22 elapsed=14.8m eta=14.1m
+[23/43] participant 23 elapsed=15.5m eta=13.5m
+[24/43] participant 24 elapsed=16.1m eta=12.8m
+[25/43] participant 25 elapsed=16.8m eta=12.1m
+[26/43] participant 26 elapsed=17.5m eta=11.4m
+[27/43] participant 27 elapsed=18.1m eta=10.7m
+[28/43] participant 28 elapsed=18.8m eta=10.1m
+[29/43] participant 29 elapsed=19.5m eta=9.4m
+[30/43] participant 30 elapsed=20.1m eta=8.7m
+[31/43] participant 31 elapsed=20.8m eta=8.1m
+[32/43] participant 32 elapsed=21.5m eta=7.4m
+[33/43] participant 33 elapsed=22.2m eta=6.7m
+[34/43] participant 34 elapsed=22.9m eta=6.1m
+[35/43] participant 35 elapsed=23.6m eta=5.4m
+[36/43] participant 36 elapsed=24.2m eta=4.7m
+[37/43] participant 37 elapsed=24.9m eta=4.0m
+[38/43] participant 38 elapsed=25.6m eta=3.4m
+[39/43] participant 39 elapsed=26.3m eta=2.7m
+[40/43] participant 40 elapsed=27.0m eta=2.0m
+[41/43] participant 41 elapsed=27.6m eta=1.3m
+[42/43] participant 42 elapsed=28.3m eta=0.7m
+[43/43] participant 43 elapsed=28.9m eta=0.0m
+protocol check vs P4 SHAP_lam0: 172 matched cells, max |diff| = 8.39e-03
+
+          arm  n_kept  n_participants  mean_macro_f1       sd
+   remove_top       2              43       0.262620 0.051264
+remove_bottom       2              43       0.292298 0.060473
+   remove_top       4              43       0.350526 0.059200
+remove_random       4              43       0.365637 0.058782
+remove_bottom       4              43       0.381933 0.070480
+   remove_top       6              43       0.376151 0.062758
+remove_random       6              43       0.415943 0.067570
+remove_bottom       6              43       0.453654 0.079917
+   remove_top       8              43       0.407550 0.069345
+remove_random       8              43       0.445232 0.071472
+remove_bottom       8              43       0.469396 0.080806
+   remove_top      10              43       0.444988 0.076678
+remove_bottom      10              43       0.474664 0.080441
+   remove_top      12              43       0.455100 0.076306
+remove_random      12              43       0.477922 0.077326
+remove_bottom      12              43       0.485335 0.078805
+   remove_top      14              43       0.487372 0.078238
+remove_bottom      14              43       0.491153 0.079665
+
+faithfulness check (expected: remove_top < remove_random < remove_bottom)
+  n_kept=2: remove_top=0.2626, remove_bottom=0.2923  -> FAITHFUL
+  n_kept=4: remove_top=0.3505, remove_random=0.3656, remove_bottom=0.3819  -> FAITHFUL
+  n_kept=6: remove_top=0.3762, remove_random=0.4159, remove_bottom=0.4537  -> FAITHFUL
+  n_kept=8: remove_top=0.4075, remove_random=0.4452, remove_bottom=0.4694  -> FAITHFUL
+  n_kept=10: remove_top=0.4450, remove_bottom=0.4747  -> FAITHFUL
+  n_kept=12: remove_top=0.4551, remove_random=0.4779, remove_bottom=0.4853  -> FAITHFUL
+  n_kept=14: remove_top=0.4874, remove_bottom=0.4912  -> FAITHFUL
+exit=0

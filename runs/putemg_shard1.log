@@ -1,0 +1,17 @@
+putEMG: 187578 windows, 240 features, classes [1, 2, 3, 6, 7, 8, 9], 44 participants
+resuming 0 complete participants
+[1/15] p4 n_train=183388 full=0.6855 top6=[7, 17, 2, 23, 15, 24] elapsed=30.6m
+[2/15] p7 n_train=183366 full=0.4890 top6=[17, 7, 2, 23, 24, 19] elapsed=59.8m
+[3/15] p10 n_train=183376 full=0.8302 top6=[7, 17, 2, 23, 15, 24] elapsed=88.8m
+[4/15] p13 n_train=182854 full=0.7099 top6=[7, 17, 2, 23, 24, 15] elapsed=118.1m
+[5/15] p16 n_train=183473 full=0.6178 top6=[7, 2, 17, 23, 15, 24] elapsed=147.3m
+[6/15] p19 n_train=182949 full=0.7323 top6=[7, 17, 2, 23, 24, 15] elapsed=176.4m
+[7/15] p23 n_train=183409 full=0.5459 top6=[7, 17, 2, 23, 15, 24] elapsed=203.3m
+[8/15] p26 n_train=183268 full=0.4959 top6=[7, 17, 2, 23, 15, 24] elapsed=230.4m
+[9/15] p30 n_train=183425 full=0.6555 top6=[7, 17, 2, 23, 15, 24] elapsed=257.4m
+[10/15] p34 n_train=183388 full=0.5342 top6=[7, 17, 2, 23, 15, 1] elapsed=284.3m
+[11/15] p38 n_train=183517 full=0.7571 top6=[7, 17, 2, 23, 24, 15] elapsed=311.4m
+[12/15] p43 n_train=183248 full=0.6918 top6=[7, 17, 2, 23, 24, 1] elapsed=338.4m
+[13/15] p47 n_train=183137 full=0.6912 top6=[7, 17, 2, 23, 24, 15] elapsed=365.3m
+[14/15] p50 n_train=183578 full=0.8398 top6=[7, 17, 2, 23, 24, 1] elapsed=392.2m
+[15/15] p54 n_train=183495 full=0.7493 top6=[7, 17, 2, 23, 24, 10] elapsed=410.1m

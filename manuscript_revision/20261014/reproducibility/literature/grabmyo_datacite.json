@@ -1,0 +1,166 @@
+{
+  "data": {
+    "id": "10.13026/89dm-f662",
+    "type": "dois",
+    "attributes": {
+      "doi": "10.13026/89dm-f662",
+      "prefix": "10.13026",
+      "suffix": "89dm-f662",
+      "identifiers": [],
+      "alternateIdentifiers": [],
+      "creators": [
+        {
+          "name": "Jiang, Ning",
+          "givenName": "Ning",
+          "familyName": "Jiang",
+          "affiliation": [
+            "Waterloo Engineering Bionics Lab",
+            "West China Hospital, Sichuan University"
+          ],
+          "nameIdentifiers": [
+            {
+              "schemeUri": "https://orcid.org/",
+              "nameIdentifier": "https://orcid.org/0000-0003-1579-3114",
+              "nameIdentifierScheme": "ORCID"
+            }
+          ]
+        },
+        {
+          "name": "Pradhan, Ashirbad",
+          "givenName": "Ashirbad",
+          "familyName": "Pradhan",
+          "affiliation": [
+            "Waterloo Engineering Bionics Lab"
+          ],
+          "nameIdentifiers": []
+        },
+        {
+          "name": "He, Jiayuan",
+          "givenName": "Jiayuan",
+          "familyName": "He",
+          "affiliation": [
+            "Waterloo Engineering Bionics Lab",
+            "West China Hospital, Sichuan University"
+          ],
+          "nameIdentifiers": []
+        }
+      ],
+      "titles": [
+        {
+          "title": "Gesture Recognition and Biometrics ElectroMyogram (GRABMyo)"
+        }
+      ],
+      "publisher": "PhysioNet",
+      "container": {},
+      "publicationYear": 2024,
+      "subjects": [],
+      "contributors": [],
+      "dates": [],
+      "language": null,
+      "types": {
+        "ris": "DATA",
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "schemaOrg": "Dataset",
+        "resourceTypeGeneral": "Dataset"
+      },
+      "relatedIdentifiers": [
+        {
+          "relationType": "IsVersionOf",
+          "relatedIdentifier": "10.13026/cadk-kw71",
+          "relatedIdentifierType": "DOI"
+        }
+      ],
+      "relatedItems": [],
+      "sizes": [],
+      "formats": [],
+      "version": "1.1.0",
+      "rightsList": [],
+      "descriptions": [
+        {
+          "description": "We present the Gesture Recognition and Biometrics ElectroMyogram (GRABMyo)\ndataset, an open-access dataset of electromyogram (EMG) recordings collected\nfrom the wrist and forearm muscles while performing hand gestures. Data were\ncollected from 43 healthy participants (age range: 24-35 years) on three\ndifferent days while performing 16 hand and finger gestures in identical\nexperimental sessions on each day. The GRABMyo dataset can be used for\nresearch on: 1) EMG-based biometrics for personal identification and\nverification, and 2) EMG-based gesture recognition for neurorehabilitation and\nhome applications. The large sample size will provide sufficient power for\nestablishing results, specifically for applications such as biometrics.\nFurther, it will be useful for subject-independent applications such as\ngeneralized classification models for gesture recognition. The multiday\nrecordings will provide results that will be consistent over a longer\nduration, crucial for the reliability of EMG-based wearable devices.\n\n",
+          "descriptionType": "Abstract"
+        }
+      ],
+      "geoLocations": [],
+      "fundingReferences": [],
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuMTMwMjYvODlETS1GNjYyPC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+SmlhbmcsIE5pbmc8L2NyZWF0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPk5pbmc8L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+Smlhbmc8L2ZhbWlseU5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiIHNjaGVtZVVSST0iaHR0cHM6Ly9vcmNpZC5vcmcvIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDMtMTU3OS0zMTE0PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uPldhdGVybG9vIEVuZ2luZWVyaW5nIEJpb25pY3MgTGFiPC9hZmZpbGlhdGlvbj4KICAgICAgPGFmZmlsaWF0aW9uPldlc3QgQ2hpbmEgSG9zcGl0YWwsIFNpY2h1YW4gVW5pdmVyc2l0eTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPlByYWRoYW4sIEFzaGlyYmFkPC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5Bc2hpcmJhZDwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5QcmFkaGFuPC9mYW1pbHlOYW1lPgogICAgICA8YWZmaWxpYXRpb24+V2F0ZXJsb28gRW5naW5lZXJpbmcgQmlvbmljcyBMYWI8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5IZSwgSmlheXVhbjwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+SmlheXVhbjwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5IZTwvZmFtaWx5TmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPldhdGVybG9vIEVuZ2luZWVyaW5nIEJpb25pY3MgTGFiPC9hZmZpbGlhdGlvbj4KICAgICAgPGFmZmlsaWF0aW9uPldlc3QgQ2hpbmEgSG9zcGl0YWwsIFNpY2h1YW4gVW5pdmVyc2l0eTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPkdlc3R1cmUgUmVjb2duaXRpb24gYW5kIEJpb21ldHJpY3MgRWxlY3Ryb015b2dyYW0gKEdSQUJNeW8pPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPlBoeXNpb05ldDwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAyNDwvcHVibGljYXRpb25ZZWFyPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCIvPgogIDxyZWxhdGVkSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iSXNWZXJzaW9uT2YiPjEwLjEzMDI2L2NhZGsta3c3MTwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPHNpemVzLz4KICA8Zm9ybWF0cy8+CiAgPHZlcnNpb24+MS4xLjA8L3ZlcnNpb24+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij5XZSBwcmVzZW50IHRoZSBHZXN0dXJlIFJlY29nbml0aW9uIGFuZCBCaW9tZXRyaWNzIEVsZWN0cm9NeW9ncmFtIChHUkFCTXlvKQpkYXRhc2V0LCBhbiBvcGVuLWFjY2VzcyBkYXRhc2V0IG9mIGVsZWN0cm9teW9ncmFtIChFTUcpIHJlY29yZGluZ3MgY29sbGVjdGVkCmZyb20gdGhlIHdyaXN0IGFuZCBmb3JlYXJtIG11c2NsZXMgd2hpbGUgcGVyZm9ybWluZyBoYW5kIGdlc3R1cmVzLiBEYXRhIHdlcmUKY29sbGVjdGVkIGZyb20gNDMgaGVhbHRoeSBwYXJ0aWNpcGFudHMgKGFnZSByYW5nZTogMjQtMzUgeWVhcnMpIG9uIHRocmVlCmRpZmZlcmVudCBkYXlzIHdoaWxlIHBlcmZvcm1pbmcgMTYgaGFuZCBhbmQgZmluZ2VyIGdlc3R1cmVzIGluIGlkZW50aWNhbApleHBlcmltZW50YWwgc2Vzc2lvbnMgb24gZWFjaCBkYXkuIFRoZSBHUkFCTXlvIGRhdGFzZXQgY2FuIGJlIHVzZWQgZm9yCnJlc2VhcmNoIG9uOiAxKSBFTUctYmFzZWQgYmlvbWV0cmljcyBmb3IgcGVyc29uYWwgaWRlbnRpZmljYXRpb24gYW5kCnZlcmlmaWNhdGlvbiwgYW5kIDIpIEVNRy1iYXNlZCBnZXN0dXJlIHJlY29nbml0aW9uIGZvciBuZXVyb3JlaGFiaWxpdGF0aW9uIGFuZApob21lIGFwcGxpY2F0aW9ucy4gVGhlIGxhcmdlIHNhbXBsZSBzaXplIHdpbGwgcHJvdmlkZSBzdWZmaWNpZW50IHBvd2VyIGZvcgplc3RhYmxpc2hpbmcgcmVzdWx0cywgc3BlY2lmaWNhbGx5IGZvciBhcHBsaWNhdGlvbnMgc3VjaCBhcyBiaW9tZXRyaWNzLgpGdXJ0aGVyLCBpdCB3aWxsIGJlIHVzZWZ1bCBmb3Igc3ViamVjdC1pbmRlcGVuZGVudCBhcHBsaWNhdGlvbnMgc3VjaCBhcwpnZW5lcmFsaXplZCBjbGFzc2lmaWNhdGlvbiBtb2RlbHMgZm9yIGdlc3R1cmUgcmVjb2duaXRpb24uIFRoZSBtdWx0aWRheQpyZWNvcmRpbmdzIHdpbGwgcHJvdmlkZSByZXN1bHRzIHRoYXQgd2lsbCBiZSBjb25zaXN0ZW50IG92ZXIgYSBsb25nZXIKZHVyYXRpb24sIGNydWNpYWwgZm9yIHRoZSByZWxpYWJpbGl0eSBvZiBFTUctYmFzZWQgd2VhcmFibGUgZGV2aWNlcy4KCjwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+Cg==",
+      "url": "https://physionet.org/content/grabmyo/1.1.0/",
+      "contentUrl": null,
+      "metadataVersion": 0,
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "source": "api",
+      "isActive": true,
+      "state": "findable",
+      "reason": null,
+      "viewCount": 0,
+      "viewsOverTime": [],
+      "downloadCount": 0,
+      "downloadsOverTime": [],
+      "referenceCount": 0,
+      "citationCount": 1,
+      "citationsOverTime": [
+        {
+          "year": "2026",
+          "total": 1
+        }
+      ],
+      "partCount": 0,
+      "partOfCount": 0,
+      "versionCount": 0,
+      "versionOfCount": 1,
+      "created": "2024-05-23T14:30:19.000Z",
+      "registered": "2024-06-07T11:03:08.000Z",
+      "published": "2024",
+      "updated": "2024-06-11T11:02:05.000Z"
+    },
+    "relationships": {
+      "client": {
+        "data": {
+          "id": "mit.physio",
+          "type": "clients"
+        }
+      },
+      "provider": {
+        "data": {
+          "id": "mit",
+          "type": "providers"
+        }
+      },
+      "media": {
+        "data": {
+          "id": "10.13026/89dm-f662",
+          "type": "media"
+        }
+      },
+      "references": {
+        "data": []
+      },
+      "citations": {
+        "data": [
+          {
+            "id": "10.1007/s42486-026-00232-4",
+            "type": "dois"
+          }
+        ]
+      },
+      "parts": {
+        "data": []
+      },
+      "partOf": {
+        "data": []
+      },
+      "versions": {
+        "data": []
+      },
+      "versionOf": {
+        "data": [
+          {
+            "id": "10.13026/cadk-kw71",
+            "type": "dois"
+          }
+        ]
+      }
+    }
+  }
+}

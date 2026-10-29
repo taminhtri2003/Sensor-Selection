@@ -1,0 +1,19 @@
+{
+  "n": 43,
+  "mean": -0.013303960715993532,
+  "median": -0.01246981322073526,
+  "sd": 0.00926339240442972,
+  "min": -0.036071473188607595,
+  "max": 0.014350688581827808,
+  "n_improved": 1,
+  "n_loss_over_margin002": 11,
+  "baseline_difference_spearman": -0.04500151011778919,
+  "interpretation": "descriptive; baseline is mathematically coupled to its difference; no individual non-inferiority guarantee",
+  "worst_participant_id": 27,
+  "q05": -0.025196133238263575,
+  "q10": -0.024575297952071452,
+  "q25": -0.020162005393481508,
+  "q75": -0.0072828742889811116,
+  "q90": -0.004050168859064484,
+  "q95": -0.0019698515446250255
+}

@@ -1,0 +1,19 @@
+full-channel: 129 rows, 43 participants, models=['M_RandomForest', 'M_SVM', 'M_XGBoost']
+  M_RandomForest: 0.5016 (95% CI 0.4747-0.5277) n=43
+  M_SVM: 0.5378 (95% CI 0.5129-0.5623) n=43
+  M_XGBoost: 0.5423 (95% CI 0.5168-0.5667) n=43
+  wrote 3 paired model comparisons (Holm-corrected)
+  k* [M_XGB lambda=0.0 margin=0.01]: 14
+  k* [M_XGB lambda=0.0 margin=0.02]: 12
+  k* [M_XGB lambda=0.0 margin=0.03]: 11
+  k* [M_XGB lambda=0.25 margin=0.01]: 14
+  k* [M_XGB lambda=0.25 margin=0.02]: 12
+  k* [M_XGB lambda=0.25 margin=0.03]: 11
+  k* [M_XGB lambda=0.5 margin=0.01]: 14
+  k* [M_XGB lambda=0.5 margin=0.02]: 12
+  k* [M_XGB lambda=0.5 margin=0.03]: 11
+  k* [M_XGB lambda=1.0 margin=0.01]: 14
+  k* [M_XGB lambda=1.0 margin=0.02]: 12
+  k* [M_XGB lambda=1.0 margin=0.03]: 11
+
+wrote F:\grabmyo_data\artifacts\statistics\master_statistics.csv (15 quantities)

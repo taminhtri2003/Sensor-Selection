@@ -1,0 +1,3 @@
+# Scientific provenance hashes cover exact file bytes, including line endings.
+# Disable automatic normalization so Windows and other clones retain those bytes.
+* -text

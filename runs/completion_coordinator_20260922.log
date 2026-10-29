@@ -1,0 +1,80 @@
+Checkpoint rows: bipolar=(480, 1376), participant attribution=(1984, 2752)
+Checkpoint rows: bipolar=(480, 1376), participant attribution=(2096, 2752)
+Checkpoint rows: bipolar=(480, 1376), participant attribution=(2208, 2752)
+Checkpoint rows: bipolar=(480, 1376), participant attribution=(2224, 2752)
+Checkpoint rows: bipolar=(480, 1376), participant attribution=(2256, 2752)
+Checkpoint rows: bipolar=(480, 1376), participant attribution=(2304, 2752)
+Checkpoint rows: bipolar=(480, 1376), participant attribution=(2336, 2752)
+Checkpoint rows: bipolar=(512, 1376), participant attribution=(2368, 2752)
+Checkpoint rows: bipolar=(512, 1376), participant attribution=(2432, 2752)
+Checkpoint rows: bipolar=(512, 1376), participant attribution=(2496, 2752)
+Checkpoint rows: bipolar=(512, 1376), participant attribution=(2544, 2752)
+Checkpoint rows: bipolar=(512, 1376), participant attribution=(2560, 2752)
+Checkpoint rows: bipolar=(512, 1376), participant attribution=(2624, 2752)
+Checkpoint rows: bipolar=(512, 1376), participant attribution=(2688, 2752)
+Checkpoint rows: bipolar=(544, 1376), participant attribution=(2688, 2752)
+Checkpoint rows: bipolar=(544, 1376), participant attribution=(2736, 2752)
+Checkpoint rows: bipolar=(544, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(576, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(608, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(640, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(672, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(704, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(736, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(768, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(800, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(832, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(864, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(896, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(928, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(960, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(992, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(1024, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(1056, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(1088, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(1120, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(1152, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(1184, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(1216, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(1248, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(1280, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(1312, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(1344, 1376), participant attribution=(2752, 2752)
+Checkpoint rows: bipolar=(1376, 1376), participant attribution=(2752, 2752)
+Experiments complete; starting strict study build.
+RUN tests
+RUN upgraded_penalty_gate
+RUN 59_audit_feature_chain
+RUN audit_leakage
+RUN 28_statistics
+RUN secondary_statistics
+RUN publication_gate
+RUN bipolar_text
+RUN study_diagrams
+RUN 42_generate_tables
+RUN 44_figures
+RUN 45_check_manuscript_numbers
+RUN 47_claim_evidence_matrix
+RUN 41_generate_study_report
+RUN supplementary_iop_pass1
+RUN supplementary_iop_pass2
+RUN supplementary_iop_pass3
+RUN main_iop_pass1
+Traceback (most recent call last):
+  File "F:\grabmyo_data\scripts\55_complete_study.py", line 90, in <module>
+    main()
+  File "F:\grabmyo_data\scripts\55_complete_study.py", line 52, in main
+    run(command, f'{doc}_pass1', ROOT / 'manuscript')
+  File "F:\grabmyo_data\scripts\55_complete_study.py", line 20, in run
+    subprocess.run(args, cwd=cwd, stdout=f, stderr=subprocess.STDOUT, check=True)
+  File "D:\miniconda3\envs\graph_gpu\lib\subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['pdflatex', '-interaction=nonstopmode', '-halt-on-error', 'main_iop.tex']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "F:\grabmyo_data\scripts\60_finish_when_ready.py", line 44, in <module>
+    main()
+  File "F:\grabmyo_data\scripts\60_finish_when_ready.py", line 40, in main
+    subprocess.run([sys.executable,str(ROOT/'scripts/55_complete_study.py')],cwd=ROOT,check=True)
+  File "D:\miniconda3\envs\graph_gpu\lib\subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['D:\\miniconda3\\envs\\graph_gpu\\python.exe', 'F:\\grabmyo_data\\scripts\\55_complete_study.py']' returned non-zero exit status 1.

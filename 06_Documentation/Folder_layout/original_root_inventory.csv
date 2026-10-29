@@ -1,0 +1,52 @@
+name,kind,organized_access
+.git,folder,original path retained
+.pytest_cache,folder,original path retained
+.test_dependencies,folder,original path retained
+.venv,folder,original path retained
+_archive_invalid,folder,90_Archive/Invalidated_outputs.lnk
+_scratch_timing,folder,90_Archive/Timing_scratch.lnk
+artifacts,folder,04_Results/All_analysis_outputs.lnk
+audit,folder,90_Archive/Earlier_audits.lnk
+configs,folder,03_Code/configs.lnk
+data,folder,05_Data/Data_cache_and_metadata.lnk
+DESTINATION,folder,05_Data/Other_downloaded_recordings.lnk
+DeviceInfo.pdf,file,05_Data\Dataset_documentation\DeviceInfo.pdf
+Electrodelocation.pdf,file,05_Data\Dataset_documentation\Electrodelocation.pdf
+environment.yml,file,03_Code\Environment\environment.yml
+featiDFTl.m,file,03_Code\Dataset_utilities\featiDFTl.m
+FINAL_PACKAGE,folder,90_Archive/Previous_publication_packages.lnk
+FINAL_STUDY_REPORT.md,file,original path retained
+GestureList.JPG,file,05_Data\Dataset_documentation\GestureList.JPG
+grabmyo_convert_wfdb_to_mat.py,file,03_Code\Dataset_utilities\grabmyo_convert_wfdb_to_mat.py
+grabmyo_feature_extraction.m,file,03_Code\Dataset_utilities\grabmyo_feature_extraction.m
+grabmyo_visualize.py,file,03_Code\Dataset_utilities\grabmyo_visualize.py
+LICENSE.txt,file,05_Data\Dataset_documentation\LICENSE.txt
+literature,folder,06_Documentation/Literature.lnk
+Makefile,file,03_Code\Environment\Makefile
+manuscript,folder,90_Archive/Earlier_manuscript.lnk
+manuscript.zip,file,original path retained
+manuscript_final,folder,90_Archive/Publication_record_20261016.lnk
+Manuscript_ML_for_EMG_classification_PhysiologicalMeasurement_20260728,folder,90_Archive/Original_manuscript_source.lnk
+manuscript_revision,folder,90_Archive/Scientific_record_20261014.lnk
+MotionSequence.txt,file,05_Data\Dataset_documentation\MotionSequence.txt
+pyproject.toml,file,03_Code\Environment\pyproject.toml
+readme.txt,file,05_Data\Dataset_documentation\readme.txt
+README_REPRODUCE.md,file,original path retained
+RECORDS,file,05_Data\Dataset_documentation\RECORDS
+reports,folder,90_Archive/Earlier_reports.lnk
+reproduce.bat,file,03_Code\Environment\reproduce.bat
+reproducibility,folder,90_Archive/Earlier_reproducibility.lnk
+requirements-lock.txt,file,03_Code\Environment\requirements-lock.txt
+runs,folder,90_Archive/Run_records.lnk
+scripts,folder,03_Code/scripts.lnk
+segmentEMG.m,file,03_Code\Dataset_utilities\segmentEMG.m
+Session1,folder,05_Data/Raw_GRABMyo/Session1.lnk
+Session2,folder,05_Data/Raw_GRABMyo/Session2.lnk
+Session3,folder,05_Data/Raw_GRABMyo/Session3.lnk
+SHA256SUMS.txt,file,05_Data\Dataset_documentation\SHA256SUMS.txt
+src,folder,03_Code/src.lnk
+STATUS.md,file,original path retained
+subject-info.csv,file,05_Data\Dataset_documentation\subject-info.csv
+tests,folder,03_Code/tests.lnk
+tmp,folder,90_Archive/Temporary_work.lnk
+uv.lock,file,03_Code\Environment\uv.lock

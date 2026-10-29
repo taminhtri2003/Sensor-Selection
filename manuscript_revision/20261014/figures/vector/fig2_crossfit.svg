@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="511.2pt" height="369.473375pt" viewBox="0 0 511.2 369.473375" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-14T19:14:37.471714</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 369.473375 
+L 511.2 369.473375 
+L 511.2 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 12.168 112.7808 
+L 111.528 112.7808 
+L 111.528 28.31616 
+L 12.168 28.31616 
+z
+" clip-path="url(#p76c57b84fb)" style="fill: #eef6fa; stroke: #0072b2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 151.272 112.7808 
+L 290.376 112.7808 
+L 290.376 28.31616 
+L 151.272 28.31616 
+z
+" clip-path="url(#p76c57b84fb)" style="fill: #eef6fa; stroke: #0072b2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 335.088 112.7808 
+L 494.064 112.7808 
+L 494.064 28.31616 
+L 335.088 28.31616 
+z
+" clip-path="url(#p76c57b84fb)" style="fill: #eef6fa; stroke: #0072b2; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font: 10.5px 'Arial'" transform="translate(32.667023 66.037746)">Participant p</text>
+    <text style="font: 10.5px 'Arial'" transform="translate(27.709875 80.364996)">Outer test only</text>
+   </g>
+   <g id="text_2">
+    <text style="font: 10.5px 'Arial'" transform="translate(172.093336 51.936738)">Other 42 participants</text>
+    <text style="font: 10.5px 'Arial'" transform="translate(171.501891 66.253488)">5 inner grouped folds</text>
+    <text style="font: 10.5px 'Arial'" transform="translate(172.876734 80.488535)">Training-only scaling</text>
+    <text style="font: 10.5px 'Arial'" transform="translate(173.460797 94.723582)">Train inner XGBoost</text>
+   </g>
+   <g id="text_3">
+    <text style="font: 10.5px 'Arial'" transform="translate(354.754711 58.986996)">Inner-held-out attributions</text>
+    <text style="font: 10.5px 'Arial'" transform="translate(350.97225 73.098996)">Normalize electrode scores</text>
+    <text style="font: 10.5px 'Arial'" transform="translate(362.640375 87.415746)">Median / MAD ranking</text>
+   </g>
+   <g id="patch_5">
+    <path d="M 297.34345 70.54848 
+Q 312.733465 70.54848 327.005445 70.54848 
+" style="fill: none; stroke: #666666; stroke-linecap: round"/>
+    <path d="M 322.205445 68.14848 
+L 327.005445 70.54848 
+L 322.205445 72.94848 
+" style="fill: none; stroke: #666666; stroke-linecap: round"/>
+   </g>
+   <g id="text_4">
+    <text style="font: 10.5px 'Arial'; text-anchor: middle" x="255.6" y="153.25344" transform="rotate(-0 255.6 153.25344)">Select top k -&gt; retrain reduced model on outer training participants -&gt; test only on p</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_6">
+    <path d="M 92.484 329.184 
+L 197.316 329.184 
+L 197.316 224.352 
+L 92.484 224.352 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p6c54c7f70b)">
+    <image xlink:href="data:image/png;base64,
+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" id="image64b56b1219" transform="scale(1 -1) translate(0 -104.88)" x="92.484" y="-224.304" width="104.88" height="104.88"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="ma81898c2bb" d="M 0 0 
+L 0 3.5 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#ma81898c2bb" x="102.9672" y="329.184" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font: 12px 'Arial'; text-anchor: middle" x="102.9672" y="344.773375" transform="rotate(-0 102.9672 344.773375)">1</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#ma81898c2bb" x="123.9336" y="329.184" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font: 12px 'Arial'; text-anchor: middle" x="123.9336" y="344.773375" transform="rotate(-0 123.9336 344.773375)">2</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#ma81898c2bb" x="144.9" y="329.184" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font: 12px 'Arial'; text-anchor: middle" x="144.9" y="344.773375" transform="rotate(-0 144.9 344.773375)">3</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#ma81898c2bb" x="165.8664" y="329.184" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font: 12px 'Arial'; text-anchor: middle" x="165.8664" y="344.773375" transform="rotate(-0 165.8664 344.773375)">4</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#ma81898c2bb" x="186.8328" y="329.184" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font: 12px 'Arial'; text-anchor: middle" x="186.8328" y="344.773375" transform="rotate(-0 186.8328 344.773375)">5</text>
+     </g>
+    </g>
+    <g id="text_10">
+     <text style="font: 12px 'Arial'; text-anchor: middle" x="144.9" y="359.74775" transform="rotate(-0 144.9 359.74775)">Inner participant group</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <defs>
+       <path id="mabfb8884b6" d="M 0 0 
+L -3.5 0 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mabfb8884b6" x="92.484" y="234.8352" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font: 12px 'Arial'; text-anchor: end" x="85.484" y="239.129887" transform="rotate(-0 85.484 239.129887)">1</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#mabfb8884b6" x="92.484" y="255.8016" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font: 12px 'Arial'; text-anchor: end" x="85.484" y="260.096287" transform="rotate(-0 85.484 260.096287)">2</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#mabfb8884b6" x="92.484" y="276.768" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font: 12px 'Arial'; text-anchor: end" x="85.484" y="281.062687" transform="rotate(-0 85.484 281.062687)">3</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#mabfb8884b6" x="92.484" y="297.7344" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="font: 12px 'Arial'; text-anchor: end" x="85.484" y="302.029087" transform="rotate(-0 85.484 302.029087)">4</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#mabfb8884b6" x="92.484" y="318.7008" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="font: 12px 'Arial'; text-anchor: end" x="85.484" y="322.995487" transform="rotate(-0 85.484 322.995487)">5</text>
+     </g>
+    </g>
+    <g id="text_16">
+     <text style="font: 12px 'Arial'; text-anchor: middle" x="72.28525" y="276.768" transform="rotate(-90 72.28525 276.768)">Attributing model</text>
+    </g>
+   </g>
+   <g id="patch_7">
+    <path d="M 92.484 329.184 
+L 92.484 224.352 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 92.484 329.184 
+L 197.316 329.184 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_17">
+    <text style="font: 10px 'Arial'; text-anchor: middle" x="144.9" y="218.352" transform="rotate(-0 144.9 218.352)">Orange: attribution only; blue: training</text>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="text_18">
+    <text style="font: 10.5px 'Arial'" transform="translate(288 234.616472)">Electrode magnitude: mean |TreeSHAP|</text>
+    <text style="font: 10.5px 'Arial'" transform="translate(288 248.851519)">Fold score: normalize across electrodes</text>
+    <text style="font: 10.5px 'Arial'" transform="translate(288 262.963519)">A = median normalized magnitude</text>
+    <text style="font: 10.5px 'Arial'" transform="translate(288 277.198566)">U = median absolute deviation</text>
+    <text style="font: 10.5px 'Arial'" transform="translate(288 291.525816)">Q(lambda) = A - lambda U</text>
+    <text style="font: 10.5px 'Arial'" transform="translate(288 305.760862)"/>
+    <text style="font: 10.5px 'Arial'" transform="translate(288 320.077612)">Report every fixed lambda; do not tune on p</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p76c57b84fb">
+   <rect x="7.2" y="7.2" width="496.8" height="175.968"/>
+  </clipPath>
+  <clipPath id="p6c54c7f70b">
+   <rect x="92.484" y="224.352" width="104.832" height="104.832"/>
+  </clipPath>
+ </defs>
+</svg>

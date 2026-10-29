@@ -1,0 +1,23 @@
+model=XGB participants=1 lambdas=[0.5] k=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16] jobs=1 workers=1
+[1/1] participant 01 lam=0.5 k16=0.5682 elapsed=4.0m eta=0.0m
+
+model  lambda  channels_k  n_participants  mean_macro_f1  sd_macro_f1  mean_accuracy
+M_XGB     0.5           1               1       0.163177          NaN       0.197192
+M_XGB     0.5           2               1       0.294105          NaN       0.322726
+M_XGB     0.5           3               1       0.373490          NaN       0.399267
+M_XGB     0.5           4               1       0.396340          NaN       0.418727
+M_XGB     0.5           5               1       0.415827          NaN       0.444826
+M_XGB     0.5           6               1       0.487643          NaN       0.521673
+M_XGB     0.5           7               1       0.522801          NaN       0.556700
+M_XGB     0.5           8               1       0.518380          NaN       0.550595
+M_XGB     0.5           9               1       0.522833          NaN       0.557158
+M_XGB     0.5          10               1       0.540938          NaN       0.571047
+M_XGB     0.5          11               1       0.540723          NaN       0.571200
+M_XGB     0.5          12               1       0.552462          NaN       0.582952
+M_XGB     0.5          13               1       0.551069          NaN       0.580891
+M_XGB     0.5          14               1       0.555139          NaN       0.585089
+M_XGB     0.5          15               1       0.560561          NaN       0.591194
+M_XGB     0.5          16               1       0.568169          NaN       0.596078
+
+ASSERTION PASSED: 1 participants x 16 k x 1 lambda
+wall clock: 4.0 min

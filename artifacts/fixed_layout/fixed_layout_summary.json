@@ -1,0 +1,32 @@
+{
+  "dev_subjects_count": 22,
+  "test_subjects_count": 21,
+  "frozen_consensus_channels": [
+    14,
+    6,
+    7,
+    4,
+    10,
+    8,
+    5,
+    13,
+    2,
+    15,
+    1,
+    16
+  ],
+  "dropped_channels": [
+    12,
+    9,
+    11,
+    3
+  ],
+  "mean_macro_f1_full16": 0.522348650584083,
+  "sd_macro_f1_full16": 0.07296733152729865,
+  "mean_macro_f1_fixed12": 0.5099040041187448,
+  "sd_macro_f1_fixed12": 0.07682336717560828,
+  "paired_difference_mean": -0.012444646465338246,
+  "bootstrap_95_lcb": -0.017900719047785858,
+  "bootstrap_95_ucb": -0.007658279964380156,
+  "non_inferior_at_delta_02": true
+}

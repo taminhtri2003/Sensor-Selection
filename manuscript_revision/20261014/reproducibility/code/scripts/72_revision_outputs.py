@@ -1,0 +1,114 @@
+"""Generate revision manuscript facts, tables and source provenance; no fallback results."""
+from pathlib import Path
+import importlib.util,json,re
+import numpy as np
+import pandas as pd
+ROOT=Path(__file__).resolve().parent.parent;REV=ROOT/'manuscript_revision/20261014';STAT=REV/'experiments/statistics';OUT=REV/'manuscript/generated'
+def load(name):return pd.read_csv(STAT/name)
+def esc(x):return str(x).replace('_',r'\_').replace('%',r'\%').replace('&',r'\&')
+def f(x,n=4):return f'{float(x):.{n}f}'
+def sf(x):return f'{float(x):+.4f}'
+def p(x):return '$<0.001$' if x<.001 else f'{x:.3f}'
+def table(name,headers,rows,caption,label):
+ lines=[r'\begin{table}[htbp]',r'\centering\small',r'\caption{'+caption+r'}\label{'+label+'}',r'\begin{adjustbox}{max width=\textwidth}',r'\begin{tabular}{'+'l'*len(headers)+r'}\toprule',' & '.join(headers)+r'\\\midrule']
+ lines+=[' & '.join(map(str,row))+r'\\' for row in rows]
+ lines+=[r'\bottomrule\end{tabular}',r'\end{adjustbox}',r'\end{table}']
+ (OUT/(name+'.tex')).write_text('\n'.join(lines)+'\n',encoding='utf-8')
+
+def main():
+ OUT.mkdir(parents=True,exist_ok=True);spec=importlib.util.spec_from_file_location('oldmacros',ROOT/'scripts/40_generate_macros.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);m.OUT=OUT
+ if m.main()!=0:raise RuntimeError('historical numerical macro generation refused its source graph')
+ spec=importlib.util.spec_from_file_location('oldtables',ROOT/'scripts/42_generate_tables.py');t=importlib.util.module_from_spec(spec);spec.loader.exec_module(t);t.OUT=REV/'manuscript/tables'
+ if t.main()!=0:raise RuntimeError('historical table generation failed')
+ for path in t.OUT.glob('*.tex'):
+  text=path.read_text().replace('50 trees','50 boosting rounds').replace('300 trees','300 boosting rounds').replace('supplementary table S3','the count-inference audit table').replace('supplementary table~S8','the DB5 table in this Supplementary').replace('main table~2','the historical attribution-versus-random table').replace('The full-array bipolar value reported in the main text (','An additional full-array bipolar value (')
+  text=text.replace(r'\begin{table*}',r'\begin{table}').replace(r'\end{table*}',r'\end{table}')
+  text=re.sub(r'(\\begin\{table\})\[[^\]]*\]',lambda match:match.group(1)+'[htbp]',text)
+  text=text.replace('SR-CFA','Penalized SHAP').replace(r'16 active gestures; chance Macro-F1 $\approx$ 0.063','16 active gestures').replace(r'as in main table~1',r'as in table~\ref{tab:sparse_ni}').replace(r'$p$: one-sided cluster-bootstrap $p$ for $H_0\colon \bar\Delta_k \le -\delta$',r'Historical $p$: the unshifted percentile-tail quantity at $-\delta$, not a null-centred test')
+  text=text.replace(r'so absolute values are lower than in table~\ref{tab:sparse_ni}',r'these scores use a different protocol from table~\ref{tab:sparse_ni}')
+  path.write_text(text,encoding='utf-8')
+ facts=[]
+ def macro(name,value,source,detail):facts.append({'macro':name,'value':str(value),'source':str(source.relative_to(ROOT)),'detail':detail})
+ dbchain=json.loads((REV/'reports/db5_feature_chain.json').read_text())
+ if dbchain['status']!='PASS':raise RuntimeError('DB5 feature-chain audit missing')
+ for suffix,key in [('BandLow','effective_low_hz'),('BandHigh','effective_high_hz'),('BandRequestedHigh','requested_high_hz'),('FeatureRows','windows')]:macro('RevDBFive'+suffix,int(dbchain[key]),REV/'reports/db5_feature_chain.json',key+' verified by complete raw reconstruction')
+ a=load('primary_matched_noninferiority.csv');b=load('primary_selection_comparison.csv').iloc[0];d=json.loads((STAT/'participant_degradation_summary.json').read_text());metrics=pd.read_csv(REV/'experiments/primary_predictions/participant_metrics.csv')
+ for cond,prefix in [('shap12','Shap'),('geom12','Geom')]:
+  row=a[(a.condition==cond)&(a.margin==.02)].iloc[0]
+  for key,col in [('Delta','mean_diff'),('Low','lcb95'),('High','ucb95')]:macro('Rev'+prefix+key,sf(row[col]),STAT/'primary_matched_noninferiority.csv',cond+' '+col)
+  macro('Rev'+prefix+'Mean',f(metrics[metrics.condition==cond].macro_f1.mean(),3),REV/'experiments/primary_predictions/participant_metrics.csv',cond+' participant mean')
+ macro('RevPrimaryFull',f(metrics[metrics.condition=='full16'].macro_f1.mean(),3),REV/'experiments/primary_predictions/participant_metrics.csv','full16 participant mean')
+ for key,col in [('GeomContrast','mean_diff'),('GeomContrastLow','lcb95'),('GeomContrastHigh','ucb95')]:macro('Rev'+key,sf(b[col]),STAT/'primary_selection_comparison.csv',col)
+ macro('RevGeomContrastP',f(b.p_raw,3),STAT/'primary_selection_comparison.csv','nominal Wilcoxon p')
+ for name,key in [('LossCount','n_loss_over_margin002'),('ImprovedCount','n_improved'),('WorstParticipant','worst_participant_id'),('MedianLoss','median'),('WorstLoss','min'),('BestChange','max'),('LossSD','sd')]:macro('Rev'+name,str(d[key]) if isinstance(d[key],int) else sf(d[key]),STAT/'participant_degradation_summary.json',key)
+ gestures=load('gesture_degradation.csv');dictionary=pd.read_csv(REV/'reproducibility/gesture_dictionary.csv');print(dictionary.columns.tolist())
+ macro('RevGestureLossCount',int(((gestures.p_holm<.05)&(gestures.mean_diff<0)).sum()),STAT/'gesture_degradation.csv','Holm over sixteen paired gesture contrasts')
+ worst=gestures.loc[gestures.mean_diff.idxmin()];macro('RevWorstGestureDelta',sf(worst.mean_diff),STAT/'gesture_degradation.csv','largest mean gesture loss');macro('RevWorstGestureLow',sf(worst.lcb95),STAT/'gesture_degradation.csv','largest mean gesture loss lower CI');macro('RevWorstGestureHigh',sf(worst.ucb95),STAT/'gesture_degradation.csv','largest mean gesture loss upper CI')
+ rows=[]
+ for cond in ('shap12','geom12'):
+  r=a[(a.condition==cond)&(a.margin==.02)].iloc[0];rows.append([{'shap12':'SHAP12','geom12':'Geometry12'}[cond],f(metrics[metrics.condition==cond].macro_f1.mean(),3),sf(r.mean_diff),f'[{sf(r.lcb95)}, {sf(r.ucb95)}]','yes' if r.ni_percentile_ci else 'no'])
+ table('primary_matched',['Subset','Mean F1','$\\bar\\Delta$','95\\% CI','NI at 0.02'],rows,'Matched primary protocol: reduced subset minus full16. Each row uses all 43 paired participants, 300 boosting rounds and 200,000 training windows.','tab:primary')
+ costs=load('matched_budget_cost_summary.csv');c=load('matched_budget_comparisons.csv');rows=[]
+ for _,r in c.iterrows():
+  rows.append([int(r.k),f(r.mean_shap,3),f(r.mean_permutation,3),sf(r.mean_diff),f'[{sf(r.lcb95)}, {sf(r.ucb95)}]',p(r.p_holm)])
+ interpret=[]
+ for _,r in c.iterrows():
+  mean_evidence='the mean interval supports a positive SHAP advantage' if r.lcb95>0 else 'the mean interval supports a negative SHAP contrast' if r.ucb95<0 else 'the mean advantage remains uncertain because its interval crosses zero'
+  rank_evidence='the corrected signed-rank contrast is significant' if r.p_holm<.05 else 'the corrected signed-rank contrast is not statistically detectable'
+  interpret.append('At $k='+str(int(r.k))+'$, '+mean_evidence+'; '+rank_evidence+'.')
+ (OUT/'matched_interpretation.tex').write_text(' '.join(interpret)+'\n',encoding='utf-8')
+ table('matched_budget',['$k$','SHAP','Permutation','$\\bar\\Delta$','95\\% CI','$p_{\\rm Holm}$'],rows,'Exploratory SHAP minus grouped-electrode permutation. The two methods share the same five inner models and validation observations per outer fold. Holm correction covers the two contrasts.','tab:matched')
+ for _,r in c.iterrows():
+  word='Six' if r.k==6 else 'Twelve'
+  for suffix,col in [('Diff','mean_diff'),('Low','lcb95'),('High','ucb95'),('P','p_holm')]:macro('RevMatched'+word+suffix,sf(r[col]) if suffix!='P' else ('< 0.001' if r[col]<.001 else '= '+f(r[col],3)),STAT/'matched_budget_comparisons.csv',f'k={int(r.k)} {col}')
+ ext=load('extension_penalty.csv');macro('RevPenaltyBenefitCount',int(ext.supports_benefit.sum()),STAT/'extension_penalty.csv','corrected positive contrasts out of twelve');macro('RevPenaltyHarmCount',int(ext.supports_harm.sum()),STAT/'extension_penalty.csv','corrected negative contrasts out of twelve')
+ activity=load('selection_change_audit.csv');twelve=activity[(activity.aggregation=='participant')&(activity.k==12)]
+ if len(twelve)!=3:raise ValueError('incomplete participant penalty layout-identity audit')
+ if (twelve.n_changed_subset==0).all():
+  description='At twelve electrodes, every fixed participant-level penalty selected the same physical site set as its unpenalized counterpart in all '+str(int(twelve.n.min()))+' outer folds. The same fixed-protocol cached fits were reused for these identical inputs, giving identical recorded scores; this is input identity rather than an equivalence test of different layouts.'
+ else:
+  description='At twelve electrodes, changed participant-level site sets occurred in '+', '.join(str(int(r.n_changed_subset))+'/'+str(int(r.n))+' folds for $\\lambda='+str(r['lambda'])+'$' for _,r in twelve.iterrows())+'. These descriptive changes do not select a penalty or establish equivalence.'
+ (OUT/'selection_change_interpretation.tex').write_text(description+'\n',encoding='utf-8')
+ selected=activity[activity.k.isin([4,6,8,12])]
+ table('selection_changes',['Aggregation','$\\lambda$','$k$','Changed sets','Mean Jaccard'],[[('Fold' if r.aggregation=='fold' else 'Participant'),r['lambda'],int(r.k),str(int(r.n_changed_subset))+'/'+str(int(r.n)),f(r.mean_jaccard,3)] for _,r in selected.iterrows()],'Post-hoc descriptive selector activity: each fixed positive penalty versus its unpenalized counterpart. Counts concern physical site sets, not rank order. Every row includes all 43 participants; the CSV retains all sixteen counts. No new models or equivalence tests were added.','tab:selectionchanges')
+ for _,r in costs.iterrows():
+  key={'shared_training_seconds':'Training','shap_selection_seconds':'Shap','permutation_selection_seconds':'Permutation'}[r.iloc[0]]
+  macro('RevCost'+key,f(r['mean'],1),STAT/'matched_budget_cost_summary.csv','mean measured seconds per outer fold; shared training counted once')
+ seedsummary=pd.read_csv(REV/'experiments/fixed_layout_seed_diagnostic/summary.csv');reverse=seedsummary[seedsummary.split=='dev_even_test_odd'].iloc[0]
+ for suffix,col in [('Hits','n_pass'),('N','n_seeds')]:macro('RevFixedSwapSeed'+suffix,int(reverse[col]),REV/'experiments/fixed_layout_seed_diagnostic/summary.csv',col+' for reverse fixed layout')
+ macro('RevFixedSwapSeedPercent',f(reverse.fraction_pass*100,0),REV/'experiments/fixed_layout_seed_diagnostic/summary.csv','percentage of seed reruns passing, not probability of NI')
+ ni=load('noninferiority_audit.csv');kstars=load('kstar_audit.csv');rf=load('alternative_classifier_noninferiority.csv');rows=[]
+ for name,label in [('primary_lambda0','Primary 250 ms'),('rest17','Rest included'),('w150','150 ms'),('w500','500 ms'),('db5','NinaPro DB5'),('bipolar','Derived bipolar')]:
+  g=ni[(ni.condition==name)&(ni.margin==.02)];k=7 if name=='bipolar' else 12;r=g[g.k==k].iloc[0];ks=kstars[(kstars.condition==name)&(kstars.margin==.02)].iloc[0]
+  def count(v):return 'none' if pd.isna(v) else str(int(v))
+  rows.append([label,str(int(r.n)),str(k),sf(r.mean_diff),f'[{sf(r.lcb95)}, {sf(r.ucb95)}]',count(ks.kstar_percentile),count(ks.kstar_null_studentized_holm)])
+ gni=ni[(ni.condition=='geometric_primary')&(ni.margin==.02)].sort_values('k');gk=kstars[(kstars.condition=='geometric_primary')&(kstars.margin==.02)].iloc[0]
+ for suffix,col in [('CI','kstar_percentile'),('Null','kstar_null_studentized_holm')]:macro('RevGeomKStar'+suffix,'none' if pd.isna(gk[col]) else int(gk[col]),STAT/'kstar_audit.csv','geometric primary margin0.02 '+col)
+ table('geometric_curve',['$k$','Mean F1','$\\bar\\Delta$','95\\% CI','NI CI','NI null Holm'],[[int(r.k),f(r.mean_k,3),sf(r.mean_diff),f'[{sf(r.lcb95)}, {sf(r.ucb95)}]','yes' if r.ni_percentile_ci else 'no','yes' if r.ni_null_holm else 'no'] for _,r in gni.iterrows()],'Full fixed geometric ordering under the primary 300-round, 200,000-window protocol. Each count uses all 43 participants and the common primary full16 reference. Count 12 and full16 reuse the exact matched metrics; remaining subsets were fitted separately. The count-family null test is exploratory and Holm-adjusted over fifteen reduced counts; geometry12 outcomes were known before this additional curve was planned.','tab:geometriccurve')
+ r=rf[rf.margin==.02].iloc[0];rows.append(['Random forest','43','12',sf(r.mean_diff),f'[{sf(r.lcb95)}, {sf(r.ucb95)}]','not estimated','not estimated'])
+ table('sensitivity',['Condition','$n$','$k$','$\\bar\\Delta$','95\\% CI','$k^*_{\\rm CI}$','$k^*_{\\rm null}$'],rows,'Within-condition reduced minus full-array comparisons at the 0.02 margin. Null denotes the exploratory null-centred studentized bootstrap with Holm correction across tested counts. The RF experiment tests only 12 and 16 electrodes, so it estimates no minimum count.','tab:sensitivity')
+ rows=[]
+ for _,r in gestures.iterrows():rows.append([str(int(r.gesture_id)),f(r.mean_full16,3),f(r.mean_shap12,3),sf(r.mean_diff),f'[{sf(r.lcb95)}, {sf(r.ucb95)}]',p(r.p_holm)])
+ table('gesture',['Gesture ID','Full16','SHAP12','$\\bar\\Delta$','95\\% CI','$p_{\\rm Holm}$'],rows,'Paired participant-level gesture F1: SHAP12 minus full16, with Holm correction across all sixteen active gestures. Numeric IDs follow the dataset MotionSequence.txt, reproduced in the gesture dictionary.','tab:gesture')
+ table('penalty',['$\\lambda$','$k$','$\\bar\\Delta$','95\\% CI','$p_{\\rm Holm}$'],[[r['lambda'],int(r.k),sf(r.mean_diff),f'[{sf(r.lcb95)}, {sf(r.ucb95)}]',p(r.p_holm)] for _,r in ext.iterrows()],'Participant aggregation: penalized minus unpenalized attribution. Holm correction covers all twelve tests; all fixed penalty settings are reported.','tab:penalty')
+ extfolder=REV/'experiments/attribution_extension';ec=pd.read_csv(extfolder/'paired_comparisons.csv');en=pd.read_csv(extfolder/'non_inferiority.csv')
+ table('participant_extension',['$\\lambda$','$k$','$\\bar\\Delta$','95\\% CI','$p_{\\rm Holm}$'],[[r['lambda'],int(r.k),sf(r.mean_diff),f'[{sf(r.lcb95)}, {sf(r.ucb95)}]',p(r.p_holm)] for _,r in ec[ec.k==12].iterrows()],'Fresh isolated participant-level extension minus original fold aggregation at count 12. Holm adjustment covers all sixty reduced-count comparisons across four penalties; full results are in the paired-comparison CSV.','tab:personextension')
+ fixed=pd.read_csv(ROOT/'artifacts/completion_analyses/fixed_layout/summary.csv');fixed=fixed[fixed['lambda']==0]
+ table('fixed_layout',['Development / test','$n$ test','Dropped sites','$\\bar\\Delta$','95\\% CI','NI'],[[('odd / even' if r.split=='dev_odd_test_even' else 'even / odd'),int(r.n_test),str(r.dropped).replace(';',', '),sf(r.mean_diff),f'[{float(r.lcb95):+.6f}, {float(r.ucb95):+.6f}]','yes' if r.non_inferior_002 else 'no'] for _,r in fixed.iterrows()],'Two exploratory split-derived layouts at twelve electrodes, fitted with all development windows. Six-decimal limits preserve the strict boundary decision. Layout estimation excludes test participants, but count selection had already used the full cohort. All penalties produced the same layout within each split.','tab:fixedlayouts')
+ rows=[]
+ for _,r in kstars.iterrows():
+  if r.condition.startswith('primary_lambda') and r.condition!='primary_lambda0':continue
+  count=lambda v:'none' if pd.isna(v) else str(int(v))
+  display={'bipolar':'Derived bipolar','db5':'NinaPro DB5','rest17':'Rest included','w150':'150 ms','w500':'500 ms','geometric_primary':'Geometric'}.get(r.condition)
+  if display is None:
+   prefix='Participant' if r.condition.startswith('participant_lambda') else 'Primary'
+   display=prefix+' ($\\lambda='+r.condition.split('lambda')[1]+'$)'
+  rows.append([display,f(r.margin,2),count(r.kstar_percentile),count(r.kstar_historical_holm),count(r.kstar_null_studentized_holm)])
+ table('ni_audit',['Condition','Margin','Percentile CI','Historical Holm','Null-centred Holm'],rows,'Count decisions from the historical percentile rule, original percentile-tail Holm calculation and exploratory null-centred studentized bootstrap. Inference uses participants; each condition and margin is its own count family.','tab:niaudit')
+ stage_labels={'shared_training_seconds':'Shared inner training','shap_selection_seconds':'TreeSHAP selection','permutation_selection_seconds':'Grouped permutation'};rows=[[stage_labels[r.iloc[0]],f(r['mean'],1),f(r['std'],1),f(r['min'],1),f(r['max'],1)] for _,r in costs.iterrows()]
+ table('selection_costs',['Stage','Mean s','SD s','Min s','Max s'],rows,'Observed resource-matched selection-stage runtime per outer fold on the recorded workstation. Inner training is shared and counted once. Early folds overlapped CPU RF fits, so timings are observational rather than an isolated benchmark. No online or real-time latency is inferred.','tab:costs')
+ (OUT/'revision_macros.tex').write_text('% Generated from revision result files.\n'+'\n'.join('\\newcommand{\\'+r['macro']+'}{'+r['value']+'}' for r in facts)+'\n',encoding='utf-8');pd.DataFrame(facts).to_csv(OUT/'revision_macro_provenance.csv',index=False)
+ # Export source tables exactly, retaining full precision for independent review.
+ for path in STAT.glob('*.csv'):(REV/'tables'/path.name).write_bytes(path.read_bytes())
+ print('PASS: current revision tables and numeric macros generated')
+if __name__=='__main__':main()

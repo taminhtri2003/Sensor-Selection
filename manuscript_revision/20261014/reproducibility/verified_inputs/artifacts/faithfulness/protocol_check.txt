@@ -1,0 +1,6 @@
+matched_cells=172
+max_abs_diff=8.389705e-03
+mean_abs_diff=1.406889e-03
+frac_identical=0.2035
+same_channels_frac=1.0
+note=same channels and protocol; differences arise from per-subset vs global z-scoring (float32 rounding) feeding XGBoost hist binning

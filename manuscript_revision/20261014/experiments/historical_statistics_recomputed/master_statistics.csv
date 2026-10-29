@@ -1,0 +1,16 @@
+quantity,model,k,n_participants,estimate,lcb95,ucb95,sd,min,max,lambda,margin,k_star_found,note
+full_channel_macro_f1,M_RandomForest,16.0,43.0,0.5015554723957028,0.4747076802024051,0.5277132999989228,0.08959955144700883,0.3456266183712543,0.6695398828457143,,,,
+full_channel_macro_f1,M_SVM,16.0,43.0,0.5377670291317825,0.5129306627147792,0.5622798722117445,0.08451899390167787,0.3828375187693739,0.7176419378329288,,,,
+full_channel_macro_f1,M_XGBoost,16.0,43.0,0.5423130875156109,0.5167654943301959,0.5667493445912289,0.08509493251513751,0.3851066309026806,0.7019157752544817,,,,
+k_star,M_XGB,,,14.0,,,,,,0.0,0.01,True,smallest non-inferior k=14
+k_star,M_XGB,,,12.0,,,,,,0.0,0.02,True,smallest non-inferior k=12
+k_star,M_XGB,,,11.0,,,,,,0.0,0.03,True,smallest non-inferior k=11
+k_star,M_XGB,,,14.0,,,,,,0.25,0.01,True,smallest non-inferior k=14
+k_star,M_XGB,,,12.0,,,,,,0.25,0.02,True,smallest non-inferior k=12
+k_star,M_XGB,,,11.0,,,,,,0.25,0.03,True,smallest non-inferior k=11
+k_star,M_XGB,,,14.0,,,,,,0.5,0.01,True,smallest non-inferior k=14
+k_star,M_XGB,,,12.0,,,,,,0.5,0.02,True,smallest non-inferior k=12
+k_star,M_XGB,,,11.0,,,,,,0.5,0.03,True,smallest non-inferior k=11
+k_star,M_XGB,,,14.0,,,,,,1.0,0.01,True,smallest non-inferior k=14
+k_star,M_XGB,,,12.0,,,,,,1.0,0.02,True,smallest non-inferior k=12
+k_star,M_XGB,,,11.0,,,,,,1.0,0.03,True,smallest non-inferior k=11

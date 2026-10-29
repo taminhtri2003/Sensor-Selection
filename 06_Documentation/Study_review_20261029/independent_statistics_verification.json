@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "scope": "Independent reconstruction from saved participant-level metrics; no model refitting.",
+  "bootstrap_resamples": 10000,
+  "bootstrap_seed": 20260728,
+  "conditions": 14,
+  "count_margin_rows_recomputed": 606,
+  "minimum_count_rows_recomputed": 42,
+  "full16_mean": 0.5413133059496598,
+  "shap12_mean": 0.5280093452336662,
+  "shap12_delta": -0.013303960715993532,
+  "shap12_interval": [
+    -0.016040716492357672,
+    -0.010598165000355625
+  ],
+  "participants_losing_more_than_002": 11,
+  "participants_declining": 42,
+  "worst_participant": 27,
+  "worst_delta": -0.036071473188607595,
+  "shap_minus_geometry": 0.006042816298044939,
+  "shap_minus_geometry_interval": [
+    -0.0010192586926532556,
+    0.012736858952475406
+  ],
+  "source_sha256": {
+    "artifacts/bipolar/bipolar_sparse_curve.csv": "5bf2f905ece9c3395701d9274516cbcb811f4c1c8028a5d2a42bec73e216cdaf",
+    "artifacts/completion_analyses/rest17/sparse_curve_subject_metrics.csv": "fe49843ec904d2f104c503a4e33cc1870b8c849978fcd158423478539aeaeda0",
+    "artifacts/completion_analyses/w150/sparse_curve_subject_metrics.csv": "279281b751917dc8a009d53517fb1655fcca697f324da9ff8252caba4188f33f",
+    "artifacts/completion_analyses/w500/sparse_curve_subject_metrics.csv": "52f18a51183fc97de8e4b8f6168c4aa7b0351e0b9664c7aff040eef920b617c9",
+    "artifacts/db5/db5_sparse_curve.csv": "38c296e9d43d6b838040e550b93f0fd1a4908aba56c7b180a0633fbf8a0ce38d",
+    "artifacts/metrics/sparse_curve_subject_metrics.csv": "9a100fb2fc64c1b67ae9d1ac59146380bb78240ab33245861a5defc1237972f1",
+    "manuscript_revision/20261014/experiments/attribution_extension/sparse_curve.csv": "47a810136fdda58ce1133f403120abf591c38c1ce51e777ca846c059ab4244e2",
+    "manuscript_revision/20261014/experiments/geometric_curve/sparse_curve_subject_metrics.csv": "c8ffd540860502593d86e4afd8b2a8dd3e52f315f0db233438802c04c1e4c21f",
+    "manuscript_revision/20261014/experiments/primary_predictions/participant_metrics.csv": "bc469ae7564b60bc3d030b072f2bb3ce4ea4d5a3b304431323e612d1ee8b5777",
+    "manuscript_revision/20261014/tables/kstar_audit.csv": "69331cdb99fc9049a764c01966902de647840a88cb71761a7054b7981ce1d472",
+    "manuscript_revision/20261014/tables/noninferiority_audit.csv": "a5ff14ba6068f0247a93a23f22c6c857307973c15fdccb715c8df53c4322f988",
+    "manuscript_revision/20261014/tables/primary_matched_noninferiority.csv": "cc192701e65f1b3826e2602ab660275187a1a2bf24323725cc36e30bae3b8e5d",
+    "manuscript_revision/20261014/tables/primary_selection_comparison.csv": "2bd61fe5bc4589747344fc8ec2461be861fb22b438c626e0d3417e707eb87ed6"
+  }
+}

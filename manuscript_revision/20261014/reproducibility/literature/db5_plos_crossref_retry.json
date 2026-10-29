@@ -1,0 +1,730 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          7
+        ]
+      ],
+      "date-time": "2026-10-07T23:06:10Z",
+      "timestamp": 1791414370767,
+      "version": "4.3.3"
+    },
+    "reference-count": 44,
+    "publisher": "Public Library of Science (PLoS)",
+    "issue": "10",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2017,
+              10,
+              12
+            ]
+          ],
+          "date-time": "2017-10-12T00:00:00Z",
+          "timestamp": 1507766400000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "funder": [
+      {
+        "name": "Schweizerischer Nationalfonds zur F\u00f6rderung der Wissenschaftlichen Forschung (CH)",
+        "award": [
+          "132700"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "132700"
+            ]
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100001711",
+        "name": "Schweizerischer Nationalfonds zur F\u00f6rderung der Wissenschaftlichen Forschung",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "410160837"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "410160837"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100001711",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "www.plosone.org"
+      ],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "PLoS ONE"
+    ],
+    "DOI": "10.1371/journal.pone.0186132",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2017,
+          10,
+          12
+        ]
+      ],
+      "date-time": "2017-10-12T13:50:39Z",
+      "timestamp": 1507816239000
+    },
+    "page": "e0186132",
+    "update-policy": "https://doi.org/10.1371/journal.pone.corrections_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 400,
+    "title": [
+      "Comparison of six electromyography acquisition setups on hand movement classification tasks"
+    ],
+    "prefix": "10.1371",
+    "volume": "12",
+    "author": [
+      {
+        "given": "Stefano",
+        "family": "Pizzolato",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Luca",
+        "family": "Tagliapietra",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Matteo",
+        "family": "Cognolato",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Monica",
+        "family": "Reggiani",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Henning",
+        "family": "M\u00fcller",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-5397-2063",
+        "authenticated-orcid": true,
+        "given": "Manfredo",
+        "family": "Atzori",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "340",
+    "published-online": {
+      "date-parts": [
+        [
+          2017,
+          10,
+          12
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "issue": "11",
+        "key": "ref1",
+        "first-page": "598",
+        "article-title": "Myocoder studies of multiple myopotential response",
+        "volume": "48",
+        "author": "FR Finley",
+        "year": "1967",
+        "journal-title": "Archives of Physical Medicine and Rehabilitation"
+      },
+      {
+        "issue": "4",
+        "key": "ref2",
+        "first-page": "797",
+        "article-title": "The Extraction of Neural Information from the Surface EMG for the Control of Upper-Limb Prostheses: Emerging Avenues and Challenges",
+        "volume": "22",
+        "author": "D Farina",
+        "year": "2014",
+        "journal-title": "The Extraction of Neural Information from the Surface EMG for the Control of Upper-Limb Prostheses: Emerging Avenues and Challenges"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "crossref",
+        "first-page": "48",
+        "DOI": "10.1109/RBME.2010.2085429",
+        "article-title": "Control of hand prostheses using peripheral information",
+        "volume": "3",
+        "author": "S Micera",
+        "year": "2010",
+        "journal-title": "IEEE Reviews in Biomedical Engineering"
+      },
+      {
+        "issue": "5",
+        "key": "ref4",
+        "doi-asserted-by": "crossref",
+        "first-page": "663",
+        "DOI": "10.1109/TNSRE.2012.2196711",
+        "article-title": "Control of Upper Limb Prostheses: Terminology and Proportional Myoelectric Control\u2013A Review",
+        "volume": "20",
+        "author": "A Fougner",
+        "year": "2012",
+        "journal-title": "IEEE Transactions on Neural Systems and Rehabilitation Engineering"
+      },
+      {
+        "issue": "162",
+        "key": "ref5",
+        "article-title": "Control Capabilities of Myoelectric Robotic Prostheses by Hand Amputees: A Scientific Research and Market Overview",
+        "volume": "9",
+        "author": "M Atzori",
+        "year": "2015",
+        "journal-title": "Frontiers in Systems Neuroscience"
+      },
+      {
+        "issue": "6",
+        "key": "ref6",
+        "doi-asserted-by": "crossref",
+        "first-page": "643",
+        "DOI": "10.1682/JRRD.2010.09.0177",
+        "article-title": "Electromyogram pattern recognition for control of powered upper-limb prostheses: State of the art and challenges for clinical use",
+        "volume": "48",
+        "author": "E Scheme",
+        "year": "2011",
+        "journal-title": "The Journal of Rehabilitation Research and Development"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hargrove L, Losier Y, Lock B, Englehart K, Hudgins B. A real-time pattern recognition based myoelectric control usability study implemented in a virtual environment. In: Engineering in Medicine and Biology Society, 2007. EMBS 2007. 29th Annual International Conference of the IEEE. IEEE; 2007. p. 4842\u20134845.",
+        "DOI": "10.1109/IEMBS.2007.4353424"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.3389/fnbot.2016.00009",
+        "article-title": "Deep Learning with Convolutional Neural Networks Applied to Electromyography Data: A Resource for the Classification of Movements for Prosthetic Hands",
+        "volume": "10",
+        "author": "M Atzori",
+        "year": "2016",
+        "journal-title": "Frontiers in Neurorobotics"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "crossref",
+        "unstructured": "M\u00fcller H, Kalpathy-Cramer J, Eggel I, Bedrick S, Said R, Bakke B, et al. Overview of the CLEF 2009 medical image retrieval track. In: Working Notes of CLEF 2009, Corfu, Greece; 2009.",
+        "DOI": "10.1007/978-3-642-15751-6_8"
+      },
+      {
+        "key": "ref10",
+        "unstructured": "Everingham M, van Gool L, Williams CKI, Winn J, Zisserman A. The PASCAL Visual Object Classes Challenge 2010 (VOC2010) Results; 2010. <ext-link xmlns:xlink=\"http://www.w3.org/1999/xlink\" ext-link-type=\"uri\" xlink:href=\"http://www.pascal-network.org/challenges/VOC/voc2010/workshop\" xlink:type=\"simple\">http://www.pascal-network.org/challenges/VOC/voc2010/workshop</ext-link>."
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1038/sdata.2014.53",
+        "article-title": "Electromyography data for non-invasive naturally-controlled robotic hand prostheses",
+        "volume": "1",
+        "author": "M Atzori",
+        "year": "2014",
+        "journal-title": "Scientific Data"
+      },
+      {
+        "issue": "1",
+        "key": "ref12",
+        "doi-asserted-by": "crossref",
+        "first-page": "73",
+        "DOI": "10.1109/TNSRE.2014.2328495",
+        "article-title": "Characterization of a benchmark database for myoelectric movement classification",
+        "volume": "23",
+        "author": "M Atzori",
+        "year": "2015",
+        "journal-title": "Neural Systems and Rehabilitation Engineering, IEEE Transactions on"
+      },
+      {
+        "issue": "4",
+        "key": "ref13",
+        "doi-asserted-by": "crossref",
+        "first-page": "735",
+        "DOI": "10.1109/TNSRE.2014.2303394",
+        "article-title": "The movement error rate for evaluation of machine learning methods for sEMG-based hand movement classification",
+        "volume": "22",
+        "author": "A Gijsberts",
+        "year": "2014",
+        "journal-title": "IEEE transactions on neural systems and rehabilitation engineering"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Atzori M, Gijsberts A, M\u00fcller H, Caputo B. Classification of hand movements in amputated subjects by sEMG and accelerometers. In: Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC); 2014. p. 63.",
+        "DOI": "10.1109/EMBC.2014.6944388"
+      },
+      {
+        "issue": "3",
+        "key": "ref15",
+        "doi-asserted-by": "crossref",
+        "first-page": "302",
+        "DOI": "10.1109/10.914793",
+        "article-title": "A wavelet-based continuous classification scheme for multifunction myoelectric control",
+        "volume": "48",
+        "author": "K Englehart",
+        "year": "2001",
+        "journal-title": "IEEE Transactions on Biomedical Engineering"
+      },
+      {
+        "issue": "4",
+        "key": "ref16",
+        "doi-asserted-by": "crossref",
+        "first-page": "1070",
+        "DOI": "10.1109/TBME.2008.2007967",
+        "article-title": "Extracting simultaneous and proportional neural control information for multiple degree of freedom prostheses from the surface electromyographic signal",
+        "volume": "56",
+        "author": "N Jiang",
+        "year": "2009",
+        "journal-title": "IEEE Transactions on Biomedical Engineering"
+      },
+      {
+        "issue": "3",
+        "key": "ref17",
+        "doi-asserted-by": "crossref",
+        "first-page": "501",
+        "DOI": "10.1109/TNSRE.2013.2278411",
+        "article-title": "Intuitive, online, simultaneous, and proportional myoelectric control over two degrees-of-freedom in upper limb amputees",
+        "volume": "22",
+        "author": "N Jiang",
+        "year": "2014",
+        "journal-title": "Neural Systems and Rehabilitation Engineering, IEEE Transactions on"
+      },
+      {
+        "issue": "3",
+        "key": "ref18",
+        "doi-asserted-by": "crossref",
+        "first-page": "345",
+        "DOI": "10.1682/JRRD.2014.09.0218",
+        "article-title": "Clinical Parameter Effect on the Capability to Control Myoelectric Robotic Prosthetic Hands",
+        "volume": "53",
+        "author": "M Atzori",
+        "year": "2016",
+        "journal-title": "Journal of Rehabilitation Research and Development"
+      },
+      {
+        "key": "ref19",
+        "first-page": "71",
+        "article-title": "Computer Vision\u2013ECCV 2010",
+        "author": "J Deng",
+        "year": "2010"
+      },
+      {
+        "issue": "6",
+        "key": "ref20",
+        "doi-asserted-by": "crossref",
+        "first-page": "719",
+        "DOI": "10.1682/JRRD.2010.08.0161",
+        "article-title": "Myoelectric forearm prostheses: state of the art from a user-centered perspective",
+        "volume": "48",
+        "author": "B Peerdeman",
+        "year": "2011",
+        "journal-title": "Journal of Rehabilitation Research and Development"
+      },
+      {
+        "issue": "1",
+        "key": "ref21",
+        "doi-asserted-by": "crossref",
+        "first-page": "35",
+        "DOI": "10.1007/s00422-008-0278-1",
+        "article-title": "Surface {EMG} in advanced hand prosthetics",
+        "volume": "100",
+        "author": "C Castellini",
+        "year": "2009",
+        "journal-title": "Biological Cybernetics"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "crossref",
+        "first-page": "185",
+        "DOI": "10.1109/TNSRE.2009.2039619",
+        "article-title": "Quantifying pattern recognition-based myoelectric control of multifunctional transradial prostheses",
+        "volume": "vol. 18",
+        "author": "G Li",
+        "year": "2010",
+        "journal-title": "IEEE Trans Neural Syst Rehabil Eng"
+      },
+      {
+        "issue": "5",
+        "key": "ref23",
+        "doi-asserted-by": "crossref",
+        "first-page": "1427",
+        "DOI": "10.1109/TBME.2008.2005485",
+        "article-title": "Decoding of individuated finger movements using surface electromyography",
+        "volume": "56",
+        "author": "FV Tenore",
+        "year": "2009",
+        "journal-title": "IEEE Transactions on Biomedical Engineering"
+      },
+      {
+        "key": "ref24",
+        "first-page": "813",
+        "article-title": "Replace, Repair, Restore, Relieve\u2013Bridging Clinical and Engineering Solutions in Neurorehabilitation",
+        "author": "M Vivian",
+        "year": "2014"
+      },
+      {
+        "issue": "6",
+        "key": "ref25",
+        "first-page": "445",
+        "article-title": "Influence of anatomical, physical, and detection-system parameters on surface EMG",
+        "volume": "86",
+        "author": "D Farina",
+        "year": "2002",
+        "journal-title": "Influence of anatomical, physical, and detection-system parameters on surface EMG"
+      },
+      {
+        "key": "ref26",
+        "article-title": "Grasp Taxonomy Comparison",
+        "author": "T Feix",
+        "year": "2008"
+      },
+      {
+        "issue": "3",
+        "key": "ref27",
+        "doi-asserted-by": "crossref",
+        "first-page": "269",
+        "DOI": "10.1109/70.34763",
+        "article-title": "On grasp choice, grasp models, and the design of hands for manufacturing tasks",
+        "volume": "5",
+        "author": "MR Cutkosky",
+        "year": "1989",
+        "journal-title": "IEEE Transactions on Robotics and Automation"
+      },
+      {
+        "issue": "7",
+        "key": "ref28",
+        "doi-asserted-by": "crossref",
+        "first-page": "437",
+        "DOI": "10.5014/ajot.34.7.437",
+        "article-title": "Patterns of static prehension in normal hands",
+        "volume": "34",
+        "author": "N Kamakura",
+        "year": "1980",
+        "journal-title": "The American journal of occupational therapy: official publication of the American Occupational Therapy Association"
+      },
+      {
+        "key": "ref29",
+        "article-title": "Developmental and Functional Hand Grasps",
+        "author": "SJ Edwards",
+        "year": "2002"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Kuzborskij I, Gijsberts A, Caputo B. On the Challenge of Classifying 52 Hand Movements from Surface Electromyography. In: Proceedings of EMBC\u2014the 34th annual conference of the IEEE Engineering in Medicine and Biology Society; 2012. p. 4931\u20134937.",
+        "DOI": "10.1109/EMBC.2012.6347099"
+      },
+      {
+        "issue": "1",
+        "key": "ref31",
+        "doi-asserted-by": "crossref",
+        "first-page": "67",
+        "DOI": "10.1155/S1110865701000191",
+        "article-title": "Onset detection in surface electromyographic signals: a systematic comparison of methods",
+        "volume": "2001",
+        "author": "G Staude",
+        "year": "2001",
+        "journal-title": "EURASIP Journal on Applied Signal Processing"
+      },
+      {
+        "issue": "4",
+        "key": "ref32",
+        "doi-asserted-by": "crossref",
+        "first-page": "378",
+        "DOI": "10.1016/0013-4694(86)90163-X",
+        "article-title": "A computer based method for automated measurement of the periods of muscular activity from an EMG and its application to locomotor EMGs",
+        "volume": "64",
+        "author": "M Lidierth",
+        "year": "1986",
+        "journal-title": "Electroencephalography and clinical neurophysiology"
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Atzori M, M\u00fcller H. Electromyography Low Pass Filtering Effects on the Classification of Hand Movements in Amputated Subjects. In: SCIEI International Conference on Digital Signal Processing (ICDSP); 2015. p. 19\u201321.",
+        "DOI": "10.12720/ijsps.3.2.118-122"
+      },
+      {
+        "issue": "6",
+        "key": "ref34",
+        "doi-asserted-by": "crossref",
+        "first-page": "1779",
+        "DOI": "10.1007/s10439-011-0265-x",
+        "article-title": "Conditioning and sampling issues of EMG signals in motion recognition of multifunctional myoelectric prostheses",
+        "volume": "39",
+        "author": "G Li",
+        "year": "2011",
+        "journal-title": "Annals of biomedical engineering"
+      },
+      {
+        "issue": "1",
+        "key": "ref35",
+        "doi-asserted-by": "crossref",
+        "first-page": "41",
+        "DOI": "10.1007/BF00421103",
+        "article-title": "EMG frequency spectrum, muscle structure, and fatigue during dynamic contractions in man",
+        "volume": "42",
+        "author": "PV Komi",
+        "year": "1979",
+        "journal-title": "European Journal of Applied Physiology and Occupational Physiology"
+      },
+      {
+        "issue": "1",
+        "key": "ref36",
+        "doi-asserted-by": "crossref",
+        "first-page": "48",
+        "DOI": "10.3109/03093640309167976",
+        "article-title": "The effect of subcutaneous fat on myoelectric signal amplitude and cross-talk",
+        "volume": "27",
+        "author": "TA Kuiken",
+        "year": "2003",
+        "journal-title": "Prosthetics and Orthotics International"
+      },
+      {
+        "issue": "1",
+        "key": "ref37",
+        "doi-asserted-by": "crossref",
+        "first-page": "82",
+        "DOI": "10.1109/10.204774",
+        "article-title": "A new strategy for multifunction myoelectric control",
+        "volume": "40",
+        "author": "B Hudgins",
+        "year": "1993",
+        "journal-title": "Biomedical Engineering, IEEE Transactions on"
+      },
+      {
+        "issue": "7",
+        "key": "ref38",
+        "doi-asserted-by": "crossref",
+        "first-page": "848",
+        "DOI": "10.1109/TBME.2003.813539",
+        "article-title": "A robust, real-time control scheme for multifunction myoelectric control",
+        "volume": "50",
+        "author": "K Englehart",
+        "year": "2003",
+        "journal-title": "IEEE Transactions on Biomedical Engineering"
+      },
+      {
+        "issue": "4",
+        "key": "ref39",
+        "doi-asserted-by": "crossref",
+        "first-page": "324",
+        "DOI": "10.1109/86.481972",
+        "article-title": "EMG feature evaluation for movement control of upper extremity prostheses",
+        "volume": "3",
+        "author": "M Zardoshti-Kermani",
+        "year": "1995",
+        "journal-title": "IEEE Transactions on Rehabilitation Engineering"
+      },
+      {
+        "issue": "2",
+        "key": "ref40",
+        "doi-asserted-by": "crossref",
+        "first-page": "169",
+        "DOI": "10.1016/j.bspc.2007.09.002",
+        "article-title": "Multi-channel surface EMG classification using support vector machines and signal-based wavelet optimization",
+        "volume": "3",
+        "author": "M Lucas",
+        "year": "2008",
+        "journal-title": "Biomedical Signal Processing and Control"
+      },
+      {
+        "key": "ref41",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1017/CBO9780511801389",
+        "article-title": "An Introduction to Support Vector Machines and Other Kernel-based Learning Methods",
+        "author": "N Cristianini",
+        "year": "2000"
+      },
+      {
+        "key": "ref42",
+        "doi-asserted-by": "crossref",
+        "first-page": "5",
+        "DOI": "10.1023/A:1010933404324",
+        "article-title": "Random forests",
+        "volume": "45",
+        "author": "L Breiman",
+        "year": "2001",
+        "journal-title": "Machine Learning"
+      },
+      {
+        "issue": "4",
+        "key": "ref43",
+        "doi-asserted-by": "crossref",
+        "first-page": "305",
+        "DOI": "10.1615/CritRevBiomedEng.v38.i4.10",
+        "article-title": "Advances in surface EMG: recent progress in detection and processing techniques",
+        "volume": "38",
+        "author": "R Merletti",
+        "year": "2010",
+        "journal-title": "Critical reviews in biomedical engineering"
+      },
+      {
+        "key": "ref44",
+        "first-page": "908",
+        "article-title": "The effect of perspiration on the sEMG amplitude and power spectrum",
+        "volume": "2",
+        "author": "AE Mohammad",
+        "year": "2015",
+        "journal-title": "Journal of Electromyography and Kinesiology"
+      }
+    ],
+    "container-title": [
+      "PLOS ONE"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "http://dx.plos.org/10.1371/journal.pone.0186132",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2020,
+          10,
+          19
+        ]
+      ],
+      "date-time": "2020-10-19T15:10:37Z",
+      "timestamp": 1603120237000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dx.plos.org/10.1371/journal.pone.0186132"
+      }
+    },
+    "subtitle": [],
+    "editor": [
+      {
+        "given": "Dingguo",
+        "family": "Zhang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "editor"
+          }
+        ]
+      }
+    ],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2017,
+          10,
+          12
+        ]
+      ]
+    },
+    "references-count": 44,
+    "journal-issue": {
+      "issue": "10",
+      "published-online": {
+        "date-parts": [
+          [
+            2017,
+            10,
+            12
+          ]
+        ]
+      }
+    },
+    "URL": "https://doi.org/10.1371/journal.pone.0186132",
+    "relation": {},
+    "ISSN": [
+      "1932-6203"
+    ],
+    "issn-type": [
+      {
+        "value": "1932-6203",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2017,
+          10,
+          12
+        ]
+      ]
+    }
+  }
+}

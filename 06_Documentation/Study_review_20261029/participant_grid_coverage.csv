@@ -1,0 +1,15 @@
+condition,participants,counts,rows
+primary_lambda0,43,16,688
+participant_lambda0,43,16,688
+primary_lambda0.25,43,16,688
+participant_lambda0.25,43,16,688
+primary_lambda0.5,43,16,688
+participant_lambda0.5,43,16,688
+primary_lambda1,43,16,688
+participant_lambda1,43,16,688
+rest17,43,16,688
+w150,43,16,688
+w500,43,16,688
+geometric_primary,43,16,688
+db5,10,16,160
+bipolar,43,8,344

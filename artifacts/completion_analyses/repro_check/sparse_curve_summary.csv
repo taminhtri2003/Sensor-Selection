@@ -1,0 +1,3 @@
+model,lambda,channels_k,n_participants,mean_macro_f1,sd_macro_f1,mean_accuracy
+M_XGB,0.0,12,1,0.55028204441207,,0.5809676434676435
+M_XGB,0.0,16,1,0.5677541065466303,,0.5956196581196581

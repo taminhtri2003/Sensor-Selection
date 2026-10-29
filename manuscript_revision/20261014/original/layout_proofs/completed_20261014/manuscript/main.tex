@@ -1,0 +1,50 @@
+\documentclass{iopjournal}
+\usepackage{amssymb,amsmath,booktabs,array,multirow,adjustbox,makecell,microtype}
+\usepackage[round]{natbib}
+\usepackage{placeins,ragged2e}
+\hypersetup{hidelinks}
+\AtBeginDocument{\justifying}
+\fancyhead[L]{\small Cross-fitted forearm electrode reduction}
+\fancyhead[C]{}\fancyhead[R]{\small Ta \textit{et al}}
+\newcommand{\rev}[1]{#1}\newcommand{\chg}[1]{#1}
+\input{generated/results_macros.tex}
+\input{generated/revision_macros.tex}
+\renewcommand{\topfraction}{0.9}\renewcommand{\bottomfraction}{0.85}\renewcommand{\textfraction}{0.08}\renewcommand{\floatpagefraction}{0.75}
+\widowpenalty=10000\clubpenalty=10000\displaywidowpenalty=10000
+\begin{document}
+\title{Subject-independent forearm sEMG electrode reduction with cross-fitted attribution and non-inferiority testing}
+\author{Minh-Tri Ta$^1$, Hoang-Khang Phan$^{2,3}$ and Le-Giang Tran$^{4,*}$}
+
+\affil{$^1$College of Engineering and Computer Science, VinUniversity, Hanoi, Vietnam}
+
+\affil{$^2$Department of Biomedical Engineering, Faculty of Applied Science, Ho Chi Minh City University of Technology (HCMUT), 268 Ly Thuong Kiet Street, District 10, Ho Chi Minh City, Vietnam}
+
+\affil{$^3$Vietnam National University Ho Chi Minh City, Linh Trung Ward, Thu Duc City, Ho Chi Minh City, Vietnam}
+
+\affil{$^4$Faculty of Electronics Technology, Industrial University of Ho Chi Minh City, Ho Chi Minh City, Vietnam}
+
+\affil{$^*$Author to whom any correspondence should be addressed.}
+
+\email{tranlegiang@iuh.edu.vn}
+
+\keywords{surface electromyography, electrode selection, cross-fitting, SHAP, non-inferiority, participant-independent validation}
+\begin{abstract}
+\textit{Objective.} Determine how many forearm surface electromyography electrodes can be removed while preserving mean gesture recognition for unseen participants, and assess the additional value of attribution-based selection.
+\textit{Approach.} We analyzed 43 GRABMyo participants using sixteen monopolar electrodes and sixteen active gestures. Participant-disjoint inner cross-fitting estimated TreeSHAP rankings within each outer leave-one-subject-out fold. Reduced models were retrained and compared with full16 using participant-bootstrap intervals and a predefined 0.02 Macro-F1 engineering tolerance. Exploratory checks included primary-budget geometric selection, paired gesture predictions, shared-resource permutation selection, and task, window and classifier sensitivities.
+\textit{Main results.} SHAP12 achieved mean Macro-F1 \RevShapMean\ versus \RevPrimaryFull\ for full16; its change was \RevShapDelta\ (95\% CI \RevShapLow\ to \RevShapHigh). Twelve was the smallest qualifying count. Nevertheless, \RevLossCount\ participants lost more than 0.02 and \RevGestureLossCount\ gestures showed corrected declines. Geometric12 did not establish non-inferiority, and the direct SHAP12 mean advantage remained uncertain (\RevGeomContrast; 95\% CI \RevGeomContrastLow\ to \RevGeomContrastHigh). Attribution outperformed mean random subsets in the lighter comparison. Shared-resource SHAP outperformed grouped permutation at six electrodes, but its twelve-electrode advantage remained uncertain. Stability regularization did not establish an improvement.
+\textit{Significance.} One quarter of this monopolar array could be removed within the mean tolerance under offline participant-independent evaluation. This validates a selection procedure rather than one locked physical layout; individual losses and uncertain transfer require independent validation before device claims.
+\end{abstract}
+
+\input{sections/introduction.tex}
+\input{sections/methods.tex}
+\input{sections/results.tex}
+\input{sections/discussion.tex}
+\ack{[AUTHOR INPUT REQUIRED: acknowledgements, if any.]}
+\funding{[AUTHOR INPUT REQUIRED: funding sources and grant numbers, or confirmation of no specific funding.]}
+\roles{[AUTHOR INPUT REQUIRED: author-approved CRediT contributions.]}
+\section*{Conflict of interest}
+[AUTHOR INPUT REQUIRED: confirm the conflict-of-interest declaration.]
+\data{Public GRABMyo v1.1.0 recordings are available from PhysioNet (\url{https://doi.org/10.13026/89dm-f662}); NinaPro DB5 is available from \url{https://ninapro.hevs.ch}. The local revision package contains source code, protocols, participant results, predictions, numeric provenance and figure source data. [AUTHOR INPUT REQUIRED: permanent public archive URL/DOI before submission.]}
+\suppdata{The separate Supplementary includes development departures, inference details, fixed-layout scope, ranking and redundancy diagnostics, complete machine-readable result tables and additional figures.}
+\bibliographystyle{plainnat}\bibliography{references}
+\end{document}

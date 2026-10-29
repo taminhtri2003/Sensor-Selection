@@ -1,0 +1,470 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        12
+      ]
+    ],
+    "date-time": "2026-10-12T20:59:33Z",
+    "timestamp": 1791838773905,
+    "version": "4.3.4"
+  },
+  "reference-count": 34,
+  "publisher": "Informa UK Limited",
+  "issue": "1",
+  "content-domain": {
+    "domain": [
+      "www.tandfonline.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Journal of the Operational Research Society"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2022,
+        1,
+        2
+      ]
+    ]
+  },
+  "DOI": "10.1080/01605682.2020.1865846",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2021,
+        2,
+        1
+      ]
+    ],
+    "date-time": "2021-02-01T16:10:37Z",
+    "timestamp": 1612195837000
+  },
+  "page": "91-101",
+  "update-policy": "https://doi.org/10.1080/tandf_crossmark_01",
+  "source": "Crossref",
+  "is-referenced-by-count": 200,
+  "title": [
+    "Statistical stability indices for LIME: Obtaining reliable explanations for machine learning models"
+  ],
+  "prefix": "10.1080",
+  "volume": "73",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0001-6818-3526",
+      "authenticated-orcid": false,
+      "given": "Giorgio",
+      "family": "Visani",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Universit\u00e0 degli Studi di Bologna, Bologna, BO, Italy"
+        },
+        {
+          "name": "CRIF S.p.A, Bologna, BO, Italy"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-3913-7701",
+      "authenticated-orcid": false,
+      "given": "Enrico",
+      "family": "Bagli",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "CRIF S.p.A, Bologna, BO, Italy"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Federico",
+      "family": "Chesani",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Universit\u00e0 degli Studi di Bologna, Bologna, BO, Italy"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Alessandro",
+      "family": "Poluzzi",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "CRIF S.p.A, Bologna, BO, Italy"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Davide",
+      "family": "Capuzzo",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "CRIF S.p.A, Bologna, BO, Italy"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "301",
+  "published-online": {
+    "date-parts": [
+      [
+        2021,
+        2,
+        1
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "CIT0001",
+      "volume-title": "Foundations of linear and generalized linear models",
+      "author": "Agresti A.",
+      "year": "2015"
+    },
+    {
+      "key": "CIT0034",
+      "unstructured": "Alvarez-Melis, D. & Tommi, S. J. (2018). On the robustness of interpretability methods.\n                      arXiv preprint\n                      arXiv:1806.08049."
+    },
+    {
+      "key": "CIT0002",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Apley, D. W. & Zhu, J. (2020). Visualizing the effects of predictor variables in black box supervised learning models.\n                      Journal of the Royal Statistical Society: Series B (Statistical Methodology), 82\n                      .4 (2020), 1059\u20131086. https://doi.org/10.1111/rssb.12377",
+      "DOI": "10.1111/rssb.12377"
+    },
+    {
+      "key": "CIT0003",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/3-540-49257-7_15"
+    },
+    {
+      "key": "CIT0004",
+      "volume-title": "Probability and measure",
+      "author": "Billingsley P.",
+      "year": "2008"
+    },
+    {
+      "key": "CIT0005",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1023/A:1023030312801"
+    },
+    {
+      "key": "CIT0006",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1023/A:1010933404324"
+    },
+    {
+      "key": "CIT0007",
+      "first-page": "24",
+      "volume-title": "Advances in neural information processing systems",
+      "author": "Craven M.",
+      "year": "1996"
+    },
+    {
+      "key": "CIT0008",
+      "unstructured": "Eba, E. B. A. (2020).\n                      Report on big data and advanced analytics\n                      . https://eba.europa.eu/file/609786/"
+    },
+    {
+      "key": "CIT0009",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1214/aos/1013203451"
+    },
+    {
+      "key": "CIT0010",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1080/10618600.2014.907095"
+    },
+    {
+      "key": "CIT0011",
+      "unstructured": "Gosiewska, A. & Biecek, P. (2019). IBreakDown: Uncertainty of model explanations for non-additive predictive models. arXiv Preprint arXiv:1903.11420."
+    },
+    {
+      "key": "CIT0012",
+      "volume-title": "Econometric analysis",
+      "author": "Greene W. H.",
+      "year": "2003"
+    },
+    {
+      "key": "CIT0013",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3236009"
+    },
+    {
+      "key": "CIT0014",
+      "volume-title": "An introduction to machine learning interpretability - Dataiku Version",
+      "author": "Hall P.",
+      "year": "2018"
+    },
+    {
+      "key": "CIT0015",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1093/imaman/12.2.139"
+    },
+    {
+      "key": "CIT0016",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-0-387-84858-7"
+    },
+    {
+      "key": "CIT0017",
+      "unstructured": "Hleg, A. (2019).\n                      Ethics guidelines for trustworthy AI\n                      . https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai"
+    },
+    {
+      "key": "CIT0018",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1080/00401706.1970.10488634"
+    },
+    {
+      "key": "CIT0019",
+      "volume-title": "Econometric methods",
+      "volume": "2",
+      "author": "Johnston J.",
+      "year": "1972"
+    },
+    {
+      "key": "CIT0020",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s10506-017-9206-9"
+    },
+    {
+      "key": "CIT0021",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1080/01621459.2017.1307116"
+    },
+    {
+      "key": "CIT0022",
+      "first-page": "4765",
+      "volume-title": "(Vol. 2017, pp.",
+      "author": "Lundberg S. M.",
+      "year": "2017"
+    },
+    {
+      "key": "CIT0023",
+      "volume-title": "Interpretable machine learning",
+      "author": "Molnar C.",
+      "year": "2020"
+    },
+    {
+      "key": "CIT0024",
+      "unstructured": "Molnar, C. (2020b).\n                      Limitations of interpretable machine learning methods.\n                      https://compstat-lmu.github.io/iml_methods_limitations/."
+    },
+    {
+      "key": "CIT0025",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.eswa.2020.113567"
+    },
+    {
+      "key": "CIT0026",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/2939672.2939778"
+    },
+    {
+      "key": "CIT0027",
+      "volume-title": "Thirty-Second AAAI Conference on Artificial Intelligence, New Orleans, United States, 2\u20137 February 2018",
+      "author": "Ribeiro M. T.",
+      "year": "2018"
+    },
+    {
+      "key": "CIT0028",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-030-33607-3_49"
+    },
+    {
+      "key": "CIT0029",
+      "unstructured": "van Wieringen, W. N. (2015). Lecture notes on ridge regression. arXiv preprint arXiv:1509.09169."
+    },
+    {
+      "key": "CIT0030",
+      "unstructured": "Visani, G., Bagli, E. & Chesani, F. (2020). OptiLIME: Optimized LIME explanations for diagnostic computer algorithms. In\n                      2020 International Conference on Information and Knowledge Management Workshops, CIKMW 2020\n                      , Galway, Ireland, 19\u201323 October 2020."
+    },
+    {
+      "key": "CIT0031",
+      "unstructured": "Visani, G., Chesani, F., Bagli, E., Capuzzo, D. & Poluzzi, A. (2019). Explanations of machine learning predictions: A mandatory step for its application to operational processes.\u00a0 https://arxiv.org/pdf/2012.15103.pdf."
+    },
+    {
+      "key": "CIT0032",
+      "unstructured": "Zafar, M. R. & Khan, N. M. (2019). DLIME: A deterministic local interpretable model-agnostic explanations approach for computer-aided diagnosis systems. Proceedings ofAnchorage \u201919: ACM SIGKDD Workshop on Explainable AI/ML (XAI) for Accountability,Fairness, and Transparency (Anchorage \u201919)."
+    },
+    {
+      "key": "CIT0033",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.17265/2159-5313/2016.09.003"
+    }
+  ],
+  "container-title": [
+    "Journal of the Operational Research Society"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://www.tandfonline.com/doi/pdf/10.1080/01605682.2020.1865846",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2022,
+        2,
+        5
+      ]
+    ],
+    "date-time": "2022-02-05T03:08:14Z",
+    "timestamp": 1644030494000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.tandfonline.com/doi/full/10.1080/01605682.2020.1865846"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2021,
+        2,
+        1
+      ]
+    ]
+  },
+  "references-count": 34,
+  "journal-issue": {
+    "issue": "1",
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          1,
+          2
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "10.1080/01605682.2020.1865846"
+  ],
+  "URL": "https://doi.org/10.1080/01605682.2020.1865846",
+  "relation": {},
+  "ISSN": [
+    "0160-5682",
+    "1476-9360"
+  ],
+  "issn-type": [
+    {
+      "value": "0160-5682",
+      "type": "print"
+    },
+    {
+      "value": "1476-9360",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2021,
+        2,
+        1
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "The publishing and review policy for this title is described in its Aims & Scope.",
+      "order": 1,
+      "name": "peerreview_statement",
+      "label": "Peer Review Statement"
+    },
+    {
+      "value": "http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=tjor20",
+      "URL": "http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=tjor20",
+      "order": 2,
+      "name": "aims_and_scope_url",
+      "label": "Aim & Scope"
+    },
+    {
+      "value": "2020-01-21",
+      "order": 0,
+      "name": "received",
+      "label": "Received",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2020-11-06",
+      "order": 1,
+      "name": "revised",
+      "label": "Revised",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2020-12-09",
+      "order": 2,
+      "name": "accepted",
+      "label": "Accepted",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2021-02-01",
+      "order": 3,
+      "name": "published",
+      "label": "Published",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    }
+  ]
+}

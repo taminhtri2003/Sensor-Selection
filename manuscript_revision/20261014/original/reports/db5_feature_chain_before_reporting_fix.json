@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "participants": 10,
+  "windows": 21089,
+  "requested_low_hz": 10.0,
+  "requested_high_hz": 95.0,
+  "effective_low_hz": 10.0,
+  "effective_high_hz": 89.0,
+  "fs_hz": 200.0,
+  "filter_order_argument": 4,
+  "interpretation": "reported requested95Hz was clipped to89Hz by min(highcut,0.45*fs-1); saved features exactly reproduce actual implementation, so no result metric is changed",
+  "source_hashes": {
+    "scripts/84_audit_db5_feature_chain.py": "f7a91727db56cd231bdd8ba19b4da72516bc0f25404a154acc8f823d2d962f60",
+    "scripts/33_db5_features.py": "2c47367d81932613ca84c0e2f05da54034d4c8cd60ea93d105fd0b193545775e",
+    "src/semg_sparse/preprocessing/filters.py": "8309863d53c7a8f743530d37753d49b02db61d6adf594460305f1d8eea06d95b",
+    "src/semg_sparse/features/handcrafted.py": "2413edf91fb6dd7551452218c92af1a67e8b1a4e75cccbcfc7bbb439a72777bd",
+    "data/features/db5_features.parquet": "b027b83cc356ecd7f2af0b5c1baec71578c83406d7c8c7bcbe78d86deed76a5f"
+  }
+}

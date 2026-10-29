@@ -1,0 +1,173 @@
+\begin{thebibliography}{21}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bengio and Grandvalet(2004)]{bengio2004variance}
+Yoshua Bengio and Yves Grandvalet.
+\newblock No unbiased estimator of the variance of k-fold cross-validation.
+\newblock \emph{Journal of Machine Learning Research}, 5:\penalty0 1089--1105,
+  2004.
+\newblock URL \url{https://www.jmlr.org/papers/v5/grandvalet04a.html}.
+
+\bibitem[Davison and Hinkley(1997)]{davison1997bootstrap}
+A.~C. Davison and D.~V. Hinkley.
+\newblock \emph{Bootstrap Methods and their Application}.
+\newblock Cambridge University Press, 1997.
+\newblock \doi{10.1017/cbo9780511802843}.
+
+\bibitem[Farina et~al.(2014)Farina, Jiang, Rehbaum, Holobar, Graimann, Dietl,
+  and Aszmann]{farina2014extraction}
+Dario Farina, Ning Jiang, Hubertus Rehbaum, Ales Holobar, Bernhard Graimann,
+  Hans Dietl, and Oskar~C. Aszmann.
+\newblock {The Extraction of Neural Information from the Surface EMG for the
+  Control of Upper-Limb Prostheses: Emerging Avenues and Challenges}.
+\newblock \emph{IEEE Transactions on Neural Systems and Rehabilitation
+  Engineering}, 22\penalty0 (4):\penalty0 797--809, 2014.
+\newblock \doi{10.1109/tnsre.2014.2305111}.
+
+\bibitem[Gehlot et~al.(2024)Gehlot, Jena, Vijayvargiya, and
+  Kumar]{gehlot2024fusion}
+Naveen Gehlot, Ashutosh Jena, Ankit Vijayvargiya, and Rajesh Kumar.
+\newblock {Surface electromyography based explainable Artificial Intelligence
+  fusion framework for feature selection of hand gesture recognition}.
+\newblock \emph{Engineering Applications of Artificial Intelligence},
+  137:\penalty0 109119, 2024.
+\newblock \doi{10.1016/j.engappai.2024.109119}.
+
+\bibitem[Gelman and Stern(2006)]{gelman2006difference}
+Andrew Gelman and Hal Stern.
+\newblock The difference between significant and not significant is not itself
+  statistically significant.
+\newblock \emph{The American Statistician}, 60:\penalty0 328--331, 2006.
+\newblock \doi{10.1198/000313006X152649}.
+
+\bibitem[Jiang et~al.(2024)Jiang, Pradhan, and He]{jiang2024grabmyo}
+Ning Jiang, Ashirbad Pradhan, and Jiayuan He.
+\newblock {Gesture Recognition and Biometrics ElectroMyogram (GRABMyo) (version
+  1.1.0)}.
+\newblock PhysioNet, 2024.
+
+\bibitem[Lundberg and Lee(2017)]{lundberg2017unified}
+Scott Lundberg and Su-In Lee.
+\newblock {A Unified Approach to Interpreting Model Predictions}.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~30, 2017.
+
+\bibitem[Lundberg et~al.(2020)Lundberg, Erion, Chen, DeGrave, Prutkin, Nair,
+  Katz, Himmelfarb, Bansal, and Lee]{lundberg2020local}
+Scott~M. Lundberg, Gabriel Erion, Hugh Chen, Alex DeGrave, Jordan~M. Prutkin,
+  Bala Nair, Ronit Katz, Jonathan Himmelfarb, Nisha Bansal, and Su-In Lee.
+\newblock {From local explanations to global understanding with explainable AI
+  for trees}.
+\newblock \emph{Nature Machine Intelligence}, 2\penalty0 (1):\penalty0 56--67,
+  2020.
+\newblock \doi{10.1038/s42256-019-0138-9}.
+
+\bibitem[Phinyomark et~al.(2012)Phinyomark, Phukpattaranont, and
+  Limsakul]{phinyomark2012feature}
+Angkoon Phinyomark, Pornchai Phukpattaranont, and Chusak Limsakul.
+\newblock {Feature reduction and selection for EMG signal classification}.
+\newblock \emph{Expert Systems with Applications}, 39\penalty0 (8):\penalty0
+  7420--7431, 2012.
+\newblock \doi{10.1016/j.eswa.2012.01.102}.
+
+\bibitem[Pizzolato et~al.(2017)Pizzolato, Tagliapietra, Cognolato, Reggiani,
+  Müller, and Atzori]{pizzolato2017comparison}
+Stefano Pizzolato, Luca Tagliapietra, Matteo Cognolato, Monica Reggiani,
+  Henning Müller, and Manfredo Atzori.
+\newblock {Comparison of six electromyography acquisition setups on hand
+  movement classification tasks}.
+\newblock \emph{PLOS ONE}, 12\penalty0 (10):\penalty0 e0186132, 2017.
+\newblock \doi{10.1371/journal.pone.0186132}.
+
+\bibitem[Pradhan et~al.(2022)Pradhan, He, and Jiang]{pradhan2022multiday}
+Ashirbad Pradhan, Jiayuan He, and Ning Jiang.
+\newblock {Multi-day dataset of forearm and wrist electromyogram for hand
+  gesture recognition and biometrics}.
+\newblock \emph{Scientific Data}, 9\penalty0 (1), 2022.
+\newblock \doi{10.1038/s41597-022-01836-y}.
+
+\bibitem[Qu et~al.(2021)Qu, Shang, Li, and Teng]{qu2021reduce}
+Yali Qu, Haoyan Shang, Jing Li, and Shenghua Teng.
+\newblock {Reduce Surface Electromyography Channels for Gesture Recognition by
+  Multitask Sparse Representation and Minimum Redundancy Maximum Relevance}.
+\newblock \emph{Journal of Healthcare Engineering}, 2021:\penalty0 1--9, 2021.
+\newblock \doi{10.1155/2021/9929684}.
+
+\bibitem[Rani et~al.(2025)Rani, Pancholi, Shaw, Pandey, Atzori, and
+  Kumar]{rani2025shap}
+Parul Rani, Sidharth Pancholi, Vikash Shaw, Suraj Pandey, Manfredo Atzori, and
+  Sanjeev Kumar.
+\newblock {Explainable AI-Guided Optimization of EMG Channels and Features for
+  Precise Hand Gesture Classification: A SHAP-Based Study}.
+\newblock \emph{IEEE Transactions on Medical Robotics and Bionics}, 7\penalty0
+  (1):\penalty0 368--376, 2025.
+\newblock \doi{10.1109/tmrb.2024.3504007}.
+
+\bibitem[Scheme and Englehart(2011)]{scheme2011electromyogram}
+Erik Scheme and Kevin Englehart.
+\newblock {Electromyogram pattern recognition for control of powered upper-limb
+  prostheses: State of the art and challenges for clinical use}.
+\newblock \emph{The Journal of Rehabilitation Research and Development},
+  48\penalty0 (6):\penalty0 643, 2011.
+\newblock \doi{10.1682/jrrd.2010.09.0177}.
+
+\bibitem[Schuirmann(1987)]{schuirmann1987comparison}
+Donald~J. Schuirmann.
+\newblock {A comparison of the Two One-Sided Tests Procedure and the Power
+  Approach for assessing the equivalence of average bioavailability}.
+\newblock \emph{Journal of Pharmacokinetics and Biopharmaceutics}, 15\penalty0
+  (6):\penalty0 657--680, 1987.
+\newblock \doi{10.1007/bf01068419}.
+
+\bibitem[Stango et~al.(2015)Stango, Negro, and Farina]{stango2015spatial}
+Antonietta Stango, Francesco Negro, and Dario Farina.
+\newblock {Spatial Correlation of High Density EMG Signals Provides Features
+  Robust to Electrode Number and Shift in Pattern Recognition for Myocontrol}.
+\newblock \emph{IEEE Transactions on Neural Systems and Rehabilitation
+  Engineering}, 23\penalty0 (2):\penalty0 189--198, 2015.
+\newblock \doi{10.1109/tnsre.2014.2366752}.
+
+\bibitem[Visani et~al.(2022)Visani, Bagli, Chesani, Poluzzi, and
+  Capuzzo]{visani2022statistical}
+Giorgio Visani, Enrico Bagli, Federico Chesani, Alessandro Poluzzi, and Davide
+  Capuzzo.
+\newblock {Statistical stability indices for LIME: Obtaining reliable
+  explanations for machine learning models}.
+\newblock \emph{Journal of the Operational Research Society}, 73\penalty0
+  (1):\penalty0 91--101, 2022.
+\newblock \doi{10.1080/01605682.2020.1865846}.
+
+\bibitem[Vujaklija et~al.(2016)Vujaklija, Farina, and
+  Aszmann]{vujaklija2016new}
+Ivan Vujaklija, Dario Farina, and Oskar Aszmann.
+\newblock {New developments in prosthetic arm systems}.
+\newblock \emph{Orthopedic Research and Reviews}, Volume 8:\penalty0 31--39,
+  2016.
+\newblock \doi{10.2147/orr.s71468}.
+
+\bibitem[Walker and Nowacki(2011)]{walker2011understanding}
+Esteban Walker and Amy~S. Nowacki.
+\newblock {Understanding Equivalence and Noninferiority Testing}.
+\newblock \emph{Journal of General Internal Medicine}, 26\penalty0
+  (2):\penalty0 192--196, 2011.
+\newblock \doi{10.1007/s11606-010-1513-8}.
+
+\bibitem[Wang et~al.(2024)Wang, Ao, Wu, Kawata, and She]{wang2024shap}
+Feng Wang, Xiaohu Ao, Min Wu, Seiichi Kawata, and Jinhua She.
+\newblock {Explainable deep learning for sEMG-based similar gesture
+  recognition: A Shapley-value-based solution}.
+\newblock \emph{Information Sciences}, 672:\penalty0 120667, 2024.
+\newblock \doi{10.1016/j.ins.2024.120667}.
+
+\bibitem[Xiang et~al.(2026)Xiang, Shi, Ye, Jiang, Zhou, and
+  Guo]{xiang2026roshap}
+Lanxin Xiang, Liang Shi, Youhui Ye, Boyu Jiang, Dawei Zhou, and Feng Guo.
+\newblock {RoSHAP: A Distributional Framework and Robust Metric for Stable
+  Feature Attribution}.
+\newblock arXiv preprint arXiv:2605.15154, 2026.
+
+\end{thebibliography}

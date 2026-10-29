@@ -1,0 +1,47 @@
+resuming 42 completed participant/lambda jobs from F:\grabmyo_data\artifacts\completion_analyses\w500\sparse_curve_subject_metrics.csv
+grouped pending lambda jobs into 1 participant jobs
+model=XGB participants=1 lambdas=[0.0] k=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16] jobs=1 workers=1
+[1/1] participant 43 lam=0.0 k16=0.3826 elapsed=3.8m eta=0.0m
+
+model  lambda  channels_k  n_participants  mean_macro_f1  sd_macro_f1  mean_accuracy
+M_XGB     0.0           1              43       0.192348     0.042989       0.214949
+M_XGB     0.0           2              43       0.311788     0.060277       0.333967
+M_XGB     0.0           3              43       0.353451     0.061700       0.374632
+M_XGB     0.0           4              43       0.410268     0.073489       0.431406
+M_XGB     0.0           5              43       0.442614     0.077559       0.463262
+M_XGB     0.0           6              43       0.493974     0.085549       0.515329
+M_XGB     0.0           7              43       0.513091     0.087376       0.533197
+M_XGB     0.0           8              43       0.517560     0.087721       0.537175
+M_XGB     0.0           9              43       0.522671     0.088827       0.542002
+M_XGB     0.0          10              43       0.529994     0.086391       0.549058
+M_XGB     0.0          11              43       0.534499     0.085732       0.553222
+M_XGB     0.0          12              43       0.540358     0.085281       0.558354
+M_XGB     0.0          13              43       0.544843     0.084989       0.562274
+M_XGB     0.0          14              43       0.548175     0.085399       0.565640
+M_XGB     0.0          15              43       0.549766     0.083660       0.567148
+M_XGB     0.0          16              43       0.552930     0.084982       0.569600
+ASSERTION FAILED: incomplete cells: [(0.0, 1), (0.0, 2), (0.0, 3), (0.0, 4), (0.0, 5)]
+resuming 43 completed participant/lambda jobs from F:\grabmyo_data\artifacts\completion_analyses\w500\sparse_curve_subject_metrics.csv
+grouped pending lambda jobs into 0 participant jobs
+model=XGB participants=43 lambdas=[0.0] k=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16] jobs=0 workers=1
+
+model  lambda  channels_k  n_participants  mean_macro_f1  sd_macro_f1  mean_accuracy
+M_XGB     0.0           1              43       0.192348     0.042989       0.214949
+M_XGB     0.0           2              43       0.311788     0.060277       0.333967
+M_XGB     0.0           3              43       0.353451     0.061700       0.374632
+M_XGB     0.0           4              43       0.410268     0.073489       0.431406
+M_XGB     0.0           5              43       0.442614     0.077559       0.463262
+M_XGB     0.0           6              43       0.493974     0.085549       0.515329
+M_XGB     0.0           7              43       0.513091     0.087376       0.533197
+M_XGB     0.0           8              43       0.517560     0.087721       0.537175
+M_XGB     0.0           9              43       0.522671     0.088827       0.542002
+M_XGB     0.0          10              43       0.529994     0.086391       0.549058
+M_XGB     0.0          11              43       0.534499     0.085732       0.553222
+M_XGB     0.0          12              43       0.540358     0.085281       0.558354
+M_XGB     0.0          13              43       0.544843     0.084989       0.562274
+M_XGB     0.0          14              43       0.548175     0.085399       0.565640
+M_XGB     0.0          15              43       0.549766     0.083660       0.567148
+M_XGB     0.0          16              43       0.552930     0.084982       0.569600
+
+ASSERTION PASSED: 43 participants x 16 k x 1 lambda
+wall clock: 0.0 min

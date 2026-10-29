@@ -1,0 +1,34 @@
+{
+  "seed": 20260728,
+  "n_classes": 16,
+  "svm_subsample": 40000,
+  "rf_subsample": 200000,
+  "xgb": {
+    "n_estimators": 300,
+    "max_depth": 6,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "tree_method": "hist",
+    "random_state": 20260728,
+    "verbosity": 0
+  },
+  "rf": {
+    "n_estimators": 200,
+    "max_depth": null,
+    "min_samples_leaf": 2,
+    "random_state": 20260728
+  },
+  "svm": {
+    "C": 1.0,
+    "kernel": "rbf",
+    "gamma": "scale",
+    "random_state": 20260728
+  },
+  "n_features": 160,
+  "python": "3.10.20",
+  "xgboost": "3.2.0",
+  "device": "cuda",
+  "workers": 1,
+  "feature_file": "data/features/grabmyo_features_full.parquet"
+}

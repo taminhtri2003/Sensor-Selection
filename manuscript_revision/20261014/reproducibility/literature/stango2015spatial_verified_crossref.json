@@ -1,0 +1,339 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        5
+      ]
+    ],
+    "date-time": "2026-10-05T21:10:33Z",
+    "timestamp": 1791234633380,
+    "version": "4.1.0"
+  },
+  "reference-count": 27,
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+  "issue": "2",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2015,
+            3,
+            1
+          ]
+        ],
+        "date-time": "2015-03-01T00:00:00Z",
+        "timestamp": 1425168000000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+    }
+  ],
+  "funder": [
+    {
+      "name": "ERC Advanced",
+      "award": [
+        "267888"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "267888"
+          ]
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "IEEE Trans. Neural Syst. Rehabil. Eng."
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2015,
+        3
+      ]
+    ]
+  },
+  "DOI": "10.1109/tnsre.2014.2366752",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2014,
+        11,
+        6
+      ]
+    ],
+    "date-time": "2014-11-06T15:23:40Z",
+    "timestamp": 1415287420000
+  },
+  "page": "189-198",
+  "source": "Crossref",
+  "is-referenced-by-count": 179,
+  "title": [
+    "Spatial Correlation of High Density EMG Signals Provides Features Robust to Electrode Number and Shift in Pattern Recognition for Myocontrol"
+  ],
+  "prefix": "10.1109",
+  "volume": "23",
+  "author": [
+    {
+      "given": "Antonietta",
+      "family": "Stango",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Francesco",
+      "family": "Negro",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Dario",
+      "family": "Farina",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "263",
+  "reference": [
+    {
+      "key": "ref10",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.bspc.2007.11.005"
+    },
+    {
+      "key": "ref11",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/TBME.2011.2177662"
+    },
+    {
+      "key": "ref12",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.jelekin.2008.09.002"
+    },
+    {
+      "key": "ref13",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/TNSRE.2007.910282"
+    },
+    {
+      "key": "ref14",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s10707-009-0078-3"
+    },
+    {
+      "key": "ref15",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.comnet.2004.03.007"
+    },
+    {
+      "key": "ref16",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1387663.1387670"
+    },
+    {
+      "key": "ref17",
+      "article-title": "Spatial correlation-based distributed compressed sensing in wireless sensor networks",
+      "author": "haifeng",
+      "year": "2010",
+      "journal-title": "Proc Int Conf Wireless Communications Networking and Mobile Computing?WiCom"
+    },
+    {
+      "key": "ref18",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/TNET.2006.872544"
+    },
+    {
+      "key": "ref19",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/TGRS.2004.825591"
+    },
+    {
+      "key": "ref4",
+      "first-page": "148",
+      "article-title": "Myoelectric control of artificial limbs: Is there the need for a change of focus?",
+      "volume": "29",
+      "author": "jiang",
+      "year": "2012",
+      "journal-title": "IEEE Signal Process Mag"
+    },
+    {
+      "key": "ref27",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/TNSRE.2007.910282"
+    },
+    {
+      "key": "ref3",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/TNSRE.2011.2178039"
+    },
+    {
+      "key": "ref6",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1080/10400435.1990.10132142"
+    },
+    {
+      "key": "ref5",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/10.204774"
+    },
+    {
+      "key": "ref8",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/TBME.2011.2159216"
+    },
+    {
+      "key": "ref7",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/TBME.2008.923917"
+    },
+    {
+      "key": "ref2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1186/1743-0003-9-42"
+    },
+    {
+      "key": "ref9",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s11517-011-0790-7"
+    },
+    {
+      "key": "ref1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.jelekin.2011.12.012"
+    },
+    {
+      "key": "ref20",
+      "first-page": "11",
+      "article-title": "Analysis of geostatistical parameters for texture classification of satellite images",
+      "author": "durrieu",
+      "year": "2005",
+      "journal-title": "Proc 25th EARSEL Symp Global Developments in Environmental Earth Observation From Space (ISBN 9059660420)"
+    },
+    {
+      "key": "ref22",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/9780470517277"
+    },
+    {
+      "key": "ref21",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/SITIS.2011.67"
+    },
+    {
+      "key": "ref24",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1961189.1961199"
+    },
+    {
+      "key": "ref23",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s00477-005-0026-1"
+    },
+    {
+      "key": "ref26",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1080/10400435.1990.10132142"
+    },
+    {
+      "key": "ref25",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/IEMBS.2007.4353424"
+    }
+  ],
+  "container-title": [
+    "IEEE Transactions on Neural Systems and Rehabilitation Engineering"
+  ],
+  "original-title": [],
+  "link": [
+    {
+      "URL": "http://xplorestaging.ieee.org/ielx7/7333/7055201/06949119.pdf?arnumber=6949119",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2022,
+        1,
+        12
+      ]
+    ],
+    "date-time": "2022-01-12T11:41:07Z",
+    "timestamp": 1641987667000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://ieeexplore.ieee.org/document/6949119/"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2015,
+        3
+      ]
+    ]
+  },
+  "references-count": 27,
+  "journal-issue": {
+    "issue": "2"
+  },
+  "URL": "https://doi.org/10.1109/tnsre.2014.2366752",
+  "relation": {},
+  "ISSN": [
+    "1534-4320",
+    "1558-0210"
+  ],
+  "issn-type": [
+    {
+      "value": "1534-4320",
+      "type": "print"
+    },
+    {
+      "value": "1558-0210",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2015,
+        3
+      ]
+    ]
+  }
+}

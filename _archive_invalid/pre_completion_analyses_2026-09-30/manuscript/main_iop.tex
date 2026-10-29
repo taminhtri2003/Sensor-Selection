@@ -1,0 +1,105 @@
+% Physiological Measurement submission, IOP Publishing template (iopjournal.cls, 2025 release,
+% from publishingsupport.iopscience.iop.org). References: Harvard (author-year), as required by
+% the journal. Supplementary material is compiled separately from supplementary_iop.tex.
+\documentclass{iopjournal}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{makecell}
+\usepackage{microtype}
+\usepackage[round]{natbib}
+\usepackage{placeins}
+\usepackage{needspace}
+\hypersetup{hidelinks}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.8}
+\setcounter{topnumber}{3}
+
+% running head without the template's placeholder journal details
+\fancyhead[L]{\small Subject-independent surface EMG electrode reduction}
+\fancyhead[C]{}
+\fancyhead[R]{\small Ta \textit{et al}}
+
+% kept so that generated tables compile; renders plain text
+\newcommand{\rev}[1]{#1}
+
+% Justified body text, abstract and captions (the class sets \raggedright globally).
+\usepackage{ragged2e}
+\AtBeginDocument{\justifying}
+\makeatletter
+\renewcommand{\@makecaption}[2]{\vskip\abovecaptionskip
+\sbox\@tempboxa{\fontsize{8}{10}\selectfont {\bfseries #1.} #2}%
+\ifdim \wd\@tempboxa >\hsize
+{\justifying\fontsize{8}{10}\selectfont {\bfseries #1.} #2\par}
+\else
+\global \@minipagefalse
+\hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
+\fi
+\vskip\belowcaptionskip}
+\makeatother
+
+% Revision marking (2026-09-23 editorial and statistical revision): revised text is shown in blue.
+% Use \showchangesfalse for the clean submission PDF.
+\newif\ifshowchanges
+\showchangestrue
+\ifdefined\cleanbuild \showchangesfalse \fi
+\newcommand{\chg}[1]{\ifshowchanges{\color{blue}#1}\else{#1}\fi}
+
+\input{generated/results_macros.tex}
+
+\begin{document}
+
+\title{Subject-independent surface EMG electrode reduction using cross-fitted attribution: a prespecified non-inferiority study}
+
+\author{Minh-Tri Ta$^1$, Hoang-Khang Phan$^{2,3}$ and Le-Giang Tran$^{4,*}$}
+
+\affil{$^1$College of Engineering and Computer Science, VinUniversity, Hanoi, Vietnam}
+
+\affil{$^2$Department of Biomedical Engineering, Faculty of Applied Science, Ho Chi Minh City University of Technology (HCMUT), 268 Ly Thuong Kiet Street, District 10, Ho Chi Minh City, Vietnam}
+
+\affil{$^3$Vietnam National University Ho Chi Minh City, Linh Trung Ward, Thu Duc City, Ho Chi Minh City, Vietnam}
+
+\affil{$^4$Faculty of Electronics Technology, Industrial University of Ho Chi Minh City, Ho Chi Minh City, Vietnam}
+
+\affil{$^*$Author to whom any correspondence should be addressed.}
+
+\email{tranlegiang@iuh.edu.vn}
+
+\keywords{surface electromyography, gesture recognition, electrode selection, SHAP, cross-fitting, non-inferiority, leave-one-subject-out}
+
+\begin{abstract}
+\justifying
+\textit{Objective.} Reducing the number of surface electromyography (sEMG) electrodes can simplify wearable interfaces, but only if recognition performance is preserved for previously unseen users. We investigated whether attribution-guided electrode selection could reduce a forearm sEMG array without meaningful loss of subject-independent gesture recognition.
+\textit{Approach.} We analysed 43 GRABMyo participants using 16 monopolar forearm electrodes and 16 active gestures. All analyses followed a leave-one-subject-out design in which the test participant was excluded from feature standardisation, model fitting and electrode ranking. Electrode importance was estimated with TreeSHAP within participant-disjoint cross-fitting, and reduced models were retrained on the highest-ranked electrodes. Performance was compared with the full array against a prespecified non-inferiority margin of 0.02 Macro-F1, using participant-level cluster-bootstrap confidence intervals (CI). \chg{Secondary analyses tested a stability penalty, random and alternative selections, and deletion with retraining.}
+\textit{Main results.} The full array achieved a Macro-F1 of \FullXGB\ (95\% CI \FullXGBLCB--\FullXGBUCB). The smallest non-inferior subset contained \KStar\ electrodes (mean difference $\DeltaKTwelve$, 95\% CI $\DeltaKTwelveLCB$ to $\DeltaKTwelveUCB$); eleven electrodes did not satisfy the criterion. \chg{Attribution-ranked subsets outperformed the mean random-subset baseline} at 4, 6, 8 and 12 electrodes, and deletion with retraining supported the faithfulness of the ranking. Stability regularisation produced no statistically detectable improvement over attribution magnitude alone. In exploratory comparisons, no statistically detectable difference from an evenly spaced, data-free layout was observed at 4, 8 or 12 electrodes; attribution scored higher at six electrodes.
+\textit{Significance.} Under offline, subject-independent evaluation of this two-ring monopolar montage, about one quarter of the electrodes could be removed within a prespecified engineering tolerance, whereas larger reductions could not; \chg{this characterises the selection procedure, not a prospectively validated fixed layout.} Cross-fitted attribution offered a leakage-controlled way to identify informative electrodes, but its advantage over simple spatial coverage was limited and varied with subset size.
+\end{abstract}
+
+\input{sections/01_introduction.tex}
+\input{sections/03_methods.tex}
+\input{sections/04_results.tex}
+\input{sections/05_discussion.tex}
+\input{sections/06_conclusion.tex}
+
+\ack{[AUTHOR INPUT REQUIRED: acknowledgements, if any.]}
+
+\funding{[AUTHOR INPUT REQUIRED: funding source and grant number, or `This research received no specific grant from any funding agency in the public, commercial or not-for-profit sectors.' only if true.]}
+
+\roles{[AUTHOR INPUT REQUIRED: contributions of Minh-Tri Ta, Hoang-Khang Phan and Le-Giang Tran using CRediT roles.]}
+
+\section*{Conflict of interest}
+[AUTHOR INPUT REQUIRED: confirm the conflict-of-interest declaration.]
+
+\data{GRABMyo v1.1.0 is available from PhysioNet \citep{jiang2024grabmyo} (\url{https://doi.org/10.13026/89dm-f662}); NinaPro DB5 from the NinaPro repository (\url{https://ninapro.hevs.ch}). The statistical analysis plan, the record of analysis decisions, the analysis code, the environment specification and all result files from which the numbers in this paper are computed are archived at [AUTHOR INPUT REQUIRED: INSERT PERMANENT REPOSITORY DOI].}
+
+\suppdata{\chg{Supplementary methods S1--S6 (departures from the analysis plan, threshold checks, deletion-analysis consistency, the fixed-layout consistency check, feature redundancy and the participant-level attribution extension), supplementary tables S1--S10 and supplementary figures S1--S2 are provided in a separate file.}}
+
+\bibliographystyle{jphysicsB}
+\bibliography{references}
+
+\end{document}

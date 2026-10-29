@@ -1,0 +1,57 @@
+[1/43] 1: diff=-0.0022 rho=0.985 elapsed=0.4m
+[2/43] 2: diff=-0.0028 rho=0.997 elapsed=0.6m
+[3/43] 3: diff=-0.0041 rho=0.991 elapsed=0.7m
+[4/43] 4: diff=-0.0045 rho=0.991 elapsed=0.9m
+[5/43] 5: diff=+0.0026 rho=0.991 elapsed=1.0m
+[6/43] 6: diff=+0.0022 rho=0.988 elapsed=1.2m
+[7/43] 7: diff=+0.0003 rho=0.997 elapsed=1.4m
+[8/43] 8: diff=-0.0034 rho=0.988 elapsed=1.6m
+[9/43] 9: diff=-0.0033 rho=0.997 elapsed=1.8m
+[10/43] 10: diff=+0.0043 rho=0.991 elapsed=1.9m
+[11/43] 11: diff=-0.0026 rho=0.994 elapsed=2.1m
+[12/43] 12: diff=-0.0058 rho=0.991 elapsed=2.3m
+[13/43] 13: diff=-0.0086 rho=0.997 elapsed=2.5m
+[14/43] 14: diff=-0.0058 rho=1.000 elapsed=2.7m
+[15/43] 15: diff=+0.0007 rho=0.997 elapsed=2.9m
+[16/43] 16: diff=+0.0020 rho=0.994 elapsed=3.1m
+[17/43] 17: diff=-0.0006 rho=0.988 elapsed=3.3m
+[18/43] 18: diff=+0.0063 rho=0.994 elapsed=3.5m
+[19/43] 19: diff=+0.0003 rho=0.991 elapsed=3.7m
+[20/43] 20: diff=+0.0061 rho=0.997 elapsed=4.0m
+[21/43] 21: diff=+0.0012 rho=0.991 elapsed=4.2m
+[22/43] 22: diff=-0.0031 rho=0.994 elapsed=4.4m
+[23/43] 23: diff=+0.0029 rho=0.994 elapsed=4.6m
+[24/43] 24: diff=-0.0012 rho=0.994 elapsed=4.8m
+[25/43] 25: diff=+0.0049 rho=0.997 elapsed=5.0m
+[26/43] 26: diff=-0.0029 rho=0.994 elapsed=5.2m
+[27/43] 27: diff=+0.0021 rho=0.979 elapsed=5.4m
+[28/43] 28: diff=-0.0192 rho=0.997 elapsed=5.6m
+[29/43] 29: diff=+0.0055 rho=1.000 elapsed=5.8m
+[30/43] 30: diff=-0.0017 rho=0.991 elapsed=6.0m
+[31/43] 31: diff=-0.0093 rho=0.985 elapsed=6.2m
+[32/43] 32: diff=+0.0056 rho=0.997 elapsed=6.3m
+[33/43] 33: diff=-0.0002 rho=0.982 elapsed=6.5m
+[34/43] 34: diff=-0.0026 rho=0.991 elapsed=6.7m
+[35/43] 35: diff=+0.0049 rho=0.976 elapsed=6.9m
+[36/43] 36: diff=+0.0115 rho=0.994 elapsed=7.1m
+[37/43] 37: diff=-0.0023 rho=0.974 elapsed=7.2m
+[38/43] 38: diff=-0.0008 rho=1.000 elapsed=7.4m
+[39/43] 39: diff=-0.0002 rho=0.997 elapsed=7.6m
+[40/43] 40: diff=+0.0059 rho=0.982 elapsed=7.8m
+[41/43] 41: diff=-0.0052 rho=0.997 elapsed=8.0m
+[42/43] 42: diff=+0.0008 rho=0.988 elapsed=8.1m
+[43/43] 43: diff=-0.0002 rho=0.982 elapsed=8.3m
+                                                                         0
+n                                                                       43
+mean_f1_10feat                                                      0.4944
+mean_f1_9feat                                                     0.493883
+mean_diff                                                        -0.000517
+sd_diff                                                           0.005186
+lcb95                                                             -0.00209
+ucb95                                                             0.000988
+wilcoxon_W                                                           433.0
+p_raw                                                             0.636666
+median_rank_spearman                                              0.994118
+n_top12_identical                                                       34
+note                  exploratory; P4 comparison protocol (50 trees, 150k)
+exit=0

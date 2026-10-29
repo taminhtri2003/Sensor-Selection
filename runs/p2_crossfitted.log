@@ -1,0 +1,22 @@
+outer folds=43 inner=5 workers=1 device=cuda
+[1/43] participant 01 top4(lam=0)=['6', '4', '14', '7'] 352.3s  elapsed=5.9m eta=248.5m
+[2/43] participant 02 top4(lam=0)=['4', '14', '6', '7'] 500.0s  elapsed=14.3m eta=292.2m
+[3/43] participant 03 top4(lam=0)=['4', '6', '14', '7'] 235.6s  elapsed=18.2m eta=242.5m
+[4/43] participant 04 top4(lam=0)=['4', '6', '14', '7'] 177.9s  elapsed=21.2m eta=206.3m
+[5/43] participant 05 top4(lam=0)=['4', '6', '14', '7'] 182.6s  elapsed=24.2m eta=184.0m
+[6/43] participant 06 top4(lam=0)=['4', '6', '14', '7'] 180.8s  elapsed=27.2m eta=167.9m
+[7/43] participant 07 top4(lam=0)=['4', '6', '14', '7'] 176.4s  elapsed=30.2m eta=155.1m
+[8/43] participant 08 top4(lam=0)=['6', '4', '14', '7'] 179.2s  elapsed=33.2m eta=145.1m
+[9/43] participant 09 top4(lam=0)=['4', '6', '14', '7'] 175.5s  elapsed=36.1m eta=136.3m
+[10/43] participant 10 top4(lam=0)=['4', '6', '14', '7'] 173.6s  elapsed=39.0m eta=128.7m
+[11/43] participant 11 top4(lam=0)=['4', '6', '14', '7'] 176.0s  elapsed=41.9m eta=122.0m
+[12/43] participant 12 top4(lam=0)=['4', '6', '14', '7'] 174.1s  elapsed=44.8m eta=115.8m
+[13/43] participant 13 top4(lam=0)=['4', '6', '14', '7'] 172.2s  elapsed=47.7m eta=110.1m
+[14/43] participant 14 top4(lam=0)=['4', '14', '6', '7'] 171.4s  elapsed=50.6m eta=104.7m
+[15/43] participant 15 top4(lam=0)=['4', '6', '14', '7'] 171.1s  elapsed=53.4m eta=99.7m
+[16/43] participant 16 top4(lam=0)=['4', '6', '14', '7'] 178.6s  elapsed=56.4m eta=95.2m
+[17/43] participant 17 top4(lam=0)=['4', '6', '14', '8'] 170.9s  elapsed=59.3m eta=90.6m
+[18/43] participant 18 top4(lam=0)=['4', '6', '14', '7'] 171.8s  elapsed=62.1m eta=86.3m
+[19/43] participant 19 top4(lam=0)=['6', '4', '14', '7'] 179.2s  elapsed=65.1m eta=82.3m
+[20/43] participant 20 top4(lam=0)=['4', '6', '14', '7'] 179.6s  elapsed=68.1m eta=78.3m
+[21/43] participant 21 top4(lam=0)=['6', '14', '4', '7'] 251.5s  elapsed=72.3m eta=75.8m

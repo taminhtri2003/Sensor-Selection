@@ -1,0 +1,11 @@
+RUN window500_completion
+Traceback (most recent call last):
+  File "F:\grabmyo_data\scripts\70_revision_experiment_queue.py", line 21, in <module>
+    if __name__=='__main__':main()
+  File "F:\grabmyo_data\scripts\70_revision_experiment_queue.py", line 16, in main
+    run(['scripts/26_sparse_sensor_curve.py','--model','XGB','--device','cuda','--group-lambdas','--lambdas','0.0','--train-subsample','200000','--k-workers','4','--cache-dir','data/cache/w500','--out-dir','artifacts/completion_analyses/w500','--participant-ids','43','--resume'],'window500_completion')
+  File "F:\grabmyo_data\scripts\70_revision_experiment_queue.py", line 8, in run
+    with p.open('a',encoding='utf-8') as f:subprocess.run([sys.executable,*args],cwd=ROOT,stdout=f,stderr=subprocess.STDOUT,check=True)
+  File "D:\miniconda3\envs\graph_gpu\lib\subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['D:\\miniconda3\\envs\\graph_gpu\\python.exe', 'scripts/26_sparse_sensor_curve.py', '--model', 'XGB', '--device', 'cuda', '--group-lambdas', '--lambdas', '0.0', '--train-subsample', '200000', '--k-workers', '4', '--cache-dir', 'data/cache/w500', '--out-dir', 'artifacts/completion_analyses/w500', '--participant-ids', '43', '--resume']' returned non-zero exit status 1.

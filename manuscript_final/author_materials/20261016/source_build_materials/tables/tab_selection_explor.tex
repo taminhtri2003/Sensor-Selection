@@ -1,0 +1,27 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Exploratory comparisons of Penalized SHAP ($\lambda = 0.5$) with other electrode-selection methods (GRABMyo, 43 participants; same comparison model as the attribution-versus-random table). Difference: Penalized SHAP minus comparator, mean paired difference with 95\% participant cluster-bootstrap confidence interval (CI). $p$: Wilcoxon signed-rank, uncorrected; $r_{rb}$: matched-pairs rank-biserial correlation. These contrasts are exploratory and were not corrected for multiplicity.}
+\label{tab:selection_explor}
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{rlcccccc}
+\toprule
+$k$ & Comparator & Penalized SHAP & Comparator & Difference & 95\% CI & $p$ & $r_{rb}$ \\
+\midrule
+4 & Permutation importance & 0.383 & 0.385 & $-$0.0018 & $-$0.0151 to +0.0118 & 0.678 & $-$0.08 \\
+ & Geometric farthest-point & 0.383 & 0.383 & $-$0.0005 & $-$0.0159 to +0.0143 & 0.986 & +0.00 \\
+ & Mutual information & 0.383 & 0.280 & +0.1031 & +0.0880 to +0.1176 & $<$0.001 & +0.99 \\
+\midrule 6 & Permutation importance & 0.453 & 0.440 & +0.0126 & +0.0047 to +0.0216 & 0.009 & +0.52 \\
+ & Geometric farthest-point & 0.453 & 0.419 & +0.0341 & +0.0195 to +0.0476 & $<$0.001 & +0.68 \\
+ & Mutual information & 0.453 & 0.360 & +0.0934 & +0.0813 to +0.1050 & $<$0.001 & +1.00 \\
+\midrule 8 & Permutation importance & 0.469 & 0.466 & +0.0033 & $-$0.0006 to +0.0071 & 0.069 & +0.33 \\
+ & Geometric farthest-point & 0.469 & 0.465 & +0.0047 & $-$0.0044 to +0.0137 & 0.267 & +0.20 \\
+ & Mutual information & 0.469 & 0.396 & +0.0737 & +0.0632 to +0.0841 & $<$0.001 & +1.00 \\
+\midrule 12 & Permutation importance & 0.485 & 0.485 & +0.0001 & $-$0.0033 to +0.0033 & 0.995 & $-$0.00 \\
+ & Geometric farthest-point & 0.485 & 0.478 & +0.0070 & +0.0000 to +0.0138 & 0.058 & +0.33 \\
+ & Mutual information & 0.485 & 0.480 & +0.0051 & +0.0013 to +0.0089 & 0.007 & +0.47 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

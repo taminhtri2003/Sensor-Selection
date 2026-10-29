@@ -1,0 +1,55 @@
+# Downloaded recordings and derived datasets (kept locally, never committed).
+/Session1/
+/Session2/
+/Session3/
+/DESTINATION/
+/data/raw/
+/data/processed/
+/data/features/
+/data/cache/
+/data/quarantine/
+**/verified_inputs/data/cache/
+**/verified_inputs/data/features/
+*.dat
+*.hea
+*.mat
+*.npy
+*features*.parquet
+
+# This frozen ZIP embeds feature/label arrays; its expanded code/results remain tracked.
+/manuscript_revision/grabmyo_revision_20261014.zip
+/manuscript_revision/grabmyo_revision_20261014.zip.sha256
+
+# Local runtimes, tool settings, credentials and disposable working files.
+.venv/
+.test_dependencies/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.aws/
+.codex/
+.agents/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+/tmp/
+/_scratch_timing/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Disposable TeX build files; PDFs, sources, bibliography and scientific logs are retained.
+*.aux
+*.blg
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz

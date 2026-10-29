@@ -1,0 +1,954 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        9
+      ]
+    ],
+    "date-time": "2026-10-09T23:46:12Z",
+    "timestamp": 1791589572904,
+    "version": "4.3.4"
+  },
+  "reference-count": 63,
+  "publisher": "Elsevier BV",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            11,
+            1
+          ]
+        ],
+        "date-time": "2024-11-01T00:00:00Z",
+        "timestamp": 1730419200000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            11,
+            1
+          ]
+        ],
+        "date-time": "2024-11-01T00:00:00Z",
+        "timestamp": 1730419200000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/legal/tdmrep-license"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            11,
+            1
+          ]
+        ],
+        "date-time": "2024-11-01T00:00:00Z",
+        "timestamp": 1730419200000
+      },
+      "content-version": "stm-asf",
+      "delay-in-days": 0,
+      "URL": "https://doi.org/10.15223/policy-017"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            11,
+            1
+          ]
+        ],
+        "date-time": "2024-11-01T00:00:00Z",
+        "timestamp": 1730419200000
+      },
+      "content-version": "stm-asf",
+      "delay-in-days": 0,
+      "URL": "https://doi.org/10.15223/policy-037"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            11,
+            1
+          ]
+        ],
+        "date-time": "2024-11-01T00:00:00Z",
+        "timestamp": 1730419200000
+      },
+      "content-version": "stm-asf",
+      "delay-in-days": 0,
+      "URL": "https://doi.org/10.15223/policy-012"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            11,
+            1
+          ]
+        ],
+        "date-time": "2024-11-01T00:00:00Z",
+        "timestamp": 1730419200000
+      },
+      "content-version": "stm-asf",
+      "delay-in-days": 0,
+      "URL": "https://doi.org/10.15223/policy-029"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            11,
+            1
+          ]
+        ],
+        "date-time": "2024-11-01T00:00:00Z",
+        "timestamp": 1730419200000
+      },
+      "content-version": "stm-asf",
+      "delay-in-days": 0,
+      "URL": "https://doi.org/10.15223/policy-004"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "elsevier.com",
+      "sciencedirect.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Engineering Applications of Artificial Intelligence"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2024,
+        11
+      ]
+    ]
+  },
+  "DOI": "10.1016/j.engappai.2024.109119",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2024,
+        8,
+        12
+      ]
+    ],
+    "date-time": "2024-08-12T13:30:27Z",
+    "timestamp": 1723469427000
+  },
+  "page": "109119",
+  "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 18,
+  "special_numbering": "PA",
+  "title": [
+    "Surface electromyography based explainable Artificial Intelligence fusion framework for feature selection of hand gesture recognition"
+  ],
+  "prefix": "10.1016",
+  "volume": "137",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0003-3607-6456",
+      "authenticated-orcid": false,
+      "given": "Naveen",
+      "family": "Gehlot",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0009-0009-9903-4748",
+      "authenticated-orcid": false,
+      "given": "Ashutosh",
+      "family": "Jena",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Ankit",
+      "family": "Vijayvargiya",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Rajesh",
+      "family": "Kumar",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "78",
+  "reference": [
+    {
+      "key": "10.1016/j.engappai.2024.109119_b1",
+      "doi-asserted-by": "crossref",
+      "first-page": "83",
+      "DOI": "10.1007/s11517-019-02073-z",
+      "article-title": "Evaluation of surface EMG-based recognition algorithms for decoding hand movements",
+      "volume": "58",
+      "author": "Abbaspour",
+      "year": "2020",
+      "journal-title": "Med. Biol. Eng. Comput."
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b2",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.eswa.2022.118864",
+      "article-title": "K-best feature selection and ranking via stochastic approximation",
+      "volume": "213",
+      "author": "Akman",
+      "year": "2023",
+      "journal-title": "Expert Syst. Appl."
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b3",
+      "doi-asserted-by": "crossref",
+      "first-page": "92",
+      "DOI": "10.1016/j.inffus.2023.03.010",
+      "article-title": "Shapley-based feature augmentation",
+      "volume": "96",
+      "author": "Antwarg",
+      "year": "2023",
+      "journal-title": "Inf. Fusion"
+    },
+    {
+      "issue": "3\u20134",
+      "key": "10.1016/j.engappai.2024.109119_b4",
+      "first-page": "338",
+      "article-title": "An RGB-D descriptor for object classification",
+      "volume": "25",
+      "author": "Arican",
+      "year": "2022",
+      "journal-title": "Romanian J. Inf. Sci. Technol. (ROMJIST)"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.engappai.2024.109119_b5",
+      "doi-asserted-by": "crossref",
+      "first-page": "35",
+      "DOI": "10.1016/j.knosys.2011.01.015",
+      "article-title": "Fast wrapper feature subset selection in high-dimensional datasets by means of filter re-ranking",
+      "volume": "25",
+      "author": "Bermejo",
+      "year": "2012",
+      "journal-title": "Knowl.-Based Syst."
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b6",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.jobe.2024.109029",
+      "article-title": "An interpretable feature selection method integrating ensemble models for chiller fault diagnosis",
+      "author": "Bi",
+      "year": "2024",
+      "journal-title": "J. Build. Eng."
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.engappai.2024.109119_b7",
+      "doi-asserted-by": "crossref",
+      "first-page": "28",
+      "DOI": "10.4018/IJAEC.2016100102",
+      "article-title": "Review on feature selection and classification using neuro-fuzzy approaches",
+      "volume": "7",
+      "author": "Biswas",
+      "year": "2016",
+      "journal-title": "Int. J. Appl. Evol. Comput. (IJAEC)"
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b8",
+      "doi-asserted-by": "crossref",
+      "first-page": "63",
+      "DOI": "10.1016/j.procs.2022.01.009",
+      "article-title": "Improvement of K-means cluster quality by post processing resulted clusters",
+      "volume": "199",
+      "author": "Borlea",
+      "year": "2022",
+      "journal-title": "Procedia Comput. Sci."
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.engappai.2024.109119_b9",
+      "doi-asserted-by": "crossref",
+      "first-page": "760",
+      "DOI": "10.1109/TNSRE.2019.2896269",
+      "article-title": "Deep learning for electromyographic hand gesture signal classification using transfer learning",
+      "volume": "27",
+      "author": "C\u00f4t\u00e9-Allard",
+      "year": "2019",
+      "journal-title": "IEEE Trans. Neural Syst. Rehabil. Eng."
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b10",
+      "series-title": "An Introduction to Support Vector Machines and other Kernel-Based Learning Methods",
+      "author": "Cristianini",
+      "year": "2000"
+    },
+    {
+      "issue": "12",
+      "key": "10.1016/j.engappai.2024.109119_b11",
+      "doi-asserted-by": "crossref",
+      "first-page": "3483",
+      "DOI": "10.1016/j.patcog.2013.05.018",
+      "article-title": "Gene selection with guided regularized random forest",
+      "volume": "46",
+      "author": "Deng",
+      "year": "2013",
+      "journal-title": "Pattern Recognit."
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.engappai.2024.109119_b12",
+      "doi-asserted-by": "crossref",
+      "first-page": "325",
+      "DOI": "10.1109/TSMC.1976.5408784",
+      "article-title": "The distance-weighted k-nearest-neighbor rule",
+      "author": "Dudani",
+      "year": "1976",
+      "journal-title": "IEEE Trans. Syst. Man Cybern."
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b13",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.ecoinf.2021.101224",
+      "article-title": "An evaluation of feature selection methods for environmental data",
+      "volume": "61",
+      "author": "Effrosynidis",
+      "year": "2021",
+      "journal-title": "Ecol. Inform."
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b14",
+      "doi-asserted-by": "crossref",
+      "first-page": "2426",
+      "DOI": "10.1109/TNSRE.2022.3199809",
+      "article-title": "Simultaneous sEMG recognition of gestures and force levels for interaction with prosthetic hand",
+      "volume": "30",
+      "author": "Fang",
+      "year": "2022",
+      "journal-title": "IEEE Trans. Neural Syst. Rehabil. Eng."
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b15",
+      "series-title": "2021 13th International Conference on Information & Communication Technology and System",
+      "first-page": "46",
+      "article-title": "Variance threshold as early screening to boruta feature selection for intrusion detection system",
+      "author": "Fida",
+      "year": "2021"
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b16",
+      "series-title": "2023 International Conference on Computer, Electronics & Electrical Engineering & their Applications",
+      "first-page": "1",
+      "article-title": "sEMG-based classification of finger movement with machine learning",
+      "author": "Gehlot",
+      "year": "2023"
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b17",
+      "series-title": "2024 Third International Conference on Power, Control and Computing Technologies",
+      "first-page": "19",
+      "article-title": "XAI-driven sEMG feature analysis for hand gestures",
+      "author": "Gehlot",
+      "year": "2024"
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b18",
+      "series-title": "The International Conference on Health Informatics: ICHI 2013, Vilamoura, Portugal on 7-9 November, 2013",
+      "first-page": "126",
+      "article-title": "Exploration of data dimensionality reduction methods for improving classification performance of voluntary movements",
+      "author": "Geng",
+      "year": "2014"
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b19",
+      "doi-asserted-by": "crossref",
+      "first-page": "3",
+      "DOI": "10.1007/s10994-006-6226-1",
+      "article-title": "Extremely randomized trees",
+      "volume": "63",
+      "author": "Geurts",
+      "year": "2006",
+      "journal-title": "Mach. Learn."
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b20",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.engappai.2022.104771",
+      "article-title": "Solving a novel multi-divisional project portfolio selection and scheduling problem",
+      "volume": "112",
+      "author": "Harrison",
+      "year": "2022",
+      "journal-title": "Eng. Appl. Artif. Intell."
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b21",
+      "doi-asserted-by": "crossref",
+      "first-page": "466",
+      "DOI": "10.1016/j.inffus.2022.12.019",
+      "article-title": "Fusion of multivariate EEG signals for schizophrenia detection using CNN and machine learning techniques",
+      "volume": "92",
+      "author": "Hassan",
+      "year": "2023",
+      "journal-title": "Inf. Fusion"
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b22",
+      "doi-asserted-by": "crossref",
+      "first-page": "1776",
+      "DOI": "10.1109/TNSRE.2023.3260210",
+      "article-title": "LiDAR-based hand contralateral controlled functional electrical stimulation system",
+      "volume": "31",
+      "author": "He",
+      "year": "2023",
+      "journal-title": "IEEE Trans. Neural Syst. Rehabil. Eng."
+    },
+    {
+      "issue": "9",
+      "key": "10.1016/j.engappai.2024.109119_b23",
+      "doi-asserted-by": "crossref",
+      "first-page": "2655",
+      "DOI": "10.1109/TBME.2023.3261336",
+      "article-title": "sEMG-based gesture recognition using temporal history",
+      "volume": "70",
+      "author": "Hong",
+      "year": "2023",
+      "journal-title": "IEEE Trans. Biomed. Eng."
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b24",
+      "series-title": "2016 International Conference on Advanced Computer Science and Information Systems",
+      "first-page": "385",
+      "article-title": "Using logistic regression method to classify tweets into the selected topics",
+      "author": "Indra",
+      "year": "2016"
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b25",
+      "doi-asserted-by": "crossref",
+      "first-page": "1253",
+      "DOI": "10.1016/j.asoc.2016.08.031",
+      "article-title": "Feature unionization: a novel approach for dimension reduction",
+      "volume": "52",
+      "author": "Jalilvand",
+      "year": "2017",
+      "journal-title": "Appl. Soft Comput."
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b26",
+      "series-title": "2023 14th International Conference on Computing Communication and Networking Technologies",
+      "first-page": "1",
+      "article-title": "Impact of feature selection on sEMG signal classification",
+      "author": "Jena",
+      "year": "2023"
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b27",
+      "doi-asserted-by": "crossref",
+      "first-page": "204",
+      "DOI": "10.1016/j.neunet.2022.05.024",
+      "article-title": "MGLNN: Semi-supervised learning via multiple graph cooperative learning neural networks",
+      "volume": "153",
+      "author": "Jiang",
+      "year": "2022",
+      "journal-title": "Neural Netw."
+    },
+    {
+      "issue": "06",
+      "key": "10.1016/j.engappai.2024.109119_b28",
+      "doi-asserted-by": "crossref",
+      "first-page": "1135",
+      "DOI": "10.1109/TLA.2020.9099752",
+      "article-title": "Comparative analysis among feature selection of sEMG signal for hand gesture classification by armband",
+      "volume": "18",
+      "author": "Junior",
+      "year": "2020",
+      "journal-title": "IEEE Latin Am. Trans."
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b29",
+      "series-title": "2023 International Conference on Energy, Materials and Communication Engineering",
+      "first-page": "1",
+      "article-title": "Enhancing human activity recognition: An exploration of machine learning models and explainable AI approaches for feature contribution analysis",
+      "author": "Kaushik",
+      "year": "2023"
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b30",
+      "series-title": "2012 12th International Conference on Control Automation Robotics & Vision",
+      "first-page": "1534",
+      "article-title": "Electromyogram (EMG) feature reduction using mutual components analysis for multifunction prosthetic fingers control",
+      "author": "Khushaba",
+      "year": "2012"
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b31",
+      "doi-asserted-by": "crossref",
+      "first-page": "505",
+      "DOI": "10.1109/JTEHM.2023.3295775",
+      "article-title": "Breathing-associated facial region segmentation for thermal camera-based indirect breathing monitoring",
+      "volume": "11",
+      "author": "Kwon",
+      "year": "2023",
+      "journal-title": "IEEE J. Transl. Eng. Health Med."
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b32",
+      "series-title": "XXVI Brazilian Congress on Biomedical Engineering: CBEB 2018, Arma\u00e7\u00e3o de Buzios, RJ, Brazil, 21-25 October 2018 (Vol. 2)",
+      "first-page": "239",
+      "article-title": "Hand gestures classification using multichannel sEMG armband",
+      "author": "La Banca Freitas",
+      "year": "2019"
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b33",
+      "series-title": "Naive Bayesian Classifier",
+      "first-page": "123",
+      "author": "Leung",
+      "year": "2007"
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b34",
+      "series-title": "2020 5th International Conference on Advanced Robotics and Mechatronics",
+      "first-page": "402",
+      "article-title": "Optimization of semg classification model based on correlation analysis and feature selection",
+      "author": "Li",
+      "year": "2020"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.engappai.2024.109119_b35",
+      "doi-asserted-by": "crossref",
+      "first-page": "64",
+      "DOI": "10.1016/j.jtbi.2010.10.019",
+      "article-title": "Predicting ion channels and their types by the dipeptide mode of pseudo amino acid composition",
+      "volume": "269",
+      "author": "Lin",
+      "year": "2011",
+      "journal-title": "J. Theoret. Biol."
+    },
+    {
+      "issue": "24",
+      "key": "10.1016/j.engappai.2024.109119_b36",
+      "doi-asserted-by": "crossref",
+      "first-page": "14703",
+      "DOI": "10.1109/JSEN.2020.3011825",
+      "article-title": "Hand gesture recognition by a MMG-based wearable device",
+      "volume": "20",
+      "author": "Liu",
+      "year": "2020",
+      "journal-title": "IEEE Sens. J."
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b37",
+      "article-title": "A unified approach to interpreting model predictions",
+      "volume": "30",
+      "author": "Lundberg",
+      "year": "2017",
+      "journal-title": "Adv. Neural Inf. Process. Syst."
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b38",
+      "first-page": "3219",
+      "article-title": "SEMG signal classification using KNN classifier with FD and TFD features",
+      "volume": "37",
+      "author": "Narayan",
+      "year": "2021",
+      "journal-title": "Mater. Today: Proc."
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b39",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.dib.2022.107921",
+      "article-title": "Dataset for multi-channel surface electromyography (sEMG) signals of hand gestures",
+      "volume": "41",
+      "author": "Ozdemir",
+      "year": "2022",
+      "journal-title": "Data Brief"
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.engappai.2024.109119_b40",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.1109/LSENS.2019.2898257",
+      "article-title": "Electromyography-based hand gesture recognition system for upper limb amputees",
+      "volume": "3",
+      "author": "Pancholi",
+      "year": "2019",
+      "journal-title": "IEEE Sens. Lett."
+    },
+    {
+      "issue": "8",
+      "key": "10.1016/j.engappai.2024.109119_b41",
+      "doi-asserted-by": "crossref",
+      "first-page": "7420",
+      "DOI": "10.1016/j.eswa.2012.01.102",
+      "article-title": "Feature reduction and selection for EMG signal classification",
+      "volume": "39",
+      "author": "Phinyomark",
+      "year": "2012",
+      "journal-title": "Expert Syst. Appl."
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b42",
+      "series-title": "2016 IEEE Annual India Conference",
+      "first-page": "1",
+      "article-title": "Acquisition and classification of EMG using a dual-channel EMG biopotential amplifier for controlling assistive devices",
+      "author": "Pradhan",
+      "year": "2016"
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b43",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.inffus.2023.101948",
+      "article-title": "A survey on multi-label feature selection from perspectives of label fusion",
+      "volume": "100",
+      "author": "Qian",
+      "year": "2023",
+      "journal-title": "Inf. Fusion"
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b44",
+      "doi-asserted-by": "crossref",
+      "first-page": "241",
+      "DOI": "10.1016/j.inffus.2021.11.006",
+      "article-title": "Multi-sensor information fusion based on machine learning for real applications in human activity recognition: State-of-the-art and research challenges",
+      "volume": "80",
+      "author": "Qiu",
+      "year": "2022",
+      "journal-title": "Inf. Fusion"
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b45",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.aei.2023.102007",
+      "article-title": "DenseSPH-YOLOv5: An automated damage detection model based on DenseNet and swin-transformer prediction head-enabled YOLOv5 with attention mechanism",
+      "volume": "56",
+      "author": "Roy",
+      "year": "2023",
+      "journal-title": "Adv. Eng. Inform."
+    },
+    {
+      "issue": "5",
+      "key": "10.1016/j.engappai.2024.109119_b46",
+      "doi-asserted-by": "crossref",
+      "first-page": "3895",
+      "DOI": "10.1007/s00521-021-06651-x",
+      "article-title": "A fast accurate fine-grain object detection model based on YOLOv4 deep neural network",
+      "volume": "34",
+      "author": "Roy",
+      "year": "2022",
+      "journal-title": "Neural Comput. Appl."
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b47",
+      "series-title": "International Conference on Intelligent Data Engineering and Automated Learning",
+      "first-page": "178",
+      "article-title": "Filter methods for feature selection\u2013a comparative study",
+      "author": "S\u00e1nchez-Maro\u00f1o",
+      "year": "2007"
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b48",
+      "series-title": "A Value for N-Person Games",
+      "author": "Shapley",
+      "year": "1953"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.engappai.2024.109119_b49",
+      "doi-asserted-by": "crossref",
+      "first-page": "56",
+      "DOI": "10.1109/THMS.2020.3041201",
+      "article-title": "Hand gesture recognition using multiple acoustic measurements at wrist",
+      "volume": "51",
+      "author": "Siddiqui",
+      "year": "2020",
+      "journal-title": "IEEE Trans. Hum.-Mach. Syst."
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.engappai.2024.109119_b50",
+      "doi-asserted-by": "crossref",
+      "first-page": "499",
+      "DOI": "10.1007/s00530-016-0510-0",
+      "article-title": "Hand gesture recognition using two-level speed normalization, feature selection and classifier fusion",
+      "volume": "23",
+      "author": "Singha",
+      "year": "2017",
+      "journal-title": "Multimedia Syst."
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.engappai.2024.109119_b51",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1103/PhysRevB.86.045109",
+      "article-title": "R\u00e9nyi entropy, mutual information, and fluctuation properties of Fermi liquids",
+      "volume": "86",
+      "author": "Swingle",
+      "year": "2012",
+      "journal-title": "Phys. Rev. B"
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b52",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.apenergy.2023.122079",
+      "article-title": "Harnessing explainable artificial intelligence for feature selection in time series energy forecasting: A comparative analysis of grad-CAM and SHAP",
+      "volume": "353",
+      "author": "Van Zyl",
+      "year": "2024",
+      "journal-title": "Appl. Energy"
+    },
+    {
+      "issue": "18",
+      "key": "10.1016/j.engappai.2024.109119_b53",
+      "doi-asserted-by": "crossref",
+      "first-page": "20431",
+      "DOI": "10.1109/JSEN.2021.3095594",
+      "article-title": "A hybrid WD-EEMD sEMG feature extraction technique for lower limb activity recognition",
+      "volume": "21",
+      "author": "Vijayvargiya",
+      "year": "2021",
+      "journal-title": "IEEE Sens. J."
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b54",
+      "series-title": "2020 IEEE 5th International Conference on Computing Communication and Automation",
+      "first-page": "1",
+      "article-title": "Comparative analysis of machine learning techniques for the classification of knee abnormality",
+      "author": "Vijayvargiya",
+      "year": "2020"
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b55",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1109/THMS.2023.3319356",
+      "article-title": "PC-GNN: Pearson correlation-based graph neural network for recognition of human lower limb activity using sEMG signal",
+      "author": "Vijayvargiya",
+      "year": "2023",
+      "journal-title": "IEEE Trans. Hum.-Mach. Syst."
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b56",
+      "series-title": "2023 International Conference on Computer, Electronics & Electrical Engineering & their Applications",
+      "first-page": "1",
+      "article-title": "A LIME-based explainable machine learning technique for the risk prediction of chronic kidney disease",
+      "author": "Vijayvargiya",
+      "year": "2023"
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b57",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.1109/TIM.2022.3198443",
+      "article-title": "Hardware implementation for lower limb surface EMG measurement and analysis using explainable AI for activity recognition",
+      "volume": "71",
+      "author": "Vijayvargiya",
+      "year": "2022",
+      "journal-title": "IEEE Trans. Instrum. Meas."
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.engappai.2024.109119_b58",
+      "doi-asserted-by": "crossref",
+      "first-page": "343",
+      "DOI": "10.1007/s13534-022-00236-w",
+      "article-title": "Human lower limb activity recognition techniques, databases, challenges and its applications using sEMG signal: an overview",
+      "volume": "12",
+      "author": "Vijayvargiya",
+      "year": "2022",
+      "journal-title": "Biomed. Eng. Lett."
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b59",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Xu, Z., Huang, G., Weinberger, K.Q., Zheng, A.X., 2014. Gradient boosted feature selection. In: Proceedings of the 20th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. pp. 522\u2013531.",
+      "DOI": "10.1145/2623330.2623635"
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b60",
+      "doi-asserted-by": "crossref",
+      "first-page": "39",
+      "DOI": "10.1016/j.patrec.2022.11.021",
+      "article-title": "Underwater sEMG-based recognition of hand gestures using tensor decomposition",
+      "volume": "165",
+      "author": "Xue",
+      "year": "2023",
+      "journal-title": "Pattern Recognit. Lett."
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b61",
+      "series-title": "2005 IEEE Engineering in Medicine and Biology 27th Annual Conference",
+      "first-page": "5934",
+      "article-title": "The investigation on sEMG of lower extremity when a slip occurs in level walking",
+      "author": "Yang",
+      "year": "2005"
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b62",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.inffus.2023.102191",
+      "article-title": "DFS-WR: A novel dual feature selection and weighting representation framework for classification",
+      "volume": "104",
+      "author": "Zhang",
+      "year": "2024",
+      "journal-title": "Inf. Fusion"
+    },
+    {
+      "key": "10.1016/j.engappai.2024.109119_b63",
+      "series-title": "2014 IEEE International Conference on Robotics and Automation",
+      "first-page": "4850",
+      "article-title": "A comparative study on PCA and LDA based EMG pattern recognition for anthropomorphic robotic hand",
+      "author": "Zhang",
+      "year": "2014"
+    }
+  ],
+  "container-title": [
+    "Engineering Applications of Artificial Intelligence"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S0952197624012776?httpAccept=text/xml",
+      "content-type": "text/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S0952197624012776?httpAccept=text/plain",
+      "content-type": "text/plain",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2024,
+        9,
+        14
+      ]
+    ],
+    "date-time": "2024-09-14T22:56:32Z",
+    "timestamp": 1726354592000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0952197624012776"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2024,
+        11
+      ]
+    ]
+  },
+  "references-count": 63,
+  "alternative-id": [
+    "S0952197624012776"
+  ],
+  "URL": "https://doi.org/10.1016/j.engappai.2024.109119",
+  "relation": {},
+  "ISSN": [
+    "0952-1976"
+  ],
+  "issn-type": [
+    {
+      "value": "0952-1976",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2024,
+        11
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "Elsevier",
+      "name": "publisher",
+      "label": "This article is maintained by"
+    },
+    {
+      "value": "Surface electromyography based explainable Artificial Intelligence fusion framework for feature selection of hand gesture recognition",
+      "name": "articletitle",
+      "label": "Article Title"
+    },
+    {
+      "value": "Engineering Applications of Artificial Intelligence",
+      "name": "journaltitle",
+      "label": "Journal Title"
+    },
+    {
+      "value": "https://doi.org/10.1016/j.engappai.2024.109119",
+      "name": "articlelink",
+      "label": "CrossRef DOI link to publisher maintained version"
+    },
+    {
+      "value": "article",
+      "name": "content_type",
+      "label": "Content Type"
+    },
+    {
+      "value": "\u00a9 2024 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies.",
+      "name": "copyright",
+      "label": "Copyright"
+    }
+  ],
+  "article-number": "109119"
+}

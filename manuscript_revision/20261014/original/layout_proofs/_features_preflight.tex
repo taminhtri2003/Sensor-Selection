@@ -1,0 +1,31 @@
+\documentclass{iopjournal}
+\usepackage{amsmath,amssymb,microtype}
+\begin{document}
+\section*{Feature-definition formatting proof}
+This proof contains technical definitions only; it is not the final manuscript.
+\newcommand{\RevDBFiveBandLow}{10}
+\newcommand{\RevDBFiveBandHigh}{89}
+\newcommand{\RevDBFiveBandRequestedHigh}{95}
+\newcommand{\RevDBFiveFeatureRows}{21089}
+
+For DB5, all \RevDBFiveFeatureRows\ saved feature rows were reconstructed exactly from the ten raw exercise files. The common filter function clips the requested upper cutoff to $\min(f_{\rm requested},0.45f_s-1)$, giving \RevDBFiveBandLow--\RevDBFiveBandHigh\ Hz at its sampling rate, although the original extraction report printed the requested \RevDBFiveBandRequestedHigh\ Hz. The filtering code and saved features are preserved; this correction changes reporting, not model inputs or outcomes. The band-pass design argument is four, giving eight poles before forward--backward application. GRABMyo's requested upper limit is below this clipping cap.
+
+For one channel, let $x_t$, $t=1,\ldots,T$, denote the filtered window, $\bar x$ its mean and $d_t=x_{t+1}-x_t$. The implemented amplitude features are
+\begin{align*}
+\mathrm{MAV}&=T^{-1}\sum_{t=1}^T|x_t|,&
+\mathrm{RMS}&=\sqrt{T^{-1}\sum_{t=1}^Tx_t^2},\\
+\mathrm{VAR}&=T^{-1}\sum_{t=1}^T(x_t-\bar x)^2,&
+\mathrm{WL}&=\sum_{t=1}^{T-1}|d_t|,\\
+\mathrm{IEMG}&=\sum_{t=1}^T|x_t|,&
+\mathrm{WAMP}&=\sum_{t=1}^{T-1}\mathbf{1}\{|d_t|\ge\tau\}.
+\end{align*}
+Variance uses divisor $T$. IEMG and waveform length are sample sums, without division by sampling rate. The count rules are
+\begin{align*}
+\mathrm{ZC}&=\sum_{t=1}^{T-1}\mathbf{1}\{x_tx_{t+1}<0,\ |d_t|\ge\tau\},\\
+\mathrm{SSC}&=\sum_{t=2}^{T-1}\mathbf{1}\{a_tb_t>0,\ \max(|a_t|,|b_t|)\ge\tau\},
+\end{align*}
+where $a_t=x_t-x_{t-1}$ and $b_t=x_t-x_{t+1}$. The thresholds are $10^{-2}$ mV for monopolar GRABMyo, $4\times10^{-3}$ mV for derived bipolar signals and seven stored ADC units for DB5; they are not interchangeable amplitude units.
+
+For spectral features, SciPy Welch estimation uses a periodic Hann window, segment length $\min(T,256)$, default half-segment overlap, constant detrending and one-sided density scaling. Mean frequency is $\sum_\ell f_\ell P_\ell/(\sum_\ell P_\ell+10^{-12})$. Median frequency is the first frequency bin whose cumulative power reaches half of that guarded total, clamped to the last bin if none reaches it; no frequency interpolation is used. The feature order within every channel is MAV, RMS, VAR, WL, ZC, SSC, IEMG, WAMP, MNF, MDF. This channel-major mapping is retained when selecting electrodes.
+
+\end{document}

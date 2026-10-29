@@ -1,0 +1,7 @@
+{
+  "date": "2026-10-14",
+  "reason": "Original participant-attribution input manifest refuses the later changed P3 source digest. Historical source file was not found; historical hashes and results remain untouched.",
+  "action": "Rerun the same fixed participant-aggregation protocol in an isolated revision directory using current fingerprinted source. Reuse only exact compatible original P3 channel sets, as already recorded; refit all new unique subsets.",
+  "selection": "All lambda and k retained; no outcome-based optimization.",
+  "historical_status": "Original legacy source hash mismatch stays documented rather than being overwritten or claimed passed."
+}

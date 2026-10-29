@@ -1,0 +1,14 @@
+figure,purpose,pdf,svg,png,generation_script
+1,Recording topology and task,PDF/fig1_montage.pdf,SVG/fig1_montage.svg,PNG/fig1_montage.png,../03_Code/scripts/67_revision_figures.py
+2,Participant-disjoint cross-fitting,PDF/fig2_crossfit.pdf,SVG/fig2_crossfit.svg,PNG/fig2_crossfit.png,../03_Code/scripts/67_revision_figures.py
+3,Electrode count and participant losses,PDF/fig3_noninferiority.pdf,SVG/fig3_noninferiority.svg,PNG/fig3_noninferiority.png,../03_Code/scripts/67_revision_figures.py
+4,Selection-strategy comparisons,PDF/fig4_selection_utility.pdf,SVG/fig4_selection_utility.svg,PNG/fig4_selection_utility.png,../03_Code/scripts/67_revision_figures.py
+5,Gesture losses and attribution,PDF/fig5_task_and_attribution.pdf,SVG/fig5_task_and_attribution.svg,PNG/fig5_task_and_attribution.png,../03_Code/scripts/67_revision_figures.py
+6,Limits of transfer,PDF/fig6_generalization_limits.pdf,SVG/fig6_generalization_limits.svg,PNG/fig6_generalization_limits.png,../03_Code/scripts/67_revision_figures.py
+S1,Rest and window-length sensitivity,PDF/figS1_sensitivity_curves.pdf,SVG/figS1_sensitivity_curves.svg,PNG/figS1_sensitivity_curves.png,../03_Code/scripts/67_revision_figures.py
+S2,Changes in gesture confusion,PDF/figS2_confusion_change.pdf,SVG/figS2_confusion_change.svg,PNG/figS2_confusion_change.png,../03_Code/scripts/67_revision_figures.py
+S3,Full-array classifier comparison,PDF/figS3_classifier_context.pdf,SVG/figS3_classifier_context.svg,PNG/figS3_classifier_context.png,../03_Code/scripts/67_revision_figures.py
+S4,Participant versus fold aggregation,PDF/figS4_participant_aggregation.pdf,SVG/figS4_participant_aggregation.svg,PNG/figS4_participant_aggregation.png,../03_Code/scripts/67_revision_figures.py
+S5,Full-array session transfer,PDF/figS5_cross_session.pdf,SVG/figS5_cross_session.svg,PNG/figS5_cross_session.png,../03_Code/scripts/67_revision_figures.py
+S6,Attribution heterogeneity,PDF/figS6_attribution_heterogeneity.pdf,SVG/figS6_attribution_heterogeneity.svg,PNG/figS6_attribution_heterogeneity.png,../03_Code/scripts/67_revision_figures.py
+S7,Complete geometric reduction curve,PDF/figS7_geometric_count_curve.pdf,SVG/figS7_geometric_count_curve.svg,PNG/figS7_geometric_count_curve.png,../03_Code/scripts/67_revision_figures.py

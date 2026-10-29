@@ -1,0 +1,258 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        14
+      ]
+    ],
+    "date-time": "2026-10-14T00:06:05Z",
+    "timestamp": 1791936365665,
+    "version": "4.3.4"
+  },
+  "reference-count": 7,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "6",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            1987,
+            12,
+            1
+          ]
+        ],
+        "date-time": "1987-12-01T00:00:00Z",
+        "timestamp": 565315200000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "http://www.springer.com/tdm"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Journal of Pharmacokinetics and Biopharmaceutics"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        1987,
+        12
+      ]
+    ]
+  },
+  "DOI": "10.1007/bf01068419",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2005,
+        1,
+        29
+      ]
+    ],
+    "date-time": "2005-01-29T13:08:12Z",
+    "timestamp": 1107004092000
+  },
+  "page": "657-680",
+  "source": "Crossref",
+  "is-referenced-by-count": 2266,
+  "title": [
+    "A comparison of the Two One-Sided Tests Procedure and the Power Approach for assessing the equivalence of average bioavailability"
+  ],
+  "prefix": "10.1007",
+  "volume": "15",
+  "author": [
+    {
+      "given": "Donald J.",
+      "family": "Schuirmann",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "297",
+  "published-online": {
+    "date-parts": [
+      [
+        1987,
+        12,
+        1
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "BF01068419_CR1",
+      "doi-asserted-by": "crossref",
+      "first-page": "83",
+      "DOI": "10.1007/BF01063612",
+      "volume": "12",
+      "author": "W. W. Hauck",
+      "year": "1984",
+      "unstructured": "W. W. Hauck and S. Anderson. A new statistical procedure for testing equivalence in two-group comparative bioavailability trials.J. Pharmacokin. Biopharm. 12:83\u201391 (1984).",
+      "journal-title": "J. Pharmacokin. Biopharm."
+    },
+    {
+      "key": "BF01068419_CR2",
+      "doi-asserted-by": "crossref",
+      "first-page": "589",
+      "DOI": "10.2307/2530573",
+      "volume": "37",
+      "author": "W. J. Westlake",
+      "year": "1981",
+      "unstructured": "W. J. Westlake. Response to T. B. L. Kirkwood: Bioequivalence testing-a need to rethink.Biometrics 37:589\u2013594 (1981).",
+      "journal-title": "Biometrics"
+    },
+    {
+      "key": "BF01068419_CR3",
+      "doi-asserted-by": "crossref",
+      "first-page": "2663",
+      "DOI": "10.1080/03610928308828634",
+      "volume": "12",
+      "author": "S. Anderson",
+      "year": "1983",
+      "unstructured": "S. Anderson and W. W. Hauck. A new procedure for testing equivalence in comparative bioavailability and other clinical trials.Comm. Stat. A 12:2663\u20132692 (1983).",
+      "journal-title": "Comm. Stat. A"
+    },
+    {
+      "key": "BF01068419_CR4",
+      "doi-asserted-by": "crossref",
+      "first-page": "225",
+      "DOI": "10.2307/2530763",
+      "volume": "40",
+      "author": "D. M. Rocke",
+      "year": "1984",
+      "unstructured": "D. M. Rocke. On testing for bioequivalence.Biometrics 40:225\u2013230 (1984). (See also Correspondence inBiometrics 4:561\u2013563 (1985).)",
+      "journal-title": "Biometrics"
+    },
+    {
+      "key": "BF01068419_CR5",
+      "first-page": "149",
+      "volume-title": "Current Concepts in the Pharmaceutical Sciences, Dosage Form Design and Bioavailability",
+      "author": "W. J. Westlake",
+      "year": "1973",
+      "unstructured": "W. J. Westlake. The design and analysis of comparative blood-level trials. In J. Swarbrick (ed.),Current Concepts in the Pharmaceutical Sciences, Dosage Form Design and Bioavailability, Lea and Febiger, Philadelphia, 1973, pp. 149\u2013179."
+    },
+    {
+      "key": "BF01068419_CR6",
+      "doi-asserted-by": "crossref",
+      "first-page": "213",
+      "DOI": "10.2307/2530412",
+      "volume": "37",
+      "author": "D. Mandallaz",
+      "year": "1981",
+      "unstructured": "D. Mandallaz and J. Mau. Comparison of different methods for decision-making in bio-equivalence assessment.Biometrics 37:213\u2013222 (1981).",
+      "journal-title": "Biometrics"
+    },
+    {
+      "key": "BF01068419_CR7",
+      "doi-asserted-by": "crossref",
+      "first-page": "649",
+      "DOI": "10.1007/BF01059558",
+      "volume": "12",
+      "author": "C. S. Locke",
+      "year": "1984",
+      "unstructured": "C. S. Locke. An exact confidence interval from untransformed data for the ratio of two formulation means.J. Pharmacokin. Biopharm. 12:649\u2013655 (1984).",
+      "journal-title": "J. Pharmacokin. Biopharm."
+    }
+  ],
+  "container-title": [
+    "Journal of Pharmacokinetics and Biopharmaceutics"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "http://link.springer.com/content/pdf/10.1007/BF01068419.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "http://link.springer.com/article/10.1007/BF01068419/fulltext.html",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "http://link.springer.com/content/pdf/10.1007/BF01068419",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2019,
+        4,
+        30
+      ]
+    ],
+    "date-time": "2019-04-30T02:06:21Z",
+    "timestamp": 1556589981000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://link.springer.com/10.1007/BF01068419"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        1987,
+        12
+      ]
+    ]
+  },
+  "references-count": 7,
+  "journal-issue": {
+    "issue": "6",
+    "published-print": {
+      "date-parts": [
+        [
+          1987,
+          12
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "BF01068419"
+  ],
+  "URL": "https://doi.org/10.1007/bf01068419",
+  "relation": {},
+  "ISSN": [
+    "0090-466X"
+  ],
+  "issn-type": [
+    {
+      "value": "0090-466X",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        1987,
+        12
+      ]
+    ]
+  }
+}

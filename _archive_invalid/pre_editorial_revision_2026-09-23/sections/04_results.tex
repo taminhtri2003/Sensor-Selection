@@ -1,0 +1,94 @@
+\section{Results}
+\label{sec:results}
+
+\subsection[Subject-independent performance and electrode reduction]{\chg{Subject-independent performance and electrode reduction}}
+\label{sec:res_reduction}
+
+\chg{With all 16 electrodes, XGBoost achieved a mean Macro-F1 of \FullXGB\ (95\% CI \FullXGBLCB--\FullXGBUCB) across the 43 held-out participants. The corresponding values were \FullSVM\ (95\% CI \FullSVMLCB--\FullSVMUCB) for the support vector machine and \FullRF\ (95\% CI \FullRFLCB--\FullRFUCB) for the random forest} (table~\ref{tab:full_channel}, figure~\ref{fig:full}). \chg{No statistically detectable difference was observed between XGBoost and the support vector machine} (paired difference $\XGBvsSVMDiff$, 95\% CI $\XGBvsSVMLCB$ to $\XGBvsSVMUCB$, $p_{\mathrm{Holm}} \XGBvsSVMP$, $r_{rb} = \XGBvsSVMR$), \chg{whereas both models outperformed the random forest} ($p_{\mathrm{Holm}} \XGBvsRFP$ and $\SVMvsRFP$; $r_{rb} = \XGBvsRFR$ and $\SVMvsRFR$). \chg{Between-participant variability was substantially larger than the difference between the two higher-performing classifiers:} XGBoost ranged from \FullXGBMin\ to \FullXGBMax\ across participants. Participant-level performance for every active gesture, reconstructed directly from the saved full-array predictions, is reported in the supplementary material.
+
+\input{tables/tab_full_channel.tex}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig3_full_channel.pdf}
+\caption{Full-array leave-one-subject-out performance on GRABMyo (43 participants). (a) Macro-F1 of three classifiers; each point is one held-out participant, grey lines join the same participant, black bars mark medians and diamonds mark means with 95\% cluster-bootstrap confidence intervals. The support vector machine and random forest were trained on samples of 40,000 and 200,000 windows. (b) Paired XGBoost minus support vector machine difference per participant, sorted; the grey band is the 95\% confidence interval of the mean difference.}
+\label{fig:full}
+\end{figure}
+
+\chg{Recognition performance decreased progressively as electrodes were removed} (figure~\ref{fig:curve}, table~\ref{tab:sparse_ni}). The reference of the curve ($k = 16$) scored \CurveKSixteen, slightly below the full-data result because all curve models share one 200,000-window training sample. \chg{Under the prespecified margin of 0.02 Macro-F1, the smallest non-inferior configuration contained $k^* = \KStar$ electrodes. Its mean difference from the corresponding 16-electrode reference was $\DeltaKTwelve$ (95\% CI $\DeltaKTwelveLCB$ to $\DeltaKTwelveUCB$), whereas the 11-electrode subset crossed the non-inferiority boundary with a lower confidence bound of $\DeltaKElevenLCB$. All configurations containing 12--15 electrodes satisfied the criterion, and the minimum acceptable count remained \KStarHolm\ after Holm correction} ($k = 12$: $p_{\mathrm{Holm}} \HolmPKTwelve$; supplementary table~S1). \chg{As expected, the selected count depended on the tolerance: the minimum was \KStarMarginPtOne\ electrodes at $\delta = 0.01$ and \KStarMarginPtThree\ at $\delta = 0.03$,} again unchanged by Holm correction.
+
+\chg{Thus, a \KStarReductionPct\% reduction in electrode count was supported within the prespecified engineering tolerance, whereas more aggressive reduction was not. Halving the array to eight electrodes gave a mean difference of $\DeltaKEight$ (95\% CI $\DeltaKEightLCB$ to $\DeltaKEightUCB$), and every reduced configuration performed numerically below the complete array.} The electrodes most often excluded at $k = 12$ were \DroppedFourSet\ (\DroppedFourFolds\ of 43 folds).
+
+\input{tables/tab_sparse_ni.tex}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig4_sparse_curve.pdf}
+\caption{Electrode-count performance curve on GRABMyo (43 participants). (a) Mean Macro-F1 of models retrained on the top-$k$ electrodes of each fold's cross-fitted ranking, for the four values of the stability weight $\lambda$ (the curves overlap); the band is the 95\% cluster-bootstrap confidence interval for $\lambda = 0$. (b) Paired difference to the $k = 16$ model with 95\% confidence interval. The thick dashed line marks the primary margin ($-\delta$, $\delta = 0.02$); the thin dotted and dash-dotted grey lines mark the sensitivity margins (0.01 and 0.03).}
+\label{fig:curve}
+\end{figure}
+
+\subsection[Evaluation of attribution-guided electrode selection]{\chg{Evaluation of attribution-guided electrode selection}}
+\label{sec:res_attribution}
+
+\chg{Attribution-guided selection performed consistently better than the mean of random subsets at all four tested subset sizes} (table~\ref{tab:baselines}, figure~\ref{fig:baselines}; Holm-corrected, 8 tests). \chg{The largest gains occurred at intermediate reductions, particularly at six electrodes} ($\HTwoKSixDiff$ Macro-F1 for SR-CFA, 95\% CI $\HTwoKSixLCB$ to $\HTwoKSixUCB$, $p_{\mathrm{Holm}} \HTwoKSixP$, $r_{rb} = \HTwoKSixR$; $\HTwoKEightDiff$ at $k = 8$), \chg{whereas the advantage became smaller as the retained array approached the full configuration} ($\HTwoKTwelveDiff$ at $k = 12$, $p_{\mathrm{Holm}} \HTwoKTwelveP$) and was also small at $k = 4$ ($\HTwoKFourDiff$). \chg{Nevertheless, attribution-selected subsets were not uniformly optimal: within each participant's random-subset distribution, they typically ranked above the median but only occasionally reached the extreme upper tail.} The median percentile of the SR-CFA subset was \PctKFour, \PctKSix, \PctKEight\ and \PctKTwelve\ at $k = 4$, 6, 8 and 12, and it reached the 95th percentile for \PctKAboveNinetyFiveSix\ of 43 participants at $k = 6$ and \PctKAboveNinetyFiveTwelve\ at $k = 12$.
+
+In exploratory, uncorrected contrasts, no statistically detectable difference between SR-CFA and permutation importance was observed at $k = 4$, 8 or 12 (for example, $k = 8$: $\VSPermKEightDiff$, $p \VSPermKEightP$); at $k = 6$, SR-CFA was higher by $\VSPermKSixDiff$ ($p \VSPermKSixP$). Likewise, no statistically detectable difference between SR-CFA and geometric selection, which spreads electrodes evenly around both rings without using data, was observed at $k = 4$ ($\VSGeomKFourDiff$, $p \VSGeomKFourP$), $k = 8$ ($\VSGeomKEightDiff$, $p \VSGeomKEightP$) or $k = 12$ ($\VSGeomKTwelveDiff$, $p \VSGeomKTwelveP$); at $k = 6$, SR-CFA was higher by $\VSGeomKSixDiff$ ($p \VSGeomKSixP$). Mutual information gave the lowest scores at every $k \le 8$.
+
+\input{tables/tab_baselines.tex}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig5_selection_baselines.pdf}
+\caption{Selection methods at matched subset size $k$ (GRABMyo, 43 participants; one comparison model shared by all methods). (a) Mean Macro-F1 with 95\% cluster-bootstrap confidence intervals, grouped by method type: attribution rankings (stability-regularised cross-fitted attribution, SR-CFA, and cross-fitted SHAP), model-based rankings (permutation importance and mutual information), data-free geometric selection and the mean over random subsets. (b) Percentile of the SR-CFA subset within each participant's own random subsets (one point per participant; bar = median; 100 random subsets per participant, 500 at $k = 12$).}
+\label{fig:baselines}
+\end{figure}
+
+\chg{The deletion-with-retraining experiment provided complementary evidence that the ranking captured information relevant to classification} (table~\ref{tab:faithfulness}, figure~\ref{fig:faithfulness}). \chg{Removing highly ranked electrodes produced the largest loss in performance, removing low-ranked electrodes produced the smallest loss, and random deletion lay between these conditions;} this ordering held at every number of electrodes retained, and \FaithNSig\ of the \FaithNTests\ Holm-corrected contrasts were significant. With six electrodes retained, Remove-Top scored \FaithTopKSix, Remove-Random \FaithRandomKSix\ and Remove-Bottom \FaithBottomKSix\ (Remove-Top minus Remove-Random $\FaithTRKSixDiff$, $p_{\mathrm{Holm}} \FaithTRKSixP$; Remove-Random minus Remove-Bottom $\FaithRBKSixDiff$, $p_{\mathrm{Holm}} \FaithRBKSixP$). \chg{The ordering was most pronounced at intermediate subset sizes and became smaller near the extremes, where either very few or nearly all electrodes remained;} the only non-significant contrast was Remove-Top versus Remove-Bottom with 14 electrodes retained ($\FaithTBKFourteenDiff$, $p_{\mathrm{Holm}} \FaithTBKFourteenP$).
+
+\input{tables/tab_faithfulness.tex}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.62\textwidth]{figures/fig6_faithfulness.pdf}
+\caption{Deletion-with-retraining test of attribution faithfulness on GRABMyo (43 participants; mean and 95\% cluster-bootstrap confidence interval). Remove-Top deletes the highest-ranked electrodes, Remove-Bottom the lowest-ranked and Remove-Random a random set; all use the same comparison model and training sample. Remove-Random is shown where random subsets were sampled (4, 6, 8 and 12 electrodes retained).}
+\label{fig:faithfulness}
+\end{figure}
+
+\chg{The stability penalty, in contrast, had little practical effect. Attribution variability across the inner participant groups was small relative to attribution magnitude} (median $U_c/A_c$ \UOverAMedian\%, maximum \UOverAMax\%), \chg{so positive values of $\lambda$ rarely changed the selected subsets.} Relative to $\lambda = 0$, the top-12 set changed in \TopTwelveDiffersLambdaPtTwoFive, \TopTwelveDiffersLambdaPtFive\ and \TopTwelveDiffersLambdaOne\ of 43 folds at $\lambda = 0.25$, 0.5 and 1, and across all four $k$ tested at least \HThreeMinTied\ of 43 participants received the identical subset under both rankings. \chg{No stability-regularised configuration produced a statistically detectable improvement over cross-fitted attribution magnitude alone after multiplicity correction} (\HThreeNSig\ of \HThreeNTests\ contrasts; largest mean difference \HThreeMaxAbsDiff; smallest $p_{\mathrm{Holm}} \HThreeMinP$; supplementary table~S2). The four curves in figure~\ref{fig:curve}(a) differ by at most \LambdaCurveMaxSpread, and $k^*$ was identical under every $\lambda$ and margin; H3 was not supported. \chg{The participant-level aggregation extension increased the measured heterogeneity of attribution profiles but likewise failed to establish a corrected predictive advantage for the penalty} (figure~\ref{fig:participant_extension}).
+
+\input{generated/participant_extension_results.tex}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig9_participant_extension.pdf}
+\caption{Post-hoc participant-level attribution extension. Every cell is the mean paired difference across the GRABMyo participants, comparing person-level with fold-level aggregation under the same penalty, subset size and model protocol. Blue favours person-level aggregation and orange favours fold aggregation. Asterisks identify Holm-corrected differences within the complete family. All candidates are shown; outer-test outcomes did not select a penalty.}
+\label{fig:participant_extension}
+\end{figure}
+
+\subsection[Robustness and exploratory analyses]{\chg{Robustness and exploratory analyses}}
+\label{sec:res_exploratory}
+
+\chg{Electrode rankings showed substantial agreement across participants, particularly at the upper and lower ends of the ranking} (table~\ref{tab:stability}, figure~\ref{fig:attribution}). Rankings computed from individual participants' attributions agreed closely (mean Spearman $\rho$ = \StabSubjRho\ $\pm$ \StabSubjRhoSD\ over \StabSubjPairs\ pairs; mean Jaccard index of the top six \StabSubjJacSix), and rankings from disjoint inner folds agreed at $\rho$ = \StabInnerRho. The same four electrodes (\TopFourSet) formed the top four in \TopFourFolds\ of 43 outer folds and carried \TopFourShare\% of the summed attribution, whereas the eight lowest-ranked electrodes carried \BottomEightShare\%; rank ranges were widest in the middle of the ordering. The outer-fold agreement ($\rho$ = \StabOuterRho) is descriptive only, because those training sets share about 98\% of their participants. \chg{This indicates that the subject-independent procedure identified reproducible spatial preferences, although the data do not support assigning these positions to individual muscles.}
+
+\input{tables/tab_stability.tex}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig7_attribution.pdf}
+\caption{Cross-fitted electrode attribution on GRABMyo ($\lambda = 0$, 43 outer folds). (a) Mean share of attribution per electrode, drawn on the $2 \times 8$ montage; each ring~2 electrode is aligned with, and 2~cm from, the ring~1 electrode at the same circumferential position. (b) Rank of each electrode across inner folds (median and range).}
+\label{fig:attribution}
+\end{figure}
+
+\chg{Replication on NinaPro DB5 was inconclusive. The dataset contained only ten participants and produced substantially wider uncertainty than GRABMyo:} full-array Macro-F1 was \DBFiveFull\ $\pm$ \DBFiveFullSD\ (12 movements; chance about 0.083), with between-subject values from \DBFiveFullMin\ to \DBFiveFullMax\ (figure~\ref{fig:generalisation}(b)). \chg{One reduced configuration ($k = 12$) met the non-inferiority margin by a negligible amount} ($\bar\Delta_{12} = \DBFiveDeltaKTwelve$, lower bound $\DBFiveDeltaKTwelveLCBSix$), \chg{but the result was sensitive to bootstrap variation} (non-inferior under \DBFiveSeedFrac\% of \DBFiveSeedN\ alternative bootstrap seeds), $k = 13$, 14 and 15 all failed (lower bounds $\DBFiveDeltaKThirteenLCB$, $\DBFiveDeltaKFourteenLCB$ and $\DBFiveDeltaKFifteenLCB$), \chg{and no subset remained non-inferior after Holm correction. The replication therefore neither confirms nor contradicts the primary GRABMyo result.}
+
+\chg{Cross-session analyses provided no evidence of an additional performance loss on later recording days beyond the existing subject-independent gap} (figure~\ref{fig:generalisation}(a)). Training on session~1 and testing on sessions 1, 2 and 3 gave \CSOneSOne, \CSOneSTwo\ and \CSOneSThree; the session-2 difference from session~1 was nominally significant ($\CSSTwoVsSOneDiff$, 95\% CI $\CSSTwoVsSOneLCB$ to $\CSSTwoVsSOneUCB$, uncorrected $p \CSSTwoVsSOneP$), and no statistically detectable difference was observed for session~3 ($\CSSThreeVsSOneDiff$, $p \CSSThreeVsSOneP$). Training on sessions 1 and 2 improved session-3 performance over training on session~1 alone ($\CSTwoVsOneDiff$, 95\% CI $\CSTwoVsOneLCB$ to $\CSTwoVsOneUCB$, $p \CSTwoVsOneP$). \chg{However, these contrasts do not isolate electrode displacement, and the apparent benefit of training on two sessions is confounded by the larger amount of training data.}
+
+\chg{Finally, results from the derived bipolar representation differed from those of the primary monopolar analysis.} With the eight derived pairs as the selection unit, full-array Macro-F1 was \BipFull\ $\pm$ \BipFullSD, lower than with monopolar electrodes (figure~\ref{fig:generalisation}(c)). \chg{No reduction from eight to seven bipolar pairs satisfied the primary non-inferiority criterion} ($\bar\Delta_7 = \BipDeltaKSeven$, lower bound $\BipDeltaKSevenLCB$; non-inferior under \BipSeedFracSeven\% of 200 alternative bootstrap seeds). Under the sensitivity margins, $k^*$ was \BipKStarMarginPtOne\ at $\delta = 0.01$ and \BipKStarMarginPtThree\ at $\delta = 0.03$, identically for all $\lambda$, and pairs \BipTopThreeSet\ formed the top three in \BipTopThreeFolds\ of 43 folds. \chg{Consequently, the \KStarReductionPct\% reduction identified in the primary analysis should be interpreted specifically as a reduction in monopolar recording sites on the GRABMyo montage, rather than as evidence that an equivalent proportion of physical bipolar sensors can be removed.}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig8_generalisation.pdf}
+\caption{Exploratory analyses. (a) GRABMyo cross-session evaluation: each point is one held-out participant, grey lines join the same participant across conditions and bars mark medians; every condition is also subject-independent. (b--c) Mean paired difference to the full array of the same curve, $\bar\Delta_k$, with 95\% cluster-bootstrap confidence interval, for (b) NinaPro DB5 (10 subjects, reference $k = 16$), (c) GRABMyo derived bipolar pairs (43 participants, reference $k = 8$). The dashed line marks the primary margin; filled markers indicate a lower bound above the margin and open markers a lower bound at or below it.}
+\label{fig:generalisation}
+\end{figure}

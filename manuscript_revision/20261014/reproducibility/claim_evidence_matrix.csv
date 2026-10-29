@@ -1,0 +1,16 @@
+Claim,Evidence classification,Source,Decision,Scope/limitation
+Twelve electrodes meet0.02 mean tolerance,"primary planned rule, qualified chronology",artifacts/metrics/sparse_curve_subject_metrics.csv; primary_matched_noninferiority.csv; noninferiority_audit.csv,supported under observed offline LOSO protocol,Mean/conditional claim; no individual guarantee
+Every participant or gesture is preserved,unsupported,participant_degradation.csv; gesture_degradation.csv,contradicted by observed losses,Do not claim
+Attribution exceeds mean random selection,historical secondary,artifacts/statistics/h2_attribution_vs_random.csv,supported in lighter protocol,Unequal selection-stage resources across other methods
+SHAP12 has a positive mean advantage over geometry12,new exploratory,primary_selection_comparison.csv,not established: mean CI crosses zero,Report nominal rank test separately
+Stability penalty is a beneficial upgraded selector,historical secondary + person extension,extension_penalty.csv; artifacts/statistics/h3_lambda_vs_zero.csv,no established benefit,Report all fixed penalties; no outer-outcome choice
+Shared-resource SHAP versus grouped permutation,new exploratory,matched_budget_comparisons.csv; matched_budget/inner_scores.csv,positive SHAP mean advantage at6; uncertain at12,Six does not meet primary NI; changes beyond budget remain confounded
+Penalty changes physical inputs at twelve electrodes,new post-hoc descriptive audit,selection_change_audit.csv; selection_change_audit_participants.csv,all participant penalties unchanged in43/43 folds,Identical inputs and cached fits; not equivalence of different layouts
+Minimum count for the tested geometric ordering,new exploratory after geometry12,kstar_audit.csv; geometric_curve/sparse_curve_subject_metrics.csv,"geometric minimum 15 (CI), 15 (null Holm)",One fixed ordering; differing NI decisions are not a direct method test
+One common locked layout independently validated,unsupported,artifacts/completion_analyses/fixed_layout/summary.csv,not supported,Two different layouts; count exposed to full cohort
+Rest/window/RF robustness,exploratory sensitivity,noninferiority_audit.csv; alternative_classifier_noninferiority.csv,condition-specific results retained,Primary rankings reused; RF onlytwo counts
+DB5 validates the same12-site hardware layout,unsupported,artifacts/db5; noninferiority_audit.csv,not supported,"Different hardware/task, ten participants"
+Bipolar pairs preserve proportional sensor reduction,unsupported,artifacts/bipolar; noninferiority_audit.csv,not supported,"Derived signals, owneight-pair reference"
+Attribution maps specific muscles,unsupported,fig5 source data; documented montage,not supported,"Predictive relevance, no registration or causal intervention"
+Real-time or clinical/device improvement,unsupported,no real-time/clinical measurements,not tested,Offline non-causal filtering and able-bodied cohorts
+First SHAP electrode selector or novel robustness algorithm,unsupported novelty,reports/02_novelty_and_literature.md,not claimed,Prior EMG SHAP and attribution-stability work cited

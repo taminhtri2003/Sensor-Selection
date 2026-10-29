@@ -1,0 +1,30 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{H4: deletion with retraining (GRABMyo, 43 participants). Retained: electrodes kept after deletion. Remove-Top, Remove-Bottom and Remove-Random delete the highest-ranked, lowest-ranked or randomly chosen electrodes; Remove-Random uses the random subsets of the H2 comparison and exists only where these were sampled. All orders use the same comparison model and training sample. Difference: mean paired difference (first minus second order) with 95\% participant cluster-bootstrap confidence interval (CI); negative values follow the expected ordering. $p_{\mathrm{Holm}}$: Wilcoxon signed-rank, Holm over the 15 contrasts; $r_{rb}$: matched-pairs rank-biserial correlation.}
+\label{tab:faithfulness}
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{rlcccccc}
+\toprule
+Retained & Contrast & First & Second & Difference & 95\% CI & $p_{\mathrm{Holm}}$ & $r_{rb}$ \\
+\midrule
+2 & Top $-$ Bottom & 0.263 & 0.292 & $-$0.0297 & $-$0.0419 to $-$0.0166 & $<$0.001 & $-$0.67 \\
+\midrule 4 & Top $-$ Bottom & 0.351 & 0.382 & $-$0.0314 & $-$0.0447 to $-$0.0177 & $<$0.001 & $-$0.64 \\
+ & Top $-$ Random & 0.351 & 0.366 & $-$0.0151 & $-$0.0239 to $-$0.0061 & 0.010 & $-$0.51 \\
+ & Random $-$ Bottom & 0.366 & 0.382 & $-$0.0163 & $-$0.0265 to $-$0.0061 & 0.013 & $-$0.47 \\
+\midrule 6 & Top $-$ Bottom & 0.376 & 0.454 & $-$0.0775 & $-$0.0921 to $-$0.0627 & $<$0.001 & $-$0.96 \\
+ & Top $-$ Random & 0.376 & 0.416 & $-$0.0398 & $-$0.0487 to $-$0.0307 & $<$0.001 & $-$0.91 \\
+ & Random $-$ Bottom & 0.416 & 0.454 & $-$0.0377 & $-$0.0459 to $-$0.0293 & $<$0.001 & $-$0.93 \\
+\midrule 8 & Top $-$ Bottom & 0.408 & 0.469 & $-$0.0618 & $-$0.0772 to $-$0.0461 & $<$0.001 & $-$0.89 \\
+ & Top $-$ Random & 0.408 & 0.445 & $-$0.0377 & $-$0.0476 to $-$0.0273 & $<$0.001 & $-$0.86 \\
+ & Random $-$ Bottom & 0.445 & 0.469 & $-$0.0242 & $-$0.0309 to $-$0.0172 & $<$0.001 & $-$0.86 \\
+\midrule 10 & Top $-$ Bottom & 0.445 & 0.475 & $-$0.0297 & $-$0.0399 to $-$0.0188 & $<$0.001 & $-$0.73 \\
+\midrule 12 & Top $-$ Bottom & 0.455 & 0.485 & $-$0.0302 & $-$0.0385 to $-$0.0218 & $<$0.001 & $-$0.84 \\
+ & Top $-$ Random & 0.455 & 0.478 & $-$0.0228 & $-$0.0296 to $-$0.0158 & $<$0.001 & $-$0.81 \\
+ & Random $-$ Bottom & 0.478 & 0.485 & $-$0.0074 & $-$0.0101 to $-$0.0046 & $<$0.001 & $-$0.74 \\
+\midrule 14 & Top $-$ Bottom & 0.487 & 0.491 & $-$0.0038 & $-$0.0084 to +0.0009 & 0.150 & $-$0.25 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

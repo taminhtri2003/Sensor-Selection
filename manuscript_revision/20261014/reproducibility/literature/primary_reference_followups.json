@@ -1,0 +1,32 @@
+[
+  {
+    "key": "bengio2004variance",
+    "source": "https://www.jmlr.org/papers/v5/grandvalet04a.html",
+    "status": "primary journal page and full paper verified",
+    "claim": "overlapping training can make naive CV variance estimates optimistic"
+  },
+  {
+    "key": "lundberg2017unified",
+    "source": "https://proceedings.neurips.cc/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html",
+    "status": "primary NeurIPS proceedings page, title/authors/year and abstract verified",
+    "claim": "SHAP attribution framework"
+  },
+  {
+    "key": "xiang2026roshap",
+    "source": "https://arxiv.org/abs/2605.15154",
+    "status": "primary arXiv abstract/version history verified, preprint",
+    "claim": "robust attribution metric, not evidence for this EMG penalty"
+  },
+  {
+    "key": "jiang2024grabmyo",
+    "source": "https://api.datacite.org/dois/10.13026/89dm-f662",
+    "status": "DataCite metadata verified; Crossref404 was wrong registry for this record",
+    "claim": "public dataset version1.1.0, creators and year2024"
+  },
+  {
+    "key": "pizzolato2017comparison",
+    "source": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0186132",
+    "status": "primary full article verified; Crossref retry metadata saved after429",
+    "claim": "DB5 acquisition/source study"
+  }
+]

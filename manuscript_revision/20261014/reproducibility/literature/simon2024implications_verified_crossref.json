@@ -1,0 +1,585 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        1
+      ]
+    ],
+    "date-time": "2026-08-01T06:22:07Z",
+    "timestamp": 1785565327277,
+    "version": "3.56.0"
+  },
+  "reference-count": 38,
+  "publisher": "Frontiers Media SA",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            3,
+            4
+          ]
+        ],
+        "date-time": "2024-03-04T00:00:00Z",
+        "timestamp": 1709510400000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "frontiersin.org"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Front. Rehabil. Sci."
+  ],
+  "abstract": "<jats:sec><jats:title>Introduction</jats:title><jats:p>Myoelectric pattern recognition systems have shown promising control of upper limb powered prostheses and are now commercially available. These pattern recognition systems typically record from up to 8 muscle sites, whereas other control systems use two-site control. While previous offline studies have shown 8 or fewer sites to be optimal, real-time control was not evaluated.</jats:p></jats:sec><jats:sec><jats:title>Methods</jats:title><jats:p>Six individuals with no limb absence and four individuals with a transradial amputation controlled a virtual upper limb prosthesis using pattern recognition control with 8 and 16 channels of EMG. Additionally, two of the individuals with a transradial amputation performed the Assessment for Capacity of Myoelectric Control (ACMC) with a multi-articulating hand and wrist prosthesis with the same channel count conditions.</jats:p></jats:sec><jats:sec><jats:title>Results</jats:title><jats:p>Users had significant improvements in control when using 16 compared to 8 EMG channels including decreased classification error (<jats:italic>p</jats:italic> = 0.006), decreased completion time (<jats:italic>p</jats:italic> = 0.019), and increased path efficiency (<jats:italic>p</jats:italic> = 0.013) when controlling a virtual prosthesis. ACMC scores increased by more than three times the minimal detectable change from the 8 to the 16-channel condition.</jats:p></jats:sec><jats:sec><jats:title>Discussion</jats:title><jats:p>The results of this study indicate that increasing EMG channel count beyond the clinical standard of 8 channels can benefit myoelectric pattern recognition users.</jats:p></jats:sec>",
+  "DOI": "10.3389/fresc.2024.1345364",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2024,
+        3,
+        4
+      ]
+    ],
+    "date-time": "2024-03-04T04:23:43Z",
+    "timestamp": 1709526223000
+  },
+  "update-policy": "https://doi.org/10.3389/crossmark-policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 10,
+  "title": [
+    "Implications of EMG channel count: enhancing pattern recognition online prosthetic testing"
+  ],
+  "prefix": "10.3389",
+  "volume": "5",
+  "author": [
+    {
+      "given": "Ann M.",
+      "family": "Simon",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Keira",
+      "family": "Newkirk",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Laura A.",
+      "family": "Miller",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Kristi L.",
+      "family": "Turner",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Kevin",
+      "family": "Brenner",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Michael",
+      "family": "Stephens",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Levi J.",
+      "family": "Hargrove",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "1965",
+  "published-online": {
+    "date-parts": [
+      [
+        2024,
+        3,
+        4
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "B1",
+      "doi-asserted-by": "publisher",
+      "first-page": "875",
+      "DOI": "10.1097/00007611-200208000-00018",
+      "article-title": "Limb amputation and limb deficiency: epidemiology and recent trends in the United States",
+      "volume": "95",
+      "author": "Dillingham",
+      "year": "2002",
+      "journal-title": "South Med J"
+    },
+    {
+      "key": "B2",
+      "doi-asserted-by": "publisher",
+      "first-page": "1",
+      "DOI": "10.1109/JTEHM.2016.2616123",
+      "article-title": "A comparison of pattern recognition control and direct control of a multiple degree-of-freedom transradial prosthesis",
+      "volume": "4",
+      "author": "Kuiken",
+      "year": "2016",
+      "journal-title": "IEEE J Transl Eng Heal Med"
+    },
+    {
+      "key": "B3",
+      "author": "Simon",
+      "year": "2019"
+    },
+    {
+      "key": "B4",
+      "doi-asserted-by": "publisher",
+      "first-page": "23",
+      "DOI": "10.1186/s12984-018-0361-3",
+      "article-title": "Evaluation of EMG pattern recognition for upper limb prosthesis control: a case study in comparison with direct myoelectric control",
+      "volume": "15",
+      "author": "Resnik",
+      "year": "2018",
+      "journal-title": "J Neuroeng Rehabil"
+    },
+    {
+      "key": "B5",
+      "doi-asserted-by": "publisher",
+      "first-page": "643",
+      "DOI": "10.1682/JRRD.2010.09.0177",
+      "article-title": "Electromyogram pattern recognition for control of powered upper-limb prostheses: state of the art and challenges for clinical use",
+      "volume": "48",
+      "author": "Scheme",
+      "year": "2011",
+      "journal-title": "J Rehabil Res Dev"
+    },
+    {
+      "key": "B6",
+      "doi-asserted-by": "publisher",
+      "first-page": "10150",
+      "DOI": "10.1109/ACCESS.2019.2891350",
+      "article-title": "Intelligent EMG pattern recognition control method for upper-limb multifunctional prostheses: advances, current challenges, and future prospects",
+      "volume": "7",
+      "author": "Samuel",
+      "year": "2019",
+      "journal-title": "IEEE Access"
+    },
+    {
+      "key": "B7",
+      "doi-asserted-by": "publisher",
+      "first-page": "4596",
+      "DOI": "10.3390/s19204596",
+      "article-title": "Real-time EMG based pattern recognition control for hand prostheses: a review on existing methods, challenges and future implementation",
+      "volume": "19",
+      "author": "Parajuli",
+      "year": "2019",
+      "journal-title": "Sensors (Switzerland)"
+    },
+    {
+      "key": "B8",
+      "doi-asserted-by": "publisher",
+      "first-page": "185",
+      "DOI": "10.1109/TNSRE.2009.2039619",
+      "article-title": "Quantifying pattern recognition-based myoelectric control of multifunctional transradial prostheses",
+      "volume": "18",
+      "author": "Li",
+      "year": "2010",
+      "journal-title": "IEEE Trans Neural Syst Rehabil Eng"
+    },
+    {
+      "key": "B9",
+      "doi-asserted-by": "publisher",
+      "first-page": "1",
+      "DOI": "10.1186/1743-0003-9-74",
+      "article-title": "Toward attenuating the impact of arm positions on electromyography pattern-recognition based motion classification in transradial amputees",
+      "volume": "9",
+      "author": "Geng",
+      "year": "2012",
+      "journal-title": "J Neuroeng Rehabil"
+    },
+    {
+      "key": "B10",
+      "doi-asserted-by": "publisher",
+      "first-page": "608",
+      "DOI": "10.1109/JBHI.2013.2249590",
+      "article-title": "Classification of finger movements for the dexterous hand prosthesis control with surface electromyography",
+      "volume": "17",
+      "author": "Al-Timemy",
+      "year": "2013",
+      "journal-title": "IEEE J Biomed Heal Inform"
+    },
+    {
+      "key": "B11",
+      "doi-asserted-by": "publisher",
+      "first-page": "837",
+      "DOI": "10.1109/TNSRE.2015.2478138",
+      "article-title": "Transradial amputee gesture classification using an optimal number of sEMG sensors: an approach using ICA clustering",
+      "volume": "24",
+      "author": "Naik",
+      "year": "2016",
+      "journal-title": "IEEE Trans Neural Syst Rehabil Eng"
+    },
+    {
+      "key": "B12",
+      "first-page": "1608",
+      "author": "Kanitz",
+      "year": "2011"
+    },
+    {
+      "key": "B13",
+      "doi-asserted-by": "publisher",
+      "first-page": "847",
+      "DOI": "10.1109/TBME.2006.889192",
+      "article-title": "A comparison of surface and intramuscular myoelectric signal classification",
+      "volume": "54",
+      "author": "Hargrove",
+      "year": "2007",
+      "journal-title": "IEEE Trans Biomed Eng"
+    },
+    {
+      "key": "B14",
+      "first-page": "122",
+      "author": "Lock",
+      "year": "2005"
+    },
+    {
+      "key": "B15",
+      "doi-asserted-by": "publisher",
+      "first-page": "5090454",
+      "DOI": "10.1155/2017/5090454",
+      "article-title": "Improving the robustness of real-time myoelectric pattern recognition against arm position changes in transradial amputees",
+      "volume": "2017",
+      "author": "Geng",
+      "year": "2017",
+      "journal-title": "Biomed Res Int"
+    },
+    {
+      "key": "B16",
+      "doi-asserted-by": "publisher",
+      "first-page": "619",
+      "DOI": "10.1682/jrrd.2010.08.0149",
+      "article-title": "Target achievement control test: evaluating real-time myoelectric pattern-recognition control of multifunctional upper-limb prostheses",
+      "volume": "48",
+      "author": "Simon",
+      "year": "2011",
+      "journal-title": "J Rehabil Res Dev"
+    },
+    {
+      "key": "B17",
+      "doi-asserted-by": "publisher",
+      "first-page": "60",
+      "DOI": "10.1186/s12984-018-0402-y",
+      "article-title": "Control within a virtual environment is correlated to functional outcomes when using a physical prosthesis",
+      "volume": "15",
+      "author": "Hargrove",
+      "year": "2018",
+      "journal-title": "J Neuroeng Rehabil"
+    },
+    {
+      "key": "B18",
+      "year": ""
+    },
+    {
+      "key": "B19",
+      "year": ""
+    },
+    {
+      "key": "B20",
+      "year": ""
+    },
+    {
+      "key": "B21",
+      "year": ""
+    },
+    {
+      "key": "B22",
+      "year": "2022"
+    },
+    {
+      "key": "B23",
+      "doi-asserted-by": "publisher",
+      "first-page": "56",
+      "DOI": "10.1097/JPO.0b013e3182515437",
+      "article-title": "Patient training for functional use of pattern recognition-controlled prostheses",
+      "volume": "24",
+      "author": "Simon",
+      "year": "2012",
+      "journal-title": "J Prosthet Orthot"
+    },
+    {
+      "key": "B24",
+      "doi-asserted-by": "publisher",
+      "first-page": "619",
+      "DOI": "10.1001/jama.2009.116",
+      "article-title": "Targeted muscle reinnervation for real-time myoelectric control of multifunction artificial arms",
+      "volume": "301",
+      "author": "Kuiken",
+      "year": "2009",
+      "journal-title": "JAMA"
+    },
+    {
+      "key": "B25",
+      "doi-asserted-by": "publisher",
+      "first-page": "82",
+      "DOI": "10.1109/10.204774",
+      "article-title": "A new strategy for multifunction myoelectric control",
+      "volume": "40",
+      "author": "Hudgins",
+      "year": "1993",
+      "journal-title": "IEEE Trans Biomed Eng"
+    },
+    {
+      "key": "B26",
+      "doi-asserted-by": "publisher",
+      "first-page": "2974",
+      "DOI": "10.1152/jn.00178.2007",
+      "article-title": "Decoding a new neural machine interface for control of artificial limbs",
+      "volume": "98",
+      "author": "Zhou",
+      "year": "2007",
+      "journal-title": "J Neurophysiol"
+    },
+    {
+      "key": "B27",
+      "volume-title": "Pattern Classification",
+      "author": "Duda",
+      "year": "2000"
+    },
+    {
+      "key": "B28",
+      "doi-asserted-by": "publisher",
+      "first-page": "149",
+      "DOI": "10.1109/TNSRE.2013.2247421",
+      "article-title": "Motion normalized proportional control for improved pattern recognition-based myoelectric control",
+      "volume": "22",
+      "author": "Scheme",
+      "year": "2014",
+      "journal-title": "IEEE Trans Neural Syst Rehabil Eng"
+    },
+    {
+      "key": "B29",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/tbme.2011.2155063",
+      "article-title": "A decision-based velocity ramp for minimizing the effect of misclassifications during real-time pattern recognition control",
+      "volume": "58",
+      "author": "Simon",
+      "year": "2011",
+      "journal-title": "IEEE Trans Biomed Eng"
+    },
+    {
+      "key": "B30",
+      "doi-asserted-by": "publisher",
+      "first-page": "271",
+      "DOI": "10.1109/TNSRE.2022.3221558",
+      "article-title": "User performance with a transradial multi-articulating hand prosthesis during pattern recognition and direct control home use",
+      "volume": "31",
+      "author": "Simon",
+      "year": "2023",
+      "journal-title": "IEEE Trans Neural Syst Rehabil Eng"
+    },
+    {
+      "key": "B31",
+      "doi-asserted-by": "publisher",
+      "first-page": "166",
+      "DOI": "10.1080/16501970410024280",
+      "article-title": "Assessment of capacity for myoelectric control: a new rasch-built measure of prosthetic hand control",
+      "volume": "37",
+      "author": "Hermansson",
+      "year": "2005",
+      "journal-title": "J Rehabil Med"
+    },
+    {
+      "key": "B32",
+      "doi-asserted-by": "publisher",
+      "first-page": "467",
+      "DOI": "10.2340/16501977-0361",
+      "article-title": "Assessment of capacity for myoelectric control: evaluation of construct and rating scale",
+      "volume": "41",
+      "author": "Lindner",
+      "year": "2009",
+      "journal-title": "J Rehabil Med"
+    },
+    {
+      "key": "B33",
+      "doi-asserted-by": "publisher",
+      "first-page": "637",
+      "DOI": "10.1109/10.923782",
+      "article-title": "A novel approach for precise simulation of the EMG signal detected by surface electrodes",
+      "volume": "48",
+      "author": "Farina",
+      "year": "2001",
+      "journal-title": "IEEE Trans Biomed Eng"
+    },
+    {
+      "key": "B34",
+      "doi-asserted-by": "publisher",
+      "first-page": "244",
+      "DOI": "10.1109/TNSRE.2017.2766360",
+      "article-title": "Decoding motor unit activity from forearm muscles: perspectives for myoelectric control",
+      "volume": "26",
+      "author": "Kapelner",
+      "year": "2018",
+      "journal-title": "IEEE Trans Neural Syst Rehabil Eng"
+    },
+    {
+      "key": "B35",
+      "doi-asserted-by": "publisher",
+      "first-page": "949",
+      "DOI": "10.1109/TNSRE.2013.2247631",
+      "article-title": "Real-time motor unit identification from high-density surface EMG",
+      "volume": "21",
+      "author": "Glaser",
+      "year": "2013",
+      "journal-title": "IEEE Trans Neural Syst Rehabil Eng"
+    },
+    {
+      "key": "B36",
+      "doi-asserted-by": "publisher",
+      "first-page": "1",
+      "DOI": "10.3389/fbioe.2023.1134135",
+      "article-title": "Autoencoder-based myoelectric controller for prosthetic hands",
+      "volume": "11",
+      "author": "Portnova-Fahreeva",
+      "year": "2023",
+      "journal-title": "Front Bioeng Biotechnol"
+    },
+    {
+      "key": "B37",
+      "doi-asserted-by": "publisher",
+      "first-page": "1",
+      "DOI": "10.1186/s12984-015-0011-y",
+      "article-title": "A real-time, practical sensor fault-tolerant module for robust EMG pattern recognition",
+      "volume": "12",
+      "author": "Zhang",
+      "year": "2015",
+      "journal-title": "J Neuroeng Rehabil"
+    },
+    {
+      "key": "B38",
+      "first-page": "1148",
+      "author": "Teh",
+      "year": "2021"
+    }
+  ],
+  "container-title": [
+    "Frontiers in Rehabilitation Sciences"
+  ],
+  "original-title": [],
+  "link": [
+    {
+      "URL": "https://www.frontiersin.org/articles/10.3389/fresc.2024.1345364/full",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2024,
+        3,
+        4
+      ]
+    ],
+    "date-time": "2024-03-04T04:23:45Z",
+    "timestamp": 1709526225000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.frontiersin.org/articles/10.3389/fresc.2024.1345364/full"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2024,
+        3,
+        4
+      ]
+    ]
+  },
+  "references-count": 38,
+  "alternative-id": [
+    "10.3389/fresc.2024.1345364"
+  ],
+  "URL": "https://doi.org/10.3389/fresc.2024.1345364",
+  "relation": {},
+  "ISSN": [
+    "2673-6861"
+  ],
+  "issn-type": [
+    {
+      "value": "2673-6861",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2024,
+        3,
+        4
+      ]
+    ]
+  },
+  "article-number": "1345364"
+}

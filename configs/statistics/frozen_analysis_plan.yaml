@@ -1,0 +1,129 @@
+# Frozen statistical analysis plan
+#
+# Committed 2026-08-12, BEFORE any sparse sensor curve, selection baseline, cross-session,
+# faithfulness, or DB5 result exists. At the time of writing, the only results in hand are the
+# full-channel LOSO baselines (in progress) and the superseded 15-participant partial run.
+#
+# Purpose: prevent the analysis from being shaped by the results. The prior version of this study
+# reported a non-inferiority margin, an "optimal" k, and p-values that were never computed; the
+# defence against that is not more care at writing time, it is fixing the decision rules while the
+# answers are still unknown.
+#
+# Any deviation from this file must be recorded in reports/decision_log.md with its reason and
+# the date, and must be reported in the manuscript as a post-hoc change.
+
+version: 1
+frozen_date: 2026-08-12
+seed: 20260728
+
+statistical_unit:
+  level: participant
+  rationale: >
+    Windows within a participant are not independent: they overlap by 50%, come from the same
+    electrode placement, and share subject anatomy. Treating windows as the unit would shrink
+    confidence intervals by roughly the square root of the windows-per-participant count and
+    produce spuriously significant comparisons. All inference is therefore at participant level,
+    n = 43 for GRABMyo and n = 10 for DB5.
+
+primary_endpoint:
+  metric: macro_f1
+  task: 16 active gestures, Rest excluded
+  model: XGBoost
+  validation: leave-one-subject-out, 43 folds
+  rationale: >
+    Macro-F1 weights every gesture equally, so degradation confined to a few classes cannot be
+    hidden by the majority. Accuracy is reported alongside as the familiar secondary metric.
+
+secondary_endpoints:
+  - balanced_accuracy
+  - accuracy
+  - weighted_f1
+  - per_class_f1
+  - task: 17 classes including Rest
+
+confirmatory_hypotheses:
+  H1:
+    statement: A reduced channel set is non-inferior to the full 16-channel array.
+    test: participant-level cluster bootstrap lower confidence bound on the paired difference
+    decision_rule: k_star = min{k : LCB95(delta_k) > -margin}
+  H2:
+    statement: Attribution-guided selection outperforms random channel subsets at matched k.
+    test: paired comparison across participants, SR-CFA vs mean of random subsets
+  H3:
+    statement: Stability regularisation (lambda > 0) outperforms attribution magnitude alone.
+    test: paired comparison across participants, Q(lambda*) vs Q(0) at matched k
+  H4:
+    statement: Attribution is faithful — removing top-ranked channels degrades performance more
+      than removing random or bottom-ranked channels.
+    test: ordering of deletion curves with bootstrap confidence intervals
+
+exploratory:
+  - cross-session degradation (CS1, CS2) and per-session ranking drift (CS3)
+  - cross-model attribution agreement (XGBoost SHAP vs RF importance vs CNN integrated gradients)
+  - per-gesture and per-participant failure analysis
+  - bipolar 8-channel sensitivity analysis
+  - window-length sensitivity (150 / 250 / 500 ms)
+  - DB5 replication
+  # Exploratory results are reported as exploratory. They may not be promoted into the abstract
+  # or conclusion on the basis of having turned out interesting.
+
+non_inferiority:
+  primary_margin: 0.02
+  sensitivity_margins: [0.01, 0.03]
+  margin_type: engineering tolerance
+  margin_justification: >
+    2 Macro-F1 percentage points is a pragmatic engineering tolerance for hardware simplification,
+    chosen before the sensor curve was computed. It is NOT a clinically validated threshold and
+    must never be described as one. If no k satisfies the primary margin, the reported finding is
+    that sensor reduction fails within the prespecified tolerance. The margin is not to be relaxed
+    after inspecting results in order to manufacture a positive claim.
+  direction: >
+    delta_{p,k} = F1_{p,k} - F1_{p,16}, so non-inferiority requires the lower bound of the paired
+    difference to exceed -margin.
+
+bootstrap:
+  method: cluster bootstrap over participants (whole participants resampled with replacement)
+  n_resamples: 10000
+  ci_type: percentile
+  ci_level: 0.95
+  prohibited: >
+    Bootstrapping windows independently. It would break the within-participant dependence
+    structure and understate uncertainty.
+
+hypothesis_tests:
+  paired_test: Wilcoxon signed-rank over participant-level paired differences
+  effect_size: matched-pairs rank-biserial correlation, reported with every test
+  multiplicity:
+    method: Holm
+    applied_to: each confirmatory family separately (H1-H4)
+    note: exploratory analyses are not corrected and are labelled exploratory
+
+random_baseline:
+  n_subsets_per_k: 100
+  n_subsets_at_k_star: 500
+  comparison: SR-CFA vs the distribution of random subsets, and vs its mean
+  reporting: >
+    Report the full random distribution, not only its mean, and state the percentile of the
+    SR-CFA result within it. If any capping or truncation is applied for compute reasons, log
+    exactly what was dropped — silent truncation reads as full coverage.
+
+lambda_selection:
+  candidates: [0.0, 0.25, 0.5, 1.0]
+  selection_data: outer-training participants only
+  prohibited: >
+    Selecting lambda by outer-test performance. That would make the reported sparse result an
+    optimistically biased estimate.
+
+missing_data:
+  policy: >
+    No participant is excluded for poor performance. Difficult participants are the finding, not
+    noise to be removed. Any exclusion requires a documented technical reason (e.g. an integrity
+    failure), must be declared in the manuscript, and must be recorded in the decision log.
+
+reporting_precision:
+  metrics: 3 decimal places
+  ci_format: "0.812 (95% CI 0.784-0.838)"
+  p_values: report exact values to 3 decimals; below 0.001 report as p < 0.001
+  consistency: >
+    Every numeric value in the manuscript is emitted by a macro generator reading result files.
+    A missing result file is a hard failure of the build, never a defaulted constant.

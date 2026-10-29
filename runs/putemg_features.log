@@ -1,0 +1,32 @@
+pooled filtered median |diff| = 0.004242 mV -> threshold 0.005 mV; LOO median 0.004211-0.004281; identical in 44/44 folds
+  20/264 files
+  40/264 files
+  60/264 files
+  80/264 files
+  100/264 files
+  120/264 files
+  140/264 files
+  160/264 files
+  180/264 files
+  200/264 files
+  220/264 files
+  240/264 files
+  260/264 files
+# putEMG feature extraction
+
+- Files: 264; participants: 44; sessions per participant: 2-2
+- Active runs: 11959; runs shorter than one window: 35
+- Windows: 187578; per participant min 3844, median 4220, max 4911
+- Count-feature threshold: 0.005 mV (pooled filtered median |diff| 0.004242 mV; identical in 44/44 leave-one-out folds)
+
+| gesture | windows |
+|---|---|
+| 1 | 27971 |
+| 2 | 27748 |
+| 3 | 26841 |
+| 6 | 26399 |
+| 7 | 26300 |
+| 8 | 25815 |
+| 9 | 26504 |
+COHORT ASSERTION PASSED
+EXIT 0

@@ -1,0 +1,39 @@
+pradhan2022multiday          2022 Multi-day dataset of forearm and wrist electromyogram for hand gesture
+pizzolato2017comparison      2017 Comparison of six electromyography acquisition setups on hand movement
+kaczmarek2019putemg          2019 putEMG�A Surface Electromyography Hand Gesture Recognition Dataset
+goldberger2000physionet      2000 PhysioBank, PhysioToolkit, and PhysioNet
+farina2004extraction         2004 The extraction of neural strategies from the surface EMG
+farina2014extraction         2014 The Extraction of Neural Information from the Surface EMG for the Cont
+vujaklija2016new             2016 New developments in prosthetic arm systems
+cote2019deep                 2019 Deep Learning for Electromyographic Hand Gesture Signal Classification
+stango2015spatial            2015 Spatial Correlation of High Density EMG Signals Provides Features Robu
+muceli2014extracting         2014 Extracting Signals Robust to Electrode Number and Shift for Online Sim
+smith2011determining         2011 Determining the Optimal Window Length for Pattern Recognition-Based My
+farrell2007optimal           2007 The Optimal Controller Delay for Myoelectric Prostheses
+phinyomark2012feature        2012 Feature reduction and selection for EMG signal classification
+phinyomark2018emg            2018 EMG Pattern Recognition in the Era of Big Data and Deep Learning
+qu2021reduce                 2021 Reduce Surface Electromyography Channels for Gesture Recognition by Mu
+liu2014emg                   2014 EMG feature assessment for myoelectric pattern recognition and channel
+altimemy2013classification   2013 Classification of Finger Movements for the Dexterous Hand Prosthesis C
+li2010quantifying            2010 Quantifying Pattern Recognition�Based Myoelectric Control of Multifunc
+hargrove2006effect           2006 The effect of electrode displacements on pattern recognition based myo
+kaufmann2010fluctuating      2010 Fluctuating emg signals: Investigating long-term effects of pattern ma
+vidovic2016improving         2016 Improving the Robustness of Myoelectric Pattern Recognition for Upper 
+scheme2011electromyogram     2011 Electromyogram pattern recognition for control of powered upper-limb p
+englehart2003robust          2003 A robust, real-time control scheme for multifunction myoelectric contr
+hudgins1993new               1993 A new strategy for multifunction myoelectric control
+lundberg2020local            2020 From local explanations to global understanding with explainable AI fo
+visani2022statistical        2022 Statistical stability indices for LIME: Obtaining reliable explanation
+samek2017evaluating          2017 Evaluating the Visualization of What a Deep Neural Network Has Learned
+meinshausen2010stability     2010 Stability Selection
+schuirmann1987comparison     1987 A comparison of the Two One-Sided Tests Procedure and the Power Approa
+walker2011understanding      2011 Understanding Equivalence and Noninferiority Testing
+lundberg2017unified          2017 A Unified Approach to Interpreting Model Predictions
+hooker2019benchmark          2019 A Benchmark for Interpretability Methods in Deep Neural Networks
+sundararajan2017axiomatic    2017 Axiomatic Attribution for Deep Networks
+xiang2026roshap              2026 RoSHAP: A Distributional Framework and Robust Metric for Stable Featur
+salmi2025shapaad             2025 SHAP-AAD: DeepSHAP-Guided Channel Reduction for EEG Auditory Attention
+kelodjou2023shaping          2023 Shaping Up SHAP: Enhancing Stability through Layer-Wise Neighbor Selec
+campbell2018noninferiority   2018 What to make of non-inferiority and equivalence testing with a post-sp
+jiang2024grabmyo             2024 Gesture Recognition and Biometrics ElectroMyogram (GRABMyo)
+wrote 38 entries

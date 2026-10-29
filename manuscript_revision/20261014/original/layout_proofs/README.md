@@ -1,0 +1,1 @@
+Formatting proofs only. These were compiled from manuscript/ with then-current relative inputs and are archived to prevent confusion with the final PDFs. They are not active final manuscript sources or completed-study outputs. The feature-definition proof was visually inspected; final page inspection is still separately required.

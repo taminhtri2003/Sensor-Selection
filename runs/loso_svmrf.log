@@ -1,0 +1,51 @@
+participants=43 features=160 workers=6 models=['SVM', 'RF']
+[1/43] participant 05 {'SVM': 0.4186, 'RandomForest': 0.3845}  elapsed=19.2m eta=806.4m
+[2/43] participant 03 {'SVM': 0.4369, 'RandomForest': 0.3926}  elapsed=19.3m eta=396.3m
+[3/43] participant 04 {'SVM': 0.5084, 'RandomForest': 0.4455}  elapsed=19.4m eta=258.7m
+[4/43] participant 06 {'SVM': 0.3928, 'RandomForest': 0.3456}  elapsed=19.5m eta=189.7m
+[5/43] participant 01 {'SVM': 0.5911, 'RandomForest': 0.5309}  elapsed=19.5m eta=147.9m
+[6/43] participant 02 {'SVM': 0.4262, 'RandomForest': 0.3578}  elapsed=19.5m eta=120.1m
+[7/43] participant 07 {'SVM': 0.5934, 'RandomForest': 0.5764}  elapsed=38.7m eta=199.2m
+[8/43] participant 08 {'SVM': 0.5102, 'RandomForest': 0.455}  elapsed=38.8m eta=169.7m
+[9/43] participant 11 {'SVM': 0.5394, 'RandomForest': 0.522}  elapsed=39.0m eta=147.2m
+[10/43] participant 12 {'SVM': 0.5628, 'RandomForest': 0.5058}  elapsed=39.6m eta=130.7m
+[11/43] participant 09 {'SVM': 0.5985, 'RandomForest': 0.4692}  elapsed=39.7m eta=115.4m
+[12/43] participant 10 {'SVM': 0.5393, 'RandomForest': 0.4881}  elapsed=39.7m eta=102.5m
+[13/43] participant 13 {'SVM': 0.5161, 'RandomForest': 0.4927}  elapsed=57.4m eta=132.5m
+[14/43] participant 14 {'SVM': 0.5423, 'RandomForest': 0.5283}  elapsed=57.5m eta=119.0m
+[15/43] participant 15 {'SVM': 0.4604, 'RandomForest': 0.4154}  elapsed=57.6m eta=107.4m
+[16/43] participant 16 {'SVM': 0.4968, 'RandomForest': 0.4933}  elapsed=59.6m eta=100.6m
+[17/43] participant 17 {'SVM': 0.4365, 'RandomForest': 0.3847}  elapsed=59.7m eta=91.4m
+[18/43] participant 18 {'SVM': 0.5911, 'RandomForest': 0.5354}  elapsed=59.8m eta=83.0m
+[19/43] participant 21 {'SVM': 0.4241, 'RandomForest': 0.4056}  elapsed=76.6m eta=96.7m
+[20/43] participant 20 {'SVM': 0.497, 'RandomForest': 0.4902}  elapsed=76.6m eta=88.1m
+[21/43] participant 19 {'SVM': 0.6683, 'RandomForest': 0.6453}  elapsed=76.7m eta=80.4m
+[22/43] participant 22 {'SVM': 0.5032, 'RandomForest': 0.4487}  elapsed=77.4m eta=73.9m
+[23/43] participant 24 {'SVM': 0.4548, 'RandomForest': 0.4434}  elapsed=77.6m eta=67.4m
+[24/43] participant 23 {'SVM': 0.6408, 'RandomForest': 0.6576}  elapsed=77.8m eta=61.6m
+[25/43] participant 26 {'SVM': 0.5277, 'RandomForest': 0.4834}  elapsed=95.0m eta=68.4m
+[26/43] participant 27 {'SVM': 0.6037, 'RandomForest': 0.5181}  elapsed=95.1m eta=62.2m
+[27/43] participant 25 {'SVM': 0.5334, 'RandomForest': 0.5066}  elapsed=95.3m eta=56.4m
+[28/43] participant 29 {'SVM': 0.429, 'RandomForest': 0.369}  elapsed=96.1m eta=51.5m
+[29/43] participant 28 {'SVM': 0.5451, 'RandomForest': 0.5166}  elapsed=96.2m eta=46.4m
+[30/43] participant 30 {'SVM': 0.6561, 'RandomForest': 0.6513}  elapsed=96.4m eta=41.8m
+[31/43] participant 31 {'SVM': 0.58, 'RandomForest': 0.5628}  elapsed=112.7m eta=43.6m
+[32/43] participant 32 {'SVM': 0.4119, 'RandomForest': 0.356}  elapsed=112.8m eta=38.8m
+[33/43] participant 33 {'SVM': 0.6065, 'RandomForest': 0.565}  elapsed=113.1m eta=34.3m
+[34/43] participant 34 {'SVM': 0.606, 'RandomForest': 0.568}  elapsed=114.7m eta=30.4m
+[35/43] participant 35 {'SVM': 0.6783, 'RandomForest': 0.6526}  elapsed=114.9m eta=26.3m
+[36/43] participant 36 {'SVM': 0.7176, 'RandomForest': 0.6695}  elapsed=115.1m eta=22.4m
+[37/43] participant 37 {'SVM': 0.6265, 'RandomForest': 0.6013}  elapsed=132.0m eta=21.4m
+[38/43] participant 38 {'SVM': 0.6257, 'RandomForest': 0.5927}  elapsed=132.2m eta=17.4m
+[39/43] participant 39 {'SVM': 0.5217, 'RandomForest': 0.5355}  elapsed=132.4m eta=13.6m
+[40/43] participant 40 {'SVM': 0.5409, 'RandomForest': 0.5388}  elapsed=133.2m eta=10.0m
+[41/43] participant 41 {'SVM': 0.6342, 'RandomForest': 0.5709}  elapsed=133.4m eta=6.5m
+[42/43] participant 42 {'SVM': 0.5479, 'RandomForest': 0.5283}  elapsed=133.5m eta=3.2m
+[43/43] participant 43 {'SVM': 0.3828, 'RandomForest': 0.3672}  elapsed=142.5m eta=0.0m
+
+         model  n_participants  mean_macro_f1  sd_macro_f1  median_macro_f1  min_macro_f1  max_macro_f1  mean_balanced_accuracy  mean_accuracy  mean_weighted_f1  total_fit_seconds
+         M_SVM              43       0.537767     0.084519         0.539352      0.382838      0.717642                0.553907       0.553907          0.537767           23260.91
+M_RandomForest              43       0.501555     0.089600         0.506555      0.345627      0.669540                0.521084       0.521084          0.501555           25103.08
+
+COHORT ASSERTION PASSED: 43 participants x 2 models
+wall clock: 142.5 min

@@ -1,0 +1,66 @@
+grouped pending lambda jobs into 43 participant jobs
+model=XGB participants=43 lambdas=[0.0] k=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16] jobs=43 workers=1
+[1/43] participant 01 lam=0.0 k16=0.5497 elapsed=4.2m eta=177.6m
+[2/43] participant 02 lam=0.0 k16=0.4054 elapsed=7.9m eta=161.5m
+[3/43] participant 03 lam=0.0 k16=0.4073 elapsed=11.5m eta=152.9m
+[4/43] participant 04 lam=0.0 k16=0.4708 elapsed=15.1m eta=146.9m
+[5/43] participant 05 lam=0.0 k16=0.4233 elapsed=18.7m eta=142.0m
+[6/43] participant 06 lam=0.0 k16=0.3921 elapsed=22.4m eta=137.9m
+[7/43] participant 07 lam=0.0 k16=0.6040 elapsed=26.1m eta=134.2m
+[8/43] participant 08 lam=0.0 k16=0.4965 elapsed=29.7m eta=130.0m
+[9/43] participant 09 lam=0.0 k16=0.5339 elapsed=33.3m eta=126.0m
+[10/43] participant 10 lam=0.0 k16=0.5017 elapsed=37.1m eta=122.6m
+[11/43] participant 11 lam=0.0 k16=0.5267 elapsed=41.0m eta=119.4m
+[12/43] participant 12 lam=0.0 k16=0.5354 elapsed=45.0m eta=116.2m
+[13/43] participant 13 lam=0.0 k16=0.5071 elapsed=48.9m eta=112.9m
+[14/43] participant 14 lam=0.0 k16=0.5512 elapsed=52.9m eta=109.5m
+[15/43] participant 15 lam=0.0 k16=0.4306 elapsed=56.8m eta=106.1m
+[16/43] participant 16 lam=0.0 k16=0.5336 elapsed=60.8m eta=102.6m
+[17/43] participant 17 lam=0.0 k16=0.4419 elapsed=64.9m eta=99.3m
+[18/43] participant 18 lam=0.0 k16=0.5727 elapsed=68.9m eta=95.7m
+[19/43] participant 19 lam=0.0 k16=0.6685 elapsed=73.1m eta=92.3m
+[20/43] participant 20 lam=0.0 k16=0.4899 elapsed=77.3m eta=88.9m
+[21/43] participant 21 lam=0.0 k16=0.4086 elapsed=81.2m eta=85.1m
+[22/43] participant 22 lam=0.0 k16=0.4954 elapsed=85.1m eta=81.3m
+[23/43] participant 23 lam=0.0 k16=0.6288 elapsed=89.0m eta=77.4m
+[24/43] participant 24 lam=0.0 k16=0.4578 elapsed=92.9m eta=73.6m
+[25/43] participant 25 lam=0.0 k16=0.5304 elapsed=96.9m eta=69.8m
+[26/43] participant 26 lam=0.0 k16=0.5164 elapsed=100.7m eta=65.9m
+[27/43] participant 27 lam=0.0 k16=0.5598 elapsed=104.7m eta=62.0m
+[28/43] participant 28 lam=0.0 k16=0.5536 elapsed=108.4m eta=58.1m
+[29/43] participant 29 lam=0.0 k16=0.3857 elapsed=112.3m eta=54.2m
+[30/43] participant 30 lam=0.0 k16=0.6468 elapsed=116.1m eta=50.3m
+[31/43] participant 31 lam=0.0 k16=0.5633 elapsed=120.1m eta=46.5m
+[32/43] participant 32 lam=0.0 k16=0.3943 elapsed=123.9m eta=42.6m
+[33/43] participant 33 lam=0.0 k16=0.6081 elapsed=127.8m eta=38.7m
+[34/43] participant 34 lam=0.0 k16=0.6063 elapsed=131.7m eta=34.9m
+[35/43] participant 35 lam=0.0 k16=0.6707 elapsed=135.8m eta=31.0m
+[36/43] participant 36 lam=0.0 k16=0.6759 elapsed=139.7m eta=27.2m
+[37/43] participant 37 lam=0.0 k16=0.5741 elapsed=143.6m eta=23.3m
+[38/43] participant 38 lam=0.0 k16=0.6085 elapsed=147.5m eta=19.4m
+[39/43] participant 39 lam=0.0 k16=0.5473 elapsed=151.3m eta=15.5m
+[40/43] participant 40 lam=0.0 k16=0.5545 elapsed=155.2m eta=11.6m
+[41/43] participant 41 lam=0.0 k16=0.6052 elapsed=159.0m eta=7.8m
+[42/43] participant 42 lam=0.0 k16=0.5440 elapsed=162.9m eta=3.9m
+[43/43] participant 43 lam=0.0 k16=0.3896 elapsed=166.6m eta=0.0m
+
+model  lambda  channels_k  n_participants  mean_macro_f1  sd_macro_f1  mean_accuracy
+M_XGB     0.0           1              43       0.169915     0.036069       0.192586
+M_XGB     0.0           2              43       0.285063     0.054376       0.306397
+M_XGB     0.0           3              43       0.325382     0.054005       0.345790
+M_XGB     0.0           4              43       0.381294     0.067484       0.401800
+M_XGB     0.0           5              43       0.411968     0.072316       0.431624
+M_XGB     0.0           6              43       0.464739     0.080496       0.484129
+M_XGB     0.0           7              43       0.485363     0.081672       0.503586
+M_XGB     0.0           8              43       0.489162     0.082774       0.506975
+M_XGB     0.0           9              43       0.495978     0.084635       0.513390
+M_XGB     0.0          10              43       0.500678     0.082318       0.517922
+M_XGB     0.0          11              43       0.506395     0.082460       0.523264
+M_XGB     0.0          12              43       0.512944     0.081827       0.529144
+M_XGB     0.0          13              43       0.515672     0.082072       0.531840
+M_XGB     0.0          14              43       0.520119     0.082847       0.536285
+M_XGB     0.0          15              43       0.521370     0.081710       0.537424
+M_XGB     0.0          16              43       0.524824     0.082598       0.540347
+
+ASSERTION PASSED: 43 participants x 16 k x 1 lambda
+wall clock: 166.6 min

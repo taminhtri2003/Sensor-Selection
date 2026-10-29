@@ -1,0 +1,19 @@
+{
+  "builder_reproduces_primary": true,
+  "spot_reextraction_max_rel_diff": 0.0,
+  "rest17": {
+    "windows": 598689,
+    "classes": 17,
+    "participants": 43
+  },
+  "w150": {
+    "windows": 939120,
+    "classes": 16,
+    "participants": 43
+  },
+  "w500": {
+    "windows": 274512,
+    "classes": 16,
+    "participants": 43
+  }
+}

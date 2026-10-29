@@ -1,0 +1,37 @@
+{
+  "k_values": [
+    4,
+    6,
+    8,
+    12
+  ],
+  "n_random_per_k": 100,
+  "frozen_plan_requested": {
+    "n_subsets_per_k": 100,
+    "n_subsets_at_k_star": 500
+  },
+  "actually_run": {
+    "n_subsets_by_k": {
+      "4": 100,
+      "6": 100,
+      "8": 100,
+      "12": 500
+    },
+    "n_subsets_per_k": 100,
+    "n_subsets_at_k_star": 500
+  },
+  "capped": false,
+  "cap_reason": "No cap; frozen random-subset counts were used.",
+  "comparison_model": {
+    "n_estimators": 50,
+    "max_depth": 6,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "tree_method": "hist",
+    "random_state": 20260728,
+    "verbosity": 0
+  },
+  "comparison_train_subsample": 150000,
+  "note": "All methods share this configuration, so the comparison is fair, but absolute values are NOT comparable to the P1/P3 headline numbers."
+}

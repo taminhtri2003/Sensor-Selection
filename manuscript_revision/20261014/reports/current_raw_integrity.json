@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "GRABMyo": "all published SHA256 entries checked",
+  "DB5_archives": 10,
+  "DB5_extracted_exercises": 30,
+  "DB5_record": 1000116,
+  "DB4_record_not_used": 1000138,
+  "source_link_correction": "the PLOS article data-availability prose reverses the two archive IDs; official Zenodo titles/sensors and checksums resolve identity"
+}

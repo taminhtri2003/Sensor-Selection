@@ -1,0 +1,775 @@
+participant_id,arm,n_kept,n_removed,channels,macro_f1,source
+1,remove_top,2,14,9;12,0.315234154875566,computed
+1,remove_top,4,12,16;11;9;12,0.40016914851964336,computed
+1,remove_top,6,10,1;3;16;11;9;12,0.4374541049808871,computed
+1,remove_top,8,8,13;2;1;3;16;11;9;12,0.5035428662844976,computed
+1,remove_top,10,6,5;15;13;2;1;3;16;11;9;12,0.5398178170042796,computed
+1,remove_top,12,4,8;10;5;15;13;2;1;3;16;11;9;12,0.5519772573987538,computed
+1,remove_top,14,2,14;7;8;10;5;15;13;2;1;3;16;11;9;12,0.5481331585272654,computed
+1,remove_bottom,2,14,6;4,0.292640874773033,reused_from_sparse_curve
+1,remove_bottom,4,12,6;4;14;7,0.3907179170555905,reused_from_sparse_curve
+1,remove_random,4,12,100 draws,0.3772764608059239,reused_from_random_baseline
+1,remove_bottom,6,10,6;4;14;7;8;10,0.4837380846347855,reused_from_sparse_curve
+1,remove_random,6,10,100 draws,0.43318090524615704,reused_from_random_baseline
+1,remove_bottom,8,8,6;4;14;7;8;10;5;15,0.52028230247593,reused_from_sparse_curve
+1,remove_random,8,8,100 draws,0.4632188491258111,reused_from_random_baseline
+1,remove_bottom,10,6,6;4;14;7;8;10;5;15;13;2,0.529874871207372,reused_from_sparse_curve
+1,remove_bottom,12,4,6;4;14;7;8;10;5;15;13;2;1;3,0.55028204441207,reused_from_sparse_curve
+1,remove_random,12,4,500 draws,0.50532362953225,reused_from_random_baseline
+1,remove_bottom,14,2,6;4;14;7;8;10;5;15;13;2;1;3;16;11,0.5558289909575576,reused_from_sparse_curve
+2,remove_top,2,14,12;9,0.23135441298113013,computed
+2,remove_top,4,12,16;11;12;9,0.3020150754136841,computed
+2,remove_top,6,10,2;3;16;11;12;9,0.33881532328384056,computed
+2,remove_top,8,8,13;1;2;3;16;11;12;9,0.37006291031132554,computed
+2,remove_top,10,6,5;15;13;1;2;3;16;11;12;9,0.3849845654733067,computed
+2,remove_top,12,4,8;10;5;15;13;1;2;3;16;11;12;9,0.3758096925897193,computed
+2,remove_top,14,2,6;7;8;10;5;15;13;1;2;3;16;11;12;9,0.4047351212806376,computed
+2,remove_bottom,2,14,4;14,0.2287260924210271,reused_from_sparse_curve
+2,remove_bottom,4,12,4;14;6;7,0.2676583416514448,reused_from_sparse_curve
+2,remove_random,4,12,100 draws,0.26087769082059287,reused_from_random_baseline
+2,remove_bottom,6,10,4;14;6;7;8;10,0.3135780364340025,reused_from_sparse_curve
+2,remove_random,6,10,100 draws,0.2963884564780552,reused_from_random_baseline
+2,remove_bottom,8,8,4;14;6;7;8;10;5;15,0.3655487375269665,reused_from_sparse_curve
+2,remove_random,8,8,100 draws,0.323109308415445,reused_from_random_baseline
+2,remove_bottom,10,6,4;14;6;7;8;10;5;15;13;1,0.4012129442877075,reused_from_sparse_curve
+2,remove_bottom,12,4,4;14;6;7;8;10;5;15;13;1;2;3,0.414838241760554,reused_from_sparse_curve
+2,remove_random,12,4,500 draws,0.3434040522783032,reused_from_random_baseline
+2,remove_bottom,14,2,4;14;6;7;8;10;5;15;13;1;2;3;16;11,0.4184567249284803,reused_from_sparse_curve
+3,remove_top,2,14,9;12,0.28462638056764,computed
+3,remove_top,4,12,16;11;9;12,0.2979433392569296,computed
+3,remove_top,6,10,3;1;16;11;9;12,0.32477191227858593,computed
+3,remove_top,8,8,2;13;3;1;16;11;9;12,0.3539850642498907,computed
+3,remove_top,10,6,5;15;2;13;3;1;16;11;9;12,0.3780848261617855,computed
+3,remove_top,12,4,8;10;5;15;2;13;3;1;16;11;9;12,0.37953782808108494,computed
+3,remove_top,14,2,14;7;8;10;5;15;2;13;3;1;16;11;9;12,0.4159232266020602,computed
+3,remove_bottom,2,14,4;6,0.3771546562899276,reused_from_sparse_curve
+3,remove_bottom,4,12,4;6;14;7,0.3575663550265424,reused_from_sparse_curve
+3,remove_random,4,12,100 draws,0.3443841417548712,reused_from_random_baseline
+3,remove_bottom,6,10,4;6;14;7;8;10,0.3783082945334816,reused_from_sparse_curve
+3,remove_random,6,10,100 draws,0.3696440779997394,reused_from_random_baseline
+3,remove_bottom,8,8,4;6;14;7;8;10;5;15,0.3998166589699592,reused_from_sparse_curve
+3,remove_random,8,8,100 draws,0.3766292347941831,reused_from_random_baseline
+3,remove_bottom,10,6,4;6;14;7;8;10;5;15;2;13,0.4187326520397986,reused_from_sparse_curve
+3,remove_bottom,12,4,4;6;14;7;8;10;5;15;2;13;3;1,0.4240407630253628,reused_from_sparse_curve
+3,remove_random,12,4,500 draws,0.39353064056542814,reused_from_random_baseline
+3,remove_bottom,14,2,4;6;14;7;8;10;5;15;2;13;3;1;16;11,0.430676686665787,reused_from_sparse_curve
+4,remove_top,2,14,9;12,0.2530502637479492,computed
+4,remove_top,4,12,16;11;9;12,0.3189354473573595,computed
+4,remove_top,6,10,3;1;16;11;9;12,0.3052422178176089,computed
+4,remove_top,8,8,13;2;3;1;16;11;9;12,0.3828595641392848,computed
+4,remove_top,10,6,5;15;13;2;3;1;16;11;9;12,0.3957461954430132,computed
+4,remove_top,12,4,8;10;5;15;13;2;3;1;16;11;9;12,0.4204243060687942,computed
+4,remove_top,14,2,14;7;8;10;5;15;13;2;3;1;16;11;9;12,0.4905369321270966,computed
+4,remove_bottom,2,14,4;6,0.3397457048619643,reused_from_sparse_curve
+4,remove_bottom,4,12,4;6;14;7,0.4040832288073182,reused_from_sparse_curve
+4,remove_random,4,12,100 draws,0.35027201162632915,reused_from_random_baseline
+4,remove_bottom,6,10,4;6;14;7;8;10,0.4522481163456489,reused_from_sparse_curve
+4,remove_random,6,10,100 draws,0.3861613028693302,reused_from_random_baseline
+4,remove_bottom,8,8,4;6;14;7;8;10;5;15,0.4828690765341231,reused_from_sparse_curve
+4,remove_random,8,8,100 draws,0.41702630781328187,reused_from_random_baseline
+4,remove_bottom,10,6,4;6;14;7;8;10;5;15;13;2,0.4795297170106256,reused_from_sparse_curve
+4,remove_bottom,12,4,4;6;14;7;8;10;5;15;13;2;3;1,0.4894994345817069,reused_from_sparse_curve
+4,remove_random,12,4,500 draws,0.45310038953875154,reused_from_random_baseline
+4,remove_bottom,14,2,4;6;14;7;8;10;5;15;13;2;3;1;16;11,0.4933187369816791,reused_from_sparse_curve
+5,remove_top,2,14,12;9,0.25555158452585647,computed
+5,remove_top,4,12,16;11;12;9,0.2996033794029038,computed
+5,remove_top,6,10,1;3;16;11;12;9,0.3110408392998275,computed
+5,remove_top,8,8,15;2;1;3;16;11;12;9,0.353224810400241,computed
+5,remove_top,10,6,5;13;15;2;1;3;16;11;12;9,0.3718418090605419,computed
+5,remove_top,12,4,8;10;5;13;15;2;1;3;16;11;12;9,0.38608145387029386,computed
+5,remove_top,14,2,14;7;8;10;5;13;15;2;1;3;16;11;12;9,0.3985213763325019,computed
+5,remove_bottom,2,14,4;6,0.2786368432118766,reused_from_sparse_curve
+5,remove_bottom,4,12,4;6;14;7,0.3195312235606725,reused_from_sparse_curve
+5,remove_random,4,12,100 draws,0.3068427694734746,reused_from_random_baseline
+5,remove_bottom,6,10,4;6;14;7;8;10,0.399914254537509,reused_from_sparse_curve
+5,remove_random,6,10,100 draws,0.3392693195190825,reused_from_random_baseline
+5,remove_bottom,8,8,4;6;14;7;8;10;5;13,0.412968001516741,reused_from_sparse_curve
+5,remove_random,8,8,100 draws,0.3546504124004295,reused_from_random_baseline
+5,remove_bottom,10,6,4;6;14;7;8;10;5;13;15;2,0.4130287996270531,reused_from_sparse_curve
+5,remove_bottom,12,4,4;6;14;7;8;10;5;13;15;2;1;3,0.4096828760470513,reused_from_sparse_curve
+5,remove_random,12,4,500 draws,0.380975846671003,reused_from_random_baseline
+5,remove_bottom,14,2,4;6;14;7;8;10;5;13;15;2;1;3;16;11,0.4263290466783422,reused_from_sparse_curve
+6,remove_top,2,14,12;9,0.2438567264147724,computed
+6,remove_top,4,12,16;11;12;9,0.33121059473273795,computed
+6,remove_top,6,10,2;3;16;11;12;9,0.3328496837982339,computed
+6,remove_top,8,8,15;1;2;3;16;11;12;9,0.34452951131916265,computed
+6,remove_top,10,6,5;13;15;1;2;3;16;11;12;9,0.4002201160740952,computed
+6,remove_top,12,4,8;10;5;13;15;1;2;3;16;11;12;9,0.40199776926573416,computed
+6,remove_top,14,2,14;7;8;10;5;13;15;1;2;3;16;11;12;9,0.3884045913739829,computed
+6,remove_bottom,2,14,4;6,0.2212595147725318,reused_from_sparse_curve
+6,remove_bottom,4,12,4;6;14;7,0.2649653801073331,reused_from_sparse_curve
+6,remove_random,4,12,100 draws,0.2752925568801469,reused_from_random_baseline
+6,remove_bottom,6,10,4;6;14;7;8;10,0.3422191940194847,reused_from_sparse_curve
+6,remove_random,6,10,100 draws,0.30360432772106055,reused_from_random_baseline
+6,remove_bottom,8,8,4;6;14;7;8;10;5;13,0.3795038166989144,reused_from_sparse_curve
+6,remove_random,8,8,100 draws,0.32487492374251714,reused_from_random_baseline
+6,remove_bottom,10,6,4;6;14;7;8;10;5;13;15;1,0.375408709917833,reused_from_sparse_curve
+6,remove_bottom,12,4,4;6;14;7;8;10;5;13;15;1;2;3,0.3892199561711857,reused_from_sparse_curve
+6,remove_random,12,4,500 draws,0.34170256638897906,reused_from_random_baseline
+6,remove_bottom,14,2,4;6;14;7;8;10;5;13;15;1;2;3;16;11,0.3947205813819336,reused_from_sparse_curve
+7,remove_top,2,14,12;9,0.3540308175716285,computed
+7,remove_top,4,12,16;11;12;9,0.4617938698482906,computed
+7,remove_top,6,10,2;3;16;11;12;9,0.48173523897023174,computed
+7,remove_top,8,8,15;1;2;3;16;11;12;9,0.5001097062494796,computed
+7,remove_top,10,6,5;13;15;1;2;3;16;11;12;9,0.5783761489928629,computed
+7,remove_top,12,4,8;10;5;13;15;1;2;3;16;11;12;9,0.5725724767134719,computed
+7,remove_top,14,2,14;7;8;10;5;13;15;1;2;3;16;11;12;9,0.5961093619832393,computed
+7,remove_bottom,2,14,4;6,0.3461062372835507,reused_from_sparse_curve
+7,remove_bottom,4,12,4;6;14;7,0.510658858434317,reused_from_sparse_curve
+7,remove_random,4,12,100 draws,0.4492107287606241,reused_from_random_baseline
+7,remove_bottom,6,10,4;6;14;7;8;10,0.5452215352621246,reused_from_sparse_curve
+7,remove_random,6,10,100 draws,0.503924436718419,reused_from_random_baseline
+7,remove_bottom,8,8,4;6;14;7;8;10;5;13,0.5773085195257366,reused_from_sparse_curve
+7,remove_random,8,8,100 draws,0.5324271303717585,reused_from_random_baseline
+7,remove_bottom,10,6,4;6;14;7;8;10;5;13;15;1,0.597450919528806,reused_from_sparse_curve
+7,remove_bottom,12,4,4;6;14;7;8;10;5;13;15;1;2;3,0.5963947283483032,reused_from_sparse_curve
+7,remove_random,12,4,500 draws,0.5717883943041585,reused_from_random_baseline
+7,remove_bottom,14,2,4;6;14;7;8;10;5;13;15;1;2;3;16;11,0.5976369301666894,reused_from_sparse_curve
+8,remove_top,2,14,12;9,0.2614859187891466,computed
+8,remove_top,4,12,16;11;12;9,0.3747754885375051,computed
+8,remove_top,6,10,1;3;16;11;12;9,0.3980354143002782,computed
+8,remove_top,8,8,15;2;1;3;16;11;12;9,0.4266154657842258,computed
+8,remove_top,10,6,5;13;15;2;1;3;16;11;12;9,0.44353593564649485,computed
+8,remove_top,12,4,8;10;5;13;15;2;1;3;16;11;12;9,0.4487141344940909,computed
+8,remove_top,14,2,14;7;8;10;5;13;15;2;1;3;16;11;12;9,0.49199517898046635,computed
+8,remove_bottom,2,14,6;4,0.3053653816256009,reused_from_sparse_curve
+8,remove_bottom,4,12,6;4;14;7,0.4068782415093458,reused_from_sparse_curve
+8,remove_random,4,12,100 draws,0.33332894936304475,reused_from_random_baseline
+8,remove_bottom,6,10,6;4;14;7;8;10,0.4750679832875389,reused_from_sparse_curve
+8,remove_random,6,10,100 draws,0.3813825828258053,reused_from_random_baseline
+8,remove_bottom,8,8,6;4;14;7;8;10;5;13,0.4770844958643411,reused_from_sparse_curve
+8,remove_random,8,8,100 draws,0.4089129668271556,reused_from_random_baseline
+8,remove_bottom,10,6,6;4;14;7;8;10;5;13;15;2,0.4902171166082462,reused_from_sparse_curve
+8,remove_bottom,12,4,6;4;14;7;8;10;5;13;15;2;1;3,0.50194843536707,reused_from_sparse_curve
+8,remove_random,12,4,500 draws,0.43884722520959357,reused_from_random_baseline
+8,remove_bottom,14,2,6;4;14;7;8;10;5;13;15;2;1;3;16;11,0.5113956032694071,reused_from_sparse_curve
+9,remove_top,2,14,12;9,0.2295304333867212,computed
+9,remove_top,4,12,16;11;12;9,0.3558468430553311,computed
+9,remove_top,6,10,1;3;16;11;12;9,0.3797629566878912,computed
+9,remove_top,8,8,15;2;1;3;16;11;12;9,0.40099519781715687,computed
+9,remove_top,10,6,5;13;15;2;1;3;16;11;12;9,0.45815134780437206,computed
+9,remove_top,12,4,8;10;5;13;15;2;1;3;16;11;12;9,0.483425472965855,computed
+9,remove_top,14,2,14;7;8;10;5;13;15;2;1;3;16;11;12;9,0.5380545887359813,computed
+9,remove_bottom,2,14,4;6,0.2881445373792691,reused_from_sparse_curve
+9,remove_bottom,4,12,4;6;14;7,0.3300387341292554,reused_from_sparse_curve
+9,remove_random,4,12,100 draws,0.35815529599797025,reused_from_random_baseline
+9,remove_bottom,6,10,4;6;14;7;8;10,0.4496518014101317,reused_from_sparse_curve
+9,remove_random,6,10,100 draws,0.4099007784387288,reused_from_random_baseline
+9,remove_bottom,8,8,4;6;14;7;8;10;5;13,0.4990325570499203,reused_from_sparse_curve
+9,remove_random,8,8,100 draws,0.43834532697334827,reused_from_random_baseline
+9,remove_bottom,10,6,4;6;14;7;8;10;5;13;15;2,0.5191986381090122,reused_from_sparse_curve
+9,remove_bottom,12,4,4;6;14;7;8;10;5;13;15;2;1;3,0.53391012801739,reused_from_sparse_curve
+9,remove_random,12,4,500 draws,0.4833062445225669,reused_from_random_baseline
+9,remove_bottom,14,2,4;6;14;7;8;10;5;13;15;2;1;3;16;11,0.5415345027463332,reused_from_sparse_curve
+10,remove_top,2,14,12;9,0.27987128938680483,computed
+10,remove_top,4,12,16;11;12;9,0.39448031178222465,computed
+10,remove_top,6,10,1;3;16;11;12;9,0.4339229935352279,computed
+10,remove_top,8,8,2;15;1;3;16;11;12;9,0.41917532295747784,computed
+10,remove_top,10,6,5;13;2;15;1;3;16;11;12;9,0.46503119914473423,computed
+10,remove_top,12,4,8;10;5;13;2;15;1;3;16;11;12;9,0.47732292471956617,computed
+10,remove_top,14,2,14;7;8;10;5;13;2;15;1;3;16;11;12;9,0.5064383829017501,computed
+10,remove_bottom,2,14,4;6,0.3060515159067794,reused_from_sparse_curve
+10,remove_bottom,4,12,4;6;14;7,0.4556268143995493,reused_from_sparse_curve
+10,remove_random,4,12,100 draws,0.35498350282002206,reused_from_random_baseline
+10,remove_bottom,6,10,4;6;14;7;8;10,0.4797253686933216,reused_from_sparse_curve
+10,remove_random,6,10,100 draws,0.40839528395728075,reused_from_random_baseline
+10,remove_bottom,8,8,4;6;14;7;8;10;5;13,0.5034163238823028,reused_from_sparse_curve
+10,remove_random,8,8,100 draws,0.42460863353355316,reused_from_random_baseline
+10,remove_bottom,10,6,4;6;14;7;8;10;5;13;2;15,0.5039977300575443,reused_from_sparse_curve
+10,remove_bottom,12,4,4;6;14;7;8;10;5;13;2;15;1;3,0.5151683535389713,reused_from_sparse_curve
+10,remove_random,12,4,500 draws,0.4462080154111799,reused_from_random_baseline
+10,remove_bottom,14,2,4;6;14;7;8;10;5;13;2;15;1;3;16;11,0.5221122043290793,reused_from_sparse_curve
+11,remove_top,2,14,9;12,0.29677804805597036,computed
+11,remove_top,4,12,16;11;9;12,0.39946428795657707,computed
+11,remove_top,6,10,1;3;16;11;9;12,0.4224293309758037,computed
+11,remove_top,8,8,2;13;1;3;16;11;9;12,0.44644345879609615,computed
+11,remove_top,10,6,5;15;2;13;1;3;16;11;9;12,0.49449326703567265,computed
+11,remove_top,12,4,8;10;5;15;2;13;1;3;16;11;9;12,0.5041677127391159,computed
+11,remove_top,14,2,14;7;8;10;5;15;2;13;1;3;16;11;9;12,0.5277379452706594,computed
+11,remove_bottom,2,14,4;6,0.3107568396168836,reused_from_sparse_curve
+11,remove_bottom,4,12,4;6;14;7,0.4287302515941391,reused_from_sparse_curve
+11,remove_random,4,12,100 draws,0.40356094155670136,reused_from_random_baseline
+11,remove_bottom,6,10,4;6;14;7;8;10,0.5069326336967936,reused_from_sparse_curve
+11,remove_random,6,10,100 draws,0.440301130304871,reused_from_random_baseline
+11,remove_bottom,8,8,4;6;14;7;8;10;5;15,0.5093460132167893,reused_from_sparse_curve
+11,remove_random,8,8,100 draws,0.4678458581730656,reused_from_random_baseline
+11,remove_bottom,10,6,4;6;14;7;8;10;5;15;2;13,0.5336156973637943,reused_from_sparse_curve
+11,remove_bottom,12,4,4;6;14;7;8;10;5;15;2;13;1;3,0.5377441529135993,reused_from_sparse_curve
+11,remove_random,12,4,500 draws,0.4994050727479787,reused_from_random_baseline
+11,remove_bottom,14,2,4;6;14;7;8;10;5;15;2;13;1;3;16;11,0.5384391141331979,reused_from_sparse_curve
+12,remove_top,2,14,12;9,0.21211692629946666,computed
+12,remove_top,4,12,16;11;12;9,0.4103058582092908,computed
+12,remove_top,6,10,1;3;16;11;12;9,0.43256944940606745,computed
+12,remove_top,8,8,15;2;1;3;16;11;12;9,0.4583540840556542,computed
+12,remove_top,10,6,5;13;15;2;1;3;16;11;12;9,0.5139159898630545,computed
+12,remove_top,12,4,8;10;5;13;15;2;1;3;16;11;12;9,0.5385961763645106,computed
+12,remove_top,14,2,14;7;8;10;5;13;15;2;1;3;16;11;12;9,0.533139233255843,computed
+12,remove_bottom,2,14,4;6,0.2633300820394069,reused_from_sparse_curve
+12,remove_bottom,4,12,4;6;14;7,0.3804548942762485,reused_from_sparse_curve
+12,remove_random,4,12,100 draws,0.35608220384493533,reused_from_random_baseline
+12,remove_bottom,6,10,4;6;14;7;8;10,0.4937154891994214,reused_from_sparse_curve
+12,remove_random,6,10,100 draws,0.4111968712333398,reused_from_random_baseline
+12,remove_bottom,8,8,4;6;14;7;8;10;5;13,0.5007128295097676,reused_from_sparse_curve
+12,remove_random,8,8,100 draws,0.4452455467702199,reused_from_random_baseline
+12,remove_bottom,10,6,4;6;14;7;8;10;5;13;15;2,0.5095023730508974,reused_from_sparse_curve
+12,remove_bottom,12,4,4;6;14;7;8;10;5;13;15;2;1;3,0.5333696596652849,reused_from_sparse_curve
+12,remove_random,12,4,500 draws,0.4809900326704525,reused_from_random_baseline
+12,remove_bottom,14,2,4;6;14;7;8;10;5;13;15;2;1;3;16;11,0.5476757474159754,reused_from_sparse_curve
+13,remove_top,2,14,12;9,0.30553008844055496,computed
+13,remove_top,4,12,16;11;12;9,0.40051170810803244,computed
+13,remove_top,6,10,1;3;16;11;12;9,0.34997227007873305,computed
+13,remove_top,8,8,2;15;1;3;16;11;12;9,0.3942511144727647,computed
+13,remove_top,10,6,5;13;2;15;1;3;16;11;12;9,0.4257271682328636,computed
+13,remove_top,12,4,8;10;5;13;2;15;1;3;16;11;12;9,0.4519306087903686,computed
+13,remove_top,14,2,14;7;8;10;5;13;2;15;1;3;16;11;12;9,0.502434664466624,computed
+13,remove_bottom,2,14,4;6,0.3238892274748933,reused_from_sparse_curve
+13,remove_bottom,4,12,4;6;14;7,0.4473865557652851,reused_from_sparse_curve
+13,remove_random,4,12,100 draws,0.3873714904520249,reused_from_random_baseline
+13,remove_bottom,6,10,4;6;14;7;8;10,0.5099109564256149,reused_from_sparse_curve
+13,remove_random,6,10,100 draws,0.42447507031467824,reused_from_random_baseline
+13,remove_bottom,8,8,4;6;14;7;8;10;5;13,0.4972292592469953,reused_from_sparse_curve
+13,remove_random,8,8,100 draws,0.4596458493151275,reused_from_random_baseline
+13,remove_bottom,10,6,4;6;14;7;8;10;5;13;2;15,0.5082370823015594,reused_from_sparse_curve
+13,remove_bottom,12,4,4;6;14;7;8;10;5;13;2;15;1;3,0.5080673934364038,reused_from_sparse_curve
+13,remove_random,12,4,500 draws,0.48603102283215194,reused_from_random_baseline
+13,remove_bottom,14,2,4;6;14;7;8;10;5;13;2;15;1;3;16;11,0.5005331304597915,reused_from_sparse_curve
+14,remove_top,2,14,12;9,0.2925771859867739,computed
+14,remove_top,4,12,16;11;12;9,0.4241324096597128,computed
+14,remove_top,6,10,1;3;16;11;12;9,0.4408530536182671,computed
+14,remove_top,8,8,2;15;1;3;16;11;12;9,0.46277873351482823,computed
+14,remove_top,10,6,5;13;2;15;1;3;16;11;12;9,0.519290574878406,computed
+14,remove_top,12,4,8;10;5;13;2;15;1;3;16;11;12;9,0.5285080989178,computed
+14,remove_top,14,2,6;7;8;10;5;13;2;15;1;3;16;11;12;9,0.5571390405205976,computed
+14,remove_bottom,2,14,4;14,0.30050275230378,reused_from_sparse_curve
+14,remove_bottom,4,12,4;14;6;7,0.3807516829292272,reused_from_sparse_curve
+14,remove_random,4,12,100 draws,0.3815140892835858,reused_from_random_baseline
+14,remove_bottom,6,10,4;14;6;7;8;10,0.4893621608183069,reused_from_sparse_curve
+14,remove_random,6,10,100 draws,0.4403077609595776,reused_from_random_baseline
+14,remove_bottom,8,8,4;14;6;7;8;10;5;13,0.5260060429364167,reused_from_sparse_curve
+14,remove_random,8,8,100 draws,0.4767596912694795,reused_from_random_baseline
+14,remove_bottom,10,6,4;14;6;7;8;10;5;13;2;15,0.5292807545121071,reused_from_sparse_curve
+14,remove_bottom,12,4,4;14;6;7;8;10;5;13;2;15;1;3,0.5548025699246126,reused_from_sparse_curve
+14,remove_random,12,4,500 draws,0.5196434803676653,reused_from_random_baseline
+14,remove_bottom,14,2,4;14;6;7;8;10;5;13;2;15;1;3;16;11,0.5640928853831397,reused_from_sparse_curve
+15,remove_top,2,14,12;9,0.23498129766226344,computed
+15,remove_top,4,12,16;11;12;9,0.2979626905549472,computed
+15,remove_top,6,10,1;3;16;11;12;9,0.3140546083344572,computed
+15,remove_top,8,8,15;2;1;3;16;11;12;9,0.3344328689292231,computed
+15,remove_top,10,6,5;13;15;2;1;3;16;11;12;9,0.3851998800075809,computed
+15,remove_top,12,4,8;10;5;13;15;2;1;3;16;11;12;9,0.39965567999938467,computed
+15,remove_top,14,2,14;7;8;10;5;13;15;2;1;3;16;11;12;9,0.46283262111418555,computed
+15,remove_bottom,2,14,4;6,0.2630169007597596,reused_from_sparse_curve
+15,remove_bottom,4,12,4;6;14;7,0.3388752434063486,reused_from_sparse_curve
+15,remove_random,4,12,100 draws,0.3139369166332763,reused_from_random_baseline
+15,remove_bottom,6,10,4;6;14;7;8;10,0.3991059285016715,reused_from_sparse_curve
+15,remove_random,6,10,100 draws,0.35776370386633294,reused_from_random_baseline
+15,remove_bottom,8,8,4;6;14;7;8;10;5;13,0.407494658068153,reused_from_sparse_curve
+15,remove_random,8,8,100 draws,0.3725960866986574,reused_from_random_baseline
+15,remove_bottom,10,6,4;6;14;7;8;10;5;13;15;2,0.4291025624022219,reused_from_sparse_curve
+15,remove_bottom,12,4,4;6;14;7;8;10;5;13;15;2;1;3,0.4288412771032562,reused_from_sparse_curve
+15,remove_random,12,4,500 draws,0.3912687107368632,reused_from_random_baseline
+15,remove_bottom,14,2,4;6;14;7;8;10;5;13;15;2;1;3;16;11,0.43972641826635,reused_from_sparse_curve
+16,remove_top,2,14,12;9,0.24543245561287128,computed
+16,remove_top,4,12,16;11;12;9,0.3317287788546948,computed
+16,remove_top,6,10,1;3;16;11;12;9,0.3391570329380218,computed
+16,remove_top,8,8,2;15;1;3;16;11;12;9,0.3909664396725754,computed
+16,remove_top,10,6,5;13;2;15;1;3;16;11;12;9,0.42698833522051594,computed
+16,remove_top,12,4,8;10;5;13;2;15;1;3;16;11;12;9,0.42835823957952046,computed
+16,remove_top,14,2,14;7;8;10;5;13;2;15;1;3;16;11;12;9,0.49171492672854117,computed
+16,remove_bottom,2,14,4;6,0.2962846900168149,reused_from_sparse_curve
+16,remove_bottom,4,12,4;6;14;7,0.4631524432018425,reused_from_sparse_curve
+16,remove_random,4,12,100 draws,0.32594682357837534,reused_from_random_baseline
+16,remove_bottom,6,10,4;6;14;7;8;10,0.467269561285174,reused_from_sparse_curve
+16,remove_random,6,10,100 draws,0.37648405982731803,reused_from_random_baseline
+16,remove_bottom,8,8,4;6;14;7;8;10;5;13,0.4891026486379055,reused_from_sparse_curve
+16,remove_random,8,8,100 draws,0.4157926207750237,reused_from_random_baseline
+16,remove_bottom,10,6,4;6;14;7;8;10;5;13;2;15,0.485032136402804,reused_from_sparse_curve
+16,remove_bottom,12,4,4;6;14;7;8;10;5;13;2;15;1;3,0.5077217080122567,reused_from_sparse_curve
+16,remove_random,12,4,500 draws,0.4549376313611126,reused_from_random_baseline
+16,remove_bottom,14,2,4;6;14;7;8;10;5;13;2;15;1;3;16;11,0.5249204751814636,reused_from_sparse_curve
+17,remove_top,2,14,9;12,0.16450654706821666,computed
+17,remove_top,4,12,16;11;9;12,0.2553353133205509,computed
+17,remove_top,6,10,3;1;16;11;9;12,0.26438391426740093,computed
+17,remove_top,8,8,2;15;3;1;16;11;9;12,0.32230770338912496,computed
+17,remove_top,10,6,5;13;2;15;3;1;16;11;9;12,0.37421048856225525,computed
+17,remove_top,12,4,7;10;5;13;2;15;3;1;16;11;9;12,0.40330141727804764,computed
+17,remove_top,14,2,14;8;7;10;5;13;2;15;3;1;16;11;9;12,0.42664384847524794,computed
+17,remove_bottom,2,14,4;6,0.2461530882908297,reused_from_sparse_curve
+17,remove_bottom,4,12,4;6;14;8,0.3174977107516828,reused_from_sparse_curve
+17,remove_random,4,12,100 draws,0.27957035663574603,reused_from_random_baseline
+17,remove_bottom,6,10,4;6;14;8;7;10,0.4105888438389031,reused_from_sparse_curve
+17,remove_random,6,10,100 draws,0.3267152177093442,reused_from_random_baseline
+17,remove_bottom,8,8,4;6;14;8;7;10;5;13,0.4342788100344914,reused_from_sparse_curve
+17,remove_random,8,8,100 draws,0.35915622118586654,reused_from_random_baseline
+17,remove_bottom,10,6,4;6;14;8;7;10;5;13;2;15,0.4481990077042932,reused_from_sparse_curve
+17,remove_bottom,12,4,4;6;14;8;7;10;5;13;2;15;3;1,0.450832333980834,reused_from_sparse_curve
+17,remove_random,12,4,500 draws,0.39073553769874775,reused_from_random_baseline
+17,remove_bottom,14,2,4;6;14;8;7;10;5;13;2;15;3;1;16;11,0.4485090426583669,reused_from_sparse_curve
+18,remove_top,2,14,12;9,0.23367348567253268,computed
+18,remove_top,4,12,16;11;12;9,0.37891725330559134,computed
+18,remove_top,6,10,1;3;16;11;12;9,0.4195943923510073,computed
+18,remove_top,8,8,2;15;1;3;16;11;12;9,0.5040908675784554,computed
+18,remove_top,10,6,5;13;2;15;1;3;16;11;12;9,0.5584125435518835,computed
+18,remove_top,12,4,8;10;5;13;2;15;1;3;16;11;12;9,0.53555276243707,computed
+18,remove_top,14,2,14;7;8;10;5;13;2;15;1;3;16;11;12;9,0.5814906926258508,computed
+18,remove_bottom,2,14,4;6,0.2369393484542746,reused_from_sparse_curve
+18,remove_bottom,4,12,4;6;14;7,0.3142080208735486,reused_from_sparse_curve
+18,remove_random,4,12,100 draws,0.3375131451075316,reused_from_random_baseline
+18,remove_bottom,6,10,4;6;14;7;8;10,0.4761303330129676,reused_from_sparse_curve
+18,remove_random,6,10,100 draws,0.4101818246234235,reused_from_random_baseline
+18,remove_bottom,8,8,4;6;14;7;8;10;5;13,0.5221562165597273,reused_from_sparse_curve
+18,remove_random,8,8,100 draws,0.46203942766764156,reused_from_random_baseline
+18,remove_bottom,10,6,4;6;14;7;8;10;5;13;2;15,0.5501683684874398,reused_from_sparse_curve
+18,remove_bottom,12,4,4;6;14;7;8;10;5;13;2;15;1;3,0.5829989740513577,reused_from_sparse_curve
+18,remove_random,12,4,500 draws,0.505592725632027,reused_from_random_baseline
+18,remove_bottom,14,2,4;6;14;7;8;10;5;13;2;15;1;3;16;11,0.6010681287260237,reused_from_sparse_curve
+19,remove_top,2,14,9;12,0.3380072861003822,computed
+19,remove_top,4,12,16;11;9;12,0.4280477967975243,computed
+19,remove_top,6,10,3;1;16;11;9;12,0.4735536152077978,computed
+19,remove_top,8,8,15;2;3;1;16;11;9;12,0.5125265924039748,computed
+19,remove_top,10,6,5;13;15;2;3;1;16;11;9;12,0.5994971902736127,computed
+19,remove_top,12,4,8;10;5;13;15;2;3;1;16;11;9;12,0.6171209605821382,computed
+19,remove_top,14,2,14;7;8;10;5;13;15;2;3;1;16;11;9;12,0.6574053635895948,computed
+19,remove_bottom,2,14,6;4,0.3734805351514294,reused_from_sparse_curve
+19,remove_bottom,4,12,6;4;14;7,0.5021259680640585,reused_from_sparse_curve
+19,remove_random,4,12,100 draws,0.4551083277084367,reused_from_random_baseline
+19,remove_bottom,6,10,6;4;14;7;8;10,0.6430973218736011,reused_from_sparse_curve
+19,remove_random,6,10,100 draws,0.539603487600493,reused_from_random_baseline
+19,remove_bottom,8,8,6;4;14;7;8;10;5;13,0.657736524049432,reused_from_sparse_curve
+19,remove_random,8,8,100 draws,0.5754364465574761,reused_from_random_baseline
+19,remove_bottom,10,6,6;4;14;7;8;10;5;13;15;2,0.6715427648822783,reused_from_sparse_curve
+19,remove_bottom,12,4,6;4;14;7;8;10;5;13;15;2;3;1,0.6783786746660629,reused_from_sparse_curve
+19,remove_random,12,4,500 draws,0.6226635239683802,reused_from_random_baseline
+19,remove_bottom,14,2,6;4;14;7;8;10;5;13;15;2;3;1;16;11,0.6805291779702776,reused_from_sparse_curve
+20,remove_top,2,14,9;12,0.21208505337706668,computed
+20,remove_top,4,12,16;11;9;12,0.28205754420724133,computed
+20,remove_top,6,10,3;1;16;11;9;12,0.33101751655739803,computed
+20,remove_top,8,8,2;15;3;1;16;11;9;12,0.3448747603580018,computed
+20,remove_top,10,6,5;13;2;15;3;1;16;11;9;12,0.40846703108813043,computed
+20,remove_top,12,4,8;10;5;13;2;15;3;1;16;11;9;12,0.4394087366294003,computed
+20,remove_top,14,2,14;7;8;10;5;13;2;15;3;1;16;11;9;12,0.48885390712936516,computed
+20,remove_bottom,2,14,4;6,0.2860879334539057,reused_from_sparse_curve
+20,remove_bottom,4,12,4;6;14;7,0.3689793394647853,reused_from_sparse_curve
+20,remove_random,4,12,100 draws,0.33364568768612574,reused_from_random_baseline
+20,remove_bottom,6,10,4;6;14;7;8;10,0.4820685179812488,reused_from_sparse_curve
+20,remove_random,6,10,100 draws,0.3844703104575558,reused_from_random_baseline
+20,remove_bottom,8,8,4;6;14;7;8;10;5;13,0.4997693989088286,reused_from_sparse_curve
+20,remove_random,8,8,100 draws,0.4215440835901323,reused_from_random_baseline
+20,remove_bottom,10,6,4;6;14;7;8;10;5;13;2;15,0.4922951321863123,reused_from_sparse_curve
+20,remove_bottom,12,4,4;6;14;7;8;10;5;13;2;15;3;1,0.4985165309995317,reused_from_sparse_curve
+20,remove_random,12,4,500 draws,0.45717431013943555,reused_from_random_baseline
+20,remove_bottom,14,2,4;6;14;7;8;10;5;13;2;15;3;1;16;11,0.4965936708277426,reused_from_sparse_curve
+21,remove_top,2,14,12;9,0.20739030934525432,computed
+21,remove_top,4,12,16;11;12;9,0.30128768790194654,computed
+21,remove_top,6,10,2;1;16;11;12;9,0.3264952793628278,computed
+21,remove_top,8,8,15;3;2;1;16;11;12;9,0.30789553056405794,computed
+21,remove_top,10,6,5;13;15;3;2;1;16;11;12;9,0.3545977323339864,computed
+21,remove_top,12,4,10;8;5;13;15;3;2;1;16;11;12;9,0.38347274516157065,computed
+21,remove_top,14,2,4;7;10;8;5;13;15;3;2;1;16;11;12;9,0.40434238645531495,computed
+21,remove_bottom,2,14,6;14,0.2511787986446228,reused_from_sparse_curve
+21,remove_bottom,4,12,6;14;4;7,0.3106843276698932,reused_from_sparse_curve
+21,remove_random,4,12,100 draws,0.33246684993909065,reused_from_random_baseline
+21,remove_bottom,6,10,6;14;4;7;10;8,0.4610008817213661,reused_from_sparse_curve
+21,remove_random,6,10,100 draws,0.3640333550488581,reused_from_random_baseline
+21,remove_bottom,8,8,6;14;4;7;10;8;5;13,0.4638062688164488,reused_from_sparse_curve
+21,remove_random,8,8,100 draws,0.3759875860346388,reused_from_random_baseline
+21,remove_bottom,10,6,6;14;4;7;10;8;5;13;15;3,0.4376135617213517,reused_from_sparse_curve
+21,remove_bottom,12,4,6;14;4;7;10;8;5;13;15;3;2;1,0.4265763634931295,reused_from_sparse_curve
+21,remove_random,12,4,500 draws,0.39460995614096517,reused_from_random_baseline
+21,remove_bottom,14,2,6;14;4;7;10;8;5;13;15;3;2;1;16;11,0.4172179717282478,reused_from_sparse_curve
+22,remove_top,2,14,12;9,0.31266076399406567,computed
+22,remove_top,4,12,16;11;12;9,0.3139295125009013,computed
+22,remove_top,6,10,1;3;16;11;12;9,0.3759102992477016,computed
+22,remove_top,8,8,15;2;1;3;16;11;12;9,0.41775141189384474,computed
+22,remove_top,10,6,5;13;15;2;1;3;16;11;12;9,0.46849687228542536,computed
+22,remove_top,12,4,8;10;5;13;15;2;1;3;16;11;12;9,0.4819812749704003,computed
+22,remove_top,14,2,14;7;8;10;5;13;15;2;1;3;16;11;12;9,0.5057558640090056,computed
+22,remove_bottom,2,14,6;4,0.2600845730292025,reused_from_sparse_curve
+22,remove_bottom,4,12,6;4;14;7,0.3325419851245086,reused_from_sparse_curve
+22,remove_random,4,12,100 draws,0.3297300838181287,reused_from_random_baseline
+22,remove_bottom,6,10,6;4;14;7;8;10,0.4114869034115029,reused_from_sparse_curve
+22,remove_random,6,10,100 draws,0.37879607119798864,reused_from_random_baseline
+22,remove_bottom,8,8,6;4;14;7;8;10;5;13,0.4488997169755418,reused_from_sparse_curve
+22,remove_random,8,8,100 draws,0.4048205682563429,reused_from_random_baseline
+22,remove_bottom,10,6,6;4;14;7;8;10;5;13;15;2,0.4666588016032083,reused_from_sparse_curve
+22,remove_bottom,12,4,6;4;14;7;8;10;5;13;15;2;1;3,0.5020849425623327,reused_from_sparse_curve
+22,remove_random,12,4,500 draws,0.4353926634236764,reused_from_random_baseline
+22,remove_bottom,14,2,6;4;14;7;8;10;5;13;15;2;1;3;16;11,0.5062804178379692,reused_from_sparse_curve
+23,remove_top,2,14,12;9,0.2835164779890758,computed
+23,remove_top,4,12,16;11;12;9,0.4491730626254856,computed
+23,remove_top,6,10,1;3;16;11;12;9,0.49032182100681876,computed
+23,remove_top,8,8,15;2;1;3;16;11;12;9,0.5061861973361538,computed
+23,remove_top,10,6,5;13;15;2;1;3;16;11;12;9,0.5876452111730134,computed
+23,remove_top,12,4,10;8;5;13;15;2;1;3;16;11;12;9,0.5879424856278408,computed
+23,remove_top,14,2,14;7;10;8;5;13;15;2;1;3;16;11;12;9,0.662979282219558,computed
+23,remove_bottom,2,14,6;4,0.3068725780304262,reused_from_sparse_curve
+23,remove_bottom,4,12,6;4;14;7,0.4616654502121061,reused_from_sparse_curve
+23,remove_random,4,12,100 draws,0.45022284437059945,reused_from_random_baseline
+23,remove_bottom,6,10,6;4;14;7;10;8,0.5826337985860903,reused_from_sparse_curve
+23,remove_random,6,10,100 draws,0.5186848504992244,reused_from_random_baseline
+23,remove_bottom,8,8,6;4;14;7;10;8;5;13,0.6030767519669924,reused_from_sparse_curve
+23,remove_random,8,8,100 draws,0.5601731329444128,reused_from_random_baseline
+23,remove_bottom,10,6,6;4;14;7;10;8;5;13;15;2,0.595123747446842,reused_from_sparse_curve
+23,remove_bottom,12,4,6;4;14;7;10;8;5;13;15;2;1;3,0.616344332551224,reused_from_sparse_curve
+23,remove_random,12,4,500 draws,0.6081165686222462,reused_from_random_baseline
+23,remove_bottom,14,2,6;4;14;7;10;8;5;13;15;2;1;3;16;11,0.6325253673012509,reused_from_sparse_curve
+24,remove_top,2,14,11;9,0.22483122095542396,computed
+24,remove_top,4,12,16;12;11;9,0.3245849789678053,computed
+24,remove_top,6,10,1;3;16;12;11;9,0.33990223414214304,computed
+24,remove_top,8,8,15;2;1;3;16;12;11;9,0.36933115314705345,computed
+24,remove_top,10,6,5;13;15;2;1;3;16;12;11;9,0.4091323130261042,computed
+24,remove_top,12,4,10;8;5;13;15;2;1;3;16;12;11;9,0.42717264092417573,computed
+24,remove_top,14,2,4;7;10;8;5;13;15;2;1;3;16;12;11;9,0.49044558163681407,computed
+24,remove_bottom,2,14,6;14,0.1976268355223468,reused_from_sparse_curve
+24,remove_bottom,4,12,6;14;4;7,0.3411726442751173,reused_from_sparse_curve
+24,remove_random,4,12,100 draws,0.33357649257960015,reused_from_random_baseline
+24,remove_bottom,6,10,6;14;4;7;10;8,0.4001268161447515,reused_from_sparse_curve
+24,remove_random,6,10,100 draws,0.36915238162825786,reused_from_random_baseline
+24,remove_bottom,8,8,6;14;4;7;10;8;5;13,0.4224352972573395,reused_from_sparse_curve
+24,remove_random,8,8,100 draws,0.3964512086635269,reused_from_random_baseline
+24,remove_bottom,10,6,6;14;4;7;10;8;5;13;15;2,0.451948476437969,reused_from_sparse_curve
+24,remove_bottom,12,4,6;14;4;7;10;8;5;13;15;2;1;3,0.4794821943043157,reused_from_sparse_curve
+24,remove_random,12,4,500 draws,0.4231250506055058,reused_from_random_baseline
+24,remove_bottom,14,2,6;14;4;7;10;8;5;13;15;2;1;3;16;12,0.4761124149723194,reused_from_sparse_curve
+25,remove_top,2,14,12;9,0.20467130445363166,computed
+25,remove_top,4,12,16;11;12;9,0.36702111108310803,computed
+25,remove_top,6,10,3;1;16;11;12;9,0.3913361828398202,computed
+25,remove_top,8,8,15;2;3;1;16;11;12;9,0.45964511514279527,computed
+25,remove_top,10,6,5;13;15;2;3;1;16;11;12;9,0.4610656342509214,computed
+25,remove_top,12,4,7;10;5;13;15;2;3;1;16;11;12;9,0.49207935042889284,computed
+25,remove_top,14,2,14;8;7;10;5;13;15;2;3;1;16;11;12;9,0.5220892614407073,computed
+25,remove_bottom,2,14,4;6,0.1988347474609863,reused_from_sparse_curve
+25,remove_bottom,4,12,4;6;14;8,0.3844742449157265,reused_from_sparse_curve
+25,remove_random,4,12,100 draws,0.302158763325241,reused_from_random_baseline
+25,remove_bottom,6,10,4;6;14;8;7;10,0.4798856981590402,reused_from_sparse_curve
+25,remove_random,6,10,100 draws,0.3660311499956307,reused_from_random_baseline
+25,remove_bottom,8,8,4;6;14;8;7;10;5;13,0.4843914175485348,reused_from_sparse_curve
+25,remove_random,8,8,100 draws,0.4049510912597455,reused_from_random_baseline
+25,remove_bottom,10,6,4;6;14;8;7;10;5;13;15;2,0.5236981605639963,reused_from_sparse_curve
+25,remove_bottom,12,4,4;6;14;8;7;10;5;13;15;2;3;1,0.5341628186281854,reused_from_sparse_curve
+25,remove_random,12,4,500 draws,0.44516245933046616,reused_from_random_baseline
+25,remove_bottom,14,2,4;6;14;8;7;10;5;13;15;2;3;1;16;11,0.5469466590733931,reused_from_sparse_curve
+26,remove_top,2,14,12;9,0.2678181162819049,computed
+26,remove_top,4,12,16;11;12;9,0.34066912825876194,computed
+26,remove_top,6,10,3;1;16;11;12;9,0.3842200628455501,computed
+26,remove_top,8,8,2;15;3;1;16;11;12;9,0.39200353830848145,computed
+26,remove_top,10,6,5;13;2;15;3;1;16;11;12;9,0.46184024365238685,computed
+26,remove_top,12,4,8;10;5;13;2;15;3;1;16;11;12;9,0.4611483850552942,computed
+26,remove_top,14,2,14;7;8;10;5;13;2;15;3;1;16;11;12;9,0.4823650427712924,computed
+26,remove_bottom,2,14,4;6,0.3057379489373006,reused_from_sparse_curve
+26,remove_bottom,4,12,4;6;14;7,0.4223560480704559,reused_from_sparse_curve
+26,remove_random,4,12,100 draws,0.33751088740317003,reused_from_random_baseline
+26,remove_bottom,6,10,4;6;14;7;8;10,0.4704545166562595,reused_from_sparse_curve
+26,remove_random,6,10,100 draws,0.3900671760355614,reused_from_random_baseline
+26,remove_bottom,8,8,4;6;14;7;8;10;5;13,0.4985378528408067,reused_from_sparse_curve
+26,remove_random,8,8,100 draws,0.41368630515692595,reused_from_random_baseline
+26,remove_bottom,10,6,4;6;14;7;8;10;5;13;2;15,0.5241331795738717,reused_from_sparse_curve
+26,remove_bottom,12,4,4;6;14;7;8;10;5;13;2;15;3;1,0.5309351301982165,reused_from_sparse_curve
+26,remove_random,12,4,500 draws,0.4515500569534729,reused_from_random_baseline
+26,remove_bottom,14,2,4;6;14;7;8;10;5;13;2;15;3;1;16;11,0.5568501287200477,reused_from_sparse_curve
+27,remove_top,2,14,12;9,0.30939735130716967,computed
+27,remove_top,4,12,16;11;12;9,0.3709606397121039,computed
+27,remove_top,6,10,3;1;16;11;12;9,0.4006704255792177,computed
+27,remove_top,8,8,13;2;3;1;16;11;12;9,0.5018984061202851,computed
+27,remove_top,10,6,5;15;13;2;3;1;16;11;12;9,0.49024717531118517,computed
+27,remove_top,12,4,8;10;5;15;13;2;3;1;16;11;12;9,0.5179550207280781,computed
+27,remove_top,14,2,14;7;8;10;5;15;13;2;3;1;16;11;12;9,0.5386002027467456,computed
+27,remove_bottom,2,14,6;4,0.3532310369827973,reused_from_sparse_curve
+27,remove_bottom,4,12,6;4;14;7,0.4239093150552827,reused_from_sparse_curve
+27,remove_random,4,12,100 draws,0.3792482166307121,reused_from_random_baseline
+27,remove_bottom,6,10,6;4;14;7;8;10,0.501184398284606,reused_from_sparse_curve
+27,remove_random,6,10,100 draws,0.44350411481156776,reused_from_random_baseline
+27,remove_bottom,8,8,6;4;14;7;8;10;5;15,0.5237566517517395,reused_from_sparse_curve
+27,remove_random,8,8,100 draws,0.4855198717630404,reused_from_random_baseline
+27,remove_bottom,10,6,6;4;14;7;8;10;5;15;13;2,0.5407336114576944,reused_from_sparse_curve
+27,remove_bottom,12,4,6;4;14;7;8;10;5;15;13;2;3;1,0.5541438469700097,reused_from_sparse_curve
+27,remove_random,12,4,500 draws,0.5242120568562317,reused_from_random_baseline
+27,remove_bottom,14,2,6;4;14;7;8;10;5;15;13;2;3;1;16;11,0.5804817088692245,reused_from_sparse_curve
+28,remove_top,2,14,9;12,0.29161218867185823,computed
+28,remove_top,4,12,16;11;9;12,0.4250495862217882,computed
+28,remove_top,6,10,3;1;16;11;9;12,0.45296643682842713,computed
+28,remove_top,8,8,15;2;3;1;16;11;9;12,0.4687155834981245,computed
+28,remove_top,10,6,5;13;15;2;3;1;16;11;9;12,0.4921601947907789,computed
+28,remove_top,12,4,8;10;5;13;15;2;3;1;16;11;9;12,0.5117760421694929,computed
+28,remove_top,14,2,14;7;8;10;5;13;15;2;3;1;16;11;9;12,0.5566336446594962,computed
+28,remove_bottom,2,14,4;6,0.2876338704573541,reused_from_sparse_curve
+28,remove_bottom,4,12,4;6;14;7,0.4071941784364187,reused_from_sparse_curve
+28,remove_random,4,12,100 draws,0.3749537982041862,reused_from_random_baseline
+28,remove_bottom,6,10,4;6;14;7;8;10,0.5209862455122998,reused_from_sparse_curve
+28,remove_random,6,10,100 draws,0.43246523151321115,reused_from_random_baseline
+28,remove_bottom,8,8,4;6;14;7;8;10;5;13,0.5592821907236768,reused_from_sparse_curve
+28,remove_random,8,8,100 draws,0.45807138386215457,reused_from_random_baseline
+28,remove_bottom,10,6,4;6;14;7;8;10;5;13;15;2,0.5634095045948079,reused_from_sparse_curve
+28,remove_bottom,12,4,4;6;14;7;8;10;5;13;15;2;3;1,0.5551574051217849,reused_from_sparse_curve
+28,remove_random,12,4,500 draws,0.4857529434417977,reused_from_random_baseline
+28,remove_bottom,14,2,4;6;14;7;8;10;5;13;15;2;3;1;16;11,0.5557516182136857,reused_from_sparse_curve
+29,remove_top,2,14,9;12,0.2525046640035143,computed
+29,remove_top,4,12,16;11;9;12,0.3386022525815518,computed
+29,remove_top,6,10,1;3;16;11;9;12,0.3220012127353057,computed
+29,remove_top,8,8,13;2;1;3;16;11;9;12,0.390903749613411,computed
+29,remove_top,10,6,5;15;13;2;1;3;16;11;9;12,0.38277977758401094,computed
+29,remove_top,12,4,8;10;5;15;13;2;1;3;16;11;9;12,0.3735782138913981,computed
+29,remove_top,14,2,14;7;8;10;5;15;13;2;1;3;16;11;9;12,0.3844899294819993,computed
+29,remove_bottom,2,14,4;6,0.2294524180975096,reused_from_sparse_curve
+29,remove_bottom,4,12,4;6;14;7,0.2814138227967198,reused_from_sparse_curve
+29,remove_random,4,12,100 draws,0.2912643445336599,reused_from_random_baseline
+29,remove_bottom,6,10,4;6;14;7;8;10,0.3566068053703204,reused_from_sparse_curve
+29,remove_random,6,10,100 draws,0.326112974418428,reused_from_random_baseline
+29,remove_bottom,8,8,4;6;14;7;8;10;5;15,0.340491933398948,reused_from_sparse_curve
+29,remove_random,8,8,100 draws,0.3443996842189414,reused_from_random_baseline
+29,remove_bottom,10,6,4;6;14;7;8;10;5;15;13;2,0.3701988868683502,reused_from_sparse_curve
+29,remove_bottom,12,4,4;6;14;7;8;10;5;15;13;2;1;3,0.3700495142317662,reused_from_sparse_curve
+29,remove_random,12,4,500 draws,0.3608653524578575,reused_from_random_baseline
+29,remove_bottom,14,2,4;6;14;7;8;10;5;15;13;2;1;3;16;11,0.3834346032170471,reused_from_sparse_curve
+30,remove_top,2,14,9;12,0.3493875733353627,computed
+30,remove_top,4,12,16;11;9;12,0.45585856757870147,computed
+30,remove_top,6,10,1;3;16;11;9;12,0.5037455153609645,computed
+30,remove_top,8,8,15;2;1;3;16;11;9;12,0.5566701404793248,computed
+30,remove_top,10,6,5;13;15;2;1;3;16;11;9;12,0.5817574697749708,computed
+30,remove_top,12,4,8;10;5;13;15;2;1;3;16;11;9;12,0.6129504812332296,computed
+30,remove_top,14,2,14;7;8;10;5;13;15;2;1;3;16;11;9;12,0.6374930105444974,computed
+30,remove_bottom,2,14,4;6,0.3662351280756996,reused_from_sparse_curve
+30,remove_bottom,4,12,4;6;14;7,0.4668631520287322,reused_from_sparse_curve
+30,remove_random,4,12,100 draws,0.46811449618071405,reused_from_random_baseline
+30,remove_bottom,6,10,4;6;14;7;8;10,0.6133281011188327,reused_from_sparse_curve
+30,remove_random,6,10,100 draws,0.5297379523367595,reused_from_random_baseline
+30,remove_bottom,8,8,4;6;14;7;8;10;5;13,0.607498184257906,reused_from_sparse_curve
+30,remove_random,8,8,100 draws,0.5637822829041244,reused_from_random_baseline
+30,remove_bottom,10,6,4;6;14;7;8;10;5;13;15;2,0.6071874234287055,reused_from_sparse_curve
+30,remove_bottom,12,4,4;6;14;7;8;10;5;13;15;2;1;3,0.6419017716315503,reused_from_sparse_curve
+30,remove_random,12,4,500 draws,0.593355674359126,reused_from_random_baseline
+30,remove_bottom,14,2,4;6;14;7;8;10;5;13;15;2;1;3;16;11,0.644478771438227,reused_from_sparse_curve
+31,remove_top,2,14,9;12,0.3304001333983512,computed
+31,remove_top,4,12,16;11;9;12,0.4376015384569407,computed
+31,remove_top,6,10,1;3;16;11;9;12,0.4422597188699744,computed
+31,remove_top,8,8,2;15;1;3;16;11;9;12,0.4656525528408175,computed
+31,remove_top,10,6,5;13;2;15;1;3;16;11;9;12,0.47115779428405136,computed
+31,remove_top,12,4,7;10;5;13;2;15;1;3;16;11;9;12,0.47862044282028127,computed
+31,remove_top,14,2,14;8;7;10;5;13;2;15;1;3;16;11;9;12,0.5428936952780912,computed
+31,remove_bottom,2,14,4;6,0.3388364785886448,reused_from_sparse_curve
+31,remove_bottom,4,12,4;6;14;8,0.4363671658898639,reused_from_sparse_curve
+31,remove_random,4,12,100 draws,0.37385142002989474,reused_from_random_baseline
+31,remove_bottom,6,10,4;6;14;8;7;10,0.5285070784935961,reused_from_sparse_curve
+31,remove_random,6,10,100 draws,0.41657592136438104,reused_from_random_baseline
+31,remove_bottom,8,8,4;6;14;8;7;10;5;13,0.5362841891270868,reused_from_sparse_curve
+31,remove_random,8,8,100 draws,0.4568184146132279,reused_from_random_baseline
+31,remove_bottom,10,6,4;6;14;8;7;10;5;13;2;15,0.5561553972201296,reused_from_sparse_curve
+31,remove_bottom,12,4,4;6;14;8;7;10;5;13;2;15;1;3,0.5688031634446642,reused_from_sparse_curve
+31,remove_random,12,4,500 draws,0.4996977803311846,reused_from_random_baseline
+31,remove_bottom,14,2,4;6;14;8;7;10;5;13;2;15;1;3;16;11,0.5816512734974546,reused_from_sparse_curve
+32,remove_top,2,14,12;9,0.24809270639867798,computed
+32,remove_top,4,12,16;11;12;9,0.3506267708067333,computed
+32,remove_top,6,10,1;3;16;11;12;9,0.3735706947921657,computed
+32,remove_top,8,8,15;2;1;3;16;11;12;9,0.41022263697999095,computed
+32,remove_top,10,6,5;13;15;2;1;3;16;11;12;9,0.44345823395071576,computed
+32,remove_top,12,4,8;10;5;13;15;2;1;3;16;11;12;9,0.39819979176427533,computed
+32,remove_top,14,2,4;7;8;10;5;13;15;2;1;3;16;11;12;9,0.4033455509788731,computed
+32,remove_bottom,2,14,14;6,0.1605777924790685,reused_from_sparse_curve
+32,remove_bottom,4,12,14;6;4;7,0.2998435613068841,reused_from_sparse_curve
+32,remove_random,4,12,100 draws,0.3161935436349562,reused_from_random_baseline
+32,remove_bottom,6,10,14;6;4;7;8;10,0.3215486062971002,reused_from_sparse_curve
+32,remove_random,6,10,100 draws,0.34166201736236024,reused_from_random_baseline
+32,remove_bottom,8,8,14;6;4;7;8;10;5;13,0.3535395634625051,reused_from_sparse_curve
+32,remove_random,8,8,100 draws,0.3600325627619806,reused_from_random_baseline
+32,remove_bottom,10,6,14;6;4;7;8;10;5;13;15;2,0.3671255995649172,reused_from_sparse_curve
+32,remove_bottom,12,4,14;6;4;7;8;10;5;13;15;2;1;3,0.3992116724697481,reused_from_sparse_curve
+32,remove_random,12,4,500 draws,0.3761450753787991,reused_from_random_baseline
+32,remove_bottom,14,2,14;6;4;7;8;10;5;13;15;2;1;3;16;11,0.4162095278416076,reused_from_sparse_curve
+33,remove_top,2,14,12;9,0.24635766871268436,computed
+33,remove_top,4,12,16;11;12;9,0.3154520598087299,computed
+33,remove_top,6,10,3;1;16;11;12;9,0.3663279616542934,computed
+33,remove_top,8,8,15;2;3;1;16;11;12;9,0.41859155130683257,computed
+33,remove_top,10,6,5;13;15;2;3;1;16;11;12;9,0.5261118483626556,computed
+33,remove_top,12,4,7;10;5;13;15;2;3;1;16;11;12;9,0.532782254439492,computed
+33,remove_top,14,2,6;8;7;10;5;13;15;2;3;1;16;11;12;9,0.6117990699641307,computed
+33,remove_bottom,2,14,4;14,0.3330226302000224,reused_from_sparse_curve
+33,remove_bottom,4,12,4;14;6;8,0.4010595673393285,reused_from_sparse_curve
+33,remove_random,4,12,100 draws,0.40146869031986343,reused_from_random_baseline
+33,remove_bottom,6,10,4;14;6;8;7;10,0.5151235802125449,reused_from_sparse_curve
+33,remove_random,6,10,100 draws,0.4520099872757967,reused_from_random_baseline
+33,remove_bottom,8,8,4;14;6;8;7;10;5;13,0.6261518556095884,reused_from_sparse_curve
+33,remove_random,8,8,100 draws,0.48344842548428785,reused_from_random_baseline
+33,remove_bottom,10,6,4;14;6;8;7;10;5;13;15;2,0.6475309454044345,reused_from_sparse_curve
+33,remove_bottom,12,4,4;14;6;8;7;10;5;13;15;2;3;1,0.6327906017540196,reused_from_sparse_curve
+33,remove_random,12,4,500 draws,0.53900990201138,reused_from_random_baseline
+33,remove_bottom,14,2,4;14;6;8;7;10;5;13;15;2;3;1;16;11,0.6448755189551674,reused_from_sparse_curve
+34,remove_top,2,14,12;9,0.23565408777991215,computed
+34,remove_top,4,12,16;11;12;9,0.3483269198073711,computed
+34,remove_top,6,10,1;3;16;11;12;9,0.41236128506665976,computed
+34,remove_top,8,8,2;15;1;3;16;11;12;9,0.42654494011417426,computed
+34,remove_top,10,6,5;13;2;15;1;3;16;11;12;9,0.5169985786542326,computed
+34,remove_top,12,4,7;10;5;13;2;15;1;3;16;11;12;9,0.5171695978926738,computed
+34,remove_top,14,2,14;8;7;10;5;13;2;15;1;3;16;11;12;9,0.5606896381944985,computed
+34,remove_bottom,2,14,4;6,0.3296938518312255,reused_from_sparse_curve
+34,remove_bottom,4,12,4;6;14;8,0.4745104919851158,reused_from_sparse_curve
+34,remove_random,4,12,100 draws,0.37363230092228245,reused_from_random_baseline
+34,remove_bottom,6,10,4;6;14;8;7;10,0.5479398954742263,reused_from_sparse_curve
+34,remove_random,6,10,100 draws,0.4416023085004553,reused_from_random_baseline
+34,remove_bottom,8,8,4;6;14;8;7;10;5;13,0.5613251222027051,reused_from_sparse_curve
+34,remove_random,8,8,100 draws,0.4768280013249405,reused_from_random_baseline
+34,remove_bottom,10,6,4;6;14;8;7;10;5;13;2;15,0.5835990084221313,reused_from_sparse_curve
+34,remove_bottom,12,4,4;6;14;8;7;10;5;13;2;15;1;3,0.6015885803447436,reused_from_sparse_curve
+34,remove_random,12,4,500 draws,0.5108572498613111,reused_from_random_baseline
+34,remove_bottom,14,2,4;6;14;8;7;10;5;13;2;15;1;3;16;11,0.6030138362129882,reused_from_sparse_curve
+35,remove_top,2,14,12;9,0.37154640985547593,computed
+35,remove_top,4,12,16;11;12;9,0.4888401290274683,computed
+35,remove_top,6,10,3;1;16;11;12;9,0.5203409506032577,computed
+35,remove_top,8,8,13;15;3;1;16;11;12;9,0.6166270271899116,computed
+35,remove_top,10,6,5;2;13;15;3;1;16;11;12;9,0.6391630816264299,computed
+35,remove_top,12,4,8;10;5;2;13;15;3;1;16;11;12;9,0.653103302863858,computed
+35,remove_top,14,2,14;7;8;10;5;2;13;15;3;1;16;11;12;9,0.651074645490292,computed
+35,remove_bottom,2,14,6;4,0.3671891113697174,reused_from_sparse_curve
+35,remove_bottom,4,12,6;4;14;7,0.4679850080935775,reused_from_sparse_curve
+35,remove_random,4,12,100 draws,0.4763611596037282,reused_from_random_baseline
+35,remove_bottom,6,10,6;4;14;7;8;10,0.5676284062909782,reused_from_sparse_curve
+35,remove_random,6,10,100 draws,0.5408155434065742,reused_from_random_baseline
+35,remove_bottom,8,8,6;4;14;7;8;10;5;2,0.6305655478966699,reused_from_sparse_curve
+35,remove_random,8,8,100 draws,0.5757415130963901,reused_from_random_baseline
+35,remove_bottom,10,6,6;4;14;7;8;10;5;2;13;15,0.6487002346050008,reused_from_sparse_curve
+35,remove_bottom,12,4,6;4;14;7;8;10;5;2;13;15;3;1,0.6555927172401057,reused_from_sparse_curve
+35,remove_random,12,4,500 draws,0.6125072419214103,reused_from_random_baseline
+35,remove_bottom,14,2,6;4;14;7;8;10;5;2;13;15;3;1;16;11,0.6629080181067748,reused_from_sparse_curve
+36,remove_top,2,14,12;9,0.3640661672566625,computed
+36,remove_top,4,12,16;11;12;9,0.5464104672828516,computed
+36,remove_top,6,10,3;1;16;11;12;9,0.5680704849902861,computed
+36,remove_top,8,8,2;15;3;1;16;11;12;9,0.581114730478455,computed
+36,remove_top,10,6,5;13;2;15;3;1;16;11;12;9,0.6314124568987057,computed
+36,remove_top,12,4,8;10;5;13;2;15;3;1;16;11;12;9,0.6322563158069345,computed
+36,remove_top,14,2,14;7;8;10;5;13;2;15;3;1;16;11;12;9,0.6606218625103928,computed
+36,remove_bottom,2,14,4;6,0.4537244431270167,reused_from_sparse_curve
+36,remove_bottom,4,12,4;6;14;7,0.5325884763475079,reused_from_sparse_curve
+36,remove_random,4,12,100 draws,0.5127567603805941,reused_from_random_baseline
+36,remove_bottom,6,10,4;6;14;7;8;10,0.650107851897562,reused_from_sparse_curve
+36,remove_random,6,10,100 draws,0.5782608066529435,reused_from_random_baseline
+36,remove_bottom,8,8,4;6;14;7;8;10;5;13,0.6955563586603342,reused_from_sparse_curve
+36,remove_random,8,8,100 draws,0.5996344769367815,reused_from_random_baseline
+36,remove_bottom,10,6,4;6;14;7;8;10;5;13;2;15,0.693105275600773,reused_from_sparse_curve
+36,remove_bottom,12,4,4;6;14;7;8;10;5;13;2;15;3;1,0.6995427753144996,reused_from_sparse_curve
+36,remove_random,12,4,500 draws,0.6329590826287507,reused_from_random_baseline
+36,remove_bottom,14,2,4;6;14;7;8;10;5;13;2;15;3;1;16;11,0.6921284315360604,reused_from_sparse_curve
+37,remove_top,2,14,9;12,0.29387605075965895,computed
+37,remove_top,4,12,16;11;9;12,0.3876699465197315,computed
+37,remove_top,6,10,15;1;16;11;9;12,0.4184813779777513,computed
+37,remove_top,8,8,2;3;15;1;16;11;9;12,0.4504433094418708,computed
+37,remove_top,10,6,5;13;2;3;15;1;16;11;9;12,0.5247086436750503,computed
+37,remove_top,12,4,7;10;5;13;2;3;15;1;16;11;9;12,0.5186288864645954,computed
+37,remove_top,14,2,14;8;7;10;5;13;2;3;15;1;16;11;9;12,0.5660311393677082,computed
+37,remove_bottom,2,14,4;6,0.3786332761517083,reused_from_sparse_curve
+37,remove_bottom,4,12,4;6;14;8,0.496093304771224,reused_from_sparse_curve
+37,remove_random,4,12,100 draws,0.40602443445625963,reused_from_random_baseline
+37,remove_bottom,6,10,4;6;14;8;7;10,0.5933228935594097,reused_from_sparse_curve
+37,remove_random,6,10,100 draws,0.467930490898371,reused_from_random_baseline
+37,remove_bottom,8,8,4;6;14;8;7;10;5;13,0.6206661324306599,reused_from_sparse_curve
+37,remove_random,8,8,100 draws,0.5092897728947017,reused_from_random_baseline
+37,remove_bottom,10,6,4;6;14;8;7;10;5;13;2;3,0.5901767870805934,reused_from_sparse_curve
+37,remove_bottom,12,4,4;6;14;8;7;10;5;13;2;3;15;1,0.590377290269722,reused_from_sparse_curve
+37,remove_random,12,4,500 draws,0.5420155836022307,reused_from_random_baseline
+37,remove_bottom,14,2,4;6;14;8;7;10;5;13;2;3;15;1;16;11,0.6026240396257376,reused_from_sparse_curve
+38,remove_top,2,14,12;9,0.35071474459482266,computed
+38,remove_top,4,12,16;11;12;9,0.4496436326352123,computed
+38,remove_top,6,10,3;1;16;11;12;9,0.47619939813977874,computed
+38,remove_top,8,8,15;2;3;1;16;11;12;9,0.5043819705502689,computed
+38,remove_top,10,6,5;13;15;2;3;1;16;11;12;9,0.5714827378270956,computed
+38,remove_top,12,4,7;10;5;13;15;2;3;1;16;11;12;9,0.5853613996023707,computed
+38,remove_top,14,2,14;8;7;10;5;13;15;2;3;1;16;11;12;9,0.5988413040928087,computed
+38,remove_bottom,2,14,4;6,0.346306631652877,reused_from_sparse_curve
+38,remove_bottom,4,12,4;6;14;8,0.4923650610672412,reused_from_sparse_curve
+38,remove_random,4,12,100 draws,0.4336256288552834,reused_from_random_baseline
+38,remove_bottom,6,10,4;6;14;8;7;10,0.5781749742013849,reused_from_sparse_curve
+38,remove_random,6,10,100 draws,0.49142677271931307,reused_from_random_baseline
+38,remove_bottom,8,8,4;6;14;8;7;10;5;13,0.5849586607003712,reused_from_sparse_curve
+38,remove_random,8,8,100 draws,0.5209729045746136,reused_from_random_baseline
+38,remove_bottom,10,6,4;6;14;8;7;10;5;13;15;2,0.5919224074134739,reused_from_sparse_curve
+38,remove_bottom,12,4,4;6;14;8;7;10;5;13;15;2;3;1,0.6062474913906324,reused_from_sparse_curve
+38,remove_random,12,4,500 draws,0.5513746523353263,reused_from_random_baseline
+38,remove_bottom,14,2,4;6;14;8;7;10;5;13;15;2;3;1;16;11,0.6098625621654282,reused_from_sparse_curve
+39,remove_top,2,14,9;12,0.2595909711298063,computed
+39,remove_top,4,12,16;11;9;12,0.3503612659339447,computed
+39,remove_top,6,10,3;1;16;11;9;12,0.37898196358841196,computed
+39,remove_top,8,8,15;2;3;1;16;11;9;12,0.40306692054814375,computed
+39,remove_top,10,6,5;13;15;2;3;1;16;11;9;12,0.4742590165516415,computed
+39,remove_top,12,4,8;10;5;13;15;2;3;1;16;11;9;12,0.4829882739847939,computed
+39,remove_top,14,2,14;7;8;10;5;13;15;2;3;1;16;11;9;12,0.5250608733082647,computed
+39,remove_bottom,2,14,4;6,0.3060536010675134,reused_from_sparse_curve
+39,remove_bottom,4,12,4;6;14;7,0.4181952261370698,reused_from_sparse_curve
+39,remove_random,4,12,100 draws,0.3529408988041735,reused_from_random_baseline
+39,remove_bottom,6,10,4;6;14;7;8;10,0.4981217907570211,reused_from_sparse_curve
+39,remove_random,6,10,100 draws,0.4107239879756992,reused_from_random_baseline
+39,remove_bottom,8,8,4;6;14;7;8;10;5;13,0.5288782697365513,reused_from_sparse_curve
+39,remove_random,8,8,100 draws,0.44338805057793,reused_from_random_baseline
+39,remove_bottom,10,6,4;6;14;7;8;10;5;13;15;2,0.5361481093911526,reused_from_sparse_curve
+39,remove_bottom,12,4,4;6;14;7;8;10;5;13;15;2;3;1,0.5518703237998765,reused_from_sparse_curve
+39,remove_random,12,4,500 draws,0.4829281077253352,reused_from_random_baseline
+39,remove_bottom,14,2,4;6;14;7;8;10;5;13;15;2;3;1;16;11,0.557830570864559,reused_from_sparse_curve
+40,remove_top,2,14,12;9,0.28796861111874483,computed
+40,remove_top,4,12,16;11;12;9,0.36958617831303586,computed
+40,remove_top,6,10,15;1;16;11;12;9,0.42135346707529203,computed
+40,remove_top,8,8,2;3;15;1;16;11;12;9,0.45056503392964586,computed
+40,remove_top,10,6,5;13;2;3;15;1;16;11;12;9,0.5152078320218074,computed
+40,remove_top,12,4,8;10;5;13;2;3;15;1;16;11;12;9,0.5247390261634275,computed
+40,remove_top,14,2,14;7;8;10;5;13;2;3;15;1;16;11;12;9,0.5498507100496999,computed
+40,remove_bottom,2,14,4;6,0.3145366970996673,reused_from_sparse_curve
+40,remove_bottom,4,12,4;6;14;7,0.4292583187761023,reused_from_sparse_curve
+40,remove_random,4,12,100 draws,0.39128664493591453,reused_from_random_baseline
+40,remove_bottom,6,10,4;6;14;7;8;10,0.5221702135398776,reused_from_sparse_curve
+40,remove_random,6,10,100 draws,0.4356848035660715,reused_from_random_baseline
+40,remove_bottom,8,8,4;6;14;7;8;10;5;13,0.5141025976445589,reused_from_sparse_curve
+40,remove_random,8,8,100 draws,0.47054868950898393,reused_from_random_baseline
+40,remove_bottom,10,6,4;6;14;7;8;10;5;13;2;3,0.5296968589676896,reused_from_sparse_curve
+40,remove_bottom,12,4,4;6;14;7;8;10;5;13;2;3;15;1,0.5636677819190222,reused_from_sparse_curve
+40,remove_random,12,4,500 draws,0.5036574534162783,reused_from_random_baseline
+40,remove_bottom,14,2,4;6;14;7;8;10;5;13;2;3;15;1;16;11,0.5802460816881045,reused_from_sparse_curve
+41,remove_top,2,14,12;9,0.37057219970115146,computed
+41,remove_top,4,12,16;11;12;9,0.4398489865399105,computed
+41,remove_top,6,10,3;1;16;11;12;9,0.4874387475257981,computed
+41,remove_top,8,8,2;15;3;1;16;11;12;9,0.5519140066744683,computed
+41,remove_top,10,6,5;13;2;15;3;1;16;11;12;9,0.6086803039641242,computed
+41,remove_top,12,4,8;10;5;13;2;15;3;1;16;11;12;9,0.608867381920525,computed
+41,remove_top,14,2,14;7;8;10;5;13;2;15;3;1;16;11;12;9,0.6000495093431535,computed
+41,remove_bottom,2,14,4;6,0.3129081375015429,reused_from_sparse_curve
+41,remove_bottom,4,12,4;6;14;7,0.4287215273659226,reused_from_sparse_curve
+41,remove_random,4,12,100 draws,0.44955097715554354,reused_from_random_baseline
+41,remove_bottom,6,10,4;6;14;7;8;10,0.5223723015305086,reused_from_sparse_curve
+41,remove_random,6,10,100 draws,0.4997775696284015,reused_from_random_baseline
+41,remove_bottom,8,8,4;6;14;7;8;10;5;13,0.5568654922967784,reused_from_sparse_curve
+41,remove_random,8,8,100 draws,0.5250416269523717,reused_from_random_baseline
+41,remove_bottom,10,6,4;6;14;7;8;10;5;13;2;15,0.5725386211063082,reused_from_sparse_curve
+41,remove_bottom,12,4,4;6;14;7;8;10;5;13;2;15;3;1,0.6060127842137775,reused_from_sparse_curve
+41,remove_random,12,4,500 draws,0.550193424183293,reused_from_random_baseline
+41,remove_bottom,14,2,4;6;14;7;8;10;5;13;2;15;3;1;16;11,0.6078135504614026,reused_from_sparse_curve
+42,remove_top,2,14,9;12,0.24924077276194756,computed
+42,remove_top,4,12,16;11;9;12,0.362306062005307,computed
+42,remove_top,6,10,2;1;16;11;9;12,0.39812478423537445,computed
+42,remove_top,8,8,15;3;2;1;16;11;9;12,0.4146943212758367,computed
+42,remove_top,10,6,5;13;15;3;2;1;16;11;9;12,0.4596436534817787,computed
+42,remove_top,12,4,8;10;5;13;15;3;2;1;16;11;9;12,0.4767846526292015,computed
+42,remove_top,14,2,14;7;8;10;5;13;15;3;2;1;16;11;9;12,0.5128158127357102,computed
+42,remove_bottom,2,14,4;6,0.321259709237695,reused_from_sparse_curve
+42,remove_bottom,4,12,4;6;14;7,0.4222724947493197,reused_from_sparse_curve
+42,remove_random,4,12,100 draws,0.36367659735868896,reused_from_random_baseline
+42,remove_bottom,6,10,4;6;14;7;8;10,0.5055450038297008,reused_from_sparse_curve
+42,remove_random,6,10,100 draws,0.4246991179182312,reused_from_random_baseline
+42,remove_bottom,8,8,4;6;14;7;8;10;5;13,0.5277183284649871,reused_from_sparse_curve
+42,remove_random,8,8,100 draws,0.45220746908863246,reused_from_random_baseline
+42,remove_bottom,10,6,4;6;14;7;8;10;5;13;15;3,0.5344492243156674,reused_from_sparse_curve
+42,remove_bottom,12,4,4;6;14;7;8;10;5;13;15;3;2;1,0.5506545555116784,reused_from_sparse_curve
+42,remove_random,12,4,500 draws,0.49229503447624884,reused_from_random_baseline
+42,remove_bottom,14,2,4;6;14;7;8;10;5;13;15;3;2;1;16;11,0.5503257223578637,reused_from_sparse_curve
+43,remove_top,2,14,12;9,0.20757130578277916,computed
+43,remove_top,4,12,16;11;12;9,0.3340843526249948,computed
+43,remove_top,6,10,13;1;16;11;12;9,0.3910114227501812,computed
+43,remove_top,8,8,2;3;13;1;16;11;12;9,0.39834904064337184,computed
+43,remove_top,10,6,5;15;2;3;13;1;16;11;12;9,0.36475673966525746,computed
+43,remove_top,12,4,8;10;5;15;2;3;13;1;16;11;12;9,0.3645582461057295,computed
+43,remove_top,14,2,6;7;8;10;5;15;2;3;13;1;16;11;12;9,0.3855002647037088,computed
+43,remove_bottom,2,14,4;14,0.2641171477124702,reused_from_sparse_curve
+43,remove_bottom,4,12,4;14;6;7,0.2837174074737333,reused_from_sparse_curve
+43,remove_random,4,12,100 draws,0.28688386559792856,reused_from_random_baseline
+43,remove_bottom,6,10,4;14;6;7;8;10,0.3106250762038623,reused_from_sparse_curve
+43,remove_random,6,10,100 draws,0.32246316842498063,reused_from_random_baseline
+43,remove_bottom,8,8,4;14;6;7;8;10;5;15,0.3482059249319558,reused_from_sparse_curve
+43,remove_random,8,8,100 draws,0.34332186461347086,reused_from_random_baseline
+43,remove_bottom,10,6,4;14;6;7;8;10;5;15;2;3,0.3458246100743239,reused_from_sparse_curve
+43,remove_bottom,12,4,4;14;6;7;8;10;5;15;2;3;13;1,0.361875412751279,reused_from_sparse_curve
+43,remove_random,12,4,500 draws,0.36821828780219856,reused_from_random_baseline
+43,remove_bottom,14,2,4;14;6;7;8;10;5;15;2;3;13;1;16;11,0.3738117641337157,reused_from_sparse_curve

@@ -1,0 +1,844 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        3
+      ]
+    ],
+    "date-time": "2026-10-03T17:01:03Z",
+    "timestamp": 1791046863817,
+    "version": "4.1.0"
+  },
+  "reference-count": 47,
+  "publisher": "Elsevier BV",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            6,
+            1
+          ]
+        ],
+        "date-time": "2024-06-01T00:00:00Z",
+        "timestamp": 1717200000000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            6,
+            1
+          ]
+        ],
+        "date-time": "2024-06-01T00:00:00Z",
+        "timestamp": 1717200000000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/legal/tdmrep-license"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            6,
+            1
+          ]
+        ],
+        "date-time": "2024-06-01T00:00:00Z",
+        "timestamp": 1717200000000
+      },
+      "content-version": "stm-asf",
+      "delay-in-days": 0,
+      "URL": "https://doi.org/10.15223/policy-017"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            6,
+            1
+          ]
+        ],
+        "date-time": "2024-06-01T00:00:00Z",
+        "timestamp": 1717200000000
+      },
+      "content-version": "stm-asf",
+      "delay-in-days": 0,
+      "URL": "https://doi.org/10.15223/policy-037"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            6,
+            1
+          ]
+        ],
+        "date-time": "2024-06-01T00:00:00Z",
+        "timestamp": 1717200000000
+      },
+      "content-version": "stm-asf",
+      "delay-in-days": 0,
+      "URL": "https://doi.org/10.15223/policy-012"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            6,
+            1
+          ]
+        ],
+        "date-time": "2024-06-01T00:00:00Z",
+        "timestamp": 1717200000000
+      },
+      "content-version": "stm-asf",
+      "delay-in-days": 0,
+      "URL": "https://doi.org/10.15223/policy-029"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            6,
+            1
+          ]
+        ],
+        "date-time": "2024-06-01T00:00:00Z",
+        "timestamp": 1717200000000
+      },
+      "content-version": "stm-asf",
+      "delay-in-days": 0,
+      "URL": "https://doi.org/10.15223/policy-004"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/501100001809",
+      "name": "National Natural Science Foundation of China",
+      "doi-asserted-by": "publisher",
+      "id": [
+        {
+          "id": "10.13039/501100001809",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    },
+    {
+      "DOI": "10.13039/501100002858",
+      "name": "China Postdoctoral Science Foundation",
+      "doi-asserted-by": "publisher",
+      "id": [
+        {
+          "id": "10.13039/501100002858",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "elsevier.com",
+      "sciencedirect.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Information Sciences"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2024,
+        6
+      ]
+    ]
+  },
+  "DOI": "10.1016/j.ins.2024.120667",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2024,
+        5,
+        3
+      ]
+    ],
+    "date-time": "2024-05-03T16:12:40Z",
+    "timestamp": 1714752760000
+  },
+  "page": "120667",
+  "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 13,
+  "special_numbering": "C",
+  "title": [
+    "Explainable deep learning for sEMG-based similar gesture recognition: A Shapley-value-based solution"
+  ],
+  "prefix": "10.1016",
+  "volume": "672",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0001-7221-4129",
+      "authenticated-orcid": false,
+      "given": "Feng",
+      "family": "Wang",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Xiaohu",
+      "family": "Ao",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Min",
+      "family": "Wu",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Seiichi",
+      "family": "Kawata",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-3165-5045",
+      "authenticated-orcid": false,
+      "given": "Jinhua",
+      "family": "She",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "78",
+  "reference": [
+    {
+      "issue": "5",
+      "key": "10.1016/j.ins.2024.120667_br0010",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1002/widm.1424",
+      "article-title": "Explainable artificial intelligence: an analytical review",
+      "volume": "11",
+      "author": "Angelov",
+      "year": "2021",
+      "journal-title": "Wiley Interdiscip. Rev. Data Min. Knowl. Discov."
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0020",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1038/sdata.2014.53",
+      "article-title": "Electromyography data for non-invasive naturally-controlled robotic hand prostheses",
+      "volume": "1",
+      "author": "Atzori",
+      "year": "2014",
+      "journal-title": "Sci. Data"
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0030",
+      "doi-asserted-by": "crossref",
+      "first-page": "59",
+      "DOI": "10.1016/j.robot.2016.12.014",
+      "article-title": "EMG-based decoding of grasp gestures in reaching-to-grasping motions",
+      "volume": "91",
+      "author": "Batzianoulis",
+      "year": "2017",
+      "journal-title": "Robot. Auton. Syst."
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.ins.2024.120667_br0040",
+      "doi-asserted-by": "crossref",
+      "first-page": "174",
+      "DOI": "10.1109/TII.2020.3041618",
+      "article-title": "Electromyography-based gesture recognition: is it time to change focus from the forearm to the wrist?",
+      "volume": "18",
+      "author": "Botros",
+      "year": "2022",
+      "journal-title": "IEEE Trans. Ind. Inform."
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0050",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.3389/fnins.2023.994517",
+      "article-title": "Heterogeneous recurrent spiking neural network for spatio-temporal classification",
+      "author": "Chakraborty",
+      "year": "2023",
+      "journal-title": "Front. Neurosci."
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0060",
+      "doi-asserted-by": "crossref",
+      "first-page": "590",
+      "DOI": "10.1038/s42256-023-00657-x",
+      "article-title": "Algorithms to estimate Shapley value feature attributions",
+      "volume": "5",
+      "author": "Chen",
+      "year": "2023",
+      "journal-title": "Nat. Mach. Intell."
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0070",
+      "series-title": "Proceedings of the 2020 Chinese Control and Decision Conference (CCDC 2020)",
+      "first-page": "587",
+      "article-title": "Human body gesture recognition method based on deep learning",
+      "author": "Chen",
+      "year": "2020"
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0080",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.engappai.2022.104675",
+      "article-title": "Temporal segment graph convolutional networks for skeleton-based action recognition",
+      "volume": "110",
+      "author": "Ding",
+      "year": "2022",
+      "journal-title": "Eng. Appl. Artif. Intell."
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0090",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1038/srep36571",
+      "article-title": "Gesture recognition by instantaneous surface EMG images",
+      "volume": "6",
+      "author": "Geng",
+      "year": "2016",
+      "journal-title": "Sci. Rep."
+    },
+    {
+      "issue": "2",
+      "key": "10.1016/j.ins.2024.120667_br0100",
+      "doi-asserted-by": "crossref",
+      "first-page": "2650",
+      "DOI": "10.1109/LRA.2021.3062320",
+      "article-title": "Toward deep generalization of peripheral EMG-based human-robot interfacing: a hybrid explainable solution for neuroRobotic systems",
+      "volume": "6",
+      "author": "Gulati",
+      "year": "2021",
+      "journal-title": "IEEE Robot. Autom. Lett."
+    },
+    {
+      "issue": "37",
+      "key": "10.1016/j.ins.2024.120667_br0110",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1126/scirobotics.aay7120",
+      "article-title": "XAI\u2014explainable artificial intelligence",
+      "volume": "4",
+      "author": "Gunning",
+      "year": "2019",
+      "journal-title": "Sci. Robot."
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0120",
+      "article-title": "Dynamic sign language recognition based on CBAM with autoencoder time series neural network",
+      "author": "Huang",
+      "year": "2022",
+      "journal-title": "Mob. Inf. Syst."
+    },
+    {
+      "issue": "19",
+      "key": "10.1016/j.ins.2024.120667_br0130",
+      "doi-asserted-by": "crossref",
+      "first-page": "18914",
+      "DOI": "10.1109/JSEN.2022.3191640",
+      "article-title": "Myoelectric control of a biomimetic robotic hand using deep learning artificial neural network for gesture classification",
+      "volume": "22",
+      "author": "Kashizadeh",
+      "year": "2022",
+      "journal-title": "IEEE Sens. J."
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0140",
+      "series-title": "Proceedings of the 12th International Conference on Machine Learning and Computing (ICMLC 2020)",
+      "first-page": "73",
+      "article-title": "Intersected EMG heatmaps and deep learning based gesture recognition",
+      "author": "Ke",
+      "year": "2020"
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0150",
+      "article-title": "Gesture recognition using surface electromyography and deep learning for prostheses hand: state-of-the-art, challenges, and future",
+      "volume": "15",
+      "author": "Li",
+      "year": "2021",
+      "journal-title": "Front. Neurosci."
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0160",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.bspc.2022.103695",
+      "article-title": "A hierarchical classification of gestures under two force levels based on muscle synergy",
+      "volume": "77",
+      "author": "Li",
+      "year": "2022",
+      "journal-title": "Biomed. Signal Process. Control"
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.ins.2024.120667_br0170",
+      "doi-asserted-by": "crossref",
+      "first-page": "610",
+      "DOI": "10.3390/s19030610",
+      "article-title": "Synergistic myoelectrical activities of forearm muscles improving robust recognition of multi-fingered gestures",
+      "volume": "19",
+      "author": "Luo",
+      "year": "2019",
+      "journal-title": "Sensors"
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0180",
+      "series-title": "Proceedings of the 2015 IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPRW 2015)",
+      "article-title": "Hand gesture recognition with 3D convolutional neural networks",
+      "author": "Molchanov",
+      "year": "2015"
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0190",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.dib.2022.107921",
+      "article-title": "Dataset for multi-channel surface electromyography (sEMG) signals of hand gestures",
+      "volume": "41",
+      "author": "Ozdemir",
+      "year": "2022",
+      "journal-title": "Data Brief"
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0200",
+      "article-title": "A robust and accurate deep learning based pattern recognition framework for upper limb prosthesis using sEMG",
+      "author": "Pancholi",
+      "year": "2021",
+      "journal-title": "Signal Process."
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.ins.2024.120667_br0210",
+      "doi-asserted-by": "crossref",
+      "first-page": "346",
+      "DOI": "10.1016/j.eng.2019.12.012",
+      "article-title": "Adversarial attacks and defenses in deep learning",
+      "volume": "6",
+      "author": "Ren",
+      "year": "2020",
+      "journal-title": "Engineering"
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0220",
+      "doi-asserted-by": "crossref",
+      "first-page": "5983",
+      "DOI": "10.1038/s41598-023-33215-x",
+      "article-title": "Differences in learning characteristics between support vector machine and random forest models for compound classification revealed by Shapley value analysis",
+      "volume": "13",
+      "author": "Siemers",
+      "year": "2023",
+      "journal-title": "Sci. Rep."
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0230",
+      "doi-asserted-by": "crossref",
+      "first-page": "1280",
+      "DOI": "10.1049/ipr2.12712",
+      "article-title": "Gesture recognition algorithm based on multi-scale feature fusion in RGB-D images",
+      "volume": "17",
+      "author": "Sun",
+      "year": "2023",
+      "journal-title": "IET Image Process."
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0240",
+      "doi-asserted-by": "crossref",
+      "first-page": "232",
+      "DOI": "10.1109/TBCAS.2019.2955641",
+      "article-title": "A fully embedded adaptive real-time hand gesture classifier leveraging HD-sEMG and deep learning",
+      "volume": "14",
+      "author": "Tam",
+      "year": "2019",
+      "journal-title": "IEEE Trans. Biomed. Circuits Syst."
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0250",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.eswa.2020.114499",
+      "article-title": "Selective spatiotemporal features learning for dynamic gesture recognition",
+      "volume": "169",
+      "author": "Tang",
+      "year": "2021",
+      "journal-title": "Expert Syst. Appl."
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0260",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1016/j.ins.2023.03.137",
+      "article-title": "A fine-grained channel state information-based deep learning system for dynamic gesture recognition",
+      "volume": "636",
+      "author": "Tong",
+      "year": "2023",
+      "journal-title": "Inf. Sci."
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0270",
+      "doi-asserted-by": "crossref",
+      "first-page": "83",
+      "DOI": "10.1613/jair.1.13999",
+      "article-title": "sEMG-based upper limb movement classifier: current scenario and upcoming challenges",
+      "volume": "75",
+      "author": "Tosin",
+      "year": "2022",
+      "journal-title": "J. Artif. Intell. Res."
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0280",
+      "doi-asserted-by": "crossref",
+      "first-page": "722",
+      "DOI": "10.1016/j.ins.2022.05.085",
+      "article-title": "Hand gesture recognition framework using a Lie group based spatio-temporal recurrent network with multiple hand-worn motion sensors",
+      "volume": "606",
+      "author": "Wang",
+      "year": "2022",
+      "journal-title": "Inf. Sci."
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0290",
+      "author": "Watson"
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0300",
+      "series-title": "Human-Centric Intelligent Systems",
+      "article-title": "Survey on explainable AI: from approaches, limitations and applications aspects",
+      "author": "Yang",
+      "year": "2023"
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0310",
+      "article-title": "TraHGR: transformer for hand gesture recognition via electroMyography",
+      "author": "Zabihi",
+      "year": "2022",
+      "journal-title": "Signal Process."
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0320",
+      "doi-asserted-by": "crossref",
+      "first-page": "272",
+      "DOI": "10.1038/s41928-023-00962-8",
+      "article-title": "Gesture recognition gets an update",
+      "volume": "6",
+      "author": "Zeissler",
+      "year": "2023",
+      "journal-title": "Nat. Electron."
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0330",
+      "series-title": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2017)",
+      "first-page": "6450",
+      "article-title": "Spatio-temporal attention-based deep neural networks for action recognition",
+      "author": "Zhang",
+      "year": "2017"
+    },
+    {
+      "issue": "2",
+      "key": "10.1016/j.ins.2024.120667_br0340",
+      "first-page": "420",
+      "article-title": "Saliency-enhanced deep feature-based approach for first-person action recognition",
+      "volume": "29",
+      "author": "Zhang",
+      "year": "2018",
+      "journal-title": "IEEE Trans. Circuits Syst. Video Technol."
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0350",
+      "doi-asserted-by": "crossref",
+      "first-page": "3",
+      "DOI": "10.3389/fnbot.2018.00003",
+      "article-title": "Non-uniform sample assignment in training set improving recognition of hand gestures dominated with similar muscle activities",
+      "volume": "12",
+      "author": "Zhang",
+      "year": "2018",
+      "journal-title": "Front. Neurorobot."
+    },
+    {
+      "issue": "10",
+      "key": "10.1016/j.ins.2024.120667_br0360",
+      "doi-asserted-by": "crossref",
+      "first-page": "9198",
+      "DOI": "10.1109/JSEN.2022.3165988",
+      "article-title": "Surface electromyography as a natural human-machine interface: a review",
+      "volume": "22",
+      "author": "Zheng",
+      "year": "2022",
+      "journal-title": "IEEE Sens. J."
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0370",
+      "series-title": "Proceedings of the 7th International Conference on Computer and Communications (ICCC 2021)",
+      "first-page": "831",
+      "article-title": "Classifying object of standard grasping movements using data glove with LSTM networks",
+      "author": "Zheng",
+      "year": "2021"
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0380",
+      "series-title": "Proceedings of the 12th International Congress on Image and Signal Processing, BioMedical Engineering and Informatics (CISP-BMEI 2019)",
+      "first-page": "1",
+      "article-title": "Adapting random forest classifier based on single and multiple features for surface electromyography signal recognition",
+      "author": "Zhou",
+      "year": "2019"
+    },
+    {
+      "issue": "6",
+      "key": "10.1016/j.ins.2024.120667_br0390",
+      "doi-asserted-by": "crossref",
+      "first-page": "1707",
+      "DOI": "10.1109/TBME.2019.2943309",
+      "article-title": "Stable responsive EMG sequence prediction and adaptive reinforcement with temporal convolutional networks",
+      "volume": "67",
+      "author": "Betthauser",
+      "year": "2020",
+      "journal-title": "IEEE Trans. Biomed. Eng."
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.ins.2024.120667_br0400",
+      "doi-asserted-by": "crossref",
+      "first-page": "4821",
+      "DOI": "10.1109/JSEN.2023.3345731",
+      "article-title": "Attention-enhanced frequency-split convolution block for sEMG motion classification: experiments on premier league and NinaPro datasets",
+      "volume": "24",
+      "author": "Ergeneci",
+      "year": "2024",
+      "journal-title": "IEEE Sens. J."
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.ins.2024.120667_br0410",
+      "doi-asserted-by": "crossref",
+      "first-page": "325",
+      "DOI": "10.1016/j.bbe.2022.02.005",
+      "article-title": "EMGHandNet: a hybrid CNN and Bi-LSTM architecture for hand activity classification using surface EMG signals",
+      "volume": "42",
+      "author": "Karnam",
+      "year": "2022",
+      "journal-title": "Biocybern. Biomed. Eng."
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0420",
+      "doi-asserted-by": "crossref",
+      "first-page": "1004",
+      "DOI": "10.1109/TNSRE.2021.3077413",
+      "article-title": "FS-HGR: few-shot learning for hand gesture recognition via electromyography",
+      "volume": "29",
+      "author": "Rahimian",
+      "year": "2021",
+      "journal-title": "IEEE Trans. Neural Syst. Rehabil. Eng."
+    },
+    {
+      "key": "10.1016/j.ins.2024.120667_br0430",
+      "doi-asserted-by": "crossref",
+      "first-page": "2207",
+      "DOI": "10.1109/TNSRE.2022.3196622",
+      "article-title": "Electromyography based decoding of dexterous, in-hand manipulation motions with temporal multichannel vision transformers",
+      "volume": "30",
+      "author": "Godoy",
+      "year": "2022",
+      "journal-title": "IEEE Trans. Neural Syst. Rehabil. Eng."
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.ins.2024.120667_br0440",
+      "doi-asserted-by": "crossref",
+      "first-page": "181",
+      "DOI": "10.1109/JBHI.2023.3330289",
+      "article-title": "A novel approach to surface EMG-based gesture classification using a vision transformer integrated with convolutive blind source separation",
+      "volume": "28",
+      "author": "Dere",
+      "year": "2024",
+      "journal-title": "IEEE J. Biomed. Health Inform."
+    },
+    {
+      "issue": "6",
+      "key": "10.1016/j.ins.2024.120667_br0450",
+      "doi-asserted-by": "crossref",
+      "first-page": "1729",
+      "DOI": "10.1109/TCSVT.2018.2855416",
+      "article-title": "Dynamic 3D hand gesture recognition by learning weighted depth motion maps",
+      "volume": "29",
+      "author": "Azad",
+      "year": "2019",
+      "journal-title": "IEEE Trans. Circuits Syst. Video Technol."
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.ins.2024.120667_br0460",
+      "doi-asserted-by": "crossref",
+      "first-page": "66",
+      "DOI": "10.1109/THMS.2015.2470657",
+      "article-title": "The GRASP taxonomy of human grasp types",
+      "volume": "46",
+      "author": "Feix",
+      "year": "2016",
+      "journal-title": "IEEE Trans. Human-Mach. Syst."
+    },
+    {
+      "issue": "10",
+      "key": "10.1016/j.ins.2024.120667_br0470",
+      "doi-asserted-by": "crossref",
+      "first-page": "6151",
+      "DOI": "10.1109/TSMC.2021.3138589",
+      "article-title": "A geometric model-based approach to hand gesture recognition",
+      "volume": "52",
+      "author": "Calado",
+      "year": "2022",
+      "journal-title": "IEEE Trans. Syst. Man Cybern. Syst."
+    }
+  ],
+  "container-title": [
+    "Information Sciences"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S0020025524005802?httpAccept=text/xml",
+      "content-type": "text/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S0020025524005802?httpAccept=text/plain",
+      "content-type": "text/plain",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2024,
+        5,
+        17
+      ]
+    ],
+    "date-time": "2024-05-17T16:27:26Z",
+    "timestamp": 1715963246000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0020025524005802"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2024,
+        6
+      ]
+    ]
+  },
+  "references-count": 47,
+  "alternative-id": [
+    "S0020025524005802"
+  ],
+  "URL": "https://doi.org/10.1016/j.ins.2024.120667",
+  "relation": {},
+  "ISSN": [
+    "0020-0255"
+  ],
+  "issn-type": [
+    {
+      "value": "0020-0255",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2024,
+        6
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "Elsevier",
+      "name": "publisher",
+      "label": "This article is maintained by"
+    },
+    {
+      "value": "Explainable deep learning for sEMG-based similar gesture recognition: A Shapley-value-based solution",
+      "name": "articletitle",
+      "label": "Article Title"
+    },
+    {
+      "value": "Information Sciences",
+      "name": "journaltitle",
+      "label": "Journal Title"
+    },
+    {
+      "value": "https://doi.org/10.1016/j.ins.2024.120667",
+      "name": "articlelink",
+      "label": "CrossRef DOI link to publisher maintained version"
+    },
+    {
+      "value": "article",
+      "name": "content_type",
+      "label": "Content Type"
+    },
+    {
+      "value": "\u00a9 2024 Elsevier Inc. All rights reserved.",
+      "name": "copyright",
+      "label": "Copyright"
+    }
+  ],
+  "article-number": "120667"
+}

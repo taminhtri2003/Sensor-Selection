@@ -1,0 +1,578 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        13
+      ]
+    ],
+    "date-time": "2026-10-13T18:00:44Z",
+    "timestamp": 1791914444049,
+    "version": "4.3.4"
+  },
+  "reference-count": 41,
+  "publisher": "Elsevier BV",
+  "issue": "8",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2012,
+            6,
+            1
+          ]
+        ],
+        "date-time": "2012-06-01T00:00:00Z",
+        "timestamp": 1338508800000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Expert Systems with Applications"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2012,
+        6
+      ]
+    ]
+  },
+  "DOI": "10.1016/j.eswa.2012.01.102",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2012,
+        1,
+        24
+      ]
+    ],
+    "date-time": "2012-01-24T16:06:15Z",
+    "timestamp": 1327421175000
+  },
+  "page": "7420-7431",
+  "source": "Crossref",
+  "is-referenced-by-count": 1403,
+  "title": [
+    "Feature reduction and selection for EMG signal classification"
+  ],
+  "prefix": "10.1016",
+  "volume": "39",
+  "author": [
+    {
+      "given": "Angkoon",
+      "family": "Phinyomark",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Pornchai",
+      "family": "Phukpattaranont",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Chusak",
+      "family": "Limsakul",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "78",
+  "reference": [
+    {
+      "key": "10.1016/j.eswa.2012.01.102_b0005",
+      "unstructured": "Biopac Systems, Inc. (2010). EMG frequency signal analysis. <http://www.biopac.com/Manuals/app_pdf/app118.pdf>."
+    },
+    {
+      "issue": "2",
+      "key": "10.1016/j.eswa.2012.01.102_b0010",
+      "doi-asserted-by": "crossref",
+      "first-page": "309",
+      "DOI": "10.1088/0967-3334/24/2/307",
+      "article-title": "Evaluation of the forearm EMG signal features for the control of a prosthetic hand",
+      "volume": "24",
+      "author": "Boostani",
+      "year": "2003",
+      "journal-title": "Physiological Measurement"
+    },
+    {
+      "key": "10.1016/j.eswa.2012.01.102_b0015",
+      "unstructured": "Du, S. (2003). Feature extraction for classification of prehensile electromyography patterns. Master\u2019s Thesis, San Diego State University, San Diego, CA, US."
+    },
+    {
+      "key": "10.1016/j.eswa.2012.01.102_b0020",
+      "unstructured": "Du, S., & Vuskovic, M. (2004). Temporal vs. spectral approach to feature extraction from prehensile EMG signals. In Proceedings of IEEE International Conference on Information Reuse and Integration (pp. 344\u2013350)."
+    },
+    {
+      "issue": "6",
+      "key": "10.1016/j.eswa.2012.01.102_b0025",
+      "doi-asserted-by": "crossref",
+      "first-page": "4283",
+      "DOI": "10.1016/j.eswa.2009.11.072",
+      "article-title": "Portable hand motion classifier for multi-channel surface electromyography recognition using grey relational analysis",
+      "volume": "37",
+      "author": "Du",
+      "year": "2010",
+      "journal-title": "Expert Systems with Applications"
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.eswa.2012.01.102_b0030",
+      "doi-asserted-by": "crossref",
+      "first-page": "302",
+      "DOI": "10.1109/10.914793",
+      "article-title": "A wavelet-based continuous classification scheme for multifunction myoelectric control",
+      "volume": "48",
+      "author": "Englehart",
+      "year": "2001",
+      "journal-title": "IEEE Transactions on Biomedical Engineering"
+    },
+    {
+      "issue": "72",
+      "key": "10.1016/j.eswa.2012.01.102_b0035",
+      "article-title": "Evaluation of EMG processing techniques using information theory",
+      "volume": "9",
+      "author": "Farf\u00e1n",
+      "year": "2010",
+      "journal-title": "BioMedical Engineering OnLine"
+    },
+    {
+      "issue": "5",
+      "key": "10.1016/j.eswa.2012.01.102_b0040",
+      "doi-asserted-by": "crossref",
+      "first-page": "337",
+      "DOI": "10.1016/S1050-6411(00)00025-0",
+      "article-title": "Comparison of algorithms for estimation of EMG variables during voluntary isometric contractions",
+      "volume": "10",
+      "author": "Farina",
+      "year": "2000",
+      "journal-title": "Journal of Electromyography and Kinesiology"
+    },
+    {
+      "key": "10.1016/j.eswa.2012.01.102_b0045",
+      "unstructured": "Fougner, A. (2007). Proportional myoelectric control of a multifunction upper limb prosthesis. Master\u2019s Thesis, Norwegian University of Science and Technology, Trondheim, Norway."
+    },
+    {
+      "issue": "2",
+      "key": "10.1016/j.eswa.2012.01.102_b0050",
+      "doi-asserted-by": "crossref",
+      "first-page": "252",
+      "DOI": "10.1109/TSMC.1975.5408479",
+      "article-title": "Functional separation of EMG signals via ARMA identification methods for prosthesis control purposes",
+      "volume": "SMC-5",
+      "author": "Graupe",
+      "year": "1975",
+      "journal-title": "IEEE Transactions on Systems, Man and Cybernetics"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.eswa.2012.01.102_b0055",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.1152/jappl.1979.46.1.1",
+      "article-title": "Electromyogram pattern of diaphragmatic fatigue",
+      "volume": "46",
+      "author": "Gross",
+      "year": "1979",
+      "journal-title": "Journal of Applied Physiology"
+    },
+    {
+      "key": "10.1016/j.eswa.2012.01.102_b0060",
+      "unstructured": "Han, J.-S., Song, W.-K., Kim, J.-S., Bang, W.-C., Lee, H., & Bien, Z. (2000). New EMG pattern recognition based on soft computing techniques and its application to control a rehabilitation robotic arm. In Proceedings of 6th International Conference on Soft Computing (pp. 890\u2013897)."
+    },
+    {
+      "issue": "7",
+      "key": "10.1016/j.eswa.2012.01.102_b0065",
+      "doi-asserted-by": "crossref",
+      "first-page": "382",
+      "DOI": "10.1109/TBME.1980.326652",
+      "article-title": "Myoelectric signal processing: Optimal estimation applied to electromyography-Part I: Derivation of the optimal myoprocessor",
+      "volume": "BME-27",
+      "author": "Hogan",
+      "year": "1980",
+      "journal-title": "IEEE Transactions on Biomedical Engineering"
+    },
+    {
+      "key": "10.1016/j.eswa.2012.01.102_b0070",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Huang, H.P., & Chen, C.Y. (1999). Development of a myoelectric discrimination system for a multi-degree prosthetic hand. In Proceedings of IEEE International Conference on Robotics and Automation (Vol. 3, pp. 2392\u20132397).",
+      "DOI": "10.1109/ROBOT.1999.770463"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.eswa.2012.01.102_b0075",
+      "doi-asserted-by": "crossref",
+      "first-page": "82",
+      "DOI": "10.1109/10.204774",
+      "article-title": "A new strategy for multifunction myoelectric control",
+      "volume": "40",
+      "author": "Hudgins",
+      "year": "1993",
+      "journal-title": "IEEE Transactions on Biomedical Engineering"
+    },
+    {
+      "key": "10.1016/j.eswa.2012.01.102_b0080",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Kaufmann, P., Englehart, K., & Platzner, M. (2010). Fluctuating EMG signals: Investigating long-term effects of pattern matching algorithms. In Proceedings of Annual International Conference of IEEE Engineering in Medicine and Biology Society (pp. 6357\u20136360).",
+      "DOI": "10.1109/IEMBS.2010.5627288"
+    },
+    {
+      "issue": "5",
+      "key": "10.1016/j.eswa.2012.01.102_b0085",
+      "doi-asserted-by": "crossref",
+      "first-page": "433",
+      "DOI": "10.1016/j.compbiomed.2009.02.001",
+      "article-title": "An exploratory study to design a novel hand movement identification system",
+      "volume": "39",
+      "author": "Khezri",
+      "year": "2009",
+      "journal-title": "Computers in Biology and Medicine"
+    },
+    {
+      "issue": "6",
+      "key": "10.1016/j.eswa.2012.01.102_b0090",
+      "doi-asserted-by": "crossref",
+      "first-page": "1410",
+      "DOI": "10.1109/TBME.2009.2039480",
+      "article-title": "Orthogonal fuzzy neighborhood discriminant analysis for multifunction myoelectric hand control",
+      "volume": "57",
+      "author": "Khushaba",
+      "year": "2010",
+      "journal-title": "IEEE Transactions on Biomedical Engineering"
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.eswa.2012.01.102_b0095",
+      "doi-asserted-by": "crossref",
+      "first-page": "740",
+      "DOI": "10.1016/j.cap.2010.11.051",
+      "article-title": "Comparison of k-nearest neighbor, quadratic discriminant and linear discriminant analysis in classification of electromyogram signals based on the wrist-motion directions",
+      "volume": "11",
+      "author": "Kim",
+      "year": "2011",
+      "journal-title": "Current Applied Physics"
+    },
+    {
+      "issue": "5\u20136",
+      "key": "10.1016/j.eswa.2012.01.102_b0100",
+      "doi-asserted-by": "crossref",
+      "first-page": "297",
+      "DOI": "10.1016/S0375-9601(01)00668-5",
+      "article-title": "Detecting nonlinearity of action surface EMG signal",
+      "volume": "290",
+      "author": "Lei",
+      "year": "2001",
+      "journal-title": "Physics Letters A"
+    },
+    {
+      "key": "10.1016/j.eswa.2012.01.102_b0105",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1007/s10439-011-0265-x",
+      "article-title": "Conditioning and sampling issues of EMG signals in motion recognition of multifunctional myoelectric prostheses",
+      "author": "Li",
+      "year": "2011",
+      "journal-title": "Annals of Biomedical Engineering"
+    },
+    {
+      "issue": "2",
+      "key": "10.1016/j.eswa.2012.01.102_b0110",
+      "doi-asserted-by": "crossref",
+      "first-page": "185",
+      "DOI": "10.1109/TNSRE.2009.2039619",
+      "article-title": "Quantifying pattern recognition\u2014Based myoelectric control of multifunctional transradial prostheses",
+      "volume": "18",
+      "author": "Li",
+      "year": "2010",
+      "journal-title": "IEEE Transactions on Neural Systems and Rehabilitation Engineering"
+    },
+    {
+      "key": "10.1016/j.eswa.2012.01.102_b0115",
+      "unstructured": "Liu, X., Zhou, R., Yang, L., & Li, G. (2009). Performance of various EMG features in identifying ARM movements for control of multifunctional prostheses. In Proceedings of IEEE Youth Conference on Information, Computing and Telecommunication (pp. 287\u2013290)."
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.eswa.2012.01.102_b0120",
+      "doi-asserted-by": "crossref",
+      "first-page": "III",
+      "DOI": "10.1016/S1050-6411(96)90011-5",
+      "article-title": "Standards for reporting EMG data",
+      "volume": "6",
+      "author": "Merletti",
+      "year": "1996",
+      "journal-title": "Journal of Electromyography and Kinesiology"
+    },
+    {
+      "key": "10.1016/j.eswa.2012.01.102_b0125",
+      "unstructured": "Miller, C.J. (2008). Real-time feature extraction and classification of prehensile EMG signals. Master\u2019s Thesis, San Diego State University, San Diego, CA, US."
+    },
+    {
+      "key": "10.1016/j.eswa.2012.01.102_b0130",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Oskoei, M.A., & Hu, H. (2006). GA-based feature subset selection for myoelectric classification. In Proceedings of IEEE International Conference on Robotics Biomimetics (pp. 1465\u20131470).",
+      "DOI": "10.1109/ROBIO.2006.340145"
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.eswa.2012.01.102_b0135",
+      "doi-asserted-by": "crossref",
+      "first-page": "275",
+      "DOI": "10.1016/j.bspc.2007.07.009",
+      "article-title": "Myoelectric control systems\u2013A survey",
+      "volume": "2",
+      "author": "Oskoei",
+      "year": "2007",
+      "journal-title": "Biomedical Signal Processing and Control"
+    },
+    {
+      "issue": "8",
+      "key": "10.1016/j.eswa.2012.01.102_b0140",
+      "doi-asserted-by": "crossref",
+      "first-page": "1956",
+      "DOI": "10.1109/TBME.2008.919734",
+      "article-title": "Support vector machine based classification scheme for myoelectric control applied to upper limb",
+      "volume": "55",
+      "author": "Oskoei",
+      "year": "2008",
+      "journal-title": "IEEE Transactions on Biomedical Engineering"
+    },
+    {
+      "issue": "10",
+      "key": "10.1016/j.eswa.2012.01.102_b0145",
+      "doi-asserted-by": "crossref",
+      "first-page": "761",
+      "DOI": "10.1109/TBME.1987.325918",
+      "article-title": "Autoregressive modeling of surface EMG and its spectrum with application to fatigue",
+      "volume": "BME-34",
+      "author": "Paiss",
+      "year": "1987",
+      "journal-title": "IEEE Transactions on Biomedical Engineering"
+    },
+    {
+      "issue": "5",
+      "key": "10.1016/j.eswa.2012.01.102_b0150",
+      "doi-asserted-by": "crossref",
+      "first-page": "9201",
+      "DOI": "10.1016/j.eswa.2008.12.023",
+      "article-title": "An integrated intelligent computing model for the interpretation of EMG based neuromuscular diseases",
+      "volume": "36",
+      "author": "Pandey",
+      "year": "2009",
+      "journal-title": "Expert Systems with Applications"
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.eswa.2012.01.102_b0155",
+      "doi-asserted-by": "crossref",
+      "first-page": "400",
+      "DOI": "10.1109/86.736154",
+      "article-title": "EMG pattern recognition based on artificial intelligence techniques",
+      "volume": "6",
+      "author": "Park",
+      "year": "1998",
+      "journal-title": "IEEE Transactions on Rehabilitation Engineering"
+    },
+    {
+      "key": "10.1016/j.eswa.2012.01.102_b0160",
+      "unstructured": "Philipson, L. (1987). The electromyographic signal used for control of upper extremity prostheses and for quantification of motor blockade during epidural anaesthesia. Ph.D. Thesis, Link\u00f6ping University, Link\u00f6ping, Sweden."
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.eswa.2012.01.102_b0165",
+      "first-page": "71",
+      "article-title": "A novel feature extraction for robust EMG pattern recognition",
+      "volume": "1",
+      "author": "Phinyomark",
+      "year": "2009",
+      "journal-title": "Journal of Computing"
+    },
+    {
+      "key": "10.1016/j.eswa.2012.01.102_b0170",
+      "unstructured": "Phinyomark, A., Limsakul, C., & Phukpattaranont, P. (2009b). EMG feature extraction for tolerance of 50Hz interference. In Proceedings of 4th PSU-UNS International Conference on Engineering Technologies (pp. 289\u2013293)."
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.eswa.2012.01.102_b0175",
+      "doi-asserted-by": "crossref",
+      "first-page": "4058",
+      "DOI": "10.1016/j.eswa.2010.09.068",
+      "article-title": "Feature extraction of forearm EMG signals for prosthetics",
+      "volume": "38",
+      "author": "Rafiee",
+      "year": "2011",
+      "journal-title": "Expert Systems with Applications"
+    },
+    {
+      "issue": "6",
+      "key": "10.1016/j.eswa.2012.01.102_b0180",
+      "doi-asserted-by": "crossref",
+      "first-page": "403",
+      "DOI": "10.1109/TBME.1982.324954",
+      "article-title": "EMG pattern analysis and classification for a prosthetic arm",
+      "volume": "BME-29",
+      "author": "Saridis",
+      "year": "1982",
+      "journal-title": "IEEE Transactions on Biomedical Engineering"
+    },
+    {
+      "issue": "5",
+      "key": "10.1016/j.eswa.2012.01.102_b0185",
+      "doi-asserted-by": "crossref",
+      "first-page": "1427",
+      "DOI": "10.1109/TBME.2008.2005485",
+      "article-title": "Decoding of individuated finger movements using surface electromyography",
+      "volume": "56",
+      "author": "Tenore",
+      "year": "2009",
+      "journal-title": "IEEE Transactions on Biomedical Engineering"
+    },
+    {
+      "issue": "21",
+      "key": "10.1016/j.eswa.2012.01.102_b0190",
+      "article-title": "Study of stability of time-domain features for electromyographic pattern recognition",
+      "volume": "7",
+      "author": "Tkach",
+      "year": "2010",
+      "journal-title": "Journal of NeuroEngineering and Rehabilitation"
+    },
+    {
+      "key": "10.1016/j.eswa.2012.01.102_b0195",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Qingju, Z., & Zhizeng, L. (2006). Wavelet de-noising of electromyography. In Proceedings of IEEE International Conference on Mechatronics Automation (pp. 1553\u20131558).",
+      "DOI": "10.1109/ICMA.2006.257406"
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.eswa.2012.01.102_b0200",
+      "doi-asserted-by": "crossref",
+      "first-page": "324",
+      "DOI": "10.1109/86.481972",
+      "article-title": "EMG feature evaluation for movement control of upper extremity prostheses",
+      "volume": "3",
+      "author": "Zardoshti-Kermani",
+      "year": "1995",
+      "journal-title": "IEEE Transactions on Rehabilitation Engineering"
+    },
+    {
+      "issue": "4\u20136",
+      "key": "10.1016/j.eswa.2012.01.102_b0205",
+      "doi-asserted-by": "crossref",
+      "first-page": "459",
+      "DOI": "10.1615/CritRevBiomedEng.v30.i456.80",
+      "article-title": "Control of multifunctional prosthetic hands by processing the electromyographic signal",
+      "volume": "30",
+      "author": "Zecca",
+      "year": "2002",
+      "journal-title": "Critical Reviews in Biomedical Engineering"
+    }
+  ],
+  "container-title": [
+    "Expert Systems with Applications"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S0957417412001200?httpAccept=text/xml",
+      "content-type": "text/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S0957417412001200?httpAccept=text/plain",
+      "content-type": "text/plain",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2019,
+        6,
+        22
+      ]
+    ],
+    "date-time": "2019-06-22T17:46:44Z",
+    "timestamp": 1561225604000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0957417412001200"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2012,
+        6
+      ]
+    ]
+  },
+  "references-count": 41,
+  "journal-issue": {
+    "issue": "8",
+    "published-print": {
+      "date-parts": [
+        [
+          2012,
+          6
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "S0957417412001200"
+  ],
+  "URL": "https://doi.org/10.1016/j.eswa.2012.01.102",
+  "relation": {},
+  "ISSN": [
+    "0957-4174"
+  ],
+  "issn-type": [
+    {
+      "value": "0957-4174",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2012,
+        6
+      ]
+    ]
+  }
+}

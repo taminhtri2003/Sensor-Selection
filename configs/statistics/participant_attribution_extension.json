@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "status": "post-hoc exploratory extension, not a replacement for frozen H1-H4",
+  "date": "2026-09-22",
+  "reason": "Fold pooling suppresses between-person attribution variability.",
+  "ranking": "For each outer fold, take the median and unscaled MAD across the 42 normalised out-of-fold person vectors; score = median - lambda * MAD.",
+  "lambdas": [0.0, 0.25, 0.5, 1.0],
+  "lambda_selection": "None. Report every candidate; do not select using outer scores.",
+  "k_values": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
+  "model": "Same XGBoost and 200000-window stratified training budget as original P3",
+  "comparison": "Within each participant compare against original fold-aggregated ranking at the same lambda and k.",
+  "reuse": "Only exact same participant, channel set, training budget, seed and model protocol. Record source row for each reuse.",
+  "inference": "43 paired participant scores; 10000-resample percentile bootstrap. Wilcoxon and Holm over all 60 reduced-size comparisons, labelled exploratory.",
+  "non_inferiority": "All margins 0.01, 0.02, 0.03 versus matching k16 reference; report unadjusted LCB and Holm within each lambda and margin.",
+  "limitations": "Attribution windows retain the original random sampling. Equal weight across people does not imply class-balanced attribution or repeated inner model fits. The 42 vectors share five fitted models; their MAD is descriptive heterogeneity, not a sampling standard error.",
+  "seed": 20260728
+}

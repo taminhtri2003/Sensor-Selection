@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\small
+\caption{Agreement of electrode rankings on GRABMyo ($\lambda = 0$). Values are mean (SD) over all pairs of rankings in each group. They are descriptive summaries: pairwise observations share rankings and are not independent, so no inferential interval is given.}
+\label{tab:stability}
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lcccccc}
+\toprule
+Rankings compared & Pairs & Spearman $\rho$ & Kendall $\tau$ & Jaccard, top 4 & Jaccard, top 6 & Jaccard, top 8 \\
+\midrule
+Individual participants & 903 & 0.927 (0.038) & 0.801 (0.066) & 0.752 (0.194) & 0.905 (0.137) & 0.803 (0.132) \\
+Inner folds (disjoint participant groups) & 430 & 0.948 (0.021) & 0.840 (0.046) & 0.816 (0.200) & 0.992 (0.047) & 0.838 (0.105) \\
+Outer folds (overlapping training sets$^*$) & 903 & 0.987 (0.008) & 0.943 (0.028) & 0.888 (0.180) & 1.000 (0.000) & 0.923 (0.106) \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\parbox{0.95\linewidth}{\footnotesize $^*$Outer training sets share about 98\% of their participants, so their agreement is descriptive only and is not an estimate of between-participant stability.}
+\end{table*}

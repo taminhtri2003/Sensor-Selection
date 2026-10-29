@@ -1,0 +1,37 @@
+{"n_subsets_by_k": {"4": 100, "6": 100, "8": 100, "12": 500}, "n_subsets_per_k": 100, "n_subsets_at_k_star": 500}
+resuming 36 completed participant folds from F:\grabmyo_data\artifacts\selection_baselines\selection_baseline_metrics.csv
+[1/7] elapsed=68.1m eta=408.4m
+[2/7] elapsed=68.6m eta=171.5m
+[3/7] elapsed=149.0m eta=198.7m
+[4/7] elapsed=150.1m eta=112.6m
+[5/7] elapsed=228.9m eta=91.6m
+[6/7] elapsed=230.8m eta=38.5m
+[7/7] elapsed=269.5m eta=0.0m
+
+   method  channels_k  n  mean_macro_f1       sd
+     PERM           4 43       0.384637 0.070321
+     GEOM           4 43       0.383393 0.068888
+    SRCFA           4 43       0.382851 0.070666
+SHAP_lam0           4 43       0.381932 0.070527
+   RANDOM           4 43       0.365637 0.058782
+       MI           4 43       0.279731 0.049049
+SHAP_lam0           6 43       0.452985 0.079817
+    SRCFA           6 43       0.452985 0.079817
+     PERM           6 43       0.440387 0.079981
+     GEOM           6 43       0.418932 0.067763
+   RANDOM           6 43       0.415943 0.067570
+       MI           6 43       0.359600 0.065649
+    SRCFA           8 43       0.469486 0.081006
+SHAP_lam0           8 43       0.468259 0.081051
+     PERM           8 43       0.466179 0.080004
+     GEOM           8 43       0.464806 0.072328
+   RANDOM           8 43       0.445232 0.071472
+       MI           8 43       0.395785 0.068383
+SHAP_lam0          12 43       0.485357 0.079268
+    SRCFA          12 43       0.485357 0.079268
+     PERM          12 43       0.485280 0.078672
+       MI          12 43       0.480222 0.079241
+     GEOM          12 43       0.478401 0.076336
+   RANDOM          12 43       0.477922 0.077326
+
+wall clock: 269.5 min

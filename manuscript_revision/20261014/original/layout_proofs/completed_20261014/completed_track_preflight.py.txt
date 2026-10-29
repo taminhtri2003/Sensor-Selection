@@ -1,0 +1,121 @@
+"""Strict current-revision gate, dispatched only by scripts/16_verify_results.py."""
+import argparse,hashlib,importlib.util,json,sys,subprocess
+from pathlib import Path
+import numpy as np
+import pandas as pd
+from sklearn.metrics import f1_score,accuracy_score,balanced_accuracy_score
+from sklearn.model_selection import GroupKFold
+ROOT=Path(__file__).resolve().parent.parent;sys.path.insert(0,str(ROOT))
+def module(name,path):
+ spec=importlib.util.spec_from_file_location(name,path);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);return m
+def sha(p):
+ h=hashlib.sha256()
+ with p.open('rb') as f:
+  for b in iter(lambda:f.read(1024*1024),b''):h.update(b)
+ return h.hexdigest()
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--revision-dir',type=Path,required=True);args=ap.parse_args();rev=args.revision_dir.resolve();checks=[]
+ def check(ok,label):
+  if not ok:raise ValueError(label)
+  checks.append(label);print('PASS: '+label,flush=True)
+ check(subprocess.run([sys.executable,str(ROOT/'scripts/84_audit_db5_feature_chain.py')],cwd=ROOT).returncode==0,'all saved DB5 feature rows reconstructed from raw data')
+ dbchain=json.loads((rev/'reports/db5_feature_chain.json').read_text());dbrows=pd.read_csv(rev/'reproducibility/db5_feature_reconstruction.csv')
+ check(dbchain['status']=='PASS' and dbchain['participants']==10 and len(dbrows)==10 and set(dbrows.participant_id)==set(range(1,11)) and dbchain['windows']==int(dbrows.n_windows.sum()) and dbrows.all_features_exact.all() and dbrows.labels_exact.all() and dbchain['effective_high_hz']==89.,'DB5 implemented cutoff and complete feature-chain coverage')
+ extracted=pd.read_csv(rev/'reproducibility/db5_current_extracted_integrity.csv');archives=pd.read_csv(rev/'reproducibility/db5_current_archive_integrity.csv')
+ check(len(archives)==10 and (archives.official_record==1000116).all() and archives.matches_official_and_saved.all() and (archives.official_md5==archives.actual_md5).all(),'DB5 all archives retain official identity and checksum acceptance')
+ check(len(extracted)==30 and extracted.matches.all() and (extracted.archive_member_sha256==extracted.local_sha256).all(),'DB5 all extracted files match verified archive members')
+ extracted['normalized_path']=extracted.local_path.str.replace('\\','/',regex=False);emap=extracted.set_index('normalized_path').local_sha256.to_dict()
+ check(all(emap.get(row.raw_file)==row.raw_sha256 for row in dbrows.itertuples()),'all reconstructed DB5 raw exercises match downloaded archive bytes')
+ for relative,digest in dbchain['source_hashes'].items():check(sha(ROOT/relative)==digest,'DB5 feature-chain fingerprint '+relative)
+ check(subprocess.run([sys.executable,str(ROOT/'scripts/54_audit_predictions.py')],cwd=ROOT).returncode==0,'historical baseline predictions reconstructed')
+ raw=json.loads((rev/'reports/current_raw_integrity.json').read_text());check(raw['status']=='PASS' and raw['DB5_archives']==10 and raw['DB5_extracted_exercises']==30 and raw['DB5_record']==1000116,'current full downloaded-data integrity')
+ current=pd.read_csv(rev/'reproducibility/grabmyo_current_integrity.csv');historical=pd.read_csv(ROOT/'data/manifests/grabmyo_integrity.csv');check(len(current)==len(historical) and (current.status=='OK').all() and (current.expected_sha256==current.actual_sha256).all() and set(current.path)==set(historical.path),'current GRABMyo full file coverage and digests')
+ old=module('legacy_gate',ROOT/'scripts/16_verify_results.py')
+ for f in (old.verify_rankings,old.verify_metrics,old.verify_statistics,old.verify_phase_outputs,old.verify_completion):f();checks.append(f.__name__)
+ old.verify_extension(str((rev/'experiments/attribution_extension').relative_to(ROOT)).replace('\\','/')+'/');checks.append('fresh extension provenance and exact subsets')
+ check(subprocess.run([sys.executable,str(ROOT/'scripts/86_selection_change_audit.py')],cwd=ROOT).returncode==0,'all fixed-penalty physical-subset changes reconstructed')
+ selection=json.loads((rev/'reports/selection_change_audit.json').read_text());check(selection['status']=='PASS' and selection['summary_rows']==96 and selection['participant_rows']==4128,'complete descriptive selector-activity coverage')
+ for relative,digest in selection['source_hashes'].items():check(sha(ROOT/relative)==digest,'selector-activity provenance '+relative)
+
+ for relative,digest in json.loads((rev/'reproducibility/input_hashes.json').read_text()).items():check(sha(ROOT/relative)==digest,'unchanged input '+relative)
+ s=np.load(ROOT/'data/cache/loso_subj.npy',mmap_mode='r');y=np.load(ROOT/'data/cache/loso_y.npy',mmap_mode='r');ranks=pd.read_csv(ROOT/'artifacts/rankings/cross_fitted_rankings.csv');ranks=ranks[ranks['lambda']==0]
+ p3=module('p3',ROOT/'scripts/26_sparse_sensor_curve.py');p4=module('p4',ROOT/'scripts/27_selection_baselines.py')
+ faith_runner=module('faith_runner',ROOT/'scripts/31_faithfulness.py');check(faith_runner.CMP_XGB==p4.CMP_XGB and faith_runner.CMP_TRAIN_SUBSAMPLE==p4.CMP_TRAIN_SUBSAMPLE,'deletion and random-comparison model parameters and training budgets identical')
+ faith=pd.read_csv(ROOT/'artifacts/faithfulness/deletion_curves.csv');baseline=pd.read_csv(ROOT/'artifacts/selection_baselines/selection_baseline_metrics.csv')
+ check(set(faith.source)=={'computed_p4_protocol','reused_from_random_baseline'},'deletion outputs use the corrected common P4 protocol')
+ for row in faith.itertuples():
+  if row.arm=='remove_random':
+   ref=baseline[(baseline.participant_id==row.participant_id)&(baseline.channels_k==row.n_kept)&(baseline.method=='RANDOM')].iloc[0];check(abs(row.macro_f1-ref.macro_f1)<1e-12,'deletion random reference equals its participant mean-draw baseline')
+  else:
+   ranking=list(map(int,ranks[ranks.outer_participant==row.participant_id].ranking.iloc[0].split(';')));expected=ranking[-int(row.n_kept):] if row.arm=='remove_top' else ranking[:int(row.n_kept)];check(set(map(int,row.channels.split(';')))==set(expected),'deletion subset matches unpenalized top/bottom ordering')
+
+ for folder,conditions in [('primary_predictions',['full16','shap12','geom12']),('alternative_classifier',[12,16])]:
+  base=rev/'experiments'/folder;m=pd.read_csv(base/'participant_metrics.csv');col='condition' if folder=='primary_predictions' else 'channels_k';old.require_grid(m,['participant_id',col],[range(1,44),conditions],folder)
+  cached_pid=None;sampled=None;fitrows=None
+  for row in m.to_dict('records'):
+   pid=int(row['participant_id']);cond=row[col];tag=str(cond) if col=='condition' else f'k{cond}';z=np.load(base/f'p{pid:02d}_{tag}.npz');indices=np.flatnonzero(s==pid)
+   check(np.array_equal(z['row_index'],indices) and np.array_equal(z['y_true'],y[indices]),f'{folder} {pid} {tag} held-out row alignment')
+   check(sha(base/f'p{pid:02d}_{tag}.npz')==row['prediction_sha256'],f'{folder} {pid} {tag} prediction fingerprint')
+   values={'macro_f1':f1_score(z['y_true'],z['y_pred'],average='macro',labels=range(16),zero_division=0),'accuracy':accuracy_score(z['y_true'],z['y_pred']),'balanced_accuracy':balanced_accuracy_score(z['y_true'],z['y_pred']),'weighted_f1':f1_score(z['y_true'],z['y_pred'],average='weighted',zero_division=0)}
+   check(all(abs(values[k]-row[k])<1e-12 for k in values),f'{folder} {pid} {tag} scores reconstructed')
+   ranking=list(map(int,ranks[ranks.outer_participant==pid].ranking.iloc[0].split(';')));channels=list(map(int,str(row['channels']).split(';')))
+   expected=p4.geometric_selection(12) if cond=='geom12' else ranking[:12 if cond=='shap12' else int(cond) if col=='channels_k' else 16]
+   check(set(channels)==set(expected) and row['n_train_windows']==200000,f'{folder} {pid} {tag} fixed subset and budget')
+   if folder=='primary_predictions':
+    if cached_pid!=pid:
+     X=np.load(ROOT/'data/cache/loso_X.npy',mmap_mode='r');outer=np.flatnonzero(s!=pid);xt=np.asarray(X[outer],np.float32);yt=np.asarray(y[outer]);fit=p3.subsample(xt,yt,200000);sampled=xt[fit];fitrows=outer[fit];cached_pid=pid
+    arrhash=lambda a:hashlib.sha256(np.ascontiguousarray(a).tobytes()).hexdigest()
+    cols=p3.channel_columns(channels);a=sampled[:,cols];mu=a.mean(axis=0);sd=a.std(axis=0)+1e-8
+    check(row['train_index_sha256']==arrhash(fitrows) and row['test_index_sha256']==arrhash(indices) and row['scaler_mu_sha256']==arrhash(mu) and row['scaler_sd_sha256']==arrhash(sd),f'primary {pid} {tag} scaler and training sample reconstructed')
+    meta=json.loads((base/f'p{pid:02d}_metadata.json').read_text());check(set(meta['training_participants'])==set(range(1,44))-{pid} and meta['test_participants']==[pid],f'primary {pid} {tag} participant exclusion ledger')
+
+  manifest=json.loads((base/'input_manifest.json').read_text());check(sha(ROOT/('scripts/64_revision_predictions.py' if folder=='primary_predictions' else 'scripts/71_revision_random_forest.py'))==manifest['runner_sha256'],folder+' runner unchanged')
+  protocol=rev/'reproducibility'/('exploratory_protocol.json' if folder=='primary_predictions' else 'protocol_amendment_04.json');check(sha(protocol)==manifest['protocol_sha256'],folder+' protocol unchanged')
+ parallel=json.loads((rev/'experiments/alternative_classifier/parallel_execution_manifest.json').read_text());check(sha(ROOT/'scripts/75_revision_rf_parallel.py')==parallel['parallel_runner_sha256'] and sha(rev/'reproducibility/protocol_amendment_05.json')==parallel['protocol_amendment_sha256'],'unchanged RF scheduling implementation')
+ mb=rev/'experiments/matched_budget';m=pd.read_csv(mb/'participant_metrics.csv');old.require_grid(m,['participant_id','method','channels_k'],[range(1,44),['SHAP','PERM_GROUP'],[6,12]],'shared-budget grid')
+ stamp=json.loads((mb/'input_manifest.json').read_text());check(sha(ROOT/'scripts/65_revision_matched_budget.py')==stamp['code_sha256'],'matched-budget runner unchanged')
+ check(sha(rev/'reproducibility/exploratory_protocol.json')==stamp['protocol'] and sha(rev/'reproducibility/protocol_amendment_02.json')==stamp['amendment'],'matched-budget protocol and within-person permutation amendment unchanged')
+ scores=pd.read_csv(mb/'inner_scores.csv');old.require_grid(scores,['outer_participant','inner_fold','channel'],[range(1,44),range(5),range(1,17)],'shared-budget scores')
+ rankings=pd.read_csv(mb/'rankings.csv');old.require_grid(rankings,['outer_participant','method'],[range(1,44),['SHAP','PERM_GROUP']],'matched rankings')
+ reference=pd.read_csv(ROOT/'artifacts/metrics/sparse_curve_subject_metrics.csv');reference=reference[reference['lambda']==0]
+ core_X=np.load(ROOT/'data/cache/loso_X.npy',mmap_mode='r')
+ array_digest=lambda values:hashlib.sha256(np.ascontiguousarray(values).tobytes()).hexdigest()
+ for pid in range(1,44):
+  outer_rows=np.flatnonzero(s!=pid);inner_X=np.asarray(core_X[outer_rows],np.float32);inner_s=np.asarray(s[outer_rows]);inner_y=np.asarray(y[outer_rows]);expected_splits=list(GroupKFold(n_splits=5).split(inner_X,inner_y,inner_s))
+  for method,column in [('SHAP','shap_norm'),('PERM_GROUP','permutation_norm')]:
+   matrix=scores[scores.outer_participant==pid].pivot(index='inner_fold',columns='channel',values=column).sort_index().sort_index(axis=1).to_numpy();expected=(np.lexsort((np.arange(16),-np.median(matrix,axis=0)))+1).tolist();saved=rankings[(rankings.outer_participant==pid)&(rankings.method==method)].ranking.iloc[0];check(list(map(int,saved.split(';')))==expected,f'matched {pid} {method} median ranking reconstructed')
+   for row in m[(m.participant_id==pid)&(m.method==method)].to_dict('records'):
+    check(set(map(int,row['channels'].split(';')))==set(expected[:int(row['channels_k'])]) and row['n_train_windows']==200000,f'matched {pid} {method} top-k final subset')
+    if row['evaluation_source']=='original_P3_exact_subset':
+     source=reference[(reference.participant_id==pid)&(reference.channels_k==row['channels_k'])].iloc[0];check(set(source.channels.split(';'))==set(row['channels'].split(';')) and all(abs(source[k]-row[k])<1e-12 for k in ['macro_f1','accuracy','balanced_accuracy','weighted_f1']),f'matched {pid} {method} reused source metrics')
+    else:check(row['evaluation_source']=='new_shared_budget_fit',f'matched {pid} {method} known fit source')
+  meta=json.loads((mb/f'p{pid:02d}_metadata.json').read_text());check(len(meta)==5,f'matched {pid} five folds');held=[]
+  check(sorted(f['fold'] for f in meta)==list(range(5)),f'matched {pid} unique inner-fold identifiers')
+  for fold in meta:
+   training_rows,validation_rows=expected_splits[int(fold['fold'])];expected_held=sorted(set(inner_s[validation_rows].tolist()));expected_train=sorted(set(inner_s[training_rows].tolist()))
+   fit_rows=training_rows if len(training_rows)<=200000 else np.random.default_rng(20260728+int(fold['fold'])).choice(training_rows,200000,replace=False)
+   inner_mu=inner_X[training_rows].mean(axis=0);inner_sd=inner_X[training_rows].std(axis=0)+1e-8
+   quota=2000//len(expected_held);vrng=np.random.default_rng(20260728+100*pid+int(fold['fold']));selected_validation=np.concatenate([vrng.choice(validation_rows[inner_s[validation_rows]==person],min(quota,int((inner_s[validation_rows]==person).sum())),replace=False) for person in expected_held])
+   check(fold['held_subjects']==expected_held and fold['train_subjects']==expected_train and fold['n_fit_windows']==len(fit_rows) and fold['train_index_sha256']==array_digest(outer_rows[fit_rows]) and fold['scaler_mu_sha256']==array_digest(inner_mu) and fold['scaler_sd_sha256']==array_digest(inner_sd) and np.array_equal(np.asarray(fold['validation_indices']),outer_rows[selected_validation]),f'matched {pid} fold {fold["fold"]} exact fit sample, training-only scaler and shared validation sample reconstructed')
+   a=set(fold['held_subjects']);b=set(fold['train_subjects']);ix=np.asarray(fold['validation_indices']);check(not a&b and pid not in a|b and a|b==set(range(1,44))-{pid} and set(s[ix])==a and len(ix)==len(np.unique(ix)) and len(ix)<=2000 and fold['n_fit_windows']<=200000,f'matched {pid} fold {fold["fold"]} participant exclusion and shared budget');held+=list(a)
+  check(sorted(held)==sorted(set(range(1,44))-{pid}),f'matched {pid} attribution coverage')
+ fixedseed=rev/'experiments/fixed_layout_seed_diagnostic';fm=json.loads((fixedseed/'input_manifest.json').read_text());check(sha(ROOT/'scripts/81_fixed_layout_seed_stability.py')==fm['runner_sha256'] and sha(ROOT/'artifacts/completion_analyses/fixed_layout/per_participant.csv')==fm['source_sha256'] and sha(rev/'reproducibility/protocol_amendment_07.json')==fm['protocol_sha256'],'fixed-layout seed diagnostic provenance')
+ fs=pd.read_csv(fixedseed/'all_seeds.csv');old.require_grid(fs,['split','seed'],[['dev_even_test_odd','dev_odd_test_even'],sorted(fs.seed.unique())],'fixed-layout seed grid');check(len(fs)==400 and (fs.noninferior002==(fs.lcb95>-.02)).all(),'all fixed-layout seed decisions retained')
+ from src.semg_sparse.statistics.non_inferiority import bootstrap_participant_metrics
+ fixed_pp=pd.read_csv(ROOT/'artifacts/completion_analyses/fixed_layout/per_participant.csv');fixed_summary=pd.read_csv(ROOT/'artifacts/completion_analyses/fixed_layout/summary.csv');old.require_grid(fixed_summary,['split','lambda'],[['dev_odd_test_even','dev_even_test_odd'],[0.,.25,.5,1.]],'all fixed-layout summary rows')
+ for row in fixed_summary.to_dict('records'):
+  group=fixed_pp[(fixed_pp.split==row['split'])&(fixed_pp['lambda']==row['lambda'])].sort_values('test_participant');ranking=list(map(int,row['ranking'].split(';')));expected=set(ranking[:12]);mean,lo,hi=bootstrap_participant_metrics(group.diff_12_minus_16.to_numpy(),n_resamples=10000,seed=20260728)
+  check(sorted(ranking)==list(range(1,17)) and set(map(int,row['dropped'].split(';')))==set(range(1,17))-expected and all(set(map(int,v.split(';')))==expected for v in group.layout) and row['n_test']==len(group)==group.test_participant.nunique() and row['n_dev']+row['n_test']==43,f'fixed layout {row["split"]} lambda {row["lambda"]} exact sites and participant count')
+  check(np.allclose(group.diff_12_minus_16,group.macro_f1_fixed12-group.macro_f1_full16,rtol=1e-10,atol=1e-12) and np.allclose([row['mean_diff'],row['lcb95'],row['ucb95'],row['mean_full16'],row['mean_fixed12']],[mean,lo,hi,group.macro_f1_full16.mean(),group.macro_f1_fixed12.mean()],rtol=1e-10,atol=1e-12) and row['non_inferior_002']==(lo>-.02),f'fixed layout {row["split"]} lambda {row["lambda"]} all means, original-seed interval and NI flag recomputed')
+ fsource=fixed_pp[fixed_pp['lambda']==0];expected_seeds=sorted(np.random.default_rng(20260728).integers(0,2**31-1,size=200));check(sorted(fs.seed.unique())==expected_seeds,'fixed-layout diagnostic seeds not selected from outcomes')
+ for row in fs.to_dict('records'):
+  values=fsource[fsource.split==row['split']].sort_values('test_participant').diff_12_minus_16.to_numpy();mean,lo,hi=bootstrap_participant_metrics(values,n_resamples=10000,seed=int(row['seed']));check(abs(mean-row['mean_diff'])<1e-12 and abs(lo-row['lcb95'])<1e-12 and abs(hi-row['ucb95'])<1e-12,'fixed-layout seed interval recomputed')
+ summary=pd.read_csv(fixedseed/'summary.csv')
+ for row in summary.to_dict('records'):
+  z=fs[fs.split==row['split']];check(row['n_seeds']==len(z) and row['n_pass']==int(z.noninferior002.sum()) and abs(row['fraction_pass']-z.noninferior002.mean())<1e-12,'fixed-layout seed frequency recomputed')
+
+ check(subprocess.run([sys.executable,str(ROOT/'scripts/85_audit_historical_statistics.py')],cwd=ROOT).returncode==0,'all primary and historical secondary statistical tables reconstructed')
+ historical=json.loads((rev/'reports/historical_statistics_reconstruction.json').read_text());check(historical['status']=='PASS' and len(historical['tables'])==15 and historical['primary_protocol_equal'],'complete historical numerical reconstruction coverage')
+ for relative,digest in historical['source_hashes'].items():check(sha(ROOT/relative)==digest,'historical reconstruction input '+relative)
+ print('COMPLETED-TRACK PREFLIGHT ONLY: full geometric curve, final inference and release verification remain pending',flush=True)
+ return 0

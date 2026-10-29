@@ -1,0 +1,113 @@
+\documentclass{iopjournal}
+\usepackage{amssymb,amsmath,booktabs,array,multirow,adjustbox,makecell,microtype,placeins,ragged2e}
+\usepackage[round]{natbib}
+\hypersetup{hidelinks}\AtBeginDocument{\justifying}
+\newcommand{\rev}[1]{#1}\newcommand{\chg}[1]{#1}
+\input{generated/results_macros.tex}\input{generated/revision_macros.tex}
+\fancyhead[L]{\small Supplementary material}\fancyhead[C]{}\fancyhead[R]{\small Cross-fitted electrode reduction}
+\renewcommand{\thesection}{S\arabic{section}}\renewcommand{\thetable}{S\arabic{table}}\renewcommand{\thefigure}{S\arabic{figure}}
+\begin{document}
+{\noindent\fontsize{16}{19}\selectfont\sffamily Supplementary material\par}
+\medskip
+{\noindent\large Subject-independent forearm sEMG electrode reduction with cross-fitted attribution and non-inferiority testing\par}
+\medskip
+This supplement distinguishes internally planned primary criteria, historical secondary analyses and new exploratory validation. Full-precision CSV files accompany the tables; these files and the numeric/figure provenance are the quantitative record.
+
+\section{Development chronology and departures}
+The internally dated statistical plan was written after an earlier pilot and before the complete reduced-count curve according to the project record. The repository has no commits and no external registration confirming that chronology. The primary 0.02 tolerance, participant unit and bootstrap rule were retained. Detailed secondary test families were specified after their underlying results existed. Budget calibration used test outcomes for participants 1 and 7. Count-feature thresholds were historically pooled and subsequently checked for invariance to exclusion. These disclosures qualify prospective or completely untouched-cohort language.
+
+The original Holm count analysis was completed after the primary curve. The new null-centred analysis is an exploratory statistical sensitivity, not a retrospective replacement of the original plan. Fixed layouts, feature redundancy and individual attribution aggregation were added post hoc. The 2026-10-14 revision additionally retained matched predictions, tested primary-protocol geometric12, shared inner resources between SHAP and grouped permutation, completed the window curves, verified Rest17 and tested a fixed-count random forest. Protocols and eight amendments record the exploratory chronology. Each amendment preceded its own additional computation; the full geometric curve and seed diagnostic followed the initial geometry12 and split-layout outcomes, and the selector-activity audit followed the completed penalty results. No penalty, margin or seed was selected to make a gate pass.
+
+The original CNN/integrated-gradients and mRMR ideas were not executed. No result is supplied for those analyses. No fresh independent cohort with the GRABMyo montage was available; an external validation experiment is a proposed next study.
+
+\section{Feature-chain and threshold checks}
+Raw-record spot re-extraction, cache-to-feature-table correspondence and prediction-label alignment are checked in the feature-chain report. The primary active cache contains \GRABMyoActiveWindows\ windows. Participant exclusion reproduced the rounded monopolar threshold in \LOOMonoIdentical\ of \LOOMonoFolds\ folds and the DB5 threshold in \LOODBFiveIdentical\ of \LOODBFiveFolds\ folds. This confirms numerical invariance of the stored threshold, not a prospective fold-wise estimation sequence. Amplitude units and quantized DB5 values are kept distinct. Rest and alternate windows are re-extracted from real raw records; no windows cross trial boundaries.
+
+\paragraph{Implemented filter and feature definitions}
+For DB5, all \RevDBFiveFeatureRows\ saved feature rows were reconstructed exactly from the ten raw exercise files. The common filter function clips the requested upper cutoff to $\min(f_{\rm requested},0.45f_s-1)$, giving \RevDBFiveBandLow--\RevDBFiveBandHigh\ Hz at its sampling rate, although the original extraction report printed the requested \RevDBFiveBandRequestedHigh\ Hz. The filtering code and saved features are preserved; this correction changes reporting, not model inputs or outcomes. The band-pass design argument is four, giving eight poles before forward--backward application. GRABMyo's requested upper limit is below this clipping cap.
+
+For one channel, let $x_t$, $t=1,\ldots,T$, denote the filtered window, $\bar x$ its mean and $d_t=x_{t+1}-x_t$. The implemented amplitude features are
+\begin{align*}
+\mathrm{MAV}&=T^{-1}\sum_{t=1}^T|x_t|,&
+\mathrm{RMS}&=\sqrt{T^{-1}\sum_{t=1}^Tx_t^2},\\
+\mathrm{VAR}&=T^{-1}\sum_{t=1}^T(x_t-\bar x)^2,&
+\mathrm{WL}&=\sum_{t=1}^{T-1}|d_t|,\\
+\mathrm{IEMG}&=\sum_{t=1}^T|x_t|,&
+\mathrm{WAMP}&=\sum_{t=1}^{T-1}\mathbf{1}\{|d_t|\ge\tau\}.
+\end{align*}
+Variance uses divisor $T$. IEMG and waveform length are sample sums, without division by sampling rate. The count rules are
+\begin{align*}
+\mathrm{ZC}&=\sum_{t=1}^{T-1}\mathbf{1}\{x_tx_{t+1}<0,\ |d_t|\ge\tau\},\\
+\mathrm{SSC}&=\sum_{t=2}^{T-1}\mathbf{1}\{a_tb_t>0,\ \max(|a_t|,|b_t|)\ge\tau\},
+\end{align*}
+where $a_t=x_t-x_{t-1}$ and $b_t=x_t-x_{t+1}$. The thresholds are $10^{-2}$ mV for monopolar GRABMyo, $4\times10^{-3}$ mV for derived bipolar signals and seven stored ADC units for DB5; they are not interchangeable amplitude units.
+
+For spectral features, SciPy Welch estimation uses a periodic Hann window, segment length $\min(T,256)$, default half-segment overlap, constant detrending and one-sided density scaling. Mean frequency is $\sum_\ell f_\ell P_\ell/(\sum_\ell P_\ell+10^{-12})$. Median frequency is the first frequency bin whose cumulative power reaches half of that guarded total, clamped to the last bin if none reaches it; no frequency interpolation is used. The feature order within every channel is MAV, RMS, VAR, WL, ZC, SSC, IEMG, WAMP, MNF, MDF. This channel-major mapping is retained when selecting electrodes.
+
+MAV and integrated EMG are redundant at a fixed window length. The historical feature-redundancy diagnostic found mean performance change \RedundDiff\ (95\% CI \RedundLCB\ to \RedundUCB), ranking correlation \RedundRho\ and matching top-twelve sets in \RedundTopTwelveSame\ outer folds. This diagnostic showed a small observed mean change; it does not establish equivalence or remove all correlated-feature effects in TreeSHAP.
+
+\section{Inference and test families}
+All intervals resample paired participant scores, not individual windows. Their estimand is the conditional mean out-of-fold performance change. Inner and outer models share training participants, so neither 42 attribution vectors nor 43 outer fits are independent fitted-model replicates. The bootstrap does not refit the entire nested procedure.
+
+The original count decision uses the percentile lower bound. Its original Holm tail is retained explicitly as a historical calculation. The new bootstrap constructs null residuals $d_p-\bar d$, resamples them, studentizes the resampled mean and compares it with $(\bar d+\delta)/(s_d/\sqrt n)$; the Monte Carlo probability is $(1+\#\{t_b\ge t_{\rm obs}\})/(B+1)$. A family contains all fifteen reduced counts for one condition, margin and penalty. At a tested fixed count, the unadjusted interval remains a separate descriptive criterion. RF tests only twelve against sixteen and estimates no $k^*$.
+
+Historical secondary families contain eight attribution-versus-random tests, twelve original penalty tests and fifteen deletion tests. The participant-extension comparison family contains sixty tests (four penalties times fifteen counts). Its penalty diagnostic has twelve tests; the new shared-resource comparison has two; the per-gesture analysis has sixteen. Geometric12 is exploratory, with a direct paired method contrast as well as each method's change from full16. Wilcoxon tests concern signed ranks; percentile intervals concern the mean, so their decisions need not coincide. No favorable seed is substituted near a boundary. In DB5, count decisions also depend on the bootstrap construction: at the 0.03 margin, the historical tail-Holm calculation supports twelve, while the null-centred studentized Holm sensitivity supports no reduced count. This small-cohort disagreement is reported rather than used to select a favorable test.
+
+\section{Participant and gesture predictions}
+Each revision prediction file stores canonical cache row indices, true labels and model predictions. The full16 and SHAP12 reruns reproduce original participant metrics within $10^{-6}$. The entire gesture analysis uses matched models under the primary 300-round, 200,000-window protocol. Per-gesture F1 is computed for every participant before inference; confusion matrices are normalized by true gesture within participant before averaging. Thus large window counts do not inflate the inferential sample size.
+
+Gesture numbers follow MotionSequence.txt, whose explicit numeric order is authoritative. In particular, gesture 14 is forearm pronation; visual row order in GestureList.JPG is not used to assign numeric IDs. Participant-loss summaries are descriptive rather than individual non-inferiority tests. Correlation of a full-array score with its own difference is mathematically coupled and is not interpreted causally.
+
+\section{Participant-level attribution and provenance}
+For each outer participant, the post-hoc extension takes the median and unscaled MAD across the 42 normalized individual attribution vectors. It preserves all fixed penalties and counts. Person vectors share five attributing models and reflect both person heterogeneity and model differences. This is not a new independent bootstrap or a claim that the penalty is novel.
+
+The old extension's saved hash of the curve runner does not match the later runner source. That historical record was preserved. The revision uses a fresh isolated fit for newly required subsets with a current fingerprint; exact old primary subsets can be reused only with an explicit matching source row and unchanged protocol. Current strict verification compares result subsets, score reconstructions, source hashes and reused metrics. The previous hash mismatch is not relabeled a pass.
+
+A further post-hoc diagnostic quantifies whether each fixed penalty changes the unordered physical site set relative to its unpenalized counterpart. It covers every count and participant for both aggregation rules, reports changed-set counts and mean Jaccard similarity, and verifies metric identity for unchanged inputs. It does not treat unchanged layouts as an equivalence experiment or retune a penalty.
+
+\section{Resources, sensitivity and fixed-layout validation}
+The historical selection methods used a common final lighter model but unequal ranking resources. Historical RBF-SVM uses $C=1$ and the scikit-learn scale rule for $\gamma$; RF uses 200 trees, minimum leaf size two and no depth limit, with seed 20260728. The RF sensitivity retains those parameters. Stored feature values are float32; feature standardization uses the appropriate training-pool mean and population SD plus $10^{-8}$, preserving the distinction between full inner-training scaler pools and capped final-model fit samples. The new comparison instead shares each inner model and its validation observations. Electrode-group permutation preserves within-electrode feature blocks and permutes only within each held-out participant. Negative estimated performance drops are retained. Both methods use the median across inner folds after normalization; SHAP and permutation remain different scoring procedures. Runtime means are descriptive for the recorded GPU/CPU environment and include no prospective device latency.
+
+Rest-inclusive and 150/500 ms analyses cover every count and participant and retain the primary 250 ms rankings. Equal training window counts across different lengths are unequal signal durations. The RF experiment holds the XGBoost-selected layout fixed and compares twelve with sixteen using the pre-existing RF parameters; it is not a RF ranking or count-optimization study.
+
+Fixed-layout rankings use the original five-fold median/MAD rule within development data. Historical pooled feature thresholds still apply. Development and test participants are disjoint; their inner and final models use all development windows, not the primary curve's fixed training cap. Count selection already used the full cohort. Odd-development and even-development derive different layouts. Their reverse-direction result cannot be portrayed as validation of the first layout. A post-hoc diagnostic reran the percentile bootstrap with \RevFixedSwapSeedN\ fixed seeds; the reverse layout qualified in \RevFixedSwapSeedHits\ reruns. All seed outcomes are retained, and the original seed is unchanged. This diagnoses Monte Carlo sensitivity rather than the probability that the hypothesis is true. DB5 and derived bipolar analyses use their own references; no channels or participants are pooled across datasets or representations.
+
+\clearpage
+\section{Additional figures}
+\begin{figure}[htbp]\centering\includegraphics[width=\textwidth]{../figures/vector/figS1_sensitivity_curves.pdf}
+\caption{Complete sensitivity curves for rest inclusion and alternate window lengths. Each mean paired change compares with full16 under that condition. Shading is a 95\% participant-bootstrap interval; dashed lines mark the 0.02 tolerance. Rankings are held at their primary 250 ms values.}\end{figure}
+\begin{figure}[htbp]\centering\includegraphics[width=.8\textwidth]{../figures/vector/figS2_confusion_change.pdf}
+\caption{SHAP12 minus full16 confusion change. Each participant's confusion matrix is normalized within true gesture before averaging. The color scale is in percentage points, with symmetric limits covering the observed changes; machine-readable values retain full precision. Off-diagonal increases identify specific additional confusions without supplying independent window-level inference.}\end{figure}
+\begin{figure}[htbp]\centering\includegraphics[width=.7\textwidth]{../figures/vector/figS3_classifier_context.pdf}
+\caption{Historical full-array classifier context. Boxes summarize held-out participant Macro-F1. XGBoost uses all outer-training windows, random forest 200,000 and SVM 40,000; unequal budgets and historical calibration limit a direct classifier-capacity comparison. This is separate from the primary count curve's full16 reference.}\end{figure}
+\begin{figure}[htbp]\centering\includegraphics[width=\textwidth]{../figures/vector/figS4_participant_aggregation.pdf}
+\caption{All participant-versus-fold aggregation comparisons. Each cell is the mean paired Macro-F1 change for one fixed penalty and count. Asterisks, if present, mark Holm-adjusted signed-rank significance across sixty comparisons. Colors use a symmetric difference scale; no penalty is selected from these outcomes.}\end{figure}
+\begin{figure}[htbp]\centering\includegraphics[width=.85\textwidth]{../figures/vector/figS5_cross_session.pdf}
+\caption{Full-array session transfer for all held-out participants. Grey lines connect the same participant; colored points are observed scores and black bars are medians. Training on two sessions uses more observations, so the final contrast confounds session diversity and quantity. These are subject-independent full-array comparisons, not reduced-layout or isolated electrode-displacement tests.}\end{figure}
+\begin{figure}[htbp]\centering\includegraphics[width=\textwidth]{../figures/vector/figS6_attribution_heterogeneity.pdf}
+\caption{Descriptive attribution heterogeneity. (A) Each participant's normalized profile averaged over outer-fold attribution records. (B) Mean MAD per electrode from five pooled inner-fold vectors versus individual participant vectors. These aggregates share fitted models and overlapping training cohorts; neither cells nor vectors are independent statistical replicates. Larger person dispersion does not imply a beneficial performance penalty.}\end{figure}
+\begin{figure}[htbp]\centering\includegraphics[width=\textwidth]{../figures/vector/figS7_geometric_count_curve.pdf}
+\caption{Complete reduced-count comparison under the primary protocol. SHAP and the fixed geometric ordering use the same training sample and common full16 reference. The left panel includes every reduced count; the right enlarges the tolerance region. Shading gives participant-bootstrap intervals and the dashed line is the 0.02 margin. The full geometric curve was added after geometry12 had been examined. Different minimum qualifying counts do not establish a direct between-method mean difference.}\label{fig:geometricfull}\end{figure}
+\FloatBarrier\clearpage
+\section{Result tables}
+\input{tables/tab_full_channel.tex}
+\input{tables/tab_sparse_ni.tex}
+\input{tables/tab_h2.tex}
+\input{tables/tab_lambda.tex}
+\input{tables/tab_faithfulness.tex}
+\input{tables/tab_stability.tex}
+\input{tables/tab_replication.tex}
+\input{tables/tab_cross_session.tex}
+\input{tables/tab_bipolar.tex}
+\input{generated/gesture.tex}
+\input{generated/participant_extension.tex}
+\input{generated/penalty.tex}
+\input{generated/selection_changes.tex}
+\input{generated/fixed_layout.tex}
+\input{generated/geometric_curve.tex}
+\input{generated/ni_audit.tex}
+\input{generated/selection_costs.tex}
+\FloatBarrier
+\section{Machine-readable evidence and reproduction}
+The revision's tables directory retains full-precision statistical outputs, including every participant, gesture, count, margin and penalty. Figure source-data CSVs and \texttt{figure\_provenance.csv} map plotted values to inputs. Numeric macros have separate historical and revision provenance files. Experimental protocols, amendments, input manifests, environment snapshots and execution logs identify the executed analyses. The reproducibility README provides execution and strict verification commands. Raw datasets remain at their public repositories rather than being redistributed as new data.
+\end{document}

@@ -1,0 +1,27 @@
+RUN tests
+RUN upgraded_penalty_gate
+RUN 59_audit_feature_chain
+RUN audit_leakage
+RUN 28_statistics
+RUN secondary_statistics
+RUN publication_gate
+RUN bipolar_text
+RUN study_diagrams
+RUN 42_generate_tables
+RUN 44_figures
+RUN 45_check_manuscript_numbers
+RUN 47_claim_evidence_matrix
+RUN 41_generate_study_report
+RUN supplementary_iop_pass1
+RUN supplementary_iop_pass2
+RUN supplementary_iop_pass3
+RUN main_iop_pass1
+RUN main_iop_bibtex
+RUN main_iop_pass2
+RUN main_iop_pass3
+{
+  "analysis_checks": "PASS",
+  "pdf_build": "PASS_PENDING_VISUAL_REVIEW",
+  "submission_ready": false,
+  "reason": "Author declarations require author input."
+}

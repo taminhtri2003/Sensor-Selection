@@ -1,0 +1,13 @@
+split dev_odd_test_even: dev=22 test=21
+ lambda   dropped  mean_diff     lcb95     ucb95  non_inferior_002
+   0.00 3;9;11;12  -0.012445 -0.017901 -0.007658              True
+   0.25 3;9;11;12  -0.012445 -0.017901 -0.007658              True
+   0.50 3;9;11;12  -0.012445 -0.017901 -0.007658              True
+   1.00 3;9;11;12  -0.012445 -0.017901 -0.007658              True
+split dev_even_test_odd: dev=21 test=22
+ lambda    dropped  mean_diff    lcb95     ucb95  non_inferior_002
+   0.00 9;11;12;13  -0.013461 -0.02002 -0.006627             False
+   0.25 9;11;12;13  -0.013461 -0.02002 -0.006627             False
+   0.50 9;11;12;13  -0.013461 -0.02002 -0.006627             False
+   1.00 9;11;12;13  -0.013461 -0.02002 -0.006627             False
+original lambda=0.5 dropped set reproduced: True

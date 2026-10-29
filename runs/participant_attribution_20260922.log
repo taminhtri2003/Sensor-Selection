@@ -1,0 +1,68 @@
+Participant 1/43 complete; 0 new fits
+Participant 2/43 complete; 0 new fits
+Participant 3/43 complete; 0 new fits
+Participant 4/43 complete; 0 new fits
+Participant 5/43 complete; 0 new fits
+Participant 6/43 complete; 0 new fits
+Participant 7/43 complete; 0 new fits
+Participant 8/43 complete; 0 new fits
+Participant 9/43 complete; 0 new fits
+Participant 10/43 complete; 0 new fits
+Participant 11/43 complete; 0 new fits
+Participant 12/43 complete; 0 new fits
+Participant 13/43 complete; 0 new fits
+Participant 14/43 complete; 0 new fits
+Participant 15/43 complete; 0 new fits
+Participant 16/43 complete; 0 new fits
+Participant 17/43 complete; 0 new fits
+Participant 18/43 complete; 0 new fits
+Participant 19/43 complete; 0 new fits
+Participant 20/43 complete; 0 new fits
+Participant 21/43 complete; 0 new fits
+Participant 22/43 complete; 0 new fits
+Participant 23/43 complete; 0 new fits
+Participant 24/43 complete; 0 new fits
+Participant 25/43 complete; 0 new fits
+Participant 26/43 complete; 0 new fits
+Participant 27/43 complete; 0 new fits
+Participant 28/43 complete; 0 new fits
+Participant 29/43 complete; 0 new fits
+Participant 30/43 complete; 0 new fits
+Participant 31/43 complete; 0 new fits
+Participant 32/43 complete; 1 new fits
+Participant 33/43 complete; 1 new fits
+Participant 34/43 complete; 0 new fits
+Participant 35/43 complete; 2 new fits
+Participant 36/43 complete; 1 new fits
+Participant 37/43 complete; 3 new fits
+Participant 38/43 complete; 1 new fits
+Participant 39/43 complete; 2 new fits
+Participant 40/43 complete; 2 new fits
+Participant 41/43 complete; 1 new fits
+Participant 42/43 complete; 1 new fits
+Participant 43/43 complete; 3 new fits
+participant_attribution_posthoc lambda=0.0 k*:
+        kstar_unadjusted  kstar_holm  kstar_fixed_sequence
+margin                                                    
+0.01                  14          14                    14
+0.02                  12          12                    12
+0.03                  11          11                    11
+participant_attribution_posthoc lambda=0.25 k*:
+        kstar_unadjusted  kstar_holm  kstar_fixed_sequence
+margin                                                    
+0.01                  14          14                    14
+0.02                  12          12                    12
+0.03                  11          11                    11
+participant_attribution_posthoc lambda=0.5 k*:
+        kstar_unadjusted  kstar_holm  kstar_fixed_sequence
+margin                                                    
+0.01                  14          14                    14
+0.02                  12          12                    12
+0.03                  11          11                    11
+participant_attribution_posthoc lambda=1.0 k*:
+        kstar_unadjusted  kstar_holm  kstar_fixed_sequence
+margin                                                    
+0.01                  14          14                    14
+0.02                  12          12                    12
+0.03                  11          11                    11
+PASS: participant-level attribution extension complete

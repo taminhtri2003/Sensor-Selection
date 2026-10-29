@@ -1,0 +1,88 @@
+\documentclass[final,5p,times,twocolumn]{elsarticle}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage[section]{placeins}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\dbltopfraction}{0.9}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.8}
+\renewcommand{\dblfloatpagefraction}{0.8}
+\setcounter{topnumber}{3}
+\setcounter{dbltopnumber}{3}
+
+% Revision highlighting: revised text is set in blue.
+% Set \revhighlightfalse for the clean submission copy.
+\newif\ifrevhighlight
+\revhighlighttrue
+\newcommand{\rev}[1]{\ifrevhighlight{\color{blue}#1}\else#1\fi}
+
+\input{generated/results_macros.tex}
+
+\journal{Physiological Measurement}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{How far can a subject-independent sEMG array be reduced? A prespecified non-inferiority test of cross-fitted attribution for electrode selection}
+
+\author[inst1]{Minh-Tri Ta}
+\author[inst2,inst3]{Hoang-Khang Phan}
+\author[inst4]{Le-Giang Tran\corref{cor1}}
+\cortext[cor1]{Corresponding author. Email: tranlegiang@iuh.edu.vn}
+
+\affiliation[inst1]{organization={College of Engineering and Computer Science, VinUniversity},
+            city={Hanoi},
+            country={Vietnam}}
+\affiliation[inst2]{organization={Department of Biomedical Engineering, Faculty of Applied Science, Ho Chi Minh City University of Technology (HCMUT)},
+            addressline={268 Ly Thuong Kiet Street, District 10},
+            city={Ho Chi Minh City},
+            country={Vietnam}}
+\affiliation[inst3]{organization={Vietnam National University Ho Chi Minh City},
+            addressline={Linh Trung Ward, Thu Duc City},
+            city={Ho Chi Minh City},
+            country={Vietnam}}
+\affiliation[inst4]{organization={Faculty of Electronics Technology, Industrial University of Ho Chi Minh City},
+            city={Ho Chi Minh City},
+            country={Vietnam}}
+
+\begin{abstract}
+\textit{Objective.} To test, under \rev{prespecified decision rules}, whether \rev{electrode selection guided by model explanations} can reduce a forearm sEMG array without meaningful loss of subject-independent gesture recognition.
+\textit{Approach.} We \rev{analysed} 43 participants of GRABMyo (16 monopolar forearm electrodes, 16 active gestures) \rev{with} leave-one-subject-out evaluation\rev{. In each fold, feature standardisation, model fitting and electrode ranking used only the training participants; the one amplitude threshold set from pooled recordings was unchanged when each participant was left out in turn}. Electrodes were ranked by TreeSHAP attributions \rev{computed on participants whom the attributing model had not seen (cross-fitting)}. A stability-regularised variant (SR-CFA) penalised \rev{attributions} that varied \rev{between groups of training participants}. \rev{The analysis plan} fixed the participant as the statistical unit, a 0.02 Macro-F1 non-inferiority margin, 10,000-resample cluster bootstrap intervals and Holm correction\rev{; the detailed tests for the secondary hypotheses were specified after the results were available}.
+\textit{Main results.} With all electrodes, XGBoost reached a Macro-F1 of \FullXGB\ (95\% CI \FullXGBLCB--\FullXGBUCB). The smallest non-inferior subset was $k^* = \KStar$ electrodes ($\bar\Delta = \DeltaKTwelve$, 95\% CI $\DeltaKTwelveLCB$ to $\DeltaKTwelveUCB$)\rev{, and this was unchanged after Holm correction over the 15 subset sizes tested}. One fewer electrode was not non-inferior, and $k^*$ was \KStarMarginPtOne\ and \KStarMarginPtThree\ under the 0.01 and 0.03 sensitivity margins. Attribution-ranked subsets outperformed \rev{the mean of} random subsets at 4, 6, 8 and 12 electrodes (largest gain $\HTwoKSixDiff$ at six). \rev{Retraining after deleting electrodes in rank order supported the faithfulness of the ranking. The stability penalty rarely changed the ranking and gave no measurable benefit. In exploratory comparisons, no statistically detectable difference was found between the attribution ranking and an evenly spaced layout chosen without data at 4, 8 and 12 electrodes. In an exploratory replication on putEMG (44 participants, 24 electrodes) that was not part of the analysis plan, a subset of \PutKStarPtTwo\ electrodes was non-inferior at the same margin (\PutKStarHolmPtTwo\ after Holm correction).}
+\textit{Significance.} \rev{For subject-independent, offline recognition with this two-ring monopolar montage, about a quarter of the electrodes could be removed within a prespecified engineering tolerance, but not more.} \rev{Cross-fitted attribution identifies which electrode positions matter, but in exploratory comparisons its advantage over an evenly spaced layout was detectable only at six electrodes.}
+\end{abstract}
+
+\begin{keyword}
+Surface electromyography \sep gesture recognition \sep electrode selection \sep SHAP \sep cross-fitting \sep non-inferiority \sep leave-one-subject-out
+\end{keyword}
+
+\end{frontmatter}
+
+\input{sections/01_introduction.tex}
+\input{sections/02_related_work.tex}
+\input{sections/03_methods.tex}
+\input{sections/04_results.tex}
+\input{sections/05_discussion.tex}
+\input{sections/06_conclusion.tex}
+
+\section*{Declaration of Competing Interest}
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+\section*{Data and Code Availability}
+GRABMyo v1.1.0 is available from PhysioNet (\url{https://physionet.org/content/grabmyo/1.1.0/}), NinaPro DB5 from the NinaPro repository\rev{, and putEMG from its authors' repository~\cite{kaczmarek2019putemg} under a CC BY-NC 4.0 licence}. \rev{The statistical analysis plan, a dated record of analysis decisions, the analysis code and all result files cited in this paper are included in the accompanying repository. All numbers in the text and tables are computed directly from these files.}
+
+\input{sections/07_appendix.tex}
+
+\bibliographystyle{elsarticle-num}
+\bibliography{references}
+
+\end{document}

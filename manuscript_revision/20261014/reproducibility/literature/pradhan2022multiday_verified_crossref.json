@@ -1,0 +1,634 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        6
+      ]
+    ],
+    "date-time": "2026-10-06T16:16:55Z",
+    "timestamp": 1791303415344,
+    "version": "4.1.0"
+  },
+  "reference-count": 40,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "1",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2022,
+            11,
+            30
+          ]
+        ],
+        "date-time": "2022-11-30T00:00:00Z",
+        "timestamp": 1669766400000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2022,
+            11,
+            30
+          ]
+        ],
+        "date-time": "2022-11-30T00:00:00Z",
+        "timestamp": 1669766400000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://creativecommons.org/licenses/by/4.0"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "link.springer.com"
+    ],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Sci Data"
+  ],
+  "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>Surface electromyography (sEMG) signals have been used for advanced prosthetics control, hand-gesture recognition (HGR), and more recently as a novel biometric trait. For these sEMG-based applications, the translation from laboratory research setting to real-life scenarios suffers from two major limitations: (1) a small subject pool, and (2) single-session data recordings, both of which prevents acceptable generalization ability. In this longitudinal database, forearm and wrist sEMG data were collected from 43 participants over three different days with long separation (Days 1, 8, and 29) while they performed static hand/wrist gestures. The objective of this dataset is to provide a comprehensive dataset for the development of robust machine learning algorithms of sEMG, for both HGR and biometric applications. We demonstrated the high quality of the current dataset by comparing with the Ninapro dataset. And we presented its usability for both HGR and biometric applications. Among other applications, the dataset can also be used for developing electrode-shift invariant generalized models, which can further bolster the development of wristband and forearm-bracelet sensors.</jats:p>",
+  "DOI": "10.1038/s41597-022-01836-y",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2022,
+        11,
+        30
+      ]
+    ],
+    "date-time": "2022-11-30T01:20:45Z",
+    "timestamp": 1669771245000
+  },
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 61,
+  "title": [
+    "Multi-day dataset of forearm and wrist electromyogram for hand gesture recognition and biometrics"
+  ],
+  "prefix": "10.1038",
+  "volume": "9",
+  "author": [
+    {
+      "given": "Ashirbad",
+      "family": "Pradhan",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Jiayuan",
+      "family": "He",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-1579-3114",
+      "authenticated-orcid": false,
+      "given": "Ning",
+      "family": "Jiang",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "297",
+  "published-online": {
+    "date-parts": [
+      [
+        2022,
+        11,
+        30
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "1836_CR1",
+      "doi-asserted-by": "publisher",
+      "first-page": "152",
+      "DOI": "10.1109/MSP.2012.2203480",
+      "volume": "29",
+      "author": "N Jiang",
+      "year": "2012",
+      "unstructured": "Jiang, N., Dosen, S., Muller, K.-R. & Farina, D. Myoelectric control of artificial limbs\u2014is there a need to change focus?[In the spotlight]. IEEE Signal Processing Magazine 29, 152\u2013150 (2012).",
+      "journal-title": "IEEE Signal Processing Magazine"
+    },
+    {
+      "key": "1836_CR2",
+      "doi-asserted-by": "publisher",
+      "first-page": "3812",
+      "DOI": "10.3390/s18113812",
+      "volume": "18",
+      "author": "F Qureshi",
+      "year": "2018",
+      "unstructured": "Qureshi, F. & Krishnan, S. Wearable hardware design for the internet of medical things (IoMT). Sensors 18, 3812 (2018).",
+      "journal-title": "Sensors"
+    },
+    {
+      "key": "1836_CR3",
+      "doi-asserted-by": "publisher",
+      "first-page": "1281",
+      "DOI": "10.1109/JBHI.2016.2598302",
+      "volume": "20",
+      "author": "J Wu",
+      "year": "2016",
+      "unstructured": "Wu, J., Sun, L. & Jafari, R. A wearable system for recognizing American sign language in real-time using IMU and surface EMG sensors. IEEE J Biomed Health Inform 20, 1281\u20131290 (2016).",
+      "journal-title": "IEEE J Biomed Health Inform"
+    },
+    {
+      "key": "1836_CR4",
+      "unstructured": "Dwivedi, A., Kwon, Y. & Liarokapis, M. in 2020 IEEE International Conference on Systems, Man, and Cybernetics (SMC). 3296\u20133303 (IEEE)."
+    },
+    {
+      "key": "1836_CR5",
+      "doi-asserted-by": "publisher",
+      "first-page": "848",
+      "DOI": "10.1109/TBME.2003.813539",
+      "volume": "50",
+      "author": "K Englehart",
+      "year": "2003",
+      "unstructured": "Englehart, K. & Hudgins, B. A robust, real-time control scheme for multifunction myoelectric control. IEEE Trans. Biomed. Eng. 50, 848\u2013854 (2003).",
+      "journal-title": "IEEE Trans. Biomed. Eng."
+    },
+    {
+      "key": "1836_CR6",
+      "doi-asserted-by": "publisher",
+      "first-page": "121",
+      "DOI": "10.1016/j.bspc.2018.07.010",
+      "volume": "46",
+      "author": "M Tavakoli",
+      "year": "2018",
+      "unstructured": "Tavakoli, M., Benussi, C., Lopes, P. A., Osorio, L. B. & de Almeida, A. T. Robust hand gesture recognition with a double channel surface EMG wearable armband and SVM classifier. Biomed. Signal Process. Control 46, 121\u2013130 (2018).",
+      "journal-title": "Biomed. Signal Process. Control"
+    },
+    {
+      "key": "1836_CR7",
+      "doi-asserted-by": "publisher",
+      "first-page": "526",
+      "DOI": "10.1109/TBME.2020.3006508",
+      "volume": "68",
+      "author": "AK Clarke",
+      "year": "2020",
+      "unstructured": "Clarke, A. K. et al. Deep learning for robust decomposition of high-density surface EMG signals. IEEE Trans. Biomed. Eng. 68, 526\u2013534 (2020).",
+      "journal-title": "IEEE Trans. Biomed. Eng."
+    },
+    {
+      "key": "1836_CR8",
+      "doi-asserted-by": "publisher",
+      "first-page": "672",
+      "DOI": "10.3390/s20030672",
+      "volume": "20",
+      "author": "L Chen",
+      "year": "2020",
+      "unstructured": "Chen, L., Fu, J., Wu, Y., Li, H. & Zheng, B. Hand gesture recognition using compact CNN via surface electromyography signals. Sensors 20, 672 (2020).",
+      "journal-title": "Sensors"
+    },
+    {
+      "key": "1836_CR9",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Campbell, E., Phinyomark, A. & Scheme, E. Deep Cross-User Models Reduce the Training Burden in Myoelectric Control. Front. Neurosci. 15 (2021).",
+      "DOI": "10.3389/fnins.2021.657958"
+    },
+    {
+      "key": "1836_CR10",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Pradhan, A., He, J. & Jiang, N. Score, Rank, and Decision-Level Fusion Strategies of Multicode Electromyogram-based Verification and Identification Biometrics. IEEE J Biomed Health Inform (2021).",
+      "DOI": "10.1109/JBHI.2021.3109595"
+    },
+    {
+      "key": "1836_CR11",
+      "unstructured": "Benatti, S., Farella, E., Gruppioni, E. & Benini, L. in BIOSIGNALS. 45\u201354."
+    },
+    {
+      "key": "1836_CR12",
+      "unstructured": "Amma, C., Krings, T., B\u00f6er, J. & Schultz, T. in Proceedings of the 33rd Annual ACM Conference on Human Factors in Computing Systems. 929\u2013938."
+    },
+    {
+      "key": "1836_CR13",
+      "doi-asserted-by": "publisher",
+      "first-page": "1201",
+      "DOI": "10.3390/s20041201",
+      "volume": "20",
+      "author": "J Chen",
+      "year": "2020",
+      "unstructured": "Chen, J., Bi, S., Zhang, G. & Cao, G. High-density surface EMG-based gesture recognition using a 3D convolutional neural network. Sensors 20, 1201 (2020).",
+      "journal-title": "Sensors"
+    },
+    {
+      "key": "1836_CR14",
+      "doi-asserted-by": "publisher",
+      "first-page": "3548",
+      "DOI": "10.3390/s19163548",
+      "volume": "19",
+      "author": "P Kaczmarek",
+      "year": "2019",
+      "unstructured": "Kaczmarek, P., Ma\u0144kowski, T. & Tomczy\u0144ski, J. putEMG\u2014a surface electromyography hand gesture recognition dataset. Sensors 19, 3548 (2019).",
+      "journal-title": "Sensors"
+    },
+    {
+      "key": "1836_CR15",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Turgunov, A., Zohirov, K. & Muhtorov, B. in 2020 IEEE 14th International Conference on Application of Information and Communication Technologies (AICT). 1\u20134 (IEEE).",
+      "DOI": "10.1109/AICT50176.2020.9368735"
+    },
+    {
+      "key": "1836_CR16",
+      "doi-asserted-by": "publisher",
+      "first-page": "1035",
+      "DOI": "10.1109/TNSRE.2021.3082551",
+      "volume": "29",
+      "author": "X Jiang",
+      "year": "2021",
+      "unstructured": "Jiang, X. et al. Open Access Dataset, Toolbox and Benchmark Processing Results of High-Density Surface Electromyogram Recordings. IEEE Trans. Neural Syst. Rehabil. Eng. 29, 1035\u20131046 (2021).",
+      "journal-title": "IEEE Trans. Neural Syst. Rehabil. Eng."
+    },
+    {
+      "key": "1836_CR17",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Giordaniello, F. et al. in 2017 International Conference on Rehabilitation Robotics (ICORR). 1148\u20131153 (IEEE).",
+      "DOI": "10.1109/ICORR.2017.8009404"
+    },
+    {
+      "key": "1836_CR18",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Fang, Y., Zhang, X., Zhou, D. & Liu, H. Improve inter-day hand gesture recognition via convolutional neural network based feature fusion. Int J HR (2020).",
+      "DOI": "10.1142/S0219843620500255"
+    },
+    {
+      "key": "1836_CR19",
+      "doi-asserted-by": "publisher",
+      "first-page": "546",
+      "DOI": "10.1109/TNSRE.2021.3059741",
+      "volume": "29",
+      "author": "U C\u00f4t\u00e9-Allard",
+      "year": "2021",
+      "unstructured": "C\u00f4t\u00e9-Allard, U. et al. A transferable adaptive domain adversarial neural network for virtual reality augmented EMG-based gesture recognition. IEEE Trans. Neural Syst. Rehabil. Eng. 29, 546\u2013555 (2021).",
+      "journal-title": "IEEE Trans. Neural Syst. Rehabil. Eng."
+    },
+    {
+      "key": "1836_CR20",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.13026/701k-gs64",
+      "author": "N Jiang",
+      "year": "2017",
+      "unstructured": "Jiang, N., Pradhan, A. & He, J. Gesture Recognition and Biometrics ElectroMyogram (GRABMyo) (version 1.0.1). PhysioNet. https://doi.org/10.13026/701k-gs64 (2022)."
+    },
+    {
+      "key": "1836_CR21",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.21227/82v9-2b79",
+      "author": "A Pradhan",
+      "year": "2017",
+      "unstructured": "Pradhan, A., Jiang, N. & He, J. Gesture Recognition and Biometrics ElectroMyogram (GRABMyo) Dataset. IEEE Dataport https://doi.org/10.21227/82v9-2b79 (2022)."
+    },
+    {
+      "key": "1836_CR22",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Pradhan, A., He, J. & Jiang, N. Performance Optimization of Surface Electromyography based Biometric Sensing System for both Verification and Identification. IEEE Sens J. (2021).",
+      "DOI": "10.1109/JSEN.2021.3079428"
+    },
+    {
+      "key": "1836_CR23",
+      "doi-asserted-by": "publisher",
+      "first-page": "58",
+      "DOI": "10.3389/fbioe.2020.00058",
+      "volume": "8",
+      "author": "J He",
+      "year": "2020",
+      "unstructured": "He, J. & Jiang, N. Biometric From Surface Electromyogram (sEMG): Feasibility of User Verification and Identification Based on Gesture Recognition. Front Bioeng Biotechnol 8, 58 (2020).",
+      "journal-title": "Front Bioeng Biotechnol"
+    },
+    {
+      "key": "1836_CR24",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Goldberger, A. L. et al. PhysioBank, PhysioToolkit, and PhysioNet: components of a new research resource for complex physiologic signals. 101, e215\u2013e220 (2000).",
+      "DOI": "10.1161/01.CIR.101.23.e215"
+    },
+    {
+      "key": "1836_CR25",
+      "doi-asserted-by": "publisher",
+      "first-page": "174",
+      "DOI": "10.1109/TII.2020.3041618",
+      "volume": "18",
+      "author": "FS Botros",
+      "year": "2020",
+      "unstructured": "Botros, F. S., Phinyomark, A. & Scheme, E. Electromyography-based gesture recognition: Is it time to change focus from the forearm to the wrist? IEEE Trans Industr Inform 18, 174\u2013184 (2020).",
+      "journal-title": "IEEE Trans Industr Inform"
+    },
+    {
+      "key": "1836_CR26",
+      "doi-asserted-by": "publisher",
+      "first-page": "1803",
+      "DOI": "10.1152/jappl.1995.79.5.1803",
+      "volume": "79",
+      "author": "C Sinderby",
+      "year": "1995",
+      "unstructured": "Sinderby, C., Lindstrom, L. & Grassino, A. Automatic assessment of electromyogram quality. J. Appl. Physiol. 79, 1803\u20131815 (1995).",
+      "journal-title": "J. Appl. Physiol."
+    },
+    {
+      "key": "1836_CR27",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Shwedyk, E., Balasubramanian, R. & Scott, R. A nonstationary model for the electromyogram. IEEE Trans. Biomed. Eng., 417\u2013424 (1977).",
+      "DOI": "10.1109/TBME.1977.326175"
+    },
+    {
+      "key": "1836_CR28",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Fraser, G. D., Chan, A. D.,Green, J. R. & MacIsaac, D. T. in 2013 IEEE International Symposium on Medical Measurements and Applications (MeMeA). 196\u2013200 (IEEE).",
+      "DOI": "10.1109/MeMeA.2013.6549735"
+    },
+    {
+      "key": "1836_CR29",
+      "doi-asserted-by": "publisher",
+      "first-page": "82",
+      "DOI": "10.1109/10.204774",
+      "volume": "40",
+      "author": "B Hudgins",
+      "year": "1993",
+      "unstructured": "Hudgins, B., Parker, P. & Scott, R. N. A new strategy for multifunction myoelectric control. IEEE Trans. Biomed. Eng. 40, 82\u201394 (1993).",
+      "journal-title": "IEEE Trans. Biomed. Eng."
+    },
+    {
+      "key": "1836_CR30",
+      "unstructured": "Bolle, R. M., Connell, J. H., Pankanti, S., Ratha, N. K. & Senior, A. W. Guide to biometrics. (Springer Science & Business Media 2013)."
+    },
+    {
+      "key": "1836_CR31",
+      "doi-asserted-by": "publisher",
+      "first-page": "1",
+      "DOI": "10.1016/j.jelekin.2004.06.008",
+      "volume": "15",
+      "author": "D Staudenmann",
+      "year": "2005",
+      "unstructured": "Staudenmann, D., Kingma, I., Stegeman, D. F. & van Die\u00ebn, J. H. Towards optimal multi-channel EMG electrode configurations in muscle force estimation: a high density EMG study. J. Electromyogr. Kinesiol. 15, 1\u201311 (2005).",
+      "journal-title": "J. Electromyogr. Kinesiol."
+    },
+    {
+      "key": "1836_CR32",
+      "doi-asserted-by": "publisher",
+      "first-page": "1615",
+      "DOI": "10.3390/s18051615",
+      "volume": "18",
+      "author": "A Phinyomark",
+      "year": "2018",
+      "unstructured": "Phinyomark, A., N. Khushaba, R. & Scheme, E. Feature extraction and selection for myoelectric control based on wearable EMG sensors. Sensors 18, 1615 (2018).",
+      "journal-title": "Sensors"
+    },
+    {
+      "key": "1836_CR33",
+      "doi-asserted-by": "publisher",
+      "first-page": "101984",
+      "DOI": "10.1016/j.bspc.2020.101984",
+      "volume": "61",
+      "author": "A Pradhan",
+      "year": "2020",
+      "unstructured": "Pradhan, A., Jiang, N., Chester, V. & Kuruganti, U. Linear regression with frequency division technique for robust simultaneous and proportional myoelectric control during medium and high contraction-level variation. Biomed. Signal Process. Control 61, 101984 (2020).",
+      "journal-title": "Biomed. Signal Process. Control"
+    },
+    {
+      "key": "1836_CR34",
+      "doi-asserted-by": "publisher",
+      "first-page": "35",
+      "DOI": "10.1007/s00422-008-0278-1",
+      "volume": "100",
+      "author": "C Castellini",
+      "year": "2009",
+      "unstructured": "Castellini, C. & Van Der Smagt, P. Surface EMG in advanced hand prosthetics. Biol. Cybern. 100, 35\u201347 (2009).",
+      "journal-title": "Biol. Cybern."
+    },
+    {
+      "key": "1836_CR35",
+      "doi-asserted-by": "publisher",
+      "first-page": "177941",
+      "DOI": "10.1109/ACCESS.2020.3027497",
+      "volume": "8",
+      "author": "U C\u00f4t\u00e9-Allard",
+      "year": "2020",
+      "unstructured": "C\u00f4t\u00e9-Allard, U. et al. Unsupervised domain adversarial self-calibration for electromyography-based gesture recognition. IEEE Access 8, 177941\u2013177955 (2020).",
+      "journal-title": "IEEE Access"
+    },
+    {
+      "key": "1836_CR36",
+      "doi-asserted-by": "publisher",
+      "first-page": "158",
+      "DOI": "10.3389/fbioe.2020.00158",
+      "volume": "8",
+      "author": "U C\u00f4t\u00e9-Allard",
+      "year": "2020",
+      "unstructured": "C\u00f4t\u00e9-Allard, U. et al. Interpreting deep learning features for myoelectric control: A comparison with handcrafted features. Front Bioeng Biotechnol 8, 158 (2020).",
+      "journal-title": "Front Bioeng Biotechnol"
+    },
+    {
+      "key": "1836_CR37",
+      "doi-asserted-by": "publisher",
+      "first-page": "961",
+      "DOI": "10.1109/TNSRE.2015.2492619",
+      "volume": "24",
+      "author": "MM-C Vidovic",
+      "year": "2015",
+      "unstructured": "Vidovic, M. M.-C. et al. Improving the robustness of myoelectric pattern recognition for upper limb prostheses by covariate shift adaptation. IEEE Trans. Neural Syst. Rehabil. Eng. 24, 961\u2013970 (2015).",
+      "journal-title": "IEEE Trans. Neural Syst. Rehabil. Eng."
+    },
+    {
+      "key": "1836_CR38",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Kanoga, S. & Kanemura, A. in 2018 IEEE International Conference on Industrial Technology (ICIT). 1478\u20131483 (IEEE).",
+      "DOI": "10.1109/ICIT.2018.8352399"
+    },
+    {
+      "key": "1836_CR39",
+      "doi-asserted-by": "publisher",
+      "first-page": "122",
+      "DOI": "10.1016/j.neucom.2017.11.072",
+      "volume": "298",
+      "author": "B Paa\u00dfen",
+      "year": "2018",
+      "unstructured": "Paa\u00dfen, B., Schulz, A., Hahne, J. & Hammer, B. Expectation maximization transfer learning and its application for bionic hand prostheses. Neurocomputing 298, 122\u2013133 (2018).",
+      "journal-title": "Neurocomputing"
+    },
+    {
+      "key": "1836_CR40",
+      "doi-asserted-by": "publisher",
+      "first-page": "956",
+      "DOI": "10.1109/TNSRE.2019.2907200",
+      "volume": "27",
+      "author": "C Prahm",
+      "year": "2019",
+      "unstructured": "Prahm, C. et al. Counteracting electrode shifts in upper-limb prosthesis control via transfer learning. IEEE Trans. Neural Syst. Rehabil. Eng. 27, 956\u2013962 (2019).",
+      "journal-title": "IEEE Trans. Neural Syst. Rehabil. Eng."
+    }
+  ],
+  "container-title": [
+    "Scientific Data"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://www.nature.com/articles/s41597-022-01836-y.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://www.nature.com/articles/s41597-022-01836-y",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://www.nature.com/articles/s41597-022-01836-y.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2024,
+        10,
+        9
+      ]
+    ],
+    "date-time": "2024-10-09T14:16:52Z",
+    "timestamp": 1728483412000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.nature.com/articles/s41597-022-01836-y"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2022,
+        11,
+        30
+      ]
+    ]
+  },
+  "references-count": 40,
+  "journal-issue": {
+    "issue": "1",
+    "published-online": {
+      "date-parts": [
+        [
+          2022,
+          12
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "1836"
+  ],
+  "URL": "https://doi.org/10.1038/s41597-022-01836-y",
+  "relation": {
+    "references": [
+      {
+        "id-type": "doi",
+        "id": "10.13026/701k-gs64",
+        "asserted-by": "subject"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.21227/82v9-2b79",
+        "asserted-by": "subject"
+      }
+    ]
+  },
+  "ISSN": [
+    "2052-4463"
+  ],
+  "issn-type": [
+    {
+      "value": "2052-4463",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2022,
+        11,
+        30
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "29 July 2022",
+      "order": 1,
+      "name": "received",
+      "label": "Received",
+      "group": {
+        "name": "ArticleHistory",
+        "label": "Article History"
+      }
+    },
+    {
+      "value": "11 November 2022",
+      "order": 2,
+      "name": "accepted",
+      "label": "Accepted",
+      "group": {
+        "name": "ArticleHistory",
+        "label": "Article History"
+      }
+    },
+    {
+      "value": "30 November 2022",
+      "order": 3,
+      "name": "first_online",
+      "label": "First Online",
+      "group": {
+        "name": "ArticleHistory",
+        "label": "Article History"
+      }
+    },
+    {
+      "value": "The authors declare no competing interests.",
+      "order": 1,
+      "name": "Ethics",
+      "group": {
+        "name": "EthicsHeading",
+        "label": "Competing interests"
+      }
+    }
+  ],
+  "article-number": "733"
+}

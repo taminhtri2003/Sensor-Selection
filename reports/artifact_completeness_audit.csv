@@ -1,0 +1,13 @@
+artifact,path,status,detail
+P1 XGB,metrics/loso_full_channel_subject_metrics_xgb.csv,OK,rows=43 participants=43/43
+P1 SVM/RF,metrics/loso_full_channel_subject_metrics_svmrf.csv,OK,rows=86 participants=43/43; cells=2 each_n=[43]
+P2 scores,rankings/cross_fitted_scores.csv,OK,rows=688 participants=43/43; cells=43 each_n=[16]
+P2 rankings,rankings/cross_fitted_rankings.csv,OK,rows=172 participants=43/43
+P2 per-subject,rankings/per_subject_attribution.csv,OK,rows=28896 participants=43/43
+P3 curve,metrics/sparse_curve_subject_metrics.csv,OK,rows=2752 participants=43/43; cells=64 each_n=[43]
+P4 baselines,selection_baselines/selection_baseline_metrics.csv,OK,rows=1032 participants=43/43; cells=24 each_n=[43]; NaN present in numeric cols
+P7 cross-session,cross_session/cross_session_metrics.csv,OK,rows=172 participants=43/43; cells=4 each_n=[43]
+P8 faithfulness,faithfulness/deletion_curves.csv,OK,rows=774 participants=43/43; cells=18 each_n=[43]
+P9 DB5 full,db5/db5_full_channel_metrics.csv,OK,rows=10 participants=10/10
+P9 DB5 curve,db5/db5_sparse_curve.csv,OK,rows=160 participants=10/10; cells=16 each_n=[10]
+P9 DB5 rankings,db5/db5_rankings.csv,OK,rows=40 participants=10/10

@@ -1,0 +1,34 @@
+{
+  "main": {
+    "pages": 12,
+    "bytes": 5082113,
+    "sha256": "bcb2b5c11700c2101b28b21432d2832012850df9c12461cefbafeef97f808c29",
+    "unresolved_or_overflow_errors": [],
+    "all_pages_visually_inspected": true,
+    "layout_status": "PASS"
+  },
+  "supplementary": {
+    "pages": 13,
+    "bytes": 593631,
+    "sha256": "739a87c5d39c8ccf4d0dcf882f566d5f9de646bc6676337b40dfe58e4fae13d1",
+    "unresolved_or_overflow_errors": [],
+    "all_pages_visually_inspected": true,
+    "layout_status": "PASS"
+  },
+  "scientific_gate": {
+    "status": "PASS",
+    "checks": 4593
+  },
+  "current_macro_count": 499,
+  "tests": {
+    "passed": 53,
+    "failed": 0
+  },
+  "submission_ready": false,
+  "remaining_issues": [
+    "Supplied Figure 1 ring-label reversal and 3 cm versus documented 2 cm distance",
+    "Artwork must not imply demonstrated stability benefit",
+    "Pooled threshold and outer-outcome budget development exposure",
+    "Author declarations and permanent archive pending"
+  ]
+}

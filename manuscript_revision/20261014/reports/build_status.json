@@ -1,0 +1,11 @@
+{
+  "status": "compiled and visually accepted; author declarations remain pending",
+  "abstract_words": 216,
+  "pdfs": [
+    "manuscript/main.pdf",
+    "manuscript/supplementary.pdf"
+  ],
+  "strict_gate": "PASS",
+  "source_snapshot": "reproducibility/code",
+  "visual_acceptance": "reports/visual_acceptance.json"
+}

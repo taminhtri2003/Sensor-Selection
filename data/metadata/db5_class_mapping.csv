@@ -1,0 +1,131 @@
+subject,exercise,movement_id,movement_name,n_samples,duration_s
+s1,E1,0,Rest,80595,403.0
+s1,E1,1,Thumb up,5055,25.3
+s1,E1,2,"Extension of index and middle, flexion of the others",3865,19.3
+s1,E1,3,"Flexion of ring and little finger, extension of the others",4377,21.9
+s1,E1,4,Thumb opposing base of little finger,4241,21.2
+s1,E1,5,Abduction of all fingers,4148,20.7
+s1,E1,6,Fingers flexed together in fist,4430,22.1
+s1,E1,7,Pointing index,4459,22.3
+s1,E1,8,Adduction of extended fingers,4767,23.8
+s1,E1,9,Wrist supination (axis: middle finger),3593,18.0
+s1,E1,10,Wrist pronation (axis: middle finger),2998,15.0
+s1,E1,11,Wrist supination (axis: little finger),3928,19.6
+s1,E1,12,Wrist pronation (axis: little finger),3811,19.1
+s2,E1,0,Rest,86426,432.1
+s2,E1,1,Thumb up,5251,26.3
+s2,E1,2,"Extension of index and middle, flexion of the others",5380,26.9
+s2,E1,3,"Flexion of ring and little finger, extension of the others",6057,30.3
+s2,E1,4,Thumb opposing base of little finger,5453,27.3
+s2,E1,5,Abduction of all fingers,5579,27.9
+s2,E1,6,Fingers flexed together in fist,5319,26.6
+s2,E1,7,Pointing index,6479,32.4
+s2,E1,8,Adduction of extended fingers,5095,25.5
+s2,E1,9,Wrist supination (axis: middle finger),4160,20.8
+s2,E1,10,Wrist pronation (axis: middle finger),4496,22.5
+s2,E1,11,Wrist supination (axis: little finger),4087,20.4
+s2,E1,12,Wrist pronation (axis: little finger),4585,22.9
+s3,E1,0,Rest,83315,416.6
+s3,E1,1,Thumb up,4429,22.1
+s3,E1,2,"Extension of index and middle, flexion of the others",3803,19.0
+s3,E1,3,"Flexion of ring and little finger, extension of the others",4792,24.0
+s3,E1,4,Thumb opposing base of little finger,3981,19.9
+s3,E1,5,Abduction of all fingers,4433,22.2
+s3,E1,6,Fingers flexed together in fist,3993,20.0
+s3,E1,7,Pointing index,4318,21.6
+s3,E1,8,Adduction of extended fingers,3262,16.3
+s3,E1,9,Wrist supination (axis: middle finger),3718,18.6
+s3,E1,10,Wrist pronation (axis: middle finger),3472,17.4
+s3,E1,11,Wrist supination (axis: little finger),4020,20.1
+s3,E1,12,Wrist pronation (axis: little finger),3830,19.1
+s4,E1,0,Rest,92222,461.1
+s4,E1,1,Thumb up,6352,31.8
+s4,E1,2,"Extension of index and middle, flexion of the others",4727,23.6
+s4,E1,3,"Flexion of ring and little finger, extension of the others",5112,25.6
+s4,E1,4,Thumb opposing base of little finger,4010,20.1
+s4,E1,5,Abduction of all fingers,4211,21.1
+s4,E1,6,Fingers flexed together in fist,4645,23.2
+s4,E1,7,Pointing index,5023,25.1
+s4,E1,8,Adduction of extended fingers,4530,22.6
+s4,E1,9,Wrist supination (axis: middle finger),5013,25.1
+s4,E1,10,Wrist pronation (axis: middle finger),6605,33.0
+s4,E1,11,Wrist supination (axis: little finger),4276,21.4
+s4,E1,12,Wrist pronation (axis: little finger),4938,24.7
+s5,E1,0,Rest,98727,493.6
+s5,E1,1,Thumb up,4647,23.2
+s5,E1,2,"Extension of index and middle, flexion of the others",3554,17.8
+s5,E1,3,"Flexion of ring and little finger, extension of the others",5866,29.3
+s5,E1,4,Thumb opposing base of little finger,3447,17.2
+s5,E1,5,Abduction of all fingers,4365,21.8
+s5,E1,6,Fingers flexed together in fist,4307,21.5
+s5,E1,7,Pointing index,4677,23.4
+s5,E1,8,Adduction of extended fingers,4675,23.4
+s5,E1,9,Wrist supination (axis: middle finger),3547,17.7
+s5,E1,10,Wrist pronation (axis: middle finger),3244,16.2
+s5,E1,11,Wrist supination (axis: little finger),3496,17.5
+s5,E1,12,Wrist pronation (axis: little finger),3974,19.9
+s6,E1,0,Rest,88379,441.9
+s6,E1,1,Thumb up,6629,33.1
+s6,E1,2,"Extension of index and middle, flexion of the others",4605,23.0
+s6,E1,3,"Flexion of ring and little finger, extension of the others",5816,29.1
+s6,E1,4,Thumb opposing base of little finger,4482,22.4
+s6,E1,5,Abduction of all fingers,6108,30.5
+s6,E1,6,Fingers flexed together in fist,5936,29.7
+s6,E1,7,Pointing index,6610,33.0
+s6,E1,8,Adduction of extended fingers,5107,25.5
+s6,E1,9,Wrist supination (axis: middle finger),4014,20.1
+s6,E1,10,Wrist pronation (axis: middle finger),4563,22.8
+s6,E1,11,Wrist supination (axis: little finger),4198,21.0
+s6,E1,12,Wrist pronation (axis: little finger),5346,26.7
+s7,E1,0,Rest,96214,481.1
+s7,E1,1,Thumb up,5810,29.1
+s7,E1,2,"Extension of index and middle, flexion of the others",3872,19.4
+s7,E1,3,"Flexion of ring and little finger, extension of the others",4646,23.2
+s7,E1,4,Thumb opposing base of little finger,4302,21.5
+s7,E1,5,Abduction of all fingers,4579,22.9
+s7,E1,6,Fingers flexed together in fist,4576,22.9
+s7,E1,7,Pointing index,5419,27.1
+s7,E1,8,Adduction of extended fingers,4393,22.0
+s7,E1,9,Wrist supination (axis: middle finger),4424,22.1
+s7,E1,10,Wrist pronation (axis: middle finger),4913,24.6
+s7,E1,11,Wrist supination (axis: little finger),3824,19.1
+s7,E1,12,Wrist pronation (axis: little finger),4234,21.2
+s8,E1,0,Rest,95019,475.1
+s8,E1,1,Thumb up,7660,38.3
+s8,E1,2,"Extension of index and middle, flexion of the others",3481,17.4
+s8,E1,3,"Flexion of ring and little finger, extension of the others",4190,20.9
+s8,E1,4,Thumb opposing base of little finger,3349,16.7
+s8,E1,5,Abduction of all fingers,4031,20.2
+s8,E1,6,Fingers flexed together in fist,4169,20.8
+s8,E1,7,Pointing index,4975,24.9
+s8,E1,8,Adduction of extended fingers,4790,23.9
+s8,E1,9,Wrist supination (axis: middle finger),3532,17.7
+s8,E1,10,Wrist pronation (axis: middle finger),5472,27.4
+s8,E1,11,Wrist supination (axis: little finger),3010,15.1
+s8,E1,12,Wrist pronation (axis: little finger),4124,20.6
+s9,E1,0,Rest,95702,478.5
+s9,E1,1,Thumb up,5597,28.0
+s9,E1,2,"Extension of index and middle, flexion of the others",4384,21.9
+s9,E1,3,"Flexion of ring and little finger, extension of the others",5782,28.9
+s9,E1,4,Thumb opposing base of little finger,3033,15.2
+s9,E1,5,Abduction of all fingers,3224,16.1
+s9,E1,6,Fingers flexed together in fist,5100,25.5
+s9,E1,7,Pointing index,4719,23.6
+s9,E1,8,Adduction of extended fingers,3709,18.5
+s9,E1,9,Wrist supination (axis: middle finger),3161,15.8
+s9,E1,10,Wrist pronation (axis: middle finger),6599,33.0
+s9,E1,11,Wrist supination (axis: little finger),3407,17.0
+s9,E1,12,Wrist pronation (axis: little finger),3703,18.5
+s10,E1,0,Rest,88797,444.0
+s10,E1,1,Thumb up,6474,32.4
+s10,E1,2,"Extension of index and middle, flexion of the others",4479,22.4
+s10,E1,3,"Flexion of ring and little finger, extension of the others",6527,32.6
+s10,E1,4,Thumb opposing base of little finger,5032,25.2
+s10,E1,5,Abduction of all fingers,6079,30.4
+s10,E1,6,Fingers flexed together in fist,5011,25.1
+s10,E1,7,Pointing index,6510,32.5
+s10,E1,8,Adduction of extended fingers,5148,25.7
+s10,E1,9,Wrist supination (axis: middle finger),3742,18.7
+s10,E1,10,Wrist pronation (axis: middle finger),4832,24.2
+s10,E1,11,Wrist supination (axis: little finger),3434,17.2
+s10,E1,12,Wrist pronation (axis: little finger),3854,19.3

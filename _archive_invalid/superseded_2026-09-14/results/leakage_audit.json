@@ -1,0 +1,35 @@
+{
+  "stage_1_feature_thresholds": {
+    "status": "PASS",
+    "details": "Thresholds are fixed numerical constants (10 uV) applied uniformly without fitting to any participant data."
+  },
+  "stage_2_normalization_scaler": {
+    "status": "PASS",
+    "details": "Per-fold z-score parameters (mu, sd) are computed strictly on outer training participants (R_{-p}) and applied transform-only to test participant p."
+  },
+  "stage_3_inner_cross_fitted_shap": {
+    "status": "PASS",
+    "details": "Held-out test participant p is masked out before inner GroupKFold splits. Attribution is computed out-of-fold across inner training subjects only."
+  },
+  "stage_4_channel_ranking_selection": {
+    "status": "PASS",
+    "details": "Channel ranking R_{-p} is derived strictly from outer-training subjects. Participant p's data is never seen during ranking."
+  },
+  "stage_5_lambda_regularization": {
+    "status": "PASS",
+    "details": "Lambda = 0.50 was pre-specified in frozen_analysis_plan.yaml on 2026-08-12, not tuned on test fold performance."
+  },
+  "stage_6_model_retraining": {
+    "status": "PASS",
+    "details": "Classifier is trained from scratch on top-k selected channels using only outer training data."
+  },
+  "stage_7_longitudinal_directionality": {
+    "status": "PASS",
+    "details": "CS1 trains exclusively on Session 1 and evaluates on Sessions 1, 2, 3. CS2 trains on Sessions 1+2 and evaluates on Session 3."
+  },
+  "stage_8_statistical_unit_participant": {
+    "status": "PASS",
+    "details": "Statistical unit is strictly the participant (N=43 on GRABMyo, N=10 on NinaPro DB5), preserving within-subject correlation."
+  },
+  "overall_verdict": "ZERO_LEAKAGE_VERIFIED"
+}

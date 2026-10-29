@@ -1,0 +1,45 @@
+macro,value,source,detail
+RevDBFiveBandLow,10,manuscript_revision\20261014\reports\db5_feature_chain.json,effective_low_hz verified by complete raw reconstruction
+RevDBFiveBandHigh,89,manuscript_revision\20261014\reports\db5_feature_chain.json,effective_high_hz verified by complete raw reconstruction
+RevDBFiveBandRequestedHigh,95,manuscript_revision\20261014\reports\db5_feature_chain.json,requested_high_hz verified by complete raw reconstruction
+RevDBFiveFeatureRows,21089,manuscript_revision\20261014\reports\db5_feature_chain.json,windows verified by complete raw reconstruction
+RevShapDelta,-0.0133,manuscript_revision\20261014\experiments\statistics\primary_matched_noninferiority.csv,shap12 mean_diff
+RevShapLow,-0.0160,manuscript_revision\20261014\experiments\statistics\primary_matched_noninferiority.csv,shap12 lcb95
+RevShapHigh,-0.0106,manuscript_revision\20261014\experiments\statistics\primary_matched_noninferiority.csv,shap12 ucb95
+RevShapMean,0.528,manuscript_revision\20261014\experiments\primary_predictions\participant_metrics.csv,shap12 participant mean
+RevGeomDelta,-0.0193,manuscript_revision\20261014\experiments\statistics\primary_matched_noninferiority.csv,geom12 mean_diff
+RevGeomLow,-0.0254,manuscript_revision\20261014\experiments\statistics\primary_matched_noninferiority.csv,geom12 lcb95
+RevGeomHigh,-0.0132,manuscript_revision\20261014\experiments\statistics\primary_matched_noninferiority.csv,geom12 ucb95
+RevGeomMean,0.522,manuscript_revision\20261014\experiments\primary_predictions\participant_metrics.csv,geom12 participant mean
+RevPrimaryFull,0.541,manuscript_revision\20261014\experiments\primary_predictions\participant_metrics.csv,full16 participant mean
+RevGeomContrast,+0.0060,manuscript_revision\20261014\experiments\statistics\primary_selection_comparison.csv,mean_diff
+RevGeomContrastLow,-0.0010,manuscript_revision\20261014\experiments\statistics\primary_selection_comparison.csv,lcb95
+RevGeomContrastHigh,+0.0127,manuscript_revision\20261014\experiments\statistics\primary_selection_comparison.csv,ucb95
+RevGeomContrastP,0.024,manuscript_revision\20261014\experiments\statistics\primary_selection_comparison.csv,nominal Wilcoxon p
+RevLossCount,11,manuscript_revision\20261014\experiments\statistics\participant_degradation_summary.json,n_loss_over_margin002
+RevImprovedCount,1,manuscript_revision\20261014\experiments\statistics\participant_degradation_summary.json,n_improved
+RevWorstParticipant,27,manuscript_revision\20261014\experiments\statistics\participant_degradation_summary.json,worst_participant_id
+RevMedianLoss,-0.0125,manuscript_revision\20261014\experiments\statistics\participant_degradation_summary.json,median
+RevWorstLoss,-0.0361,manuscript_revision\20261014\experiments\statistics\participant_degradation_summary.json,min
+RevBestChange,+0.0144,manuscript_revision\20261014\experiments\statistics\participant_degradation_summary.json,max
+RevLossSD,+0.0093,manuscript_revision\20261014\experiments\statistics\participant_degradation_summary.json,sd
+RevGestureLossCount,4,manuscript_revision\20261014\experiments\statistics\gesture_degradation.csv,Holm over sixteen paired gesture contrasts
+RevWorstGestureDelta,-0.0456,manuscript_revision\20261014\experiments\statistics\gesture_degradation.csv,largest mean gesture loss
+RevWorstGestureLow,-0.0594,manuscript_revision\20261014\experiments\statistics\gesture_degradation.csv,largest mean gesture loss lower CI
+RevWorstGestureHigh,-0.0323,manuscript_revision\20261014\experiments\statistics\gesture_degradation.csv,largest mean gesture loss upper CI
+RevMatchedSixDiff,+0.0309,manuscript_revision\20261014\experiments\statistics\matched_budget_comparisons.csv,k=6 mean_diff
+RevMatchedSixLow,+0.0211,manuscript_revision\20261014\experiments\statistics\matched_budget_comparisons.csv,k=6 lcb95
+RevMatchedSixHigh,+0.0410,manuscript_revision\20261014\experiments\statistics\matched_budget_comparisons.csv,k=6 ucb95
+RevMatchedSixP,< 0.001,manuscript_revision\20261014\experiments\statistics\matched_budget_comparisons.csv,k=6 p_holm
+RevMatchedTwelveDiff,+0.0002,manuscript_revision\20261014\experiments\statistics\matched_budget_comparisons.csv,k=12 mean_diff
+RevMatchedTwelveLow,-0.0029,manuscript_revision\20261014\experiments\statistics\matched_budget_comparisons.csv,k=12 lcb95
+RevMatchedTwelveHigh,+0.0034,manuscript_revision\20261014\experiments\statistics\matched_budget_comparisons.csv,k=12 ucb95
+RevMatchedTwelveP,= 0.976,manuscript_revision\20261014\experiments\statistics\matched_budget_comparisons.csv,k=12 p_holm
+RevPenaltyBenefitCount,0,manuscript_revision\20261014\experiments\statistics\extension_penalty.csv,corrected positive contrasts out of twelve
+RevPenaltyHarmCount,0,manuscript_revision\20261014\experiments\statistics\extension_penalty.csv,corrected negative contrasts out of twelve
+RevCostTraining,117.1,manuscript_revision\20261014\experiments\statistics\matched_budget_cost_summary.csv,mean measured seconds per outer fold; shared training counted once
+RevCostShap,4.0,manuscript_revision\20261014\experiments\statistics\matched_budget_cost_summary.csv,mean measured seconds per outer fold; shared training counted once
+RevCostPermutation,10.6,manuscript_revision\20261014\experiments\statistics\matched_budget_cost_summary.csv,mean measured seconds per outer fold; shared training counted once
+RevFixedSwapSeedHits,90,manuscript_revision\20261014\experiments\fixed_layout_seed_diagnostic\summary.csv,n_pass for reverse fixed layout
+RevFixedSwapSeedN,200,manuscript_revision\20261014\experiments\fixed_layout_seed_diagnostic\summary.csv,n_seeds for reverse fixed layout
+RevFixedSwapSeedPercent,45,manuscript_revision\20261014\experiments\fixed_layout_seed_diagnostic\summary.csv,"percentage of seed reruns passing, not probability of NI"

@@ -1,0 +1,407 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        2,
+        13
+      ]
+    ],
+    "date-time": "2026-02-13T23:47:40Z",
+    "timestamp": 1771026460168,
+    "version": "3.50.1"
+  },
+  "reference-count": 25,
+  "publisher": "Wiley",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2021,
+            5,
+            27
+          ]
+        ],
+        "date-time": "2021-05-27T00:00:00Z",
+        "timestamp": 1622073600000
+      },
+      "content-version": "unspecified",
+      "delay-in-days": 0,
+      "URL": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/501100007129",
+      "name": "Natural Science Foundation of Shandong Province",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "ZR2020MF086"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "ZR2020MF086"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/501100007129",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Journal of Healthcare Engineering"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2021,
+        5,
+        27
+      ]
+    ]
+  },
+  "abstract": "<jats:p>Surface electromyography- (sEMG-) based gesture recognition is widely used in rehabilitation training, artificial prosthesis, and human-computer interaction. The purpose of this study is to simplify the sEMG devices by reducing channels while achieving comparably high gesture recognition accuracy. We propose a compound channel selection scheme by combining the variable selection algorithms based on multitask sparse representation (MTSR) and minimum Redundancy Maximum Relevance (mRMR). Specifically, channelwise features are first extracted to compose channel-feature paired variables, for which variable selection procedures by MTSR and mRMR are carried out, respectively. Then, we rank all the channels according to their occurrences in each variable selection procedure and figure out a certain number of informative channels by fusing these rankings of channels. Finally, the gesture classification performance using the selected channels is evaluated by the support vector machine (SVM) classifier. Experiment results validate the effectiveness of this proposed method.</jats:p>",
+  "DOI": "10.1155/2021/9929684",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2021,
+        5,
+        28
+      ]
+    ],
+    "date-time": "2021-05-28T19:38:16Z",
+    "timestamp": 1622230696000
+  },
+  "page": "1-9",
+  "source": "Crossref",
+  "is-referenced-by-count": 11,
+  "title": [
+    "Reduce Surface Electromyography Channels for Gesture Recognition by Multitask Sparse Representation and Minimum Redundancy Maximum Relevance"
+  ],
+  "prefix": "10.1155",
+  "volume": "2021",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0001-5929-0274",
+      "authenticated-orcid": true,
+      "given": "Yali",
+      "family": "Qu",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "College of Electronic and Information Engineering, Shandong University of Science and Technology, Qingdao, China"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-4770-1667",
+      "authenticated-orcid": true,
+      "given": "Haoyan",
+      "family": "Shang",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "College of Electronic and Information Engineering, Shandong University of Science and Technology, Qingdao, China"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-9209-5937",
+      "authenticated-orcid": true,
+      "given": "Jing",
+      "family": "Li",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "College of Electronic and Information Engineering, Shandong University of Science and Technology, Qingdao, China"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-5345-620X",
+      "authenticated-orcid": true,
+      "given": "Shenghua",
+      "family": "Teng",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "College of Electronic and Information Engineering, Shandong University of Science and Technology, Qingdao, China"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "311",
+  "reference": [
+    {
+      "issue": "8",
+      "key": "1",
+      "doi-asserted-by": "crossref",
+      "first-page": "773",
+      "DOI": "10.1007/s11517-010-0629-7",
+      "article-title": "Multiscale entropy-based approach to automated surface EMG classification of neuromuscular disorders",
+      "volume": "48",
+      "author": "P. A. Kaplanis",
+      "year": "2010",
+      "journal-title": "Medical & Biological Engineering & Computing"
+    },
+    {
+      "key": "2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s10916-008-9244-7"
+    },
+    {
+      "key": "3",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1080/03091902.2019.1576793"
+    },
+    {
+      "key": "4",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1186/s12984-017-0284-4"
+    },
+    {
+      "key": "5",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1186/1743-0003-9-85"
+    },
+    {
+      "key": "6",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.medengphy.2008.05.006"
+    },
+    {
+      "key": "7",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/1050-6411(94)90023-x"
+    },
+    {
+      "key": "8",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.eswa.2012.01.102"
+    },
+    {
+      "key": "9",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s40846-016-0188-y"
+    },
+    {
+      "key": "10",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.3390/s18051615"
+    },
+    {
+      "key": "11",
+      "first-page": "5214",
+      "article-title": "Development of the hand motion recognition system based on surface EMG using suitable measurement channels for pattern recognition",
+      "author": "K. Nagata"
+    },
+    {
+      "key": "12",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/TNSRE.2007.910282"
+    },
+    {
+      "key": "13",
+      "first-page": "5182",
+      "article-title": "Channel and feature selection in multifunction myoelectric control",
+      "author": "R. N. Khushaba"
+    },
+    {
+      "key": "14",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1504/ijbbr.2013.058708"
+    },
+    {
+      "key": "15",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/TPAMI.2005.159"
+    },
+    {
+      "key": "16",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.medengphy.2014.04.003"
+    },
+    {
+      "key": "17",
+      "first-page": "1",
+      "article-title": "Channel selection in multi-channel surface electromyogram based hand activity classifier",
+      "author": "R. Gupta"
+    },
+    {
+      "key": "18",
+      "first-page": "215",
+      "article-title": "Reduce sEMG channels for hand gesture recognition",
+      "author": "Y. Qu"
+    },
+    {
+      "key": "19",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.eswa.2014.03.014"
+    },
+    {
+      "key": "20",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.bspc.2016.01.011"
+    },
+    {
+      "key": "21",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s10994-007-5040-8"
+    },
+    {
+      "key": "22",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-319-10581-9_20"
+    },
+    {
+      "key": "23",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s11682-015-9437-x"
+    },
+    {
+      "key": "24",
+      "article-title": "Myoelectric control development toolbox",
+      "author": "A. D. Chan"
+    },
+    {
+      "key": "25",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1961189.1961199"
+    }
+  ],
+  "container-title": [
+    "Journal of Healthcare Engineering"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "http://downloads.hindawi.com/journals/jhe/2021/9929684.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "http://downloads.hindawi.com/journals/jhe/2021/9929684.xml",
+      "content-type": "application/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "http://downloads.hindawi.com/journals/jhe/2021/9929684.pdf",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2021,
+        5,
+        28
+      ]
+    ],
+    "date-time": "2021-05-28T19:38:20Z",
+    "timestamp": 1622230700000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.hindawi.com/journals/jhe/2021/9929684/"
+    }
+  },
+  "subtitle": [],
+  "editor": [
+    {
+      "given": "G R",
+      "family": "Sinha",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "editor",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2021,
+        5,
+        27
+      ]
+    ]
+  },
+  "references-count": 25,
+  "alternative-id": [
+    "9929684",
+    "9929684"
+  ],
+  "URL": "https://doi.org/10.1155/2021/9929684",
+  "relation": {},
+  "ISSN": [
+    "2040-2309",
+    "2040-2295"
+  ],
+  "issn-type": [
+    {
+      "value": "2040-2309",
+      "type": "electronic"
+    },
+    {
+      "value": "2040-2295",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2021,
+        5,
+        27
+      ]
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+expected records: 15351
+  500/15351  ok=500  windows=9500
+  1000/15351  ok=1000  windows=19000
+  1500/15351  ok=1500  windows=28500
+  2000/15351  ok=2000  windows=38000
+  2500/15351  ok=2500  windows=47500
+  3000/15351  ok=3000  windows=57000
+  3500/15351  ok=3500  windows=66500
+  4000/15351  ok=4000  windows=76000
+  4500/15351  ok=4500  windows=85500
+  5000/15351  ok=5000  windows=95000
+  5500/15351  ok=5500  windows=104500
+  6000/15351  ok=6000  windows=114000
+  6500/15351  ok=6500  windows=123500
+  7000/15351  ok=7000  windows=133000
+  7500/15351  ok=7500  windows=142500
+  8000/15351  ok=8000  windows=152000
+  8500/15351  ok=8500  windows=161500
+  9000/15351  ok=9000  windows=171000
+  9500/15351  ok=9500  windows=180500
+  10000/15351  ok=10000  windows=190000
+  10500/15351  ok=10500  windows=199500
+  11000/15351  ok=11000  windows=209000
+  11500/15351  ok=11500  windows=218500
+  12000/15351  ok=12000  windows=228000
+  12500/15351  ok=12500  windows=237500
+  13000/15351  ok=13000  windows=247000
+  13500/15351  ok=13500  windows=256500
+  14000/15351  ok=14000  windows=266000
+  14500/15351  ok=14500  windows=275500
+  15000/15351  ok=15000  windows=285000
+
+status: {'OK': 15351}
+windows=291669 participants=43 sessions=[np.int32(1), np.int32(2), np.int32(3)] gestures=17
+
+COHORT ASSERTION PASSED

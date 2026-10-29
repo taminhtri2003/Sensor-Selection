@@ -1,0 +1,405 @@
+macro,value,source,detail
+GRABMyoParticipants,43,data/features/grabmyo_extraction_qc.csv,
+GRABMyoSessions,3,data/features/grabmyo_extraction_qc.csv,
+GRABMyoGestures,17,data/features/grabmyo_extraction_qc.csv,incl. rest
+GRABMyoActiveGestures,16,data/features/grabmyo_extraction_qc.csv,rest excluded
+GRABMyoWindows,"598{,}689",data/features/grabmyo_extraction_qc.csv,
+GRABMyoRecords,"15{,}351",data/features/grabmyo_extraction_qc.csv,
+GRABMyoRecordsFailed,0,data/features/grabmyo_extraction_qc.csv,
+GRABMyoAgeMean,26.4,subject-info.csv,
+GRABMyoAgeSD,2.9,subject-info.csv,
+GRABMyoMale,23,subject-info.csv,
+GRABMyoFemale,20,subject-info.csv,
+GRABMyoCircMean,24.1,subject-info.csv,cm
+GRABMyoCircSD,2.3,subject-info.csv,cm
+GRABMyoArcSpacing,3.0,subject-info.csv,"mean circumference / 8, cm"
+GRABMyoActiveWindows,"563{,}472",data/cache/loso_y.npy,16 active gestures
+FoldTrainingWindows,"550{,}368",data/cache/loso_subj.npy,range 550368-550368
+TestWindowsPerParticipant,"13{,}104",data/cache/loso_subj.npy,median
+DBFiveSubjects,10,data/metadata/db5_subject_info.csv,
+DBFiveAgeMean,28.0,data/metadata/db5_subject_info.csv,
+DBFiveAgeSD,4.0,data/metadata/db5_subject_info.csv,
+DBFiveMale,8,data/metadata/db5_subject_info.csv,
+DBFiveFemale,2,data/metadata/db5_subject_info.csv,
+DBFiveWindows,"21{,}089",data/features/db5_extraction_qc.csv,
+GRABMyoFilesVerified,"30{,}715",data/manifests/grabmyo_integrity.csv,
+FullRF,0.502,artifacts/statistics/master_statistics.csv,M_RandomForest estimate
+FullRFLCB,0.475,artifacts/statistics/master_statistics.csv,M_RandomForest lcb95
+FullRFUCB,0.528,artifacts/statistics/master_statistics.csv,M_RandomForest ucb95
+FullRFSD,0.090,artifacts/statistics/master_statistics.csv,M_RandomForest sd
+FullRFMin,0.346,artifacts/statistics/master_statistics.csv,M_RandomForest min
+FullRFMax,0.670,artifacts/statistics/master_statistics.csv,M_RandomForest max
+FullSVM,0.538,artifacts/statistics/master_statistics.csv,M_SVM estimate
+FullSVMLCB,0.513,artifacts/statistics/master_statistics.csv,M_SVM lcb95
+FullSVMUCB,0.562,artifacts/statistics/master_statistics.csv,M_SVM ucb95
+FullSVMSD,0.085,artifacts/statistics/master_statistics.csv,M_SVM sd
+FullSVMMin,0.383,artifacts/statistics/master_statistics.csv,M_SVM min
+FullSVMMax,0.718,artifacts/statistics/master_statistics.csv,M_SVM max
+FullXGB,0.542,artifacts/statistics/master_statistics.csv,M_XGBoost estimate
+FullXGBLCB,0.517,artifacts/statistics/master_statistics.csv,M_XGBoost lcb95
+FullXGBUCB,0.567,artifacts/statistics/master_statistics.csv,M_XGBoost ucb95
+FullXGBSD,0.085,artifacts/statistics/master_statistics.csv,M_XGBoost sd
+FullXGBMin,0.385,artifacts/statistics/master_statistics.csv,M_XGBoost min
+FullXGBMax,0.702,artifacts/statistics/master_statistics.csv,M_XGBoost max
+KStarMarginPtOne,14,artifacts/statistics/master_statistics.csv,margin 0.01; identical for all four lambda
+KStarMarginPtTwo,12,artifacts/statistics/master_statistics.csv,margin 0.02; identical for all four lambda
+KStarMarginPtThree,11,artifacts/statistics/master_statistics.csv,margin 0.03; identical for all four lambda
+KStar,12,artifacts/statistics/master_statistics.csv,primary margin 0.02
+KStarReductionPct,25,artifacts/statistics/master_statistics.csv,(16-k*)/16
+SVMvsRFDiff,+0.0362,artifacts/statistics/model_comparisons.csv,SVM minus RF
+SVMvsRFLCB,+0.0284,artifacts/statistics/model_comparisons.csv,
+SVMvsRFUCB,+0.0444,artifacts/statistics/model_comparisons.csv,
+SVMvsRFW,15.0,artifacts/statistics/model_comparisons.csv,
+SVMvsRFP,< 0.001,artifacts/statistics/model_comparisons.csv,Holm
+SVMvsRFR,+0.97,artifacts/statistics/model_comparisons.csv,rank-biserial
+XGBvsRFDiff,+0.0408,artifacts/statistics/model_comparisons.csv,XGB minus RF
+XGBvsRFLCB,+0.0340,artifacts/statistics/model_comparisons.csv,
+XGBvsRFUCB,+0.0475,artifacts/statistics/model_comparisons.csv,
+XGBvsRFW,10.0,artifacts/statistics/model_comparisons.csv,
+XGBvsRFP,< 0.001,artifacts/statistics/model_comparisons.csv,Holm
+XGBvsRFR,+0.98,artifacts/statistics/model_comparisons.csv,rank-biserial
+XGBvsSVMDiff,+0.0045,artifacts/statistics/model_comparisons.csv,XGB minus SVM
+XGBvsSVMLCB,-0.0015,artifacts/statistics/model_comparisons.csv,
+XGBvsSVMUCB,+0.0107,artifacts/statistics/model_comparisons.csv,
+XGBvsSVMW,354.0,artifacts/statistics/model_comparisons.csv,
+XGBvsSVMP,= 0.154,artifacts/statistics/model_comparisons.csv,Holm
+XGBvsSVMR,+0.25,artifacts/statistics/model_comparisons.csv,rank-biserial
+SVMCalibTwentyK,0.555,artifacts/metrics/budget_calibration.csv,single fold (participant 1)
+SVMCalibFortyK,0.591,artifacts/metrics/budget_calibration.csv,single fold (participant 1)
+CurveKSixteen,0.541,artifacts/metrics/sparse_curve_subject_metrics.csv,lambda=0 mean
+CurveKSixteenSD,0.084,artifacts/metrics/sparse_curve_subject_metrics.csv,
+CurveKFourteen,0.535,artifacts/metrics/sparse_curve_subject_metrics.csv,lambda=0 mean
+CurveKFourteenSD,0.083,artifacts/metrics/sparse_curve_subject_metrics.csv,
+DeltaKFourteen,-0.0060,artifacts/statistics/non_inferiority_by_k.csv,vs k=16 curve ref
+DeltaKFourteenLCB,-0.0081,artifacts/statistics/non_inferiority_by_k.csv,
+DeltaKFourteenUCB,-0.0039,artifacts/statistics/non_inferiority_by_k.csv,
+CurveKThirteen,0.530,artifacts/metrics/sparse_curve_subject_metrics.csv,lambda=0 mean
+CurveKThirteenSD,0.083,artifacts/metrics/sparse_curve_subject_metrics.csv,
+DeltaKThirteen,-0.0109,artifacts/statistics/non_inferiority_by_k.csv,vs k=16 curve ref
+DeltaKThirteenLCB,-0.0132,artifacts/statistics/non_inferiority_by_k.csv,
+DeltaKThirteenUCB,-0.0085,artifacts/statistics/non_inferiority_by_k.csv,
+CurveKTwelve,0.528,artifacts/metrics/sparse_curve_subject_metrics.csv,lambda=0 mean
+CurveKTwelveSD,0.084,artifacts/metrics/sparse_curve_subject_metrics.csv,
+DeltaKTwelve,-0.0132,artifacts/statistics/non_inferiority_by_k.csv,vs k=16 curve ref
+DeltaKTwelveLCB,-0.0160,artifacts/statistics/non_inferiority_by_k.csv,
+DeltaKTwelveUCB,-0.0105,artifacts/statistics/non_inferiority_by_k.csv,
+CurveKEleven,0.521,artifacts/metrics/sparse_curve_subject_metrics.csv,lambda=0 mean
+CurveKElevenSD,0.084,artifacts/metrics/sparse_curve_subject_metrics.csv,
+DeltaKEleven,-0.0202,artifacts/statistics/non_inferiority_by_k.csv,vs k=16 curve ref
+DeltaKElevenLCB,-0.0245,artifacts/statistics/non_inferiority_by_k.csv,
+DeltaKElevenUCB,-0.0160,artifacts/statistics/non_inferiority_by_k.csv,
+CurveKTen,0.515,artifacts/metrics/sparse_curve_subject_metrics.csv,lambda=0 mean
+CurveKTenSD,0.083,artifacts/metrics/sparse_curve_subject_metrics.csv,
+DeltaKTen,-0.0258,artifacts/statistics/non_inferiority_by_k.csv,vs k=16 curve ref
+DeltaKTenLCB,-0.0311,artifacts/statistics/non_inferiority_by_k.csv,
+DeltaKTenUCB,-0.0205,artifacts/statistics/non_inferiority_by_k.csv,
+CurveKEight,0.505,artifacts/metrics/sparse_curve_subject_metrics.csv,lambda=0 mean
+CurveKEightSD,0.085,artifacts/metrics/sparse_curve_subject_metrics.csv,
+DeltaKEight,-0.0366,artifacts/statistics/non_inferiority_by_k.csv,vs k=16 curve ref
+DeltaKEightLCB,-0.0440,artifacts/statistics/non_inferiority_by_k.csv,
+DeltaKEightUCB,-0.0289,artifacts/statistics/non_inferiority_by_k.csv,
+CurveKSix,0.480,artifacts/metrics/sparse_curve_subject_metrics.csv,lambda=0 mean
+CurveKSixSD,0.083,artifacts/metrics/sparse_curve_subject_metrics.csv,
+DeltaKSix,-0.0609,artifacts/statistics/non_inferiority_by_k.csv,vs k=16 curve ref
+DeltaKSixLCB,-0.0711,artifacts/statistics/non_inferiority_by_k.csv,
+DeltaKSixUCB,-0.0507,artifacts/statistics/non_inferiority_by_k.csv,
+CurveKFour,0.397,artifacts/metrics/sparse_curve_subject_metrics.csv,lambda=0 mean
+CurveKFourSD,0.071,artifacts/metrics/sparse_curve_subject_metrics.csv,
+DeltaKFour,-0.1444,artifacts/statistics/non_inferiority_by_k.csv,vs k=16 curve ref
+DeltaKFourLCB,-0.1590,artifacts/statistics/non_inferiority_by_k.csv,
+DeltaKFourUCB,-0.1306,artifacts/statistics/non_inferiority_by_k.csv,
+CurveKTwo,0.299,artifacts/metrics/sparse_curve_subject_metrics.csv,lambda=0 mean
+CurveKTwoSD,0.057,artifacts/metrics/sparse_curve_subject_metrics.csv,
+DeltaKTwo,-0.2420,artifacts/statistics/non_inferiority_by_k.csv,vs k=16 curve ref
+DeltaKTwoLCB,-0.2603,artifacts/statistics/non_inferiority_by_k.csv,
+DeltaKTwoUCB,-0.2230,artifacts/statistics/non_inferiority_by_k.csv,
+CurveKOne,0.181,artifacts/metrics/sparse_curve_subject_metrics.csv,lambda=0 mean
+CurveKOneSD,0.040,artifacts/metrics/sparse_curve_subject_metrics.csv,
+DeltaKOne,-0.3602,artifacts/statistics/non_inferiority_by_k.csv,vs k=16 curve ref
+DeltaKOneLCB,-0.3831,artifacts/statistics/non_inferiority_by_k.csv,
+DeltaKOneUCB,-0.3368,artifacts/statistics/non_inferiority_by_k.csv,
+CurveTrainWindows,"200{,}000",artifacts/metrics/sparse_curve_subject_metrics.csv,fixed stratified subsample per fold
+LambdaCurveMaxSpread,0.0039,artifacts/metrics/sparse_curve_subject_metrics.csv,max over k of (max-min over lambda) of mean Macro-F1
+TopFourSet,"4, 6, 7, 14",artifacts/rankings/cross_fitted_rankings.csv,"modal top-4 set, lambda=0"
+TopFourFolds,36,artifacts/rankings/cross_fitted_rankings.csv,folds with the modal top-4 set
+DroppedFourSet,"9, 11, 12, 16",artifacts/rankings/cross_fitted_rankings.csv,modal set of 4 channels excluded at k=12
+DroppedFourFolds,43,artifacts/rankings/cross_fitted_rankings.csv,
+TopFourShare,34.0,artifacts/rankings/cross_fitted_scores.csv,% of summed A_c held by the 4 highest channels
+BottomEightShare,39.6,artifacts/rankings/cross_fitted_scores.csv,
+UOverAMedian,2.4,artifacts/rankings/cross_fitted_scores.csv,median U_c/A_c in percent
+UOverAMax,9.4,artifacts/rankings/cross_fitted_scores.csv,
+TopTwelveDiffersLambdaPtTwoFive,0,artifacts/rankings/cross_fitted_rankings.csv,folds whose top-12 set differs from lambda=0
+TopTwelveDiffersLambdaPtFive,0,artifacts/rankings/cross_fitted_rankings.csv,folds whose top-12 set differs from lambda=0
+TopTwelveDiffersLambdaOne,1,artifacts/rankings/cross_fitted_rankings.csv,folds whose top-12 set differs from lambda=0
+HTwoKFourDiff,+0.0172,artifacts/statistics/h2_attribution_vs_random.csv,SR-CFA(lambda=0.5) minus random mean
+HTwoKFourLCB,+0.0071,artifacts/statistics/h2_attribution_vs_random.csv,
+HTwoKFourUCB,+0.0274,artifacts/statistics/h2_attribution_vs_random.csv,
+HTwoKFourP,= 0.007,artifacts/statistics/h2_attribution_vs_random.csv,Holm over 8
+HTwoKFourR,+0.50,artifacts/statistics/h2_attribution_vs_random.csv,
+HTwoKSixDiff,+0.0370,artifacts/statistics/h2_attribution_vs_random.csv,SR-CFA(lambda=0.5) minus random mean
+HTwoKSixLCB,+0.0286,artifacts/statistics/h2_attribution_vs_random.csv,
+HTwoKSixUCB,+0.0452,artifacts/statistics/h2_attribution_vs_random.csv,
+HTwoKSixP,< 0.001,artifacts/statistics/h2_attribution_vs_random.csv,Holm over 8
+HTwoKSixR,+0.92,artifacts/statistics/h2_attribution_vs_random.csv,
+HTwoKEightDiff,+0.0243,artifacts/statistics/h2_attribution_vs_random.csv,SR-CFA(lambda=0.5) minus random mean
+HTwoKEightLCB,+0.0176,artifacts/statistics/h2_attribution_vs_random.csv,
+HTwoKEightUCB,+0.0308,artifacts/statistics/h2_attribution_vs_random.csv,
+HTwoKEightP,< 0.001,artifacts/statistics/h2_attribution_vs_random.csv,Holm over 8
+HTwoKEightR,+0.86,artifacts/statistics/h2_attribution_vs_random.csv,
+HTwoKTwelveDiff,+0.0074,artifacts/statistics/h2_attribution_vs_random.csv,SR-CFA(lambda=0.5) minus random mean
+HTwoKTwelveLCB,+0.0046,artifacts/statistics/h2_attribution_vs_random.csv,
+HTwoKTwelveUCB,+0.0103,artifacts/statistics/h2_attribution_vs_random.csv,
+HTwoKTwelveP,< 0.001,artifacts/statistics/h2_attribution_vs_random.csv,Holm over 8
+HTwoKTwelveR,+0.71,artifacts/statistics/h2_attribution_vs_random.csv,
+HTwoAllSig,yes,artifacts/statistics/h2_attribution_vs_random.csv,
+PctKFour,65,artifacts/statistics/h2_srcfa_percentile.csv,median percentile
+PctKAboveNinetyFiveFour,3,artifacts/statistics/h2_srcfa_percentile.csv,
+PctKSix,89,artifacts/statistics/h2_srcfa_percentile.csv,median percentile
+PctKAboveNinetyFiveSix,11,artifacts/statistics/h2_srcfa_percentile.csv,
+PctKEight,82,artifacts/statistics/h2_srcfa_percentile.csv,median percentile
+PctKAboveNinetyFiveEight,6,artifacts/statistics/h2_srcfa_percentile.csv,
+PctKTwelve,66,artifacts/statistics/h2_srcfa_percentile.csv,median percentile
+PctKAboveNinetyFiveTwelve,1,artifacts/statistics/h2_srcfa_percentile.csv,
+VSPermKFourDiff,-0.0018,artifacts/statistics/baseline_pairwise_exploratory.csv,SR-CFA minus baseline; exploratory
+VSPermKFourP,= 0.678,artifacts/statistics/baseline_pairwise_exploratory.csv,uncorrected
+VSGeomKFourDiff,-0.0005,artifacts/statistics/baseline_pairwise_exploratory.csv,SR-CFA minus baseline; exploratory
+VSGeomKFourP,= 0.986,artifacts/statistics/baseline_pairwise_exploratory.csv,uncorrected
+VSMiKFourDiff,+0.1031,artifacts/statistics/baseline_pairwise_exploratory.csv,SR-CFA minus baseline; exploratory
+VSMiKFourP,< 0.001,artifacts/statistics/baseline_pairwise_exploratory.csv,uncorrected
+VSPermKSixDiff,+0.0126,artifacts/statistics/baseline_pairwise_exploratory.csv,SR-CFA minus baseline; exploratory
+VSPermKSixP,= 0.009,artifacts/statistics/baseline_pairwise_exploratory.csv,uncorrected
+VSGeomKSixDiff,+0.0341,artifacts/statistics/baseline_pairwise_exploratory.csv,SR-CFA minus baseline; exploratory
+VSGeomKSixP,< 0.001,artifacts/statistics/baseline_pairwise_exploratory.csv,uncorrected
+VSMiKSixDiff,+0.0934,artifacts/statistics/baseline_pairwise_exploratory.csv,SR-CFA minus baseline; exploratory
+VSMiKSixP,< 0.001,artifacts/statistics/baseline_pairwise_exploratory.csv,uncorrected
+VSPermKEightDiff,+0.0033,artifacts/statistics/baseline_pairwise_exploratory.csv,SR-CFA minus baseline; exploratory
+VSPermKEightP,= 0.069,artifacts/statistics/baseline_pairwise_exploratory.csv,uncorrected
+VSGeomKEightDiff,+0.0047,artifacts/statistics/baseline_pairwise_exploratory.csv,SR-CFA minus baseline; exploratory
+VSGeomKEightP,= 0.267,artifacts/statistics/baseline_pairwise_exploratory.csv,uncorrected
+VSMiKEightDiff,+0.0737,artifacts/statistics/baseline_pairwise_exploratory.csv,SR-CFA minus baseline; exploratory
+VSMiKEightP,< 0.001,artifacts/statistics/baseline_pairwise_exploratory.csv,uncorrected
+VSPermKTwelveDiff,+0.0001,artifacts/statistics/baseline_pairwise_exploratory.csv,SR-CFA minus baseline; exploratory
+VSPermKTwelveP,= 0.995,artifacts/statistics/baseline_pairwise_exploratory.csv,uncorrected
+VSGeomKTwelveDiff,+0.0070,artifacts/statistics/baseline_pairwise_exploratory.csv,SR-CFA minus baseline; exploratory
+VSGeomKTwelveP,= 0.058,artifacts/statistics/baseline_pairwise_exploratory.csv,uncorrected
+VSMiKTwelveDiff,+0.0051,artifacts/statistics/baseline_pairwise_exploratory.csv,SR-CFA minus baseline; exploratory
+VSMiKTwelveP,= 0.007,artifacts/statistics/baseline_pairwise_exploratory.csv,uncorrected
+HThreeMaxAbsDiff,0.0015,artifacts/statistics/h3_lambda_vs_zero.csv,
+HThreeNSig,0,artifacts/statistics/h3_lambda_vs_zero.csv,
+HThreeNTests,12,artifacts/statistics/h3_lambda_vs_zero.csv,
+HThreeMinP,= 0.216,artifacts/statistics/h3_lambda_vs_zero.csv,smallest Holm p
+HThreeMinTied,36,artifacts/statistics/h3_lambda_vs_zero.csv,min participants with identical subset
+FaithProtocolCells,172,artifacts/faithfulness/protocol_check.txt,
+FaithProtocolMeanDiff,0.0014,artifacts/faithfulness/protocol_check.txt,
+FaithProtocolMaxDiff,0.0084,artifacts/faithfulness/protocol_check.txt,
+FaithTopKTwo,0.263,artifacts/faithfulness/faithfulness_summary.csv,
+FaithBottomKTwo,0.292,artifacts/faithfulness/faithfulness_summary.csv,
+FaithTopKFour,0.351,artifacts/faithfulness/faithfulness_summary.csv,
+FaithRandomKFour,0.366,artifacts/faithfulness/faithfulness_summary.csv,
+FaithBottomKFour,0.382,artifacts/faithfulness/faithfulness_summary.csv,
+FaithTopKSix,0.376,artifacts/faithfulness/faithfulness_summary.csv,
+FaithRandomKSix,0.416,artifacts/faithfulness/faithfulness_summary.csv,
+FaithBottomKSix,0.454,artifacts/faithfulness/faithfulness_summary.csv,
+FaithTopKEight,0.408,artifacts/faithfulness/faithfulness_summary.csv,
+FaithRandomKEight,0.445,artifacts/faithfulness/faithfulness_summary.csv,
+FaithBottomKEight,0.469,artifacts/faithfulness/faithfulness_summary.csv,
+FaithTopKTen,0.445,artifacts/faithfulness/faithfulness_summary.csv,
+FaithBottomKTen,0.475,artifacts/faithfulness/faithfulness_summary.csv,
+FaithTopKTwelve,0.455,artifacts/faithfulness/faithfulness_summary.csv,
+FaithRandomKTwelve,0.478,artifacts/faithfulness/faithfulness_summary.csv,
+FaithBottomKTwelve,0.485,artifacts/faithfulness/faithfulness_summary.csv,
+FaithTopKFourteen,0.487,artifacts/faithfulness/faithfulness_summary.csv,
+FaithBottomKFourteen,0.491,artifacts/faithfulness/faithfulness_summary.csv,
+FaithTBKTwoDiff,-0.0297,artifacts/statistics/h4_faithfulness.csv,
+FaithTBKTwoLCB,-0.0419,artifacts/statistics/h4_faithfulness.csv,
+FaithTBKTwoUCB,-0.0166,artifacts/statistics/h4_faithfulness.csv,
+FaithTBKTwoP,< 0.001,artifacts/statistics/h4_faithfulness.csv,Holm
+FaithTBKFourDiff,-0.0314,artifacts/statistics/h4_faithfulness.csv,
+FaithTBKFourLCB,-0.0447,artifacts/statistics/h4_faithfulness.csv,
+FaithTBKFourUCB,-0.0177,artifacts/statistics/h4_faithfulness.csv,
+FaithTBKFourP,< 0.001,artifacts/statistics/h4_faithfulness.csv,Holm
+FaithTRKFourDiff,-0.0151,artifacts/statistics/h4_faithfulness.csv,
+FaithTRKFourLCB,-0.0239,artifacts/statistics/h4_faithfulness.csv,
+FaithTRKFourUCB,-0.0061,artifacts/statistics/h4_faithfulness.csv,
+FaithTRKFourP,= 0.010,artifacts/statistics/h4_faithfulness.csv,Holm
+FaithRBKFourDiff,-0.0163,artifacts/statistics/h4_faithfulness.csv,
+FaithRBKFourLCB,-0.0265,artifacts/statistics/h4_faithfulness.csv,
+FaithRBKFourUCB,-0.0061,artifacts/statistics/h4_faithfulness.csv,
+FaithRBKFourP,= 0.013,artifacts/statistics/h4_faithfulness.csv,Holm
+FaithTBKSixDiff,-0.0775,artifacts/statistics/h4_faithfulness.csv,
+FaithTBKSixLCB,-0.0921,artifacts/statistics/h4_faithfulness.csv,
+FaithTBKSixUCB,-0.0627,artifacts/statistics/h4_faithfulness.csv,
+FaithTBKSixP,< 0.001,artifacts/statistics/h4_faithfulness.csv,Holm
+FaithTRKSixDiff,-0.0398,artifacts/statistics/h4_faithfulness.csv,
+FaithTRKSixLCB,-0.0487,artifacts/statistics/h4_faithfulness.csv,
+FaithTRKSixUCB,-0.0307,artifacts/statistics/h4_faithfulness.csv,
+FaithTRKSixP,< 0.001,artifacts/statistics/h4_faithfulness.csv,Holm
+FaithRBKSixDiff,-0.0377,artifacts/statistics/h4_faithfulness.csv,
+FaithRBKSixLCB,-0.0459,artifacts/statistics/h4_faithfulness.csv,
+FaithRBKSixUCB,-0.0293,artifacts/statistics/h4_faithfulness.csv,
+FaithRBKSixP,< 0.001,artifacts/statistics/h4_faithfulness.csv,Holm
+FaithTBKEightDiff,-0.0618,artifacts/statistics/h4_faithfulness.csv,
+FaithTBKEightLCB,-0.0772,artifacts/statistics/h4_faithfulness.csv,
+FaithTBKEightUCB,-0.0461,artifacts/statistics/h4_faithfulness.csv,
+FaithTBKEightP,< 0.001,artifacts/statistics/h4_faithfulness.csv,Holm
+FaithTRKEightDiff,-0.0377,artifacts/statistics/h4_faithfulness.csv,
+FaithTRKEightLCB,-0.0476,artifacts/statistics/h4_faithfulness.csv,
+FaithTRKEightUCB,-0.0273,artifacts/statistics/h4_faithfulness.csv,
+FaithTRKEightP,< 0.001,artifacts/statistics/h4_faithfulness.csv,Holm
+FaithRBKEightDiff,-0.0242,artifacts/statistics/h4_faithfulness.csv,
+FaithRBKEightLCB,-0.0309,artifacts/statistics/h4_faithfulness.csv,
+FaithRBKEightUCB,-0.0172,artifacts/statistics/h4_faithfulness.csv,
+FaithRBKEightP,< 0.001,artifacts/statistics/h4_faithfulness.csv,Holm
+FaithTBKTenDiff,-0.0297,artifacts/statistics/h4_faithfulness.csv,
+FaithTBKTenLCB,-0.0399,artifacts/statistics/h4_faithfulness.csv,
+FaithTBKTenUCB,-0.0188,artifacts/statistics/h4_faithfulness.csv,
+FaithTBKTenP,< 0.001,artifacts/statistics/h4_faithfulness.csv,Holm
+FaithTBKTwelveDiff,-0.0302,artifacts/statistics/h4_faithfulness.csv,
+FaithTBKTwelveLCB,-0.0385,artifacts/statistics/h4_faithfulness.csv,
+FaithTBKTwelveUCB,-0.0218,artifacts/statistics/h4_faithfulness.csv,
+FaithTBKTwelveP,< 0.001,artifacts/statistics/h4_faithfulness.csv,Holm
+FaithTRKTwelveDiff,-0.0228,artifacts/statistics/h4_faithfulness.csv,
+FaithTRKTwelveLCB,-0.0296,artifacts/statistics/h4_faithfulness.csv,
+FaithTRKTwelveUCB,-0.0158,artifacts/statistics/h4_faithfulness.csv,
+FaithTRKTwelveP,< 0.001,artifacts/statistics/h4_faithfulness.csv,Holm
+FaithRBKTwelveDiff,-0.0074,artifacts/statistics/h4_faithfulness.csv,
+FaithRBKTwelveLCB,-0.0101,artifacts/statistics/h4_faithfulness.csv,
+FaithRBKTwelveUCB,-0.0046,artifacts/statistics/h4_faithfulness.csv,
+FaithRBKTwelveP,< 0.001,artifacts/statistics/h4_faithfulness.csv,Holm
+FaithTBKFourteenDiff,-0.0038,artifacts/statistics/h4_faithfulness.csv,
+FaithTBKFourteenLCB,-0.0084,artifacts/statistics/h4_faithfulness.csv,
+FaithTBKFourteenUCB,+0.0009,artifacts/statistics/h4_faithfulness.csv,
+FaithTBKFourteenP,= 0.150,artifacts/statistics/h4_faithfulness.csv,Holm
+FaithNTests,15,artifacts/statistics/h4_faithfulness.csv,
+FaithNSig,14,artifacts/statistics/h4_faithfulness.csv,
+FaithTBAllSig,no,artifacts/statistics/h4_faithfulness.csv,
+StabSubjPairs,903,artifacts/stability/stability_summary.csv,
+StabSubjRho,0.927,artifacts/stability/stability_summary.csv,
+StabSubjRhoSD,0.038,artifacts/stability/stability_summary.csv,
+StabSubjJacFour,0.752,artifacts/stability/stability_summary.csv,
+StabSubjJacSix,0.905,artifacts/stability/stability_summary.csv,
+StabSubjJacEight,0.803,artifacts/stability/stability_summary.csv,
+StabInnerPairs,430,artifacts/stability/stability_summary.csv,
+StabInnerRho,0.948,artifacts/stability/stability_summary.csv,
+StabInnerRhoSD,0.021,artifacts/stability/stability_summary.csv,
+StabInnerJacFour,0.816,artifacts/stability/stability_summary.csv,
+StabInnerJacSix,0.992,artifacts/stability/stability_summary.csv,
+StabInnerJacEight,0.838,artifacts/stability/stability_summary.csv,
+StabOuterPairs,903,artifacts/stability/stability_summary.csv,
+StabOuterRho,0.987,artifacts/stability/stability_summary.csv,
+StabOuterRhoSD,0.008,artifacts/stability/stability_summary.csv,
+StabOuterJacFour,0.888,artifacts/stability/stability_summary.csv,
+StabOuterJacSix,1.000,artifacts/stability/stability_summary.csv,
+StabOuterJacEight,0.923,artifacts/stability/stability_summary.csv,
+CSOneSOne,0.492,artifacts/cross_session/cross_session_metrics.csv,
+CSOneSOneSD,0.101,artifacts/cross_session/cross_session_metrics.csv,
+CSOneSOneTrain,"183{,}456",artifacts/cross_session/cross_session_metrics.csv,median train windows
+CSOneSTwo,0.528,artifacts/cross_session/cross_session_metrics.csv,
+CSOneSTwoSD,0.088,artifacts/cross_session/cross_session_metrics.csv,
+CSOneSTwoTrain,"183{,}456",artifacts/cross_session/cross_session_metrics.csv,median train windows
+CSOneSThree,0.510,artifacts/cross_session/cross_session_metrics.csv,
+CSOneSThreeSD,0.090,artifacts/cross_session/cross_session_metrics.csv,
+CSOneSThreeTrain,"183{,}456",artifacts/cross_session/cross_session_metrics.csv,median train windows
+CSTwoSThree,0.530,artifacts/cross_session/cross_session_metrics.csv,
+CSTwoSThreeSD,0.095,artifacts/cross_session/cross_session_metrics.csv,
+CSTwoSThreeTrain,"366{,}912",artifacts/cross_session/cross_session_metrics.csv,median train windows
+CSSTwoVsSOneDiff,+0.0355,artifacts/statistics/cross_session_tests.csv,
+CSSTwoVsSOneLCB,+0.0091,artifacts/statistics/cross_session_tests.csv,
+CSSTwoVsSOneUCB,+0.0621,artifacts/statistics/cross_session_tests.csv,
+CSSTwoVsSOneW,287.0,artifacts/statistics/cross_session_tests.csv,
+CSSTwoVsSOneP,= 0.024,artifacts/statistics/cross_session_tests.csv,"exploratory, uncorrected"
+CSSThreeVsSOneDiff,+0.0172,artifacts/statistics/cross_session_tests.csv,
+CSSThreeVsSOneLCB,-0.0038,artifacts/statistics/cross_session_tests.csv,
+CSSThreeVsSOneUCB,+0.0391,artifacts/statistics/cross_session_tests.csv,
+CSSThreeVsSOneW,381.0,artifacts/statistics/cross_session_tests.csv,
+CSSThreeVsSOneP,= 0.272,artifacts/statistics/cross_session_tests.csv,"exploratory, uncorrected"
+CSTwoVsOneDiff,+0.0210,artifacts/statistics/cross_session_tests.csv,
+CSTwoVsOneLCB,+0.0146,artifacts/statistics/cross_session_tests.csv,
+CSTwoVsOneUCB,+0.0274,artifacts/statistics/cross_session_tests.csv,
+CSTwoVsOneW,77.0,artifacts/statistics/cross_session_tests.csv,
+CSTwoVsOneP,< 0.001,artifacts/statistics/cross_session_tests.csv,"exploratory, uncorrected"
+DBFiveFull,0.281,artifacts/db5/db5_full_channel_metrics.csv,
+DBFiveFullSD,0.099,artifacts/db5/db5_full_channel_metrics.csv,
+DBFiveFullMin,0.096,artifacts/db5/db5_full_channel_metrics.csv,
+DBFiveFullMax,0.386,artifacts/db5/db5_full_channel_metrics.csv,
+DBFiveKSixteen,0.281,artifacts/db5/db5_sparse_curve.csv,
+DBFiveKSixteenSD,0.099,artifacts/db5/db5_sparse_curve.csv,
+DBFiveKTwelve,0.268,artifacts/db5/db5_sparse_curve.csv,
+DBFiveKTwelveSD,0.092,artifacts/db5/db5_sparse_curve.csv,
+DBFiveKEight,0.252,artifacts/db5/db5_sparse_curve.csv,
+DBFiveKEightSD,0.068,artifacts/db5/db5_sparse_curve.csv,
+DBFiveKFour,0.180,artifacts/db5/db5_sparse_curve.csv,
+DBFiveKFourSD,0.026,artifacts/db5/db5_sparse_curve.csv,
+DBFiveDeltaKEleven,-0.0211,artifacts/statistics/db5_non_inferiority_by_k.csv,
+DBFiveDeltaKElevenLCB,-0.03412,artifacts/statistics/db5_non_inferiority_by_k.csv,
+DBFiveDeltaKTwelve,-0.0126,artifacts/statistics/db5_non_inferiority_by_k.csv,
+DBFiveDeltaKTwelveLCB,-0.01999,artifacts/statistics/db5_non_inferiority_by_k.csv,
+DBFiveDeltaKThirteen,-0.0143,artifacts/statistics/db5_non_inferiority_by_k.csv,
+DBFiveDeltaKThirteenLCB,-0.03119,artifacts/statistics/db5_non_inferiority_by_k.csv,
+DBFiveDeltaKFourteen,-0.0119,artifacts/statistics/db5_non_inferiority_by_k.csv,
+DBFiveDeltaKFourteenLCB,-0.02744,artifacts/statistics/db5_non_inferiority_by_k.csv,
+DBFiveDeltaKFifteen,-0.0108,artifacts/statistics/db5_non_inferiority_by_k.csv,
+DBFiveDeltaKFifteenLCB,-0.02377,artifacts/statistics/db5_non_inferiority_by_k.csv,
+DBFiveKStarMarginPtOne,none,artifacts/statistics/db5_non_inferiority_by_k.csv,
+DBFiveKStarMarginPtTwo,12,artifacts/statistics/db5_non_inferiority_by_k.csv,
+DBFiveKStarMarginPtThree,12,artifacts/statistics/db5_non_inferiority_by_k.csv,
+DBFiveNIPassing,12,artifacts/statistics/db5_non_inferiority_by_k.csv,all k passing at 0.02
+DBFiveSeedFrac,95.5,artifacts/statistics/db5_bootstrap_seed_robustness.csv,200 bootstrap seeds
+DBFiveSeedN,200,artifacts/statistics/db5_bootstrap_seed_robustness.csv,
+DBFiveSeedLCBMin,-0.0201,artifacts/statistics/db5_bootstrap_seed_robustness.csv,
+DBFiveSeedLCBMax,-0.0195,artifacts/statistics/db5_bootstrap_seed_robustness.csv,
+BipFull,0.476,artifacts/bipolar/bipolar_full_channel_metrics.csv,"8 pairs, all training windows"
+BipFullSD,0.090,artifacts/bipolar/bipolar_full_channel_metrics.csv,
+BipKOne,0.174,artifacts/bipolar/bipolar_sparse_curve.csv,lambda=0
+BipKOneSD,0.043,artifacts/bipolar/bipolar_sparse_curve.csv,
+BipKTwo,0.239,artifacts/bipolar/bipolar_sparse_curve.csv,lambda=0
+BipKTwoSD,0.049,artifacts/bipolar/bipolar_sparse_curve.csv,
+BipKThree,0.309,artifacts/bipolar/bipolar_sparse_curve.csv,lambda=0
+BipKThreeSD,0.069,artifacts/bipolar/bipolar_sparse_curve.csv,
+BipKFour,0.354,artifacts/bipolar/bipolar_sparse_curve.csv,lambda=0
+BipKFourSD,0.079,artifacts/bipolar/bipolar_sparse_curve.csv,
+BipKFive,0.405,artifacts/bipolar/bipolar_sparse_curve.csv,lambda=0
+BipKFiveSD,0.082,artifacts/bipolar/bipolar_sparse_curve.csv,
+BipKSix,0.441,artifacts/bipolar/bipolar_sparse_curve.csv,lambda=0
+BipKSixSD,0.086,artifacts/bipolar/bipolar_sparse_curve.csv,
+BipKSeven,0.463,artifacts/bipolar/bipolar_sparse_curve.csv,lambda=0
+BipKSevenSD,0.085,artifacts/bipolar/bipolar_sparse_curve.csv,
+BipKEight,0.479,artifacts/bipolar/bipolar_sparse_curve.csv,lambda=0
+BipKEightSD,0.089,artifacts/bipolar/bipolar_sparse_curve.csv,
+BipDeltaKOne,-0.3047,artifacts/statistics/bipolar_non_inferiority_by_k.csv,
+BipDeltaKOneLCB,-0.3295,artifacts/statistics/bipolar_non_inferiority_by_k.csv,
+BipDeltaKTwo,-0.2394,artifacts/statistics/bipolar_non_inferiority_by_k.csv,
+BipDeltaKTwoLCB,-0.2608,artifacts/statistics/bipolar_non_inferiority_by_k.csv,
+BipDeltaKThree,-0.1703,artifacts/statistics/bipolar_non_inferiority_by_k.csv,
+BipDeltaKThreeLCB,-0.1857,artifacts/statistics/bipolar_non_inferiority_by_k.csv,
+BipDeltaKFour,-0.1245,artifacts/statistics/bipolar_non_inferiority_by_k.csv,
+BipDeltaKFourLCB,-0.1395,artifacts/statistics/bipolar_non_inferiority_by_k.csv,
+BipDeltaKFive,-0.0737,artifacts/statistics/bipolar_non_inferiority_by_k.csv,
+BipDeltaKFiveLCB,-0.0841,artifacts/statistics/bipolar_non_inferiority_by_k.csv,
+BipDeltaKSix,-0.0376,artifacts/statistics/bipolar_non_inferiority_by_k.csv,
+BipDeltaKSixLCB,-0.0456,artifacts/statistics/bipolar_non_inferiority_by_k.csv,
+BipDeltaKSeven,-0.0155,artifacts/statistics/bipolar_non_inferiority_by_k.csv,
+BipDeltaKSevenLCB,-0.0203,artifacts/statistics/bipolar_non_inferiority_by_k.csv,
+BipKStarMarginPtOne,none,artifacts/statistics/bipolar_non_inferiority_by_k.csv,all lambda
+BipKStarMarginPtTwo,none,artifacts/statistics/bipolar_non_inferiority_by_k.csv,all lambda
+BipKStarMarginPtThree,7,artifacts/statistics/bipolar_non_inferiority_by_k.csv,all lambda
+BipSeedFracSeven,0,artifacts/statistics/bipolar_bootstrap_seed_robustness.csv,
+BipSeedLCBMaxSeven,-0.0202,artifacts/statistics/bipolar_bootstrap_seed_robustness.csv,
+BipSeedLCBMinSeven,-0.0206,artifacts/statistics/bipolar_bootstrap_seed_robustness.csv,
+BipCurveRefK,0.479,artifacts/bipolar/bipolar_sparse_curve.csv,"k=8 curve reference, 200k subsample"
+BipTopThreeSet,"5, 6, 7",artifacts/bipolar/bipolar_rankings.csv,modal top-3 pairs
+BipTopThreeFolds,29,artifacts/bipolar/bipolar_rankings.csv,
+FixedDev,22,artifacts/fixed_layout/fixed_layout_summary.json,
+FixedTest,21,artifacts/fixed_layout/fixed_layout_summary.json,
+FixedChannels,"1, 2, 4, 5, 6, 7, 8, 10, 13, 14, 15, 16",artifacts/fixed_layout/fixed_layout_summary.json,
+FixedDropped,"3, 9, 11, 12",artifacts/fixed_layout/fixed_layout_summary.json,
+FixedFull,0.522,artifacts/fixed_layout/fixed_layout_summary.json,
+FixedTwelve,0.510,artifacts/fixed_layout/fixed_layout_summary.json,
+FixedDiff,-0.0124,artifacts/fixed_layout/fixed_layout_summary.json,
+FixedLCB,-0.0179,artifacts/fixed_layout/fixed_layout_summary.json,
+FixedUCB,-0.0077,artifacts/fixed_layout/fixed_layout_summary.json,
+RedundDiff,-0.0005,artifacts/sensitivity/feature_redundancy_summary.csv,9 minus 10 features
+RedundLCB,-0.0021,artifacts/sensitivity/feature_redundancy_summary.csv,
+RedundUCB,+0.0010,artifacts/sensitivity/feature_redundancy_summary.csv,
+RedundRho,0.994,artifacts/sensitivity/feature_redundancy_summary.csv,median per-fold channel-rank rho
+RedundTopTwelveSame,34,artifacts/sensitivity/feature_redundancy_summary.csv,

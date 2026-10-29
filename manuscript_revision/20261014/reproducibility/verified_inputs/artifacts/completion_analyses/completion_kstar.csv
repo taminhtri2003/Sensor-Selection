@@ -1,0 +1,13 @@
+condition,margin,kstar_unadjusted,kstar_holm,kstar_fixed_sequence,all_k_ge_kstar_noninferior
+primary_250ms,0.01,14,14,14,True
+primary_250ms,0.02,12,12,12,True
+primary_250ms,0.03,11,11,11,True
+rest17,0.01,14,14,14,True
+rest17,0.02,12,12,12,True
+rest17,0.03,11,11,11,True
+w150,0.01,14,14,14,True
+w150,0.02,12,12,12,True
+w150,0.03,10,11,10,True
+w500,0.01,14,14,14,True
+w500,0.02,12,12,12,True
+w500,0.03,10,11,10,True

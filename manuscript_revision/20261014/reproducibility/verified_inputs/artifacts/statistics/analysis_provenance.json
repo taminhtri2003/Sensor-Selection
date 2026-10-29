@@ -1,0 +1,19 @@
+{
+  "frozen_plan": "configs/statistics/frozen_analysis_plan.yaml",
+  "frozen_plan_sha256": "734f889ae4afdf2440585b41d19f204e2a0f9cd68d263b2ea1fe411287b4459f",
+  "primary_margin": 0.02,
+  "sensitivity_margins": [
+    0.01,
+    0.03
+  ],
+  "n_bootstrap_resamples": 10000,
+  "ci_level": 0.95,
+  "multiplicity": "Holm",
+  "metric": "macro_f1",
+  "n_participants": 43,
+  "inputs": [
+    "artifacts/metrics/loso_full_channel_subject_metrics_svmrf.csv",
+    "artifacts/metrics/loso_full_channel_subject_metrics_xgb.csv",
+    "artifacts/metrics/sparse_curve_subject_metrics.csv"
+  ]
+}

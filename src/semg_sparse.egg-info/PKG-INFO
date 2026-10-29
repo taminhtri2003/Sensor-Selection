@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: semg-sparse
+Version: 1.0.0
+Summary: Explainability-guided sparse sEMG sensor selection for subject-independent hand-gesture recognition
+Author-email: Research Engineer <reproducible.research@physionet.org>
+License-File: LICENSE.txt
+Requires-Dist: numpy>=1.24
+Requires-Dist: scipy>=1.10
+Requires-Dist: pandas>=2.0
+Requires-Dist: scikit-learn>=1.2
+Requires-Dist: xgboost>=1.7
+Requires-Dist: torch>=2.0
+Requires-Dist: shap>=0.41
+Requires-Dist: captum>=0.6
+Requires-Dist: optuna>=3.1
+Requires-Dist: wfdb>=4.1
+Requires-Dist: h5py>=3.8
+Requires-Dist: pyarrow>=11.0
+Requires-Dist: matplotlib>=3.7
+Requires-Dist: seaborn>=0.12
+Requires-Dist: statsmodels>=0.14
+Requires-Dist: pingouin>=0.5
+Requires-Dist: boto3>=1.26
+Requires-Dist: awscli>=1.27
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Dynamic: license-file

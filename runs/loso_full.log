@@ -1,0 +1,5 @@
+windows=563472 features=160 classes=16 participants=43
+[1/43] participant 01  {'M_XGBoost': 0.5635, 'M_SVM': 0.5911, 'M_RandomForest': 0.5304}
+[2/43] participant 02  {'M_XGBoost': 0.4284, 'M_SVM': 0.4262, 'M_RandomForest': 0.3666}
+[3/43] participant 03  {'M_XGBoost': 0.4316, 'M_SVM': 0.4369, 'M_RandomForest': 0.3855}
+[4/43] participant 04  {'M_XGBoost': 0.5042, 'M_SVM': 0.5084, 'M_RandomForest': 0.4478}

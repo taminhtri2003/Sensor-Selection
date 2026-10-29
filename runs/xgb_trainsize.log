@@ -1,0 +1,12 @@
+﻿
+--- participant 1 (train 550368) ---
+  n= 100000:   46.1s  macroF1=0.5665
+  n= 200000:   51.0s  macroF1=0.5700
+  n= 350000:  158.5s  macroF1=0.5637
+  n= 550368:  177.1s  macroF1=0.5635
+
+--- participant 7 (train 550368) ---
+  n= 100000:   38.4s  macroF1=0.6126
+  n= 200000:   52.6s  macroF1=0.6150
+  n= 350000:   69.3s  macroF1=0.6140
+  n= 550368:   72.3s  macroF1=0.6204

@@ -1,0 +1,68 @@
+\documentclass[final,5p,times,twocolumn]{elsarticle}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+\input{generated/results_macros.tex}
+
+\journal{Physiological Measurement}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Stability and Generalization of Explainability-Guided Sensor Selection in Subject-Independent sEMG Gesture Recognition}
+
+\author[inst1]{Minh-Tri Ta}
+\author[inst2,inst3]{Hoang-Khang Phan}
+\author[inst4]{Le-Giang Tran\corref{cor1}}
+\cortext[cor1]{Corresponding author. Email: tranlegiang@iuh.edu.vn}
+
+\affiliation[inst1]{organization={College of Engineering and Computer Science, VinUniversity},
+            city={Hanoi},
+            country={Vietnam}}
+\affiliation[inst2]{organization={Department of Biomedical Engineering, Faculty of Applied Science, Ho Chi Minh City University of Technology (HCMUT)},
+            addressline={268 Ly Thuong Kiet Street, District 10},
+            city={Ho Chi Minh City},
+            country={Vietnam}}
+\affiliation[inst3]{organization={Vietnam National University Ho Chi Minh City},
+            addressline={Linh Trung Ward, Thu Duc City},
+            city={Ho Chi Minh City},
+            country={Vietnam}}
+\affiliation[inst4]{organization={Faculty of Electronics Technology, Industrial University of Ho Chi Minh City},
+            city={Ho Chi Minh City},
+            country={Vietnam}}
+
+\begin{abstract}
+Surface electromyography (sEMG) channel reduction is crucial for wearable myoelectric prostheses, yet prior studies rely heavily on user-dependent evaluations, post-hoc threshold heuristics, and unvalidated feature attributions. In this study, we present a rigorous, zero-leakage evaluation framework for explainability-guided sparse sensor selection in subject-independent sEMG gesture recognition. Evaluated on the 43-participant GRABMyo benchmark across 16 active gestures and replicated on NinaPro DB5 (10 subjects), we implement Stability-Regularized Cross-Fitted Attribution (SR-CFA) using TreeSHAP computed strictly across inner training folds. Model performance is assessed under a pre-specified statistical analysis plan ($\delta = 0.02$ Macro-F1 engineering margin) using 10,000 participant-level cluster bootstrap resamples. Full-channel Leave-One-Subject-Out (LOSO) baselines demonstrate that XGBoost (Macro-F1 \FullXGBoostMacroF, 95\% CI [\FullXGBoostMacroFLCB, \FullXGBoostMacroFUCB]) and RBF-SVM (\FullSVMMacroF, 95\% CI [\FullSVMMacroFLCB, \FullSVMMacroFUCB]) are statistically indistinguishable ($p = 0.154$), while significantly outperforming Random Forest (\FullRandomForestMacroF, $p < 0.001$). Under the pre-specified non-inferiority margin, sensor reduction is preserved down to $k^* = 12$ channels ($\text{LCB}_{95\%} = \OptimalKLCB > -0.020$), achieving a 25\% physical sensor reduction without statistical inferiority. Between-subject attribution stability is high across individuals (mean Spearman $\rho = 0.927 \pm 0.038$), concentrating consistently on primary flexor and extensor compartments. A single physically fixed consensus 12-channel layout derived on development subjects generalizes to unseen test subjects with statistical non-inferiority ($\Delta = -0.0124$, 95\% CI $[-0.0179, -0.0077]$). Longitudinal evaluations indicate that multi-day training exposure significantly improves cross-session performance by $+0.0210$ Macro-F1 ($p < 0.001$), demonstrating that multi-session data partially mitigates donning/doffing variability. Replicated on NinaPro DB5, a 12-channel subset yields borderline non-inferiority ($\text{LCB}_{95\%} = -0.0203$). This study provides an audited, leak-free methodological benchmark for population-level wearable neural interface design.
+\end{abstract}
+
+\begin{keyword}
+Surface electromyography (sEMG) \sep Hand gesture recognition \sep Explainable AI (XAI) \sep Shapley additive explanations (SHAP) \sep Sensor selection \sep Non-inferiority testing \sep Leave-one-subject-out (LOSO)
+\end{keyword}
+
+\end{frontmatter}
+
+\input{sections/01_introduction.tex}
+\input{sections/02_related_work.tex}
+\input{sections/03_methods.tex}
+\input{sections/04_results.tex}
+\input{sections/05_discussion.tex}
+\input{sections/06_conclusion.tex}
+
+\section*{Declaration of Competing Interest}
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+\section*{Data and Code Availability}
+All raw datasets used in this study are publicly available: GRABMyo v1.1.0 via PhysioNet (\url{https://physionet.org/content/grabmyo/1.1.0/}) and NinaPro DB5 via the NinaPro repository. All preprocessing scripts, feature extractors, statistical analysis protocols, and manuscript figure generators are available in the open repository.
+
+\bibliographystyle{elsarticle-num}
+\bibliography{references}
+
+\end{document}

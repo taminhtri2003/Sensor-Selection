@@ -1,0 +1,838 @@
+Supplementary material                                                                                   Cross-fitted electrode reduction
+
+
+
+                 Supplementary material
+                 Subject-independent forearm sEMG electrode reduction with cross-fitted attribution
+                 and non-inferiority testing
+                    This supplement provides detailed methods, exploratory analyses and participant-level results for
+                 the electrode-reduction study. Full-precision CSV files accompany the result tables and figures. Raw
+                 recordings are available from the public dataset repositories identified in the main article.
+
+                 S1 Analysis design and scope
+                 The primary endpoint is participant Macro-F1, evaluated against a 0.02 engineering tolerance using
+                 a participant-bootstrap percentile interval. The analysis design followed pilot work and was not
+                 independently preregistered. Model-budget calibration used outer-fold outcomes for participants 1 and
+                 7. Count-feature thresholds were calibrated from pooled recordings before participant partitioning;
+                 exclusion of individual participants did not change the rounded thresholds. These development
+                 exposures limit prospective interpretation despite participant-disjoint model fitting, scaling and
+                 ranking.
+                     Secondary test families and the participant-level aggregation, full geometric count curve, shared-
+                 resource comparison, gesture analysis, fixed-layout analyses and Monte Carlo sensitivity are exploratory
+                 or post-hoc. The full geometric curve was motivated by the twelve-electrode comparison. Selector
+                 activity is a post-hoc descriptive analysis of the penalty results. These analyses are not independent
+                 prospective validation. No independently collected cohort with the same GRABMyo montage was
+                 available.
+
+                 S2 Signal processing and feature definitions
+                 The primary active cache contains 563,472 windows. Participant exclusion reproduced the rounded
+                 monopolar threshold in 43 of 43 folds and the DB5 threshold in 10 of 10 folds. This numerical
+                 invariance does not imply fold-specific threshold calibration. Amplitude units and quantized DB5
+                 values are distinct. Rest-inclusive and alternate-window features are extracted from raw recordings
+                 without crossing trial boundaries.
+                     For DB5, the filter function limits the upper cutoff to min(frequested , 0.45fs − 1), yielding an
+                 effective passband of 10–89 Hz. The band-pass design argument is four, giving eight poles before
+                 forward–backward application. GRABMyo’s 450 Hz upper limit is below the clipping cap.
+                     For one channel, let xt , t = 1, . . . , T , denote the filtered window, x̄ its mean and dt = xt+1 − xt .
+                 The implemented amplitude features are
+                                                                                             ⌜
+                                                  T
+                                                 ∑︂
+                                                                                             ⃓
+                                                                                             ⃓        T
+                                                                                                     ∑︂
+                                  MAV = T −1        |xt |,                            RMS = ⎷T −1       x2t ,
+                                                   t=1                                                           t=1
+                                                    T
+                                                   ∑︂                                                 T
+                                                                                                      ∑︂−1
+                                   VAR = T −1              (xt − x̄)2 ,                       WL =           |dt |,
+                                                   t=1                                                t=1
+                                             T
+                                            ∑︂                                                        T
+                                                                                                      ∑︂−1
+                                 IEMG =           |xt |,                                  WAMP =             1{|dt | ≥ τ }.
+                                            t=1                                                       t=1
+
+                 Variance uses divisor T . IEMG and waveform length are sample sums, without division by sampling
+                 rate. The count rules are
+                                                              T
+                                                              ∑︂−1
+                                                   ZC =              1{xt xt+1 < 0, |dt | ≥ τ },
+                                                               t=1
+                                                              T
+                                                              ∑︂−1
+                                                  SSC =              1{at bt > 0, max(|at |, |bt |) ≥ τ },
+                                                               t=2
+
+                 where at = xt − xt−1 and bt = xt − xt+1 . The thresholds are 10−2 mV for monopolar GRABMyo, 4 ×
+                 10−3 mV for derived bipolar signals and seven stored ADC units for DB5; they are not interchangeable
+                 amplitude units.
+                     For spectral features, SciPy Welch estimation uses a periodic Hann window, segment length
+                              default half-segment
+                 min(T, 256), ∑︁                   overlap, constant detrending and one-sided density scaling. Mean
+                 frequency is ℓ fℓ Pℓ /( ℓ Pℓ + 10−12 ). Median frequency is the first frequency bin whose cumulative
+                                        ∑︁
+
+
+
+                                                                     1
+Supplementary material                                                                     Cross-fitted electrode reduction
+
+
+
+                 power reaches half of that guarded total, clamped to the last bin if none reaches it; no frequency
+                 interpolation is used. The feature order within every channel is MAV, RMS, VAR, WL, ZC, SSC,
+                 IEMG, WAMP, MNF, MDF. This channel-major mapping is retained when selecting electrodes.
+                     MAV and integrated EMG are redundant at a fixed window length. The feature-redundancy
+                 diagnostic found mean performance change -0.0005 (95% CI -0.0021 to +0.0010), ranking correlation
+                 0.994 and matching top-twelve sets in 34 outer folds. This diagnostic showed a small observed mean
+                 change; it does not establish equivalence or remove all correlated-feature effects in TreeSHAP.
+
+                 S3 Inference and test families
+                 All intervals resample paired participant scores, not individual windows. Their estimand is the
+                 conditional mean out-of-fold performance change. Inner and outer models share training participants,
+                 so neither 42 attribution vectors nor 43 outer fits are independent fitted-model replicates. The
+                 bootstrap does not refit the entire nested procedure.
+                     The primary count decision uses the percentile lower bound. The percentile-tail Holm calculation
+                 uses unshifted bootstrap differences and is not a null-generated test. The null-centred studentized
+                 sensitivity constructs null residuals  dp − d,¯ resamples them, studentizes the resampled mean and
+                                      ¯           √
+                 compares it with (d + δ)/(sd / n); the Monte Carlo probability is (1 + #{tb ≥ tobs })/(B + 1). A
+                 family contains all fifteen reduced counts for one condition, margin and penalty. At a tested fixed
+                 count, the unadjusted interval remains a separate descriptive criterion. RF tests only twelve against
+                 sixteen and estimates no k ∗ .
+                     Post-hoc secondary families contain eight attribution-versus-random tests, twelve fold-aggregation
+                 penalty tests and fifteen deletion tests. The participant-extension comparison family contains sixty
+                 tests (four penalties times fifteen counts). Its penalty diagnostic has twelve tests; the shared-resource
+                 comparison has two; the per-gesture analysis has sixteen. Geometric12 is exploratory, with a direct
+                 paired method contrast as well as each method’s change from full16. Wilcoxon tests concern signed
+                 ranks; percentile intervals concern the mean, so their decisions need not coincide. In DB5, count
+                 decisions also depend on the bootstrap construction: at the 0.03 margin, the percentile-tail Holm
+                 calculation supports twelve, while the null-centred studentized Holm sensitivity supports no reduced
+                 count. This disagreement limits the small-cohort inference.
+
+                 S4 Participant and gesture predictions
+                 Full16, SHAP12 and geometry12 predictions use matched outer-test observations and true labels. The
+                 entire gesture analysis uses matched models under the primary 300-round, 200,000-window protocol.
+                 Per-gesture F1 is computed for every participant before inference; confusion matrices are normalized
+                 by true gesture within participant before averaging. Thus large window counts do not inflate the
+                 inferential sample size.
+                     Gesture numbers follow the explicit numeric order in MotionSequence.txt; gesture 14 is forearm
+                 pronation. Participant-loss summaries are descriptive rather than individual non-inferiority tests.
+                 Correlation of a full-array score with its own difference is mathematically coupled and is not interpreted
+                 causally.
+
+                 S5 Participant-level attribution and selector activity
+                 For each outer participant, the post-hoc extension takes the median and unscaled MAD across the 42
+                 normalized individual attribution vectors. It preserves all fixed penalties and counts. Person vectors
+                 share five attributing models and reflect both person heterogeneity and model differences. Their
+                 dispersion does not provide independent fitted-model replicates.
+                     A post-hoc descriptive analysis quantifies whether each fixed penalty changes the unordered
+                 physical site set relative to its unpenalized counterpart. It covers every count and participant for
+                 both aggregation rules and reports changed-set counts and mean Jaccard similarity. Identical site
+                 sets produce identical classifier inputs under the fixed protocol; identical scores in this case are not
+                 evidence of equivalence between different layouts.
+
+                 S6 Resources, sensitivity and fixed-layout validation
+                 The reduced-budget selection methods used a common final lighter model but unequal ranking
+                 resources. RBF-SVM uses C = 1 and the scikit-learn scale rule for γ; RF uses 200 trees, minimum
+                 leaf size two and no depth limit. The RF sensitivity retains those parameters. Stored feature values
+                 are float32; feature standardization uses the appropriate training-pool mean and population SD plus
+                 10−8 , preserving the distinction between full inner-training scaler pools and capped final-model fit
+                 samples. The resource-matched comparison shares each inner model and its validation observations.
+                 Electrode-group permutation preserves within-electrode feature blocks and permutes only within
+
+
+                                                           2
+Supplementary material                                                                    Cross-fitted electrode reduction
+
+
+
+                 each held-out participant. Negative estimated performance drops are retained. Both methods use
+                 the median across inner folds after normalization; SHAP and permutation remain different scoring
+                 procedures. Runtime means are descriptive for the recorded GPU/CPU environment and include no
+                 prospective device latency.
+                     Rest-inclusive and 150/500 ms analyses cover every count and participant and retain the primary
+                 250 ms rankings. Equal training window counts across different lengths are unequal signal durations.
+                 The RF experiment holds the XGBoost-selected layout fixed and compares twelve with sixteen using
+                 these RF parameters; it is not a RF ranking or count-optimization study.
+                     Fixed-layout rankings use the five-fold median/MAD rule within development data. Pooled
+                 feature thresholds still apply. Development and test participants are disjoint; their inner and final
+                 models use all development windows, not the primary curve’s fixed training cap. Count selection
+                 already used the full cohort. Odd-development and even-development derive different layouts. Their
+                 reverse-direction result cannot be portrayed as validation of the first layout. A post-hoc Monte
+                 Carlo analysis repeated the percentile bootstrap under 200 fixed randomizations, each using 10,000
+                 resamples; the reverse layout qualified in 90 repetitions. This diagnoses numerical decision sensitivity
+                 rather than the probability that the hypothesis is true. DB5 and derived bipolar analyses use their
+                 own references; no channels or participants are pooled across datasets or representations.
+
+
+
+
+                                                           3
+Supplementary material                                                                                                                                                           Cross-fitted electrode reduction
+
+
+
+                 S7                           Additional figures
+
+                                                    Rest included                                                          150 ms                                                       500 ms
+                                              0.0                                                                    0.0                                                          0.0
+
+                  Difference to full array
+
+
+
+
+                                                                                         Difference to full array
+
+
+
+
+                                                                                                                                                      Difference to full array
+                                             −0.1                                                                   −0.1                                                         −0.1
+
+
+                                             −0.2                                                                   −0.2                                                         −0.2
+
+
+                                             −0.3                                                                   −0.3                                                         −0.3
+
+
+                                                                                                                                                                                 −0.4
+                                                    1         8           16                                               1         8           16                                     1         8           16
+                                                    Retained selection units                                               Retained selection units                                     Retained selection units
+
+                 Figure S1. Complete sensitivity curves for rest inclusion and alternate window lengths. Each mean paired change
+                 compares with full16 under that condition. Shading is a 95% participant-bootstrap interval; dashed lines mark the 0.02
+                 tolerance. Rankings are held at their primary 250 ms values.
+
+
+
+                                                                             SHAP12 minus full16, within participant
+
+
+
+
+                                                                                                                                                                                                    Mean conditional confusion change (percentage points)
+                                                                                                                                                                                               6
+                                                                         1
+                                                                         2
+                                                                         3                                                                                                                     4
+                                                                         4
+                                                                         5
+                                                                         6                                                                                                                     2
+                                                      True gesture ID
+
+
+
+
+                                                                         7
+                                                                         8
+                                                                                                                                                                                               0
+                                                                         9
+                                                                        10
+                                                                        11                                                                                                                     −2
+                                                                        12
+                                                                        13
+                                                                        14                                                                                                                     −4
+                                                                        15
+                                                                        16
+                                                                                                                                                                                               −6
+                                                                             1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+                                                                                      Predicted gesture ID
+
+                 Figure S2. SHAP12 minus full16 confusion change. Each participant’s confusion matrix is normalized within true
+                 gesture before averaging. The color scale is in percentage points, with symmetric limits covering the observed changes;
+                 machine-readable values retain full precision. Off-diagonal increases identify specific additional confusions without
+                 supplying independent window-level inference.
+
+
+
+
+                                                                                                                       4
+Supplementary material                                                                                                   Cross-fitted electrode reduction
+
+
+
+
+                                                                            Full-array classifier context: different training budgets
+                                                                            0.7
+
+
+
+
+                                                     Participant Macro-F1
+                                                                            0.6
+
+
+                                                                            0.5
+
+
+                                                                            0.4
+
+
+                                                                                      RBF-SVM       Random forest   XGBoost
+                                                                                                      Classifier
+
+                 Figure S3. Full-array classifier comparison. Boxes summarize held-out participant Macro-F1. XGBoost uses all
+                 outer-training windows, random forest 200,000 and SVM 40,000; unequal budgets and budget calibration limit a direct
+                 classifier-capacity comparison. This is separate from the primary count curve’s full16 reference.
+
+
+
+
+                                                Participant aggregation minus fold aggregation
+
+
+
+
+                                                                                                                                                     Mean paired Macro-F1 difference
+                                                                                                                                            0.004
+                                           0
+                  Fixed penalty lambda
+
+
+
+
+                                                                                                                                            0.002
+                                         0.25
+                                                                                                                                            0.000
+                                          0.5
+                                                                                                                                            −0.002
+
+                                           1
+                                                                                                                                            −0.004
+                                                 1         2                  3   4     5   6 7 8 9 10 11 12 13 14 15
+                                                                                            Retained electrodes
+
+                 Figure S4. All participant-versus-fold aggregation comparisons. Each cell is the mean paired Macro-F1 change for
+                 one fixed penalty and count. The inferential family comprises sixty paired signed-rank comparisons with Holm
+                 adjustment. Colors use a symmetric difference scale; no penalty is selected from these outcomes.
+
+
+
+
+                                                                                                5
+Supplementary material                                                                                                                                                                                                 Cross-fitted electrode reduction
+
+
+
+
+                                                                                       Full-array session transfer: paired participants
+
+
+                                                                                 0.7
+
+
+                                                 Held-out participant Macro-F1   0.6
+
+
+                                                                                 0.5
+
+
+                                                                                 0.4
+
+
+                                                                                 0.3
+                                                                                       Train1 / test1        Train1 / test2                                                                          Train1 / test3          Train1+2 / test3
+
+
+                 Figure S5. Full-array session transfer for all held-out participants. Grey lines connect the same participant; colored
+                 points are observed scores and black bars are medians. Training on two sessions uses more observations, so the final
+                 contrast confounds session diversity and quantity. These are subject-independent full-array comparisons, not
+                 reduced-layout or isolated electrode-displacement tests.
+
+
+
+
+                                                A Individual importance profiles                                                                                                                           B Pooling changes dispersion
+                                           1
+                                                                                                                                                                                                     0.5                            Five fold vectors
+                                                                                                                                                                                                                                    Individual vectors
+                                                                                                                                                           Mean normalized MAD (percentage points)
+
+
+
+
+                                                                                                                      10
+                                           10                                                                                                                                                        0.4
+                                                                                                                           Mean normalized magnitude (%)
+
+
+
+
+                                                                                                                      9
+                  Attributed participant
+
+
+
+
+                                                                                                                      8
+                                                                                                                                                                                                     0.3
+                                           20
+                                                                                                                      7
+
+                                                                                                                      6
+                                                                                                                                                                                                     0.2
+                                           30                                                                         5
+
+                                                                                                                      4
+                                                                                                                                                                                                     0.1
+
+
+
+                                           43                                                                                                                                                        0.0
+                                                1                                  4         8          12     16                                                                                           1      4           8        12         16
+                                                                                          Electrode                                                                                                                         Electrode
+
+
+                 Figure S6. Descriptive attribution heterogeneity. (A) Each participant’s normalized profile averaged over outer-fold
+                 attribution records. (B) Mean MAD per electrode from five pooled inner-fold vectors versus individual participant
+                 vectors. These aggregates share fitted models and overlapping training cohorts; neither cells nor vectors are
+                 independent statistical replicates. Larger person dispersion does not imply a beneficial performance penalty.
+
+
+
+
+                                                                                                                6
+Supplementary material                                                                                                                      Cross-fitted electrode reduction
+
+
+
+
+                                                     A Complete reduced-count comparison                                            B Mean-preservation boundary
+                                              0.55
+                                                                                                                            0.000
+                                              0.50
+                  Participant mean Macro-F1
+
+
+
+
+                                                                                                                           −0.005
+                                                                                               Mean difference to full16
+                                              0.45
+                                                                                                                           −0.010
+                                              0.40
+                                                                                                                           −0.015
+                                              0.35
+                                                                                                                           −0.020
+                                              0.30
+                                                                                                                           −0.025
+                                              0.25
+                                                                           Cross-fitted SHAP                               −0.030
+                                              0.20                         Fixed geometry
+                                                                                                                           −0.035
+                                                     1     4          8         12        16                                         10    11    12     13    14     15
+                                                               Retained electrodes                                                          Retained electrodes
+
+                 Figure S7. Complete reduced-count comparison under the primary protocol. SHAP and the fixed geometric ordering
+                 use the same training sample and common full16 reference. The left panel includes every reduced count; the right
+                 enlarges the tolerance region. Shading gives participant-bootstrap intervals and the dashed line is the 0.02 margin.
+                 Different minimum qualifying counts do not establish a direct between-method mean difference.
+
+
+
+
+                                                                                      7
+Supplementary material                                                                                Cross-fitted electrode reduction
+
+
+
+                 S8      Result tables
+
+                 Table S1. Full-array (16-electrode) leave-one-subject-out performance of three classifiers on GRABMyo (43
+                 participants, 16 active gestures). CI: 95% participant cluster-bootstrap confidence interval. RBF-SVM: support vector
+                 machine with a radial basis function kernel. Training windows: windows used to fit each fold’s model.
+                               Model             Training windows          Macro-F1       95% CI          SD      Range
+                               XGBoost       all (550,368 per fold)          0.542      0.517–0.567 0.085 0.385–0.702
+                               RBF-SVM       40,000                          0.538      0.513–0.562 0.085 0.383–0.718
+                               Random forest 200,000                         0.502      0.475–0.528 0.090 0.346–0.670
+                    Paired comparisons (Wilcoxon signed-rank, Holm over 3): Random forest − RBF-SVM = −0.0362 (95% CI
+                    −0.0444 to −0.0284), pHolm < 0.001, rrb = −0.97; Random forest − XGBoost = −0.0408 (95% CI −0.0475 to
+                    −0.0340), pHolm < 0.001, rrb = −0.98; RBF-SVM − XGBoost = −0.0045 (95% CI −0.0107 to +0.0015), pHolm
+                    = 0.154, rrb = −0.25.
+
+
+
+
+                 Table S2. Electrode-count performance curve and primary non-inferiority decision on GRABMyo (cross-fitted ranking,
+                 λ = 0; 43 participants; every k retrained from scratch on the same 200,000 training windows of each fold). ∆k : mean
+                 paired difference from the k = 16 model of the same curve, with 95% participant cluster-bootstrap confidence interval
+                 (CI). Non-inferior: lower bound above −δ with the primary margin δ = 0.02; Holm: the percentile-tail calculation with
+                 Holm correction over the 15 subset sizes; this is not a null-generated test. The smallest non-inferior subset (k∗ ) is in
+                 bold; the rule below it marks the boundary. Decisions at the sensitivity margins δ = 0.01 and 0.03 are given in the
+                 count-inference comparison table.
+                         k Macro-F1 (mean ± SD)              ∆k             95% CI             Non-inferior Non-inferior (Holm)
+                      16        0.541 ± 0.084          reference
+                      15        0.538 ± 0.083          −0.0036   −0.0056 to −0.0017                 yes                 yes
+                      14        0.535 ± 0.083          −0.0060   −0.0081 to −0.0039                 yes                 yes
+                      13        0.530 ± 0.083          −0.0109   −0.0133 to −0.0085                 yes                 yes
+                      12       0.528 ± 0.084           −0.0133 −0.0160 to −0.0106                   yes                 yes
+                      11        0.521 ± 0.084           −0.0204       −0.0246 to −0.0162            no                    no
+                      10        0.515 ± 0.083           −0.0259       −0.0311 to −0.0205            no                    no
+                       9        0.510 ± 0.086           −0.0318       −0.0387 to −0.0246            no                    no
+                       8        0.505 ± 0.085           −0.0366       −0.0440 to −0.0289            no                    no
+                       7        0.500 ± 0.085           −0.0413       −0.0489 to −0.0333            no                    no
+                       6        0.480 ± 0.084           −0.0610       −0.0713 to −0.0507            no                    no
+                       5        0.428 ± 0.075           −0.1133       −0.1277 to −0.0993            no                    no
+                       4        0.397 ± 0.071           −0.1444       −0.1590 to −0.1306            no                    no
+                       3        0.340 ± 0.057           −0.2015       −0.2212 to −0.1822            no                    no
+                       2        0.299 ± 0.057           −0.2420       −0.2603 to −0.2230            no                    no
+                       1        0.181 ± 0.040           −0.3603       −0.3832 to −0.3369            no                    no
+
+
+
+
+                 Table S3. H2: attribution-ranked subsets versus the mean of random subsets of the same size (GRABMyo, 43
+                 participants; post-hoc secondary family of 8 tests, Holm-corrected). All subsets were evaluated with one comparison
+                 model (XGBoost, 50 boosting rounds, 150,000 training windows per fold), these scores use a different protocol from
+                 table S2. Random: participant’s mean over 100 random subsets (500 at k = 12). Difference: mean paired difference
+                 (attribution minus random) with 95% participant cluster-bootstrap confidence interval (CI). Higher/lower: participants
+                 for whom the attribution subset scored above/below their random mean. pHolm : Wilcoxon signed-rank,
+                 Holm-corrected; rrb : matched-pairs rank-biserial correlation.
+                   k Ranking                      Attribution Random Difference            95% CI          Higher/lower    pHolm    rrb
+                   4 Cross-fitted SHAP (λ = 0)       0.382        0.366    +0.0163   +0.0060 to +0.0267        29/14       0.007   +0.47
+                     Penalized SHAP (λ = 0.5)        0.383        0.366    +0.0172   +0.0071 to +0.0274        30/13       0.007   +0.50
+                   6 Cross-fitted SHAP (λ = 0)       0.453        0.416    +0.0370   +0.0286 to +0.0452        37/6       <0.001 +0.92
+                     Penalized SHAP (λ = 0.5)        0.453        0.416    +0.0370   +0.0286 to +0.0452        37/6       <0.001 +0.92
+                   8 Cross-fitted SHAP (λ = 0)       0.468        0.445    +0.0230   +0.0161 to +0.0298        36/7       <0.001 +0.82
+                     Penalized SHAP (λ = 0.5)        0.469        0.445    +0.0243   +0.0176 to +0.0308        37/6       <0.001 +0.86
+                  12 Cross-fitted SHAP (λ = 0)       0.485        0.478    +0.0074   +0.0046 to +0.0103        35/8       <0.001 +0.71
+                     Penalized SHAP (λ = 0.5)        0.485        0.478    +0.0074   +0.0046 to +0.0103        35/8       <0.001 +0.71
+
+
+
+
+                                                                  8
+Supplementary material                                                                                        Cross-fitted electrode reduction
+
+
+
+
+                 Table S4. H3: stability-regularised ranking (λ > 0) minus magnitude-only ranking (λ = 0) on the electrode-count
+                 performance curve (GRABMyo, 43 participants). Mean paired difference with 95% participant cluster-bootstrap
+                 confidence interval (CI). Tied: participants for whom both rankings select the identical subset. pHolm : Wilcoxon
+                 signed-rank, Holm over 12 tests. rrb is computed from untied participants only and is undefined (–) when all are tied;
+                 with most participants tied it is not informative about magnitude.
+                                          λ     k Mean difference                  95% CI             Tied    pHolm      rrb
+                                       0.25 4           −0.0002            −0.0005 to +0.0000         41/43   1.000     −1.00
+                                       0.25 6           +0.0000            +0.0000 to +0.0000         43/43   1.000      –
+                                       0.25 8           +0.0001            +0.0000 to +0.0002         42/43   1.000     +1.00
+                                       0.25 12          +0.0000            +0.0000 to +0.0000         43/43   1.000      –
+                                        0.5 4           +0.0004            −0.0005 to +0.0018         40/43   1.000     +0.00
+                                        0.5 6           +0.0000            +0.0000 to +0.0000         43/43   1.000      –
+                                        0.5 8           +0.0008            +0.0000 to +0.0019         40/43   1.000     +1.00
+                                        0.5 12          +0.0000            +0.0000 to +0.0000         43/43   1.000      –
+                                          1 4           +0.0010            −0.0003 to +0.0027         38/43   1.000     +0.47
+                                          1 6           +0.0000            +0.0000 to +0.0000         43/43   1.000      –
+                                          1 8           +0.0015            +0.0004 to +0.0028         36/43   0.216     +1.00
+                                          1 12          −0.0005            −0.0014 to +0.0000         42/43   1.000     −1.00
+
+
+
+
+                 Table S5. H4: deletion with retraining (GRABMyo, 43 participants). Retained: electrodes kept after deletion.
+                 Remove-Top, Remove-Bottom and Remove-Random delete the highest-ranked, lowest-ranked or randomly chosen
+                 electrodes; Remove-Random uses the random subsets of the H2 comparison and exists only where these were sampled.
+                 All orders use the same comparison model and training sample. Difference: mean paired difference (first minus second
+                 order) with 95% participant cluster-bootstrap confidence interval (CI); negative values follow the expected ordering.
+                 pHolm : Wilcoxon signed-rank, Holm over the 15 contrasts; rrb : matched-pairs rank-biserial correlation.
+                         Retained Contrast                     First Second Difference                    95% CI               pHolm      rrb
+                                 2 Top − Bottom                0.263       0.292    −0.0297         −0.0419 to −0.0166 <0.001 −0.67
+                                 4 Top − Bottom    0.351                   0.382    −0.0314         −0.0447 to −0.0177 <0.001 −0.64
+                                   Top − Random    0.351                   0.366    −0.0151         −0.0239 to −0.0061 0.010 −0.51
+                                   Random − Bottom 0.366                   0.382    −0.0163         −0.0265 to −0.0061 0.013 −0.47
+                                 6 Top − Bottom    0.376                   0.454    −0.0775         −0.0921 to −0.0627 <0.001 −0.96
+                                   Top − Random    0.376                   0.416    −0.0398         −0.0487 to −0.0307 <0.001 −0.91
+                                   Random − Bottom 0.416                   0.454    −0.0377         −0.0459 to −0.0293 <0.001 −0.93
+                                 8 Top − Bottom    0.408                   0.469    −0.0618         −0.0772 to −0.0461 <0.001 −0.89
+                                   Top − Random    0.408                   0.445    −0.0377         −0.0476 to −0.0273 <0.001 −0.86
+                                   Random − Bottom 0.445                   0.469    −0.0242         −0.0309 to −0.0172 <0.001 −0.86
+                               10 Top − Bottom                 0.445       0.475    −0.0297         −0.0399 to −0.0188 <0.001 −0.73
+                               12 Top − Bottom    0.455                    0.485    −0.0302         −0.0385 to −0.0218 <0.001 −0.84
+                                  Top − Random    0.455                    0.478    −0.0228         −0.0296 to −0.0158 <0.001 −0.81
+                                  Random − Bottom 0.478                    0.485    −0.0074         −0.0101 to −0.0046 <0.001 −0.74
+                               14 Top − Bottom                 0.487       0.491    −0.0038         −0.0084 to +0.0009         0.150    −0.25
+
+
+
+
+                 Table S6. Agreement of electrode rankings on GRABMyo (λ = 0). Values are mean (SD) over all pairs of rankings in
+                 each group. They are descriptive summaries: pairwise observations share rankings and are not independent, so no
+                 inferential interval is given.
+                  Rankings compared                           Pairs   Spearman ρ     Kendall τ       Jaccard, top 4 Jaccard, top 6 Jaccard, top 8
+                  Individual participants                     903     0.927 (0.038) 0.801 (0.066)    0.752 (0.194)    0.905 (0.137)    0.803 (0.132)
+                  Inner folds (disjoint participant groups)   430     0.948 (0.021) 0.840 (0.046)    0.816 (0.200)    0.992 (0.047)    0.838 (0.105)
+                  Outer folds (overlapping training sets∗ )   903     0.987 (0.008) 0.943 (0.028)    0.888 (0.180)    1.000 (0.000)    0.923 (0.106)
+                    ∗ Outer training sets share about 98% of their participants, so their agreement is descriptive only and is not an
+
+                    estimate of between-participant stability.
+
+
+
+
+                                                                       9
+Supplementary material                                                                              Cross-fitted electrode reduction
+
+
+
+
+                 Table S7. NinaPro DB5 channel-count performance curve (exploratory replication; cross-fitted ranking, λ = 0; 10
+                 subjects; reference k = 16, mean Macro-F1 0.281; margin δ = 0.02). The lower 95% bound is shown to six decimals
+                 because the k = 12 decision lies at the margin. Non-inferior: lower bound above −δ, unadjusted and under
+                 percentile-tail Holm correction over 15 subset sizes. Monte Carlo repetitions: number of 200 bootstrap repetitions in
+                 which the unadjusted decision was non-inferior. This is a Monte Carlo decision-stability diagnostic, not a probability
+                 that the hypothesis is true.
+                                                                                                            Qualifying
+                              k Macro-F1         ∆k      Lower bound Non-inf. Non-inf. (Holm)
+                                                                                                            repetitions
+                            15      0.270     −0.0108       −0.023773       no                no           0/200 (0.0%)
+                            14      0.269     −0.0119       −0.027438       no                no           0/200 (0.0%)
+                            13      0.266     −0.0143       −0.031186       no                no           0/200 (0.0%)
+                            12      0.268     −0.0126       −0.019994       yes               no         191/200 (95.5%)
+                            11      0.260     −0.0211       −0.034121       no                no           0/200 (0.0%)
+                            10      0.265     −0.0160       −0.031368       no                no           0/200 (0.0%)
+                             9      0.260     −0.0202       −0.036943       no                no           0/200 (0.0%)
+                             8      0.252     −0.0288       −0.055369       no                no           0/200 (0.0%)
+                             7      0.232     −0.0486       −0.075346       no                no           0/200 (0.0%)
+                             6      0.231     −0.0498       −0.081816       no                no           0/200 (0.0%)
+                             5      0.200     −0.0803       −0.118422       no                no           0/200 (0.0%)
+                             4      0.180     −0.1006       −0.150266       no                no           0/200 (0.0%)
+                             3      0.162     −0.1185       −0.174145       no                no           0/200 (0.0%)
+                             2      0.138     −0.1430       −0.195307       no                no           0/200 (0.0%)
+                             1      0.105     −0.1754       −0.229548       no                no           0/200 (0.0%)
+
+
+
+
+                 Table S8. Cross-session evaluation on GRABMyo (exploratory; full array). All conditions are also
+                 subject-independent: the test participant is never in training.
+                                      Design Train sessions Test session Train windows              Macro-F1
+                                      CS1              1                1           183,456        0.492 ± 0.101
+                                      CS1              1                2           183,456        0.528 ± 0.088
+                                      CS1              1                3           183,456        0.510 ± 0.090
+                                      CS2             1+2               3           366,912        0.530 ± 0.095
+                    Paired contrasts (exploratory, uncorrected): CS1: test S2 − test S1: +0.0355 (95% CI +0.0091 to +0.0621), p =
+                    0.024; CS1: test S3 − test S1: +0.0172 (95% CI −0.0038 to +0.0391), p = 0.272; S3 test: CS2 (train S1+S2) −
+                    CS1 (train S1): +0.0210 (95% CI +0.0146 to +0.0274), p < 0.001.
+
+
+
+
+                 Table S9. GRABMyo derived bipolar pairs Fj − Fj+8 (exploratory; 43 participants; λ = 0; count-feature threshold
+                 4 × 10−3 mV; margin δ = 0.02). Reference: the k = 8 model of the same curve, trained on the curve’s 200,000-window
+                 sample (mean Macro-F1 0.480). An additional full-array bipolar value (0.478) comes from a separate model trained on
+                 all 550,368 training windows of each fold, as for the monopolar analysis. ∆k : mean paired difference with 95%
+                 participant cluster-bootstrap confidence interval (CI). Monte Carlo repetitions: as in the DB5 table in this
+                 Supplementary.
+                                                                                                     Qualifying
+                                     k Macro-F1         ∆k              95% CI          Non-inf.
+                                                                                                     repetitions
+                                     7      0.464     −0.0158    −0.0203 to −0.0113         no      0/200 (0.0%)
+                                     6      0.442     −0.0375    −0.0451 to −0.0303         no      0/200 (0.0%)
+                                     5      0.405     −0.0742    −0.0845 to −0.0646         no      0/200 (0.0%)
+                                     4      0.356     −0.1240    −0.1392 to −0.1096         no      0/200 (0.0%)
+                                     3      0.310     −0.1697    −0.1852 to −0.1546         no      0/200 (0.0%)
+                                     2      0.240     −0.2399    −0.2615 to −0.2177         no      0/200 (0.0%)
+                                     1      0.174     −0.3052    −0.3298 to −0.2790         no      0/200 (0.0%)
+
+
+
+
+                                                                10
+Supplementary material                                                                             Cross-fitted electrode reduction
+
+
+
+
+                 Table S10. Paired participant-level gesture F1: SHAP12 minus full16, with Holm correction across all sixteen active
+                 gestures. Numeric IDs follow the dataset MotionSequence.txt, reproduced in the gesture dictionary.
+                                   Gesture ID       Full16   SHAP12     ¯
+                                                                        ∆           95% CI                 pHolm
+                                   1                0.449    0.437      -0.0119     [-0.0210, -0.0035]     0.086
+                                   2                0.308    0.284      -0.0242     [-0.0356, -0.0132]     0.003
+                                   3                0.519    0.516      -0.0030     [-0.0117, +0.0054]     1.000
+                                   4                0.348    0.341      -0.0069     [-0.0137, -0.0001]     0.121
+                                   5                0.490    0.483      -0.0066     [-0.0176, +0.0045]     1.000
+                                   6                0.604    0.592      -0.0115     [-0.0222, -0.0008]     0.133
+                                   7                0.503    0.504      +0.0009     [-0.0059, +0.0083]     1.000
+                                   8                0.499    0.489      -0.0099     [-0.0215, +0.0006]     0.787
+                                   9                0.387    0.357      -0.0300     [-0.0436, -0.0167]     0.002
+                                   10               0.533    0.514      -0.0192     [-0.0299, -0.0094]     0.005
+                                   11               0.940    0.939      -0.0003     [-0.0018, +0.0012]     1.000
+                                   12               0.830    0.819      -0.0107     [-0.0202, -0.0014]     0.079
+                                   13               0.813    0.804      -0.0093     [-0.0156, -0.0036]     0.085
+                                   14               0.487    0.441      -0.0456     [-0.0594, -0.0323]     < 0.001
+                                   15               0.543    0.536      -0.0066     [-0.0142, +0.0014]     0.168
+                                   16               0.410    0.392      -0.0179     [-0.0322, -0.0034]     0.168
+
+
+
+
+                 Table S11. Participant-level minus fold aggregation at count 12. Holm adjustment covers all sixty reduced-count
+                 comparisons across four penalties; full results are in the paired-comparison CSV.
+                                                λ       k    ¯
+                                                             ∆           95% CI                 pHolm
+                                                0.0     12   +0.0000     [+0.0000, +0.0000]     1.000
+                                                0.25    12   +0.0000     [+0.0000, +0.0000]     1.000
+                                                0.5     12   +0.0000     [+0.0000, +0.0000]     1.000
+                                                1.0     12   +0.0005     [+0.0000, +0.0014]     1.000
+
+
+
+
+                 Table S12. Participant aggregation: penalized minus unpenalized attribution. Holm correction covers all twelve tests;
+                 all fixed penalty settings are reported.
+                                                λ       k    ¯
+                                                             ∆           95% CI                 pHolm
+                                                0.25    4    +0.0000     [+0.0000, +0.0000]     1.000
+                                                0.25    6    +0.0000     [+0.0000, +0.0000]     1.000
+                                                0.25    8    +0.0002     [-0.0008, +0.0011]     1.000
+                                                0.25    12   +0.0000     [+0.0000, +0.0000]     1.000
+                                                0.5     4    +0.0001     [+0.0000, +0.0004]     1.000
+                                                0.5     6    +0.0000     [+0.0000, +0.0000]     1.000
+                                                0.5     8    +0.0000     [-0.0011, +0.0011]     1.000
+                                                0.5     12   +0.0000     [+0.0000, +0.0000]     1.000
+                                                1.0     4    +0.0030     [+0.0006, +0.0060]     0.332
+                                                1.0     6    +0.0000     [+0.0000, +0.0000]     1.000
+                                                1.0     8    +0.0005     [-0.0008, +0.0018]     1.000
+                                                1.0     12   +0.0000     [+0.0000, +0.0000]     1.000
+
+
+
+
+                                                                 11
+Supplementary material                                                                                  Cross-fitted electrode reduction
+
+
+
+
+                 Table S13. Post-hoc descriptive selector activity: each fixed positive penalty versus its unpenalized counterpart.
+                 Counts concern physical site sets, not rank order. Every row includes all 43 participants; the CSV retains all sixteen
+                 counts. Identical site sets do not constitute an equivalence test of distinct layouts.
+                                            Aggregation       λ        k     Changed sets       Mean Jaccard
+                                            Fold              0.25     4     2/43               0.981
+                                            Fold              0.25     6     0/43               1.000
+                                            Fold              0.25     8     1/43               0.995
+                                            Fold              0.25     12    0/43               1.000
+                                            Fold              0.5      4     3/43               0.972
+                                            Fold              0.5      6     0/43               1.000
+                                            Fold              0.5      8     3/43               0.984
+                                            Fold              0.5      12    0/43               1.000
+                                            Fold              1.0      4     5/43               0.953
+                                            Fold              1.0      6     0/43               1.000
+                                            Fold              1.0      8     7/43               0.964
+                                            Fold              1.0      12    1/43               0.996
+                                            Participant       0.25     4     0/43               1.000
+                                            Participant       0.25     6     0/43               1.000
+                                            Participant       0.25     8     3/43               0.984
+                                            Participant       0.25     12    0/43               1.000
+                                            Participant       0.5      4     1/43               0.991
+                                            Participant       0.5      6     0/43               1.000
+                                            Participant       0.5      8     5/43               0.974
+                                            Participant       0.5      12    0/43               1.000
+                                            Participant       1.0      4     6/43               0.944
+                                            Participant       1.0      6     0/43               1.000
+                                            Participant       1.0      8     7/43               0.964
+                                            Participant       1.0      12    0/43               1.000
+
+
+
+
+                 Table S14. Two exploratory split-derived layouts at twelve electrodes, fitted with all development windows.
+                 Six-decimal limits preserve the strict boundary decision. Layout estimation excludes test participants, but count
+                 selection had already used the full cohort. All penalties produced the same layout within each split.
+                             Development / test      n test       Dropped sites     ¯
+                                                                                    ∆           95% CI                   NI
+                             odd / even              21           3, 9, 11, 12      -0.0124     [-0.017901, -0.007658]   yes
+                             even / odd              22           9, 11, 12, 13     -0.0135     [-0.020020, -0.006627]   no
+
+
+
+
+                 Table S15. Full fixed geometric ordering under the primary 300-round, 200,000-window protocol. Each count uses all
+                 43 participants and the common primary full16 reference. The count-family null test is exploratory and Holm-adjusted
+                 over fifteen reduced counts.
+                                      k     Mean F1       ¯
+                                                          ∆            95% CI                 NI CI     NI null Holm
+                                      1     0.191         -0.3506      [-0.3718, -0.3288]     no        no
+                                      2     0.289         -0.2523      [-0.2714, -0.2325]     no        no
+                                      3     0.367         -0.1746      [-0.1911, -0.1569]     no        no
+                                      4     0.407         -0.1341      [-0.1497, -0.1185]     no        no
+                                      5     0.432         -0.1095      [-0.1232, -0.0954]     no        no
+                                      6     0.450         -0.0917      [-0.1030, -0.0796]     no        no
+                                      7     0.484         -0.0574      [-0.0683, -0.0463]     no        no
+                                      8     0.502         -0.0395      [-0.0467, -0.0321]     no        no
+                                      9     0.505         -0.0367      [-0.0438, -0.0296]     no        no
+                                      10    0.514         -0.0274      [-0.0337, -0.0210]     no        no
+                                      11    0.518         -0.0229      [-0.0290, -0.0165]     no        no
+                                      12    0.522         -0.0193      [-0.0254, -0.0132]     no        no
+                                      13    0.525         -0.0159      [-0.0218, -0.0099]     no        no
+                                      14    0.527         -0.0143      [-0.0201, -0.0082]     no        no
+                                      15    0.537         -0.0040      [-0.0063, -0.0016]     yes       yes
+
+
+
+
+                                                                  12
+Supplementary material                                                                              Cross-fitted electrode reduction
+
+
+
+
+                 Table S16. Count decisions from the primary percentile rule, percentile-tail Holm calculation and exploratory
+                 null-centred studentized bootstrap. Inference uses participants; each condition and margin is its own count family.
+                              Condition                   Margin      Percentile CI     Tail Holm   Null-centred Holm
+                              Derived bipolar             0.01        none              none        none
+                              Derived bipolar             0.02        none              none        none
+                              Derived bipolar             0.03        7                 7           7
+                              NinaPro DB5                 0.01        none              none        none
+                              NinaPro DB5                 0.02        12                none        none
+                              NinaPro DB5                 0.03        12                12          none
+                              Geometric                   0.01        15                15          15
+                              Geometric                   0.02        15                15          15
+                              Geometric                   0.03        11                12          12
+                              Participant (λ = 0)         0.01        14                14          14
+                              Participant (λ = 0)         0.02        12                12          12
+                              Participant (λ = 0)         0.03        11                11          11
+                              Participant (λ = 0.25)      0.01        14                14          14
+                              Participant (λ = 0.25)      0.02        12                12          12
+                              Participant (λ = 0.25)      0.03        11                11          11
+                              Participant (λ = 0.5)       0.01        14                14          14
+                              Participant (λ = 0.5)       0.02        12                12          12
+                              Participant (λ = 0.5)       0.03        11                11          11
+                              Participant (λ = 1)         0.01        14                14          14
+                              Participant (λ = 1)         0.02        12                12          12
+                              Participant (λ = 1)         0.03        11                11          11
+                              Primary (λ = 0)             0.01        14                14          14
+                              Primary (λ = 0)             0.02        12                12          12
+                              Primary (λ = 0)             0.03        11                11          11
+                              Rest included               0.01        14                14          14
+                              Rest included               0.02        12                12          12
+                              Rest included               0.03        11                11          11
+                              150 ms                      0.01        14                14          14
+                              150 ms                      0.02        12                12          12
+                              150 ms                      0.03        10                11          11
+                              500 ms                      0.01        14                14          14
+                              500 ms                      0.02        12                12          12
+                              500 ms                      0.03        10                11          11
+
+
+
+
+                 Table S17. Observed resource-matched selection-stage runtime per outer fold on the recorded workstation. Inner
+                 training is shared and counted once. Measurements include concurrent workstation load and are descriptive rather
+                 than an isolated benchmark. No online or real-time latency is inferred.
+                                            Stage                       Mean s    SD s     Min s    Max s
+                                            Shared inner training       117.1     3.7      114.7    136.4
+                                            TreeSHAP selection          4.0       0.2      3.8      4.3
+                                            Grouped permutation         10.6      1.1      9.8      13.3
+
+
+
+
+                                                                 13
+

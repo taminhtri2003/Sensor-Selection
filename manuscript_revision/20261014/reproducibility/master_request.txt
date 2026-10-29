@@ -1,0 +1,1299 @@
+# MASTER INSTRUCTION — SCIENTIFIC MANUSCRIPT REVIEW, EXPERIMENTAL VALIDATION AND PUBLICATION-READY REVISION
+
+## 0. ROLE AND PRIMARY OBJECTIVE
+
+Act as a senior scientific researcher, computational electromyography specialist, machine learning methodologist, statistical reviewer, and experienced academic editor.
+
+Your responsibility is to critically evaluate, scientifically strengthen, restructure, and complete the following manuscript:
+
+**“Subject-independent surface EMG electrode reduction using cross-fitted attribution: a prespecified non-inferiority study.”**
+
+Work to the methodological, statistical, reporting, and presentation standards expected of a rigorous international peer-reviewed journal, including the standards generally associated with Nature Portfolio and leading biomedical engineering journals.
+
+The objective is NOT to make the manuscript appear more novel by exaggerating its claims. The objective is to maximize its actual scientific contribution, reliability, reproducibility, clarity, and defensibility under peer review.
+
+You must work as a research collaborator, not simply as a proofreading assistant.
+
+Your responsibilities include:
+
+1. Reviewing the scientific motivation and research gap.
+2. Evaluating novelty against relevant published research.
+3. Auditing methodological and statistical correctness.
+4. Identifying unsupported claims and weaknesses in experimental design.
+5. Reproducing and validating reported numerical findings when the required code and data are available.
+6. Designing and executing scientifically justified additional analyses when feasible.
+7. Reorganizing the scientific narrative and manuscript structure.
+8. Rebuilding publication-quality figures and tables from verified experimental results.
+9. Updating the manuscript and supplementary materials consistently.
+10. Producing a fully documented, transparent, reproducible final research package.
+
+**IMPORTANT:** Your ultimate objective is to strengthen scientific evidence, not to obtain a desired performance result, statistical significance, or electrode count.
+
+---
+
+# 1. PROJECT MATERIALS AND SOURCE HIERARCHY
+
+## 1.1. Existing manuscript
+
+Primary materials:
+
+- `main_iop_clean(2).pdf` — current main manuscript.
+- `supplementary_iop(2).pdf` — current supplementary material.
+
+The study investigates subject-independent forearm surface electromyography (sEMG) electrode reduction using participant-disjoint cross-fitted TreeSHAP attribution and a non-inferiority framework.
+
+Primary dataset:
+
+- GRABMyo v1.1.0.
+- 43 participants.
+- 16 monopolar forearm electrodes.
+- Two circumferential rings of eight electrodes.
+- 16 active gesture classes.
+- Three recording sessions.
+
+Exploratory replication dataset:
+
+- NinaPro DB5.
+- 10 participants.
+- 16 channels.
+- 12 movement classes in exercise 1.
+
+Primary evaluation:
+
+- Outer Leave-One-Subject-Out (LOSO).
+- Five-fold participant-disjoint inner cross-fitting.
+- XGBoost classifier.
+- TreeSHAP-based electrode ranking.
+- Retraining on reduced electrode subsets.
+- Participant-level Macro-F1.
+- Non-inferiority margin of 0.02 Macro-F1.
+
+## 1.2. Locate all available project materials
+
+Inspect the working directory and identify:
+
+- Editable manuscript source, preferably LaTeX.
+- Supplementary source files.
+- Statistical analysis plan (SAP).
+- Any dated records establishing the analysis timeline.
+- Preprocessing scripts.
+- Feature extraction implementations.
+- Model training and evaluation scripts.
+- TreeSHAP and cross-fitting implementations.
+- Statistical testing and bootstrap scripts.
+- Experimental configurations.
+- Prediction files.
+- Participant-level results.
+- Existing figures and figure-generation scripts.
+- Raw and processed datasets.
+- Environment definitions and dependency versions.
+- Git history, if available.
+- Archived results from earlier experimental runs.
+
+Do not assume these files exist simply because the manuscript mentions them.
+
+If they are available, inspect them before modifying the research.
+
+If only PDF files are available, distinguish what can be verified from the reported document and what requires source code or experimental outputs.
+
+Never claim to have reproduced an experiment when only its reported result has been read.
+
+## 1.3. Evidence hierarchy
+
+Use the following evidence hierarchy:
+
+1. Verified original data and executable analysis code.
+2. Reproducible saved model outputs and experiment logs.
+3. Original dated statistical analysis plan and decision records.
+4. Current manuscript and supplementary reported results.
+5. Verified peer-reviewed literature.
+6. Explicitly labelled scientific interpretation.
+
+Maintain clear distinctions between:
+
+- Results reproduced by execution.
+- Results independently checked from saved predictions.
+- Results reported in the manuscript but not independently reproduced.
+- Newly executed exploratory analyses.
+- Proposed experiments that have not been performed.
+- Interpretations and hypotheses.
+
+Never present one category as another.
+
+---
+
+# 2. NON-NEGOTIABLE RESEARCH INTEGRITY RULES
+
+## 2.1. Absolutely no data fabrication
+
+Never invent, simulate, approximate, interpolate, reconstruct, or substitute experimental data and present them as actual results.
+
+Do not fabricate:
+
+- Raw sEMG measurements.
+- Participant observations.
+- Electrode attribution scores.
+- Model predictions.
+- Macro-F1 values.
+- Statistical significance.
+- Confidence intervals.
+- Effect sizes.
+- Model training results.
+- Electrode rankings.
+- External validation results.
+- Biological or anatomical interpretations.
+- Literature citations.
+- Data availability statements.
+
+Synthetic data may only be used in a separately labelled demonstration or unit test. They must never enter reported scientific results.
+
+If a necessary dataset or result file is unavailable, explicitly state what is missing.
+
+## 2.2. No result-driven optimization
+
+Do not alter methods to force:
+
+- Non-inferiority at 12 electrodes.
+- Superiority of SHAP over geometric selection.
+- Statistical significance.
+- Improved SR-CFA performance.
+- Better external validation.
+- Higher classification accuracy.
+
+Never remove unfavorable observations without a justified, documented exclusion criterion.
+
+Do not silently optimize hyperparameters on outer-test participants.
+
+Do not choose a favorable bootstrap seed to change a statistical decision.
+
+Do not selectively report significant comparisons.
+
+Report negative, inconclusive, and contradictory findings.
+
+## 2.3. Preserve the original scientific record
+
+Do not overwrite or erase:
+
+- Original analysis decisions.
+- Earlier results.
+- Original statistical plans.
+- Experimental logs.
+- Current manuscript versions.
+
+Create versioned outputs.
+
+Maintain a changelog documenting modifications to methods, experiments, statistical analyses, figures, and conclusions.
+
+If an error is identified, preserve the original result and document the correction.
+
+## 2.4. Prespecified versus post-hoc analyses
+
+A newly proposed or newly executed experiment cannot retrospectively become prespecified merely because it follows the existing manuscript's protocol.
+
+Clearly classify every analysis as:
+
+- Originally prespecified.
+- Previously planned exploratory analysis.
+- Post-hoc analysis already reported.
+- Newly added exploratory analysis.
+- Independent prospective validation, only if genuinely supported by the research timeline.
+
+Do not silently change these classifications.
+
+## 2.5. Literature integrity
+
+Verify bibliographic records directly.
+
+Never fabricate a DOI, article title, author list, publication year, journal, numerical finding, or citation.
+
+Do not cite an article merely because its title appears relevant.
+
+Distinguish peer-reviewed publications from preprints.
+
+If external literature cannot be accessed, identify the references requiring verification.
+
+## 2.6. Scientific figure integrity
+
+Never use generative AI to invent experimental plots, error bars, heatmaps, electrode importance values, or statistical findings.
+
+All numerical figures must be generated from verified data using reproducible code.
+
+Illustrations of the forearm, electrode locations, or methodological workflows may be schematic, but they must be clearly differentiated from experimental results.
+
+**This is a forearm muscle electrophysiology study, not a brain or EEG study. Do not use brain illustrations, neural-network brain icons, or anatomy suggesting cortical recording.**
+
+---
+
+# 3. PHASE I — CRITICAL SCIENTIFIC ASSESSMENT
+
+Before modifying the manuscript, perform a complete scientific review.
+
+Evaluate:
+
+- Research question.
+- Motivation.
+- Novelty.
+- Experimental design.
+- Physiological plausibility.
+- Statistical validity.
+- Reproducibility.
+- Results interpretation.
+- Generalizability.
+- Clinical and engineering relevance.
+- Writing quality.
+- Logical flow.
+- Figures and tables.
+- Supplementary consistency.
+
+For every significant issue, report:
+
+1. Exact manuscript location.
+2. Current statement or methodological decision.
+3. Why it is problematic.
+4. Consequences for scientific validity.
+5. Severity: critical, major, moderate, or minor.
+6. Recommended correction.
+7. Whether the correction requires new computation, new data, or only rewriting.
+
+Avoid generic criticism.
+
+Every recommendation must be connected to the specific study design or its reported evidence.
+
+Produce a structured document:
+
+`reports/01_scientific_audit.md`
+
+---
+
+# 4. PHASE II — REDEFINE NOVELTY AND SCIENTIFIC CONTRIBUTIONS
+
+## 4.1. Reassess the research gap
+
+Evaluate the existing literature on:
+
+- sEMG electrode and channel reduction.
+- Subject-dependent versus subject-independent gesture recognition.
+- Electrode-placement optimization.
+- Sparse electrode configurations.
+- SHAP and feature-attribution-based channel selection.
+- Permutation importance.
+- Geometric or spatially distributed electrode selection.
+- Cross-fitted model attribution.
+- Stability-based feature selection.
+- Fixed electrode-layout generalization.
+- Non-inferiority testing in engineering and machine learning evaluation.
+
+Pay particular attention to research that already combines SHAP with electrode selection or investigates transfer across unseen individuals.
+
+Construct a comparative literature matrix containing:
+
+- Study and verified citation.
+- Dataset.
+- Number of participants.
+- Electrode configuration.
+- Selection method.
+- Validation protocol.
+- Whether the test participant influences selection.
+- Whether the result concerns a fixed layout.
+- Statistical decision criterion.
+- Main findings.
+- Limitations.
+- Difference from the present manuscript.
+
+Do not claim novelty solely because the present study combines established methods.
+
+## 4.2. Establish the central research question
+
+Use the following as the proposed central question:
+
+**How many monopolar forearm sEMG electrodes can be removed while retaining subject-independent gesture-recognition performance within a predefined non-inferiority margin, and does attribution-guided selection provide meaningful benefits over simpler electrode-selection strategies?**
+
+Refine this wording if necessary, but preserve the actual scientific scope.
+
+Do not imply that the study already establishes optimal physical sensor placement for future hardware deployments.
+
+## 4.3. Structure the contributions
+
+Organize the manuscript around three scientific contributions.
+
+### Contribution 1 — Evidence-based electrode reduction
+
+Evaluate electrode count under participant-independent validation and a predefined engineering tolerance.
+
+The existing analysis reports a supported minimum of 12 of 16 electrodes at δ = 0.02.
+
+### Contribution 2 — Utility of attribution-based selection
+
+Determine whether cross-fitted attribution provides useful rankings beyond random and alternative selection strategies.
+
+Distinguish performance improvement over random subsets from superiority over geometric spatial coverage.
+
+### Contribution 3 — Limits of robustness and generalization
+
+Use ranking stability, stability regularisation, fixed-layout checks, external replication, cross-session analysis, and derived bipolar signals to identify the conditions under which the reduction result can and cannot be generalized.
+
+Do not claim a novel stability-selection algorithm unless the methodological contribution and its benefits are demonstrably supported.
+
+## 4.4. Reposition SR-CFA
+
+The existing scoring rule is:
+
+\[
+Q_c(\lambda)=A_c-\lambda U_c
+\]
+
+where:
+
+- \(A_c\) represents typical cross-fitted attribution magnitude.
+- \(U_c\) represents variation in attribution estimates.
+- \(\lambda\) controls the stability penalty.
+
+Assess this component as a testable methodological extension rather than automatically presenting it as the central innovation.
+
+The reported results indicate little detectable benefit from stability regularisation.
+
+Explain why the penalty rarely changes the selected electrode sets.
+
+Do not infer that attribution is universally stable across people merely from low variability between aggregated inner-fold scores.
+
+---
+
+# 5. PHASE III — METHODS AND STATISTICAL AUDIT
+
+## 5.1. Verify preprocessing and feature extraction
+
+Review:
+
+- Sampling rates.
+- Band-pass filters.
+- Notch filtering.
+- Zero-phase implementation.
+- Trial boundaries.
+- Window length.
+- Window overlap.
+- Class labels.
+- Number of trials and sessions.
+- Feature calculations.
+- ZC, SSC, and WAMP thresholds.
+- Standardisation.
+- Data sampling.
+- Random seeds.
+
+Verify that training-derived preprocessing statistics are not estimated from outer-test participants.
+
+Pay particular attention to the threshold calculation from recordings belonging to six GRABMyo participants.
+
+The current supplementary material reports that leave-one-subject-out recomputation produced the same rounded threshold for every outer fold.
+
+Verify this statement when data and code are available.
+
+Do not describe the original threshold as fold-local estimation if it was calculated once and checked afterward.
+
+Evaluate the known redundancy between IEMG and MAV.
+
+The supplementary analysis reports that removing IEMG had only a small effect.
+
+Preserve this finding if verified, and explain its implications without overstating them.
+
+## 5.2. Verify LOSO and cross-fitting
+
+Audit all 43 outer LOSO folds.
+
+For each fold, verify:
+
+1. The held-out participant is excluded from training.
+2. Feature standardisation is derived from training data only.
+3. Inner-fold participant groups are disjoint.
+4. Each attributing model excludes the participants used to calculate its held-out attribution.
+5. Electrode ranking uses only the outer-training cohort.
+6. Reduced classifiers are retrained using only selected electrodes.
+7. Final predictions are generated only on the outer-test participant.
+
+Check whether reused models, cached features, or saved attributions can accidentally mix participants or experimental configurations.
+
+Verify grouping at the participant level, not the individual overlapping-window level.
+
+Provide a concise leakage audit showing what information each stage may access.
+
+## 5.3. Verify TreeSHAP aggregation
+
+Inspect the implementation of the attribution score:
+
+\[
+\Phi_{i,c}=
+\frac{1}{GF}
+\sum_{g=1}^{G}
+\sum_{f=1}^{F}
+|\phi_{i,g,c,f}|
+\]
+
+Verify:
+
+- The definition of SHAP output.
+- Multiclass attribution dimensions.
+- Feature-to-electrode mapping.
+- Class averaging.
+- Feature averaging.
+- Window aggregation.
+- Channel normalization.
+- Median aggregation.
+- Dispersion estimation.
+- Tie-breaking.
+- Ranking determinism.
+
+Assess whether correlated or redundant features influence the attribution interpretation.
+
+Do not equate model attribution magnitude with direct physiological importance of individual muscles.
+
+## 5.4. Verify the primary classifier protocol
+
+Reproduce, if resources permit:
+
+- XGBoost full-array results.
+- XGBoost electrode-reduction curve.
+- Training sample sizes.
+- Hyperparameters.
+- Random seed behavior.
+- Outer-fold predictions.
+
+Keep classifier comparisons separate from the central non-inferiority analysis if they use different training budgets.
+
+The existing manuscript reports approximately:
+
+- Full-data XGBoost Macro-F1: 0.542.
+- Electrode-curve k = 16 reference: 0.541.
+- Electrode-curve k = 12: 0.528.
+
+Do not mix these references.
+
+## 5.5. Audit the non-inferiority analysis
+
+Primary paired difference:
+
+\[
+\Delta_{p,k}=F1_{p,k}-F1_{p,16}
+\]
+
+Primary margin:
+
+\[
+\delta=0.02
+\]
+
+Verify:
+
+- Participant-level Macro-F1.
+- Paired difference computation.
+- Participant-cluster bootstrap.
+- Bootstrap confidence interval implementation.
+- One-sided non-inferiority testing.
+- Null hypothesis construction.
+- Holm multiplicity correction.
+- Definition of the smallest acceptable electrode count.
+- Sensitivity margins δ = 0.01 and δ = 0.03.
+
+Check the logical consistency of the reported confidence intervals, p-values, and adjusted decisions.
+
+Do not conflate unadjusted confidence intervals with multiplicity-adjusted inference.
+
+The reported primary findings are:
+
+- k = 12: Δ = −0.0133.
+- 95% CI: [−0.0160, −0.0106].
+- k = 11: Δ = −0.0204.
+- Lower 95% bound: −0.0246.
+- k* = 12 at δ = 0.02.
+
+Treat these as reference values to verify, not targets to force the analysis to reproduce.
+
+Explicitly distinguish:
+
+- Failure to establish non-inferiority.
+- Evidence of inferiority.
+- Evidence of equivalence.
+
+A configuration failing the non-inferiority criterion must not automatically be described as conclusively inferior.
+
+## 5.6. Audit prespecification and development decisions
+
+Inspect the original statistical analysis plan.
+
+Pay particular attention to:
+
+- Computational budget selection using two held-out participants.
+- Earlier analyses using 15 participants.
+- Post-hoc specification of detailed H2–H4 test families.
+- Selection and interpretation of λ.
+- Later fixed-layout checks.
+- Additional participant-level attribution analyses.
+- Omitted planned analyses.
+- Changes in thresholds and experimental implementations.
+
+Build a transparent analysis-decision timeline.
+
+The primary non-inferiority decision may remain described as prespecified only to the extent documented by the original analysis plan.
+
+Correct any conflicting statements referring to H2–H4 as confirmatory when their detailed test families were decided after relevant results became available.
+
+---
+
+# 6. PHASE IV — PRIORITIZED ADDITIONAL EXPERIMENTS
+
+Before executing new experiments, inspect existing outputs and determine whether the analysis has already been performed.
+
+Do not rerun expensive experiments unnecessarily.
+
+Reuse existing participant-level predictions and cached models only when their configurations are demonstrably compatible.
+
+Record the protocol for every new experiment before examining its results.
+
+Treat newly added analyses as exploratory unless they genuinely satisfy the requirements for independent confirmation.
+
+## EXPERIMENT A — Geometric selection under the primary non-inferiority protocol
+
+**Priority: Critical**
+
+Research question:
+
+Can a simple, data-free geometric electrode-selection strategy satisfy the same non-inferiority criterion as attribution-guided selection?
+
+Use:
+
+- GRABMyo.
+- Same 43 LOSO folds.
+- Same training participants.
+- Same preprocessing.
+- Same XGBoost configuration.
+- Same training-sample budget.
+- Same full-array reference definition.
+- Same Macro-F1 evaluation.
+- Same participant-level statistical unit.
+
+Reproduce the geometric farthest-point selection rule already described in the manuscript.
+
+Evaluate the 12-electrode configuration, preferably alongside the complete count curve if computationally feasible.
+
+Calculate:
+
+- Macro-F1.
+- Paired Δ Macro-F1.
+- Participant-bootstrap 95% CI.
+- Non-inferiority decision.
+- Difference relative to attribution-guided selection.
+- Computational cost of the selection procedures, when measurable.
+
+Do not tune geometric selection using outer-test performance.
+
+Do not modify the non-inferiority margin after viewing results.
+
+Report the outcome whether geometric selection succeeds or fails.
+
+Explain how the result affects the scientific interpretation of SHAP.
+
+## EXPERIMENT B — Per-gesture performance degradation
+
+**Priority: Critical**
+
+Research question:
+
+Does retaining 12 electrodes preserve performance uniformly across all gestures, or are particular movements disproportionately affected?
+
+Compare k = 12 with k = 16 using matched outer-fold predictions.
+
+Compute:
+
+- Per-gesture F1.
+- Paired change in per-gesture F1.
+- Mean and variability across participants.
+- Confidence intervals where statistically appropriate.
+- Gesture-level confusion patterns.
+- Gestures with the greatest performance loss.
+
+Avoid treating overlapping signal windows as independent subjects.
+
+Distinguish exploratory gesture-level comparisons from confirmatory testing.
+
+Do not infer a specific muscle contribution from an electrode unless supported by anatomical registration or other evidence.
+
+## EXPERIMENT C — Participant-level degradation
+
+**Priority: High**
+
+Research question:
+
+Does a small average Macro-F1 loss hide substantial deterioration for some participants?
+
+Calculate:
+
+\[
+\Delta_{p,12}=F1_{p,12}-F1_{p,16}
+\]
+
+Inspect:
+
+- Mean and median difference.
+- Standard deviation.
+- Quantiles.
+- Distribution of paired differences.
+- Number of participants experiencing performance improvements.
+- Number experiencing losses greater than the engineering tolerance.
+- Worst observed participant-level losses.
+- Relationship with full-array performance.
+
+Differentiate the population-level non-inferiority decision from individual-participant guarantees.
+
+## EXPERIMENT D — Matched-budget feature attribution
+
+**Priority: High**
+
+Research question:
+
+Are differences between SHAP and alternative ranking methods explained partly by unequal computational budgets?
+
+Compare attribution approaches under clearly defined, comparable resource constraints.
+
+At minimum, evaluate cross-fitted SHAP and permutation importance.
+
+Where possible, control:
+
+- Training observations.
+- Classifier configuration.
+- Number of fitted models or compute budget.
+- Evaluation participants.
+- Subset sizes.
+- Final classifier configuration.
+
+Report method performance alongside training and selection cost.
+
+Do not assume that a numerically higher Macro-F1 means the ranking method is intrinsically superior.
+
+## EXPERIMENT E — Additional sensitivity analyses
+
+**Priority: Secondary**
+
+If resources allow, evaluate:
+
+- Seventeen-class recognition including rest.
+- Alternative analysis-window lengths.
+- At least one alternative classifier.
+- Sensitivity to feature redundancy.
+- Ranking stability under different development-cohort compositions.
+
+Keep all analyses participant-disjoint.
+
+Clearly document which results were already planned and which are newly introduced.
+
+## EXPERIMENT F — Independent fixed-layout validation
+
+**Priority: Highest for deployment claims, but requires genuinely independent evidence**
+
+The existing primary LOSO analysis evaluates a selection procedure.
+
+It does not by itself prospectively validate a fixed physical electrode layout.
+
+Supplementary S4 reports that odd-to-even and even-to-odd development/test splits produce similar mean performance losses but different non-inferiority decisions.
+
+Do not conceal this.
+
+If independent data are available:
+
+1. Define a frozen electrode layout from development data.
+2. Freeze the electrode count and identities.
+3. Freeze the model-selection and evaluation procedures.
+4. Evaluate on independent participants.
+5. Conduct the predetermined statistical analysis.
+6. Report success or failure.
+
+If no independent data are available, do not claim validation.
+
+Instead, report the existing consistency checks accurately and identify prospective fixed-layout validation as future work.
+
+---
+
+# 7. PHASE V — RESTRUCTURE THE MANUSCRIPT
+
+The final manuscript must use polished scientific English.
+
+Explanations and progress reports to the researcher may use Vietnamese.
+
+Maintain concise, technically precise paragraphs.
+
+Avoid unnecessary headings, excessive line breaks, repetitive explanations, and promotional language.
+
+## 7.1. TITLE
+
+Evaluate whether the current title accurately communicates the central contribution.
+
+Avoid implying algorithmic novelty not supported by the results.
+
+Any proposed replacement title must reflect:
+
+- Subject-independent evaluation.
+- sEMG electrode reduction.
+- Attribution-guided selection.
+- Non-inferiority, where appropriate.
+
+Provide a comparison between the existing and proposed title, explaining the rationale.
+
+## 7.2. ABSTRACT
+
+Rewrite the abstract only after the final results are verified.
+
+Maintain the target journal's required abstract structure and word limit.
+
+Prioritize:
+
+1. Research problem.
+2. Dataset and experimental design.
+3. Primary outcome.
+4. Interpretation of method comparisons.
+5. Generalizability limitations.
+6. Actual scientific significance.
+
+Do not overstate the engineering relevance of the 12-electrode result.
+
+Avoid wording suggesting that configurations below 12 electrodes were conclusively demonstrated to be inferior if they merely failed non-inferiority testing.
+
+## 7.3. INTRODUCTION
+
+Develop a coherent scientific argument:
+
+**Paragraph 1 — Engineering problem**
+
+Explain why reducing the number of forearm sEMG recording sites matters.
+
+**Paragraph 2 — Existing electrode-selection research**
+
+Discuss established approaches and their strengths.
+
+**Paragraph 3 — Subject-independent generalization**
+
+Explain why successful participant-dependent selection does not establish transfer to unseen users.
+
+**Paragraph 4 — Limitations of attribution-based ranking**
+
+Explain the need for participant-disjoint evaluation, interpretation of model attribution, and investigation of ranking variability.
+
+**Paragraph 5 — Missing decision criterion**
+
+Explain why selecting an electrode count from an accuracy curve alone does not define an acceptable loss.
+
+**Paragraph 6 — Study objectives and contributions**
+
+Clearly state the primary objective, secondary questions, evaluation framework and specific contributions.
+
+Avoid presenting cross-fitting, TreeSHAP or stability regularisation as entirely new methods.
+
+Make explicit how the present study differs from closely related published work.
+
+## 7.4. METHODS
+
+Recommended organization:
+
+### 2.1. Datasets and recognition task
+### 2.2. Subject-independent experimental design
+### 2.3. Signal preprocessing and feature extraction
+### 2.4. Cross-fitted attribution and electrode ranking
+### 2.5. Reduced-model retraining and evaluation
+### 2.6. Non-inferiority testing and statistical analysis
+### 2.7. Secondary and exploratory experiments
+
+Where necessary, move excessive implementation detail into Supplementary Methods.
+
+However, do not remove information required for reproducibility.
+
+Define the selection unit clearly when moving between monopolar electrodes and derived bipolar pairs.
+
+## 7.5. RESULTS
+
+Restructure Results around scientific questions rather than simply the chronological order of experiments.
+
+Suggested organization:
+
+### 3.1. Subject-independent recognition and electrode-count reduction
+
+Report the full-array reference, electrode-count curve, non-inferiority decision, and sensitivity margins.
+
+### 3.2. Utility of attribution-guided electrode selection
+
+Compare attribution ranking against random, geometric, permutation importance, and other selection methods.
+
+Include new matched-protocol results if they have actually been computed.
+
+### 3.3. Functional relevance and stability of electrode rankings
+
+Present attribution distribution, deletion with retraining, ranking agreement, and the stability-penalty result.
+
+### 3.4. Robustness and limits of generalization
+
+Present fixed-layout consistency, external replication, cross-session findings, bipolar re-referencing, and relevant new sensitivity analyses.
+
+Avoid repeating full tables in prose.
+
+Report exact effect estimates, uncertainty, and statistical decisions where essential.
+
+## 7.6. DISCUSSION
+
+Structure the argument around interpretation rather than repeating Results.
+
+Address:
+
+1. What the supported reduction from 16 to 12 electrodes actually means.
+2. Whether the montage contains substantial or limited redundant information.
+3. Why attribution-guided selection may outperform random selection.
+4. Why simple geometric coverage remains competitive.
+5. What deletion with retraining establishes about functional ranking relevance.
+6. Why stability regularisation adds little detectable benefit.
+7. Why spatial attribution should not automatically be interpreted as specific muscle localization.
+8. How the fixed-layout analyses constrain deployment claims.
+9. Why DB5 and bipolar results do not establish broad generalization.
+10. What evidence is still required for physical hardware and real-time control.
+
+Be particularly precise about the difference between:
+
+- Predictive relevance.
+- Anatomical interpretation.
+- Statistical generalization.
+- Physical sensor deployment.
+
+## 7.7. CONCLUSION
+
+Write a concise conclusion supported by the final evidence.
+
+Do not claim:
+
+- Universal optimality of 12 electrodes.
+- Prospective validation of a frozen layout.
+- Established superiority of SR-CFA.
+- Real-time usability.
+- Clinical applicability.
+
+The conclusion should focus on the statistically supported reduction decision, what attribution contributes, and the limits of generalization.
+
+---
+
+# 8. PHASE VI — FIGURE REDESIGN AND SCIENTIFIC VISUALIZATION
+
+Rebuild the main figures following a restrained Nature-style scientific visualization standard.
+
+Use six main figures unless the target journal imposes a different limit or a scientifically better arrangement is justified.
+
+## General design requirements
+
+- White background.
+- Minimalist scientific design.
+- Calibri, Carlito, Arial, or an appropriate journal-compatible sans-serif font.
+- Consistent typography.
+- Panels labelled a, b, c, etc.
+- Clear visual hierarchy.
+- Legible labels at final journal print size.
+- Consistent axis scales.
+- Appropriate error bars.
+- Defined statistical units.
+- Colorblind-conscious palette.
+- Limited decorative elements.
+- Minimal borders and no unnecessary cards.
+- No excessive explanatory text inside plots.
+- Consistent electrode labels F1–F16.
+- Vector formats where possible.
+
+Use real forearm sEMG context, not brain or EEG graphics.
+
+Every figure should communicate a specific scientific message.
+
+### FIGURE 1 — Study context and electrode montage
+
+Story:
+
+What is being measured, and why is electrode reduction relevant?
+
+Suggested panels:
+
+(a) Forearm electrode montage.
+
+(b) Unwrapped 2 × 8 electrode configuration.
+
+(c) Dataset characteristics and gesture-recognition task.
+
+Ensure that electrode numbering and proximal/distal arrangement match the dataset documentation.
+
+Do not assign electrodes to individual muscles without verified anatomical registration.
+
+### FIGURE 2 — Leakage-controlled subject-independent evaluation
+
+Story:
+
+How are electrode rankings obtained without using information from the eventual test participant?
+
+Suggested panels:
+
+(a) Outer LOSO.
+
+(b) Five-fold participant-disjoint cross-fitting.
+
+(c) Attribution aggregation and ranking.
+
+(d) Reduced-model retraining and final held-out evaluation.
+
+Distinguish inner attribution evaluation from outer performance evaluation.
+
+### FIGURE 3 — Non-inferiority and minimum supported electrode count
+
+Story:
+
+How many electrodes can be removed under the specified performance-loss tolerance?
+
+Suggested panels:
+
+(a) Macro-F1 versus retained electrode count.
+
+(b) Paired difference and participant-bootstrap confidence intervals.
+
+(c) Sensitivity to non-inferiority margins.
+
+Highlight k = 12 and k = 11.
+
+Use the correct curve reference of approximately 0.541, not the separate full-data classifier result of 0.542.
+
+Clearly distinguish confidence intervals from adjusted statistical decisions.
+
+### FIGURE 4 — Comparison of electrode-selection strategies
+
+Story:
+
+Does attribution-guided selection provide measurable benefits over simpler selection methods?
+
+Suggested panels:
+
+(a) Comparison across subset sizes.
+
+(b) Paired differences relative to geometric selection.
+
+(c) Participant-level comparison relative to random subsets, only if data are available.
+
+Use verified numerical results and report the model configuration used.
+
+Do not combine scores from different computational protocols without explicit explanation.
+
+### FIGURE 5 — Attribution, deletion and stability
+
+Story:
+
+Do attribution rankings identify predictively useful recording positions, and does stability regularisation improve selection?
+
+Suggested panels:
+
+(a) Electrode attribution map on the verified 2 × 8 montage.
+
+(b) Deletion with retraining.
+
+(c) Effect of stability penalties on electrode-set selection or performance.
+
+Do not create anatomical heatmaps suggesting recorded activity within individual muscles.
+
+Attribution magnitude and actual muscle activation are different quantities.
+
+### FIGURE 6 — Generalization boundaries
+
+Story:
+
+Why does a supported electrode count not yet establish a universally valid hardware layout?
+
+Suggested panels:
+
+(a) Fixed-layout consistency checks.
+
+(b) NinaPro DB5 evaluation.
+
+(c) Derived bipolar-pair evaluation.
+
+Emphasize uncertainty and the distinction between a reduction procedure and a validated physical configuration.
+
+Do not treat the DB5 nominal k = 12 result as confirmed after multiplicity correction.
+
+## Supplementary figures
+
+Move secondary visualizations to Supplementary when appropriate, including:
+
+- Detailed classifier comparisons.
+- Additional ranking-stability plots.
+- Expanded stability-penalty comparisons.
+- Participant-level aggregation analyses.
+- Cross-session diagnostics.
+- Additional feature-sensitivity results.
+- Full exploratory comparisons.
+
+## Figure production rules
+
+Every figure must have a reproducible source script.
+
+Recommended outputs:
+
+- Vector PDF.
+- SVG where appropriate.
+- High-resolution PNG for inspection.
+- Figure caption.
+- Source-data file.
+- Script used to generate the figure.
+
+Never use an AI-generated image as evidence for experimental results.
+
+Validate all numbers, labels, confidence intervals, group counts and conclusions against the final statistical outputs.
+
+---
+
+# 9. PHASE VII — SUPPLEMENTARY MATERIAL
+
+Revise the supplementary material together with the main manuscript.
+
+Do not treat Supplementary as an independent document.
+
+Check:
+
+- Consistent method definitions.
+- Consistent dataset descriptions.
+- Consistent model configurations.
+- Consistent statistical results.
+- Correct table numbering.
+- Correct figure numbering.
+- Correct cross-references.
+- Clear distinction between planned and post-hoc work.
+- Appropriate descriptions of sensitivity analyses.
+
+Preserve the documented departures from the analysis plan.
+
+Do not delete negative or contradictory results.
+
+Ensure that any new experiment appears in the appropriate supplementary section with sufficient implementation detail.
+
+Create a source-to-claim verification table connecting each reported numerical claim to its verified result file or computational source.
+
+---
+
+# 10. PHASE VIII — FINAL TECHNICAL AND EDITORIAL QUALITY CONTROL
+
+Perform a complete manuscript audit.
+
+## Scientific consistency
+
+Verify that:
+
+- Objectives match Methods.
+- Methods match experiments.
+- Experiments match Results.
+- Results match Figures and Tables.
+- Discussion follows the results.
+- Conclusions do not exceed the evidence.
+- Abstract agrees with all finalized analyses.
+
+## Statistical consistency
+
+Verify:
+
+- Sample sizes.
+- Mean values.
+- Standard deviations.
+- Confidence intervals.
+- p-values.
+- Corrected p-values.
+- Effect sizes.
+- Non-inferiority decisions.
+- Subset sizes.
+- Multiple-testing families.
+
+Do not use “no significant difference” as proof of equivalence.
+
+## Formatting
+
+Check:
+
+- LaTeX compilation.
+- Mathematical notation.
+- Figure resolution.
+- Font consistency.
+- Table widths.
+- Caption formatting.
+- Equation numbering.
+- Cross-references.
+- Citation formatting.
+- Bibliography.
+- Page layout.
+- Supplementary numbering.
+
+Specifically identify and correct broken references such as the existing `table eftab:h2` error.
+
+## Administrative statements
+
+Identify unresolved fields involving:
+
+- Ethics determination.
+- Funding.
+- Acknowledgments.
+- Author contributions.
+- Conflicts of interest.
+- Data availability.
+- Permanent repository DOI.
+
+Do not invent these declarations.
+
+Mark them for confirmation by the authors.
+
+## Reproducibility
+
+Verify that a third-party researcher can identify:
+
+- Dataset version.
+- Preprocessing procedure.
+- Feature definitions.
+- Model hyperparameters.
+- Data split protocol.
+- Random seeds.
+- Statistical procedures.
+- Software environment.
+- Figure-generation procedures.
+- Source files used for every published result.
+
+---
+
+# 11. REQUIRED DELIVERABLES
+
+Create a well-organized revision package.
+
+Suggested directory:
+
+```text
+manuscript_revision/
+├── reports/
+│   ├── 01_scientific_audit.md
+│   ├── 02_novelty_and_literature.md
+│   ├── 03_methodology_audit.md
+│   ├── 04_statistical_validation.md
+│   ├── 05_additional_experiments.md
+│   ├── 06_manuscript_change_log.md
+│   ├── 07_claim_evidence_matrix.md
+│   └── 08_final_quality_control.md
+├── experiments/
+│   ├── geometric_noninferiority/
+│   ├── per_gesture_analysis/
+│   ├── participant_degradation/
+│   ├── matched_budget_comparison/
+│   └── sensitivity_analyses/
+├── figures/
+│   ├── source/
+│   ├── vector/
+│   └── preview/
+├── tables/
+├── supplementary/
+├── manuscript/
+└── reproducibility/
+```
+
+Adapt this structure to the existing repository rather than creating unnecessary duplicate projects.
+
+At minimum, deliver:
+
+1. A revised manuscript in its native editable format.
+2. A compiled PDF, when compilation tools are available.
+3. Updated supplementary material.
+4. Final reproducible figures.
+5. Updated tables.
+6. A scientific audit report.
+7. An experiment-validation report.
+8. A claim-to-evidence matrix.
+9. A change log.
+10. A list of unresolved author decisions or missing materials.
+
+If a requested output cannot be produced, explain the exact blocker instead of creating a placeholder that appears complete.
+
+---
+
+# 12. AUTONOMOUS EXECUTION RULES
+
+Work systematically, without repeatedly requesting confirmation for ordinary research, editing, and computational tasks.
+
+Begin by inspecting the project and creating a concise execution plan.
+
+Prioritize scientific validity over cosmetic improvements.
+
+Use existing computational outputs before initiating expensive retraining.
+
+If GPU or computational resources are insufficient:
+
+- Identify the intended experiment.
+- Estimate its computational requirements when possible.
+- Explain which results can be obtained from existing artifacts.
+- Provide a reproducible execution script.
+- Do not fabricate the result.
+
+For operations that may overwrite original work, preserve a backup or use version control.
+
+Do not silently delete old experiments.
+
+After each major phase, record:
+
+- What was inspected.
+- What was verified.
+- What changed.
+- What remains uncertain.
+- What evidence supports the changes.
+
+Continue through all feasible phases rather than stopping after producing a review document.
+
+Do not ask the researcher to manually perform operations that can be completed reliably with the available tools.
+
+However, request explicit confirmation for decisions requiring author knowledge, institutional declarations, unavailable source data, or a change to the central research question.
+
+---
+
+# 13. FINAL SCIENTIFIC ACCEPTANCE CRITERIA
+
+The revision is considered scientifically complete only when:
+
+1. The novelty claim is accurate and supported by verified literature.
+2. The primary non-inferiority analysis has been audited.
+3. The LOSO and cross-fitting procedures are demonstrably participant-disjoint.
+4. Original and additional analyses are clearly differentiated.
+5. The value of attribution-based selection is critically evaluated.
+6. Negative findings remain visible.
+7. The 12-electrode conclusion is expressed within its actual statistical scope.
+8. No fixed-layout validation claim exceeds the available evidence.
+9. Every quantitative figure is generated from real experimental outputs.
+10. Tables, figures, text and Supplementary report consistent numbers.
+11. The manuscript presents one coherent scientific argument.
+12. All unresolved limitations and missing author information are explicitly documented.
+13. Reproducibility materials are organized and traceable.
+14. The final manuscript is suitable for a substantive external peer review.
+
+**Do not optimize for a predetermined conclusion. Optimize for the strongest conclusion that the evidence can legitimately support.**
+
+---
+
+# 14. START EXECUTION
+
+Start immediately with the following sequence:
+
+**Step 1:** Inspect the manuscript, Supplementary and all accessible project files.
+
+**Step 2:** Produce a concise scientific audit identifying the most consequential problems.
+
+**Step 3:** Identify the exact contributions currently supported by evidence.
+
+**Step 4:** Audit the original analysis plan, methods, numerical results and experimental code.
+
+**Step 5:** Execute the highest-priority feasible analyses, beginning with geometric non-inferiority and gesture-specific performance degradation.
+
+**Step 6:** Update the interpretation of the results based on verified evidence.
+
+**Step 7:** Restructure and revise the manuscript.
+
+**Step 8:** Regenerate Figures 1–6 from real source data using consistent journal-quality typography.
+
+**Step 9:** Revise Supplementary, references and administrative sections.
+
+**Step 10:** Perform a final scientific, statistical, visual and editorial consistency audit.
+
+Work until all feasible tasks are completed.
+
+For tasks that remain blocked, document precisely what is missing, why it matters, and what would be required to complete them.
+
+The final result must represent a genuine improvement in scientific rigor, reproducibility, and communication—not merely a more polished manuscript.

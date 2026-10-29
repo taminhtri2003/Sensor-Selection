@@ -1,0 +1,7 @@
+{
+  "parallel_runner_sha256": "f40259227615e0103da6e4b7545f65c42b9f84e5cd63d960a25d5855df56e25a",
+  "protocol_amendment_sha256": "272e6d07f070b7c4f224abe005642268b02cbae525f0df9cc7dec193906de532",
+  "original_runner_sha256": "6a3846e11cffcb73470269bfcb5903dfbf8192b08ff9f13451d4d50a7738e1bb",
+  "workers": 3,
+  "threads_per_fit": 2
+}

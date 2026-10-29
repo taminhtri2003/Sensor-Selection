@@ -1,0 +1,27 @@
+bipolar active data: 563472 windows, 80 features, 43 participants
+[1/43] participant 01 full=0.4994 top4=['6', '7', '4', '5'] elapsed=4.3m
+[2/43] participant 02 full=0.3531 top4=['6', '7', '4', '5'] elapsed=8.8m
+[3/43] participant 03 full=0.4496 top4=['6', '7', '4', '5'] elapsed=13.0m
+[4/43] participant 04 full=0.3938 top4=['6', '7', '5', '4'] elapsed=17.3m
+[5/43] participant 05 full=0.3057 top4=['6', '7', '4', '5'] elapsed=21.7m
+[6/43] participant 06 full=0.3751 top4=['6', '7', '4', '5'] elapsed=25.7m
+[7/43] participant 07 full=0.6296 top4=['6', '7', '5', '4'] elapsed=29.9m
+[8/43] participant 08 full=0.5290 top4=['6', '7', '4', '5'] elapsed=33.9m
+[9/43] participant 09 full=0.4209 top4=['6', '7', '5', '4'] elapsed=38.0m
+[10/43] participant 10 full=0.5038 top4=['6', '7', '5', '4'] elapsed=42.3m
+[11/43] participant 11 full=0.4836 top4=['6', '7', '5', '4'] elapsed=46.6m
+[12/43] participant 12 full=0.5197 top4=['6', '7', '5', '4'] elapsed=50.9m
+[13/43] participant 13 full=0.4782 top4=['6', '7', '5', '4'] elapsed=55.2m
+[14/43] participant 14 full=0.4729 top4=['6', '7', '4', '5'] elapsed=59.3m
+[15/43] participant 15 full=0.4373 top4=['6', '7', '5', '4'] elapsed=63.7m
+[16/43] participant 16 full=0.4718 top4=['6', '7', '5', '4'] elapsed=68.0m
+[17/43] participant 17 full=0.4348 top4=['6', '7', '5', '4'] elapsed=72.1m
+[18/43] participant 18 full=0.5686 top4=['6', '7', '5', '4'] elapsed=76.2m
+[19/43] participant 19 full=0.6252 top4=['6', '7', '5', '4'] elapsed=80.3m
+[20/43] participant 20 full=0.4959 top4=['6', '7', '5', '4'] elapsed=84.7m
+[21/43] participant 21 full=0.2408 top4=['6', '7', '5', '4'] elapsed=89.2m
+[22/43] participant 22 full=0.4702 top4=['6', '7', '5', '4'] elapsed=93.5m
+[23/43] participant 23 full=0.5426 top4=['6', '7', '5', '4'] elapsed=97.8m
+[24/43] participant 24 full=0.4364 top4=['6', '7', '5', '4'] elapsed=102.2m
+[25/43] participant 25 full=0.5048 top4=['6', '7', '5', '4'] elapsed=106.5m
+exit=127

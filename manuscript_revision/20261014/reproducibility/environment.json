@@ -1,0 +1,31 @@
+{
+  "python": "3.10.20 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:42:35) [MSC v.1942 64 bit (AMD64)]",
+  "executable": "D:\\miniconda3\\envs\\graph_gpu\\python.exe",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "packages": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "scipy": "1.15.2",
+    "scikit-learn": "1.7.2",
+    "xgboost": "3.2.0",
+    "matplotlib": "3.9.1",
+    "pytest": "9.0.3",
+    "pyarrow": "24.0.0",
+    "h5py": "3.16.0",
+    "tabulate": "0.10.0",
+    "PyYAML": "6.0.3"
+  },
+  "hardware": {
+    "processor": "Intel64 Family 6 Model 151 Stepping 5, GenuineIntel",
+    "machine": "AMD64",
+    "Windows_CIM": {
+      "physical_cores": 6,
+      "cpu": "12th Gen Intel(R) Core(TM) i5-12400F",
+      "logical_processors": 12,
+      "RAM_bytes": 34164097024
+    },
+    "GPU_query": "NVIDIA GeForce RTX 5060 Ti, 16311 MiB, 617.42"
+  },
+  "RF_parallelism": "3participant processes,2threads each",
+  "GPU_queue": "one experiment track at a time"
+}

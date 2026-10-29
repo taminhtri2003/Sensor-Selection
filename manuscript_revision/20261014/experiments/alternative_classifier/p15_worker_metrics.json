@@ -1,0 +1,28 @@
+[
+  {
+    "participant_id": 15,
+    "channels_k": 12,
+    "channels": "4;6;14;7;8;10;5;13;15;2;1;3",
+    "n_train_windows": 200000,
+    "n_test_windows": 13104,
+    "macro_f1": 0.40216276155042635,
+    "accuracy": 0.4327686202686203,
+    "balanced_accuracy": 0.4327686202686203,
+    "weighted_f1": 0.40216276155042635,
+    "fit_predict_seconds": 385.25402510003187,
+    "prediction_sha256": "7d8f9e65e70761c0237df2170c9af16fd65937d81b24e6d31599d1d576f7fdb5"
+  },
+  {
+    "participant_id": 15,
+    "channels_k": 16,
+    "channels": "4;6;14;7;8;10;5;13;15;2;1;3;16;11;12;9",
+    "n_train_windows": 200000,
+    "n_test_windows": 13104,
+    "macro_f1": 0.41530426653699865,
+    "accuracy": 0.44268925518925517,
+    "balanced_accuracy": 0.4426892551892552,
+    "weighted_f1": 0.41530426653699865,
+    "fit_predict_seconds": 412.9600014000316,
+    "prediction_sha256": "7aa03db8a27fad6185915e62989c5a855863e56520e7a965b8b4307b7af06070"
+  }
+]

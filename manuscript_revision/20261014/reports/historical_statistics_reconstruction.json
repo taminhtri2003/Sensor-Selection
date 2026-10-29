@@ -1,0 +1,113 @@
+{
+  "status": "PASS",
+  "tables": [
+    {
+      "file": "master_statistics.csv",
+      "rows": 15,
+      "original_sha256": "52e1b6ae9356e3d8c47b7c7d34aefddee636e1337ec9991d55cfdbf00e7cf676",
+      "recomputed_sha256": "52e1b6ae9356e3d8c47b7c7d34aefddee636e1337ec9991d55cfdbf00e7cf676"
+    },
+    {
+      "file": "model_comparisons.csv",
+      "rows": 3,
+      "original_sha256": "f3d29663a319db19bd57fb630e33e9305add50bd07f0cb6e9a4118182f0b6739",
+      "recomputed_sha256": "f3d29663a319db19bd57fb630e33e9305add50bd07f0cb6e9a4118182f0b6739"
+    },
+    {
+      "file": "non_inferiority_by_k.csv",
+      "rows": 192,
+      "original_sha256": "9d4475aae685fe59f0907dc8e2ac1a186a4d94ed9d751ab82082949601e3542a",
+      "recomputed_sha256": "9d4475aae685fe59f0907dc8e2ac1a186a4d94ed9d751ab82082949601e3542a"
+    },
+    {
+      "file": "h2_attribution_vs_random.csv",
+      "rows": 8,
+      "original_sha256": "2d5a79768fd2008910a75a230932a28e346e4f0a2198e86ce89dd4a7c3e2a5dc",
+      "recomputed_sha256": "2d5a79768fd2008910a75a230932a28e346e4f0a2198e86ce89dd4a7c3e2a5dc"
+    },
+    {
+      "file": "h2_srcfa_percentile_by_participant.csv",
+      "rows": 172,
+      "original_sha256": "d7bbc5ab223086df58d565333788e09c450445ec4ab926875dc166c7889f4f32",
+      "recomputed_sha256": "d7bbc5ab223086df58d565333788e09c450445ec4ab926875dc166c7889f4f32"
+    },
+    {
+      "file": "h2_srcfa_percentile.csv",
+      "rows": 4,
+      "original_sha256": "50e7ddfc8553c8748217080a7014acc1dfe010193de053fc3e76770aa764cb60",
+      "recomputed_sha256": "50e7ddfc8553c8748217080a7014acc1dfe010193de053fc3e76770aa764cb60"
+    },
+    {
+      "file": "baseline_pairwise_exploratory.csv",
+      "rows": 12,
+      "original_sha256": "0f3a90c583b7771eb57e357e65c122afa98d993a4d5b713618819bcb3e692d09",
+      "recomputed_sha256": "0f3a90c583b7771eb57e357e65c122afa98d993a4d5b713618819bcb3e692d09"
+    },
+    {
+      "file": "h3_lambda_vs_zero.csv",
+      "rows": 12,
+      "original_sha256": "85d3f7201e8266efbabec667d792c66b7599051b32c9be99f8029db0870ef763",
+      "recomputed_sha256": "85d3f7201e8266efbabec667d792c66b7599051b32c9be99f8029db0870ef763"
+    },
+    {
+      "file": "h4_faithfulness.csv",
+      "rows": 15,
+      "original_sha256": "ea6565fa2a071733481fd358b87d5b3381533c60f4d47d953b246af22eedf4bb",
+      "recomputed_sha256": "ea6565fa2a071733481fd358b87d5b3381533c60f4d47d953b246af22eedf4bb"
+    },
+    {
+      "file": "cross_session_tests.csv",
+      "rows": 3,
+      "original_sha256": "7cb363d48e49ce78a6752d2bae6e957f386da9f4d7038f8589685bc7aaba3c86",
+      "recomputed_sha256": "7cb363d48e49ce78a6752d2bae6e957f386da9f4d7038f8589685bc7aaba3c86"
+    },
+    {
+      "file": "db5_non_inferiority_by_k.csv",
+      "rows": 45,
+      "original_sha256": "26b83ca300485539cdcc9a2ae7de4eb4012d10ea1bd8729e7162caa83acf2186",
+      "recomputed_sha256": "26b83ca300485539cdcc9a2ae7de4eb4012d10ea1bd8729e7162caa83acf2186"
+    },
+    {
+      "file": "db5_bootstrap_seed_robustness.csv",
+      "rows": 15,
+      "original_sha256": "c2d3120c95d08b76e5ec632f108ac3acca92c6cdb7c99561224c216581b2022f",
+      "recomputed_sha256": "c2d3120c95d08b76e5ec632f108ac3acca92c6cdb7c99561224c216581b2022f"
+    },
+    {
+      "file": "bipolar_non_inferiority_by_k.csv",
+      "rows": 84,
+      "original_sha256": "f94d9a7205cf4801c8799d695fd1dbc0114bc215799ed619438c0ca349bfd650",
+      "recomputed_sha256": "f94d9a7205cf4801c8799d695fd1dbc0114bc215799ed619438c0ca349bfd650"
+    },
+    {
+      "file": "bipolar_bootstrap_seed_robustness.csv",
+      "rows": 7,
+      "original_sha256": "027de3f40e870289754c3497f8a451f616c84d400564552ed4d16bd7fc94c152",
+      "recomputed_sha256": "027de3f40e870289754c3497f8a451f616c84d400564552ed4d16bd7fc94c152"
+    },
+    {
+      "file": "h1_holm.csv",
+      "rows": 225,
+      "original_sha256": "4886996fd0141b95430078b0c3a5ac0d557c115a7c14a890424614b1c083e4e8",
+      "recomputed_sha256": "4886996fd0141b95430078b0c3a5ac0d557c115a7c14a890424614b1c083e4e8"
+    }
+  ],
+  "primary_protocol_equal": true,
+  "source_hashes": {
+    "scripts/28_statistics.py": "13ef56fdf71b48577c30fd5a87eff189585de7b4736c156c4eb9bc4909064877",
+    "scripts/37_secondary_statistics.py": "ef7fa20856c8a350929c56beb2b1a46cb7114915b487420cb307f9562d58274c",
+    "scripts/85_audit_historical_statistics.py": "01c9b45f8534a0e6690729b046db5ab084972965d1113f62db229c1587ceff92",
+    "src/semg_sparse/statistics/non_inferiority.py": "2e30d7c0f5725941eee6c02ca149960154d983ac22f8fe9b4d7d0484446b587f",
+    "configs/statistics/frozen_analysis_plan.yaml": "734f889ae4afdf2440585b41d19f204e2a0f9cd68d263b2ea1fe411287b4459f",
+    "artifacts/metrics/loso_full_channel_subject_metrics_xgb.csv": "a23362af7e074049b780cf9c14403117f61e160caab5b250abcd315c300462ce",
+    "artifacts/metrics/loso_full_channel_subject_metrics_svmrf.csv": "aecd0a11adda662f58545140b47759a26ec2f147a694ba24de42fcd4d42afce7",
+    "artifacts/metrics/sparse_curve_subject_metrics.csv": "9a100fb2fc64c1b67ae9d1ac59146380bb78240ab33245861a5defc1237972f1",
+    "artifacts/selection_baselines/selection_baseline_metrics.csv": "967d7842c8d1eae4dc58725fd9a44aa7756389cc28d6e63cddeb307f9597e6e0",
+    "artifacts/selection_baselines/random_subsets_raw.csv": "a6ae30b0151304e857735d702833768e34197d5d79da15d37c1ae34dafefbb79",
+    "artifacts/faithfulness/deletion_curves.csv": "d6b840e799a32604b4ed167910428e9ca9b4d3acea6713d6e673709802e23fc7",
+    "artifacts/cross_session/cross_session_metrics.csv": "b7b0d10963bd25e1168b91294fcca91a582812c3023058a3f6055237528296f7",
+    "artifacts/db5/db5_sparse_curve.csv": "38c296e9d43d6b838040e550b93f0fd1a4908aba56c7b180a0633fbf8a0ce38d",
+    "artifacts/bipolar/bipolar_sparse_curve.csv": "5bf2f905ece9c3395701d9274516cbcb811f4c1c8028a5d2a42bec73e216cdaf"
+  },
+  "interpretation": "Saved primary/secondary statistics independently regenerated from participant results and compared including labels and decision flags; original files unchanged; seed diagnostics keep original seeds1000-1199."
+}

@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "scope": "Independent reconstruction from saved participant-level metrics; no model refitting.",
+  "bootstrap_resamples": 10000,
+  "bootstrap_seed": 20260728,
+  "conditions": 14,
+  "count_margin_rows_recomputed": 606,
+  "minimum_count_rows_recomputed": 42,
+  "full16_mean": 0.5413133059496598,
+  "shap12_mean": 0.5280093452336662,
+  "shap12_delta": -0.013303960715993532,
+  "shap12_interval": [
+    -0.016040716492357672,
+    -0.010598165000355625
+  ],
+  "participants_losing_more_than_002": 11,
+  "participants_declining": 42,
+  "worst_participant": 27,
+  "worst_delta": -0.036071473188607595,
+  "shap_minus_geometry": 0.006042816298044939,
+  "shap_minus_geometry_interval": [
+    -0.0010192586926532556,
+    0.012736858952475406
+  ]
+}

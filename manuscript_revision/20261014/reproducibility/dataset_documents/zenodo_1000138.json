@@ -1,0 +1,214 @@
+{
+  "created": "2017-10-01T10:17:31.103211+00:00",
+  "modified": "2020-01-24T19:26:05.999172+00:00",
+  "id": 1000138,
+  "conceptrecid": "1000137",
+  "doi": "10.5281/zenodo.1000138",
+  "conceptdoi": "10.5281/zenodo.1000137",
+  "doi_url": "https://doi.org/10.5281/zenodo.1000138",
+  "metadata": {
+    "title": "Ninapro dataset 4 (Cometa Wave Plus + Dormo)",
+    "doi": "10.5281/zenodo.1000138",
+    "publication_date": "2017-10-01",
+    "description": "<p>The 4th Ninapro database includes 10 intact subjects recorded with \"Cometa\" electrodes (http://www.cometasystems.com/).</p>\n\n<p>The database is thoroughly described in the paper: \"Pizzolato et al., Comparison of Six Electromyography Acquisition Setups on Hand Movement Classification Tasks, Plos One 2017 (accepted).\".<br>\nPlease, cite this paper for any work related to the 5th Ninapro database.</p>\n\n<p>The dataset is part of the Ninapro database (http://ninapro.hevs.ch/). Please, look at the database for more information.</p>\n\n<p><strong>Acquisition Protocol</strong><br>\nThe subjects repeat several movements represented by movies that are shown on the screen of a laptop.<br>\nThe experiment is divided in three exercises:<br>\n1. Basic movements of the fingers<br>\n2. Isometric, isotonic hand configurations and basic wrist movements<br>\n3. Grasping and functional movements<br>\nDuring the acquisition, the subjects were asked to repeat the movements with the right hand. Each movement repetition lasted 5 seconds and was followed by 3 seconds of rest.<br>\nThe protocol includes 6 repetitions of 52 different movements (plus rest) performed by 10 intact subjects. The movements were selected from the hand taxonomy as well as from hand robotics literature.</p>\n\n<p><strong>Acquisition Setup</strong><br>\nThe muscular activity is gathered using 12 active single\u2013differential wireless electrodes from Cometa. The electrodes are positioned as shown in the figure: eight electrodes are equally spaced around the forearm in correspondence to the radio humeral joint; two electrodes are placed on the main activity spots of the flexor digitorum and of the extensor digitorum; two electrodes are placed on the main activity spots of the biceps and of the triceps. The described locations have been chosen in order to combine a dense sampling approach with a precise anatomical positioning strategy.</p>\n\n<p>\u00a0</p>\n\n<p>The electrodes were fixed on the forearm using their standard adhesive bands.<br>\nThe sEMG signals are sampled at a rate of 2 kHz.<br>\nDuring the acquisition, the subjects were asked to repeat the movements with the right hand. Each movement repetition lasted 5 seconds and was followed by 3 seconds of rest. The protocol includes 6 repetitions of 52 different movements (plus rest) performed by 10 intact subjects. The movements were selected from the hand taxonomy as well as from hand robotics literature.</p>\n\n<p><strong>Data Sets</strong></p>\n\n<p>For each exercise, for each subject, the database contains one matlab file with synchronized variables.<br>\nThe variables included in the matlab files are:<br>\n\u2022 subject: the subject number;<br>\n\u2022 sensor: the name of the sEMG sensor;<br>\n\u2022 frequency: the frequency in Hertz of the recorded data<br>\n\u2022 exercise: exercise number;<br>\n\u2022 emg: sEMG signal. Columns 1-8 are the electrodes equally spaced around the forearm at the height of the radio humeral joint. Columns 9 and 10 contain signals from the main activity spot of the muscles flexor and extensor digitorum superficialis, while columns 11 and 12 contain signals from the main activity spot of the muscles biceps brachii and triceps brachii.<br>\n\u2022 stimulus: the original label of the movement repeated by the subject;<br>\n\u2022 restimulus: the corrected stimulus, processed with movement detection algorithms;<br>\n\u2022 repetition: stimulus repetition index;<br>\n\u2022 rerepetition: restimulus repetition index;<br>\n\u2022 age: subject\u2019s age;<br>\n\u2022 gender: subject\u2019s gender, \u201dm\u201d for male \u201df\u201d for female;<br>\n\u2022 weight: subject\u2019s weight in kilograms;<br>\n\u2022 height: subject\u2019s height in centimeters;<br>\n\u2022 laterality: subject\u2019s laterality, \u201dr\u201d for right-handed, \u201dl\u201d for left-handed;<br>\n\u2022 circumference: circumference of the subject\u2019s forearm at the radio-humeral joint height, measured in centimeters;</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Pizzolato, Stefano",
+        "affiliation": "Information Systems Institute at the University of Applied Sciences Western Switzerland (HES-SO Valais), Sierre, Switzerland"
+      },
+      {
+        "name": "Tagliapietra, Luca",
+        "affiliation": "Department of Management and Engineering, University of Padova, Padova, Italy"
+      },
+      {
+        "name": "Cognolato, Matteo",
+        "affiliation": "Information Systems Institute at the University of Applied Sciences Western Switzerland (HES-SO Valais), Sierre, Switzerland"
+      },
+      {
+        "name": "Reggiani, Monica",
+        "affiliation": "Department of Management and Engineering, University of Padova, Padova, Italy"
+      },
+      {
+        "name": "M\u00fcller, Henning",
+        "affiliation": "Information Systems Institute at the University of Applied Sciences Western Switzerland (HES-SO Valais), Sierre, Switzerland"
+      },
+      {
+        "name": "Atzori, Manfredo",
+        "affiliation": "Information Systems Institute at the University of Applied Sciences Western Switzerland (HES-SO Valais), Sierre, Switzerland"
+      }
+    ],
+    "keywords": [
+      "electromyography, prosthetics, prostheses, cometa wave, dormo, robotic hands"
+    ],
+    "references": [
+      "Stefano Pizzolato, Luca Tagliapietra, Matteo Cognolato, Monica Reggiani, Henning M\u00fcller, Manfredo Atzori, Comparison of Six Electromyography Acquisition Setups on Hand Movement Classification Tasks, Plos One, 2017 (accepted)"
+    ],
+    "resource_type": {
+      "title": "Dataset",
+      "type": "dataset"
+    },
+    "license": {
+      "id": "cc-by-nd-4.0"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 0,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "1000137"
+          }
+        }
+      ]
+    }
+  },
+  "title": "Ninapro dataset 4 (Cometa Wave Plus + Dormo)",
+  "links": {
+    "self": "https://zenodo.org/api/records/1000138",
+    "self_html": "https://zenodo.org/records/1000138",
+    "preview_html": "https://zenodo.org/records/1000138?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.1000138",
+    "self_doi": "https://doi.org/10.5281/zenodo.1000138",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.1000138",
+    "reserve_doi": "https://zenodo.org/api/records/1000138/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/1000137",
+    "parent_html": "https://zenodo.org/records/1000137",
+    "parent_doi": "https://doi.org/10.5281/zenodo.1000137",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.1000137",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:1000138/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:1000138/sequence/default",
+    "files": "https://zenodo.org/api/records/1000138/files",
+    "media_files": "https://zenodo.org/api/records/1000138/media-files",
+    "latest": "https://zenodo.org/api/records/1000138/versions/latest",
+    "latest_html": "https://zenodo.org/records/1000138/latest",
+    "versions": "https://zenodo.org/api/records/1000138/versions",
+    "draft": "https://zenodo.org/api/records/1000138/draft",
+    "access_links": "https://zenodo.org/api/records/1000138/access/links",
+    "access_grants": "https://zenodo.org/api/records/1000138/access/grants",
+    "access_users": "https://zenodo.org/api/records/1000138/access/users",
+    "access_request": "https://zenodo.org/api/records/1000138/access/request",
+    "access": "https://zenodo.org/api/records/1000138/access",
+    "communities": "https://zenodo.org/api/records/1000138/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/1000138/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/1000138/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/1000138/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/1000138/quota-increase",
+    "requests": "https://zenodo.org/api/records/1000138/requests"
+  },
+  "updated": "2020-01-24T19:26:05.999172+00:00",
+  "recid": "1000138",
+  "revision": 5,
+  "files": [
+    {
+      "id": "7b50aee7-8377-44b6-989d-ec4c07c3b155",
+      "key": "s7.zip",
+      "size": 226932372,
+      "checksum": "md5:380de31e07dc8c023b5a6417ea550227",
+      "links": {
+        "self": "https://zenodo.org/api/records/1000138/files/s7.zip/content"
+      }
+    },
+    {
+      "id": "d6ed05ab-8916-4687-8209-ca7413a499ac",
+      "key": "s9.zip",
+      "size": 231291612,
+      "checksum": "md5:0cc33c23286adca0354c5fed430f416e",
+      "links": {
+        "self": "https://zenodo.org/api/records/1000138/files/s9.zip/content"
+      }
+    },
+    {
+      "id": "d6fd50d0-639f-4a80-985f-50c97f336bac",
+      "key": "s5.zip",
+      "size": 235873219,
+      "checksum": "md5:8de31457cc81e668e05a9c51075d5216",
+      "links": {
+        "self": "https://zenodo.org/api/records/1000138/files/s5.zip/content"
+      }
+    },
+    {
+      "id": "dfef5cc7-69d1-4758-a21e-7c65b7e27365",
+      "key": "s4.zip",
+      "size": 226681655,
+      "checksum": "md5:f1d504f7fceef84f88657b2c8fcc3a9f",
+      "links": {
+        "self": "https://zenodo.org/api/records/1000138/files/s4.zip/content"
+      }
+    },
+    {
+      "id": "44f26744-7a53-4e20-b19c-cfb29884301f",
+      "key": "s3.zip",
+      "size": 233180883,
+      "checksum": "md5:e2859345e07394adfdc9441422da93bc",
+      "links": {
+        "self": "https://zenodo.org/api/records/1000138/files/s3.zip/content"
+      }
+    },
+    {
+      "id": "b95b5245-0a57-46d3-b581-973eeaeb5329",
+      "key": "s2.zip",
+      "size": 233861707,
+      "checksum": "md5:838fa31aad40ff7a0c9cb01e9f04ad9c",
+      "links": {
+        "self": "https://zenodo.org/api/records/1000138/files/s2.zip/content"
+      }
+    },
+    {
+      "id": "3deba8d6-8748-4a3a-af98-e4489aa786dc",
+      "key": "s1.zip",
+      "size": 224161171,
+      "checksum": "md5:c5af132a26d8d6c682567e286f618385",
+      "links": {
+        "self": "https://zenodo.org/api/records/1000138/files/s1.zip/content"
+      }
+    },
+    {
+      "id": "c4258db7-7139-4c4e-8811-540ae1b2e1e9",
+      "key": "s10.zip",
+      "size": 217759429,
+      "checksum": "md5:5216b9eef6c2f928480502704feda167",
+      "links": {
+        "self": "https://zenodo.org/api/records/1000138/files/s10.zip/content"
+      }
+    },
+    {
+      "id": "de8dddbf-d73d-4742-8b65-d4fa719a9c59",
+      "key": "s6.zip",
+      "size": 230418329,
+      "checksum": "md5:40a00a62e87c4dc95fed219df728c072",
+      "links": {
+        "self": "https://zenodo.org/api/records/1000138/files/s6.zip/content"
+      }
+    },
+    {
+      "id": "086b627d-4941-43c0-a541-d696be0d5842",
+      "key": "s8.zip",
+      "size": 228293575,
+      "checksum": "md5:1b6cbf648f79fc522c46b20acc765f3f",
+      "links": {
+        "self": "https://zenodo.org/api/records/1000138/files/s8.zip/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "36653"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 8386,
+    "unique_downloads": 1889,
+    "views": 2929,
+    "unique_views": 2727,
+    "version_downloads": 8386,
+    "version_unique_downloads": 1889,
+    "version_unique_views": 2725,
+    "version_views": 2926
+  },
+  "state": "done",
+  "submitted": true
+}

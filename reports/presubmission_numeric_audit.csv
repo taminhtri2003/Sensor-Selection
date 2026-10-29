@@ -1,0 +1,36 @@
+item,unrounded,macro,manuscript,consistent,note
+P1 XGB mean,0.5423130875156109,FullXGB,0.542,True,n=43
+P1 XGB LCB,0.5167654943301959,FullXGBLCB,0.517,True,
+P1 XGB-SVM diff,0.004546058383828446,XGBvsSVMDiff,+0.0045,True,
+H1 lambda=0 margin=0.01 k* (plan rule),14,KStarMarginPtOne,14,True,
+H1 lambda=0 margin=0.01 k* with Holm over 15 k (one-sided bootstrap p<0.025),14,,,,plan requires Holm within H1; not applied by scripts/28
+H1 lambda=0 margin=0.01 k* fixed-sequence (post hoc),14,,,,
+H1 lambda=0 margin=0.02 k* (plan rule),12,KStar,12,True,
+H1 lambda=0 margin=0.02 k* with Holm over 15 k (one-sided bootstrap p<0.025),12,,,,plan requires Holm within H1; not applied by scripts/28
+H1 lambda=0 margin=0.02 k* fixed-sequence (post hoc),12,,,,
+H1 lambda=0 margin=0.03 k* (plan rule),11,KStarMarginPtThree,11,True,
+H1 lambda=0 margin=0.03 k* with Holm over 15 k (one-sided bootstrap p<0.025),11,,,,plan requires Holm within H1; not applied by scripts/28
+H1 lambda=0 margin=0.03 k* fixed-sequence (post hoc),11,,,,
+H1 lambda=0 k=11 LCB (unrounded),-0.02447933222508511,DeltaKElevenLCB,-0.0245,True,
+H1 lambda=0 k=12 LCB (unrounded),-0.015972606446856975,DeltaKTwelveLCB,-0.0160,True,
+H1 lambda=0 k=13 LCB (unrounded),-0.013238081079100808,,,,
+H1 lambda=0 k=12 mean delta,-0.013216564504759049,DeltaKTwelve,-0.0132,True,
+H1 lambda=0 k=12 n,43,,,,
+H1 lambda=0.25 k* at 0.01/0.02/0.03,14/12/11,,,,
+H1 lambda=0.5 k* at 0.01/0.02/0.03,14/12/11,,,,
+H1 lambda=1.0 k* at 0.01/0.02/0.03,14/12/11,,,,
+H4 n_kept=2 ordering top<random<bottom,holds,,,,remove_top=0.2626; remove_bottom=0.2923
+H4 n_kept=4 ordering top<random<bottom,holds,,,,remove_top=0.3505; remove_random=0.3656; remove_bottom=0.3819
+H4 n_kept=6 ordering top<random<bottom,holds,,,,remove_top=0.3762; remove_random=0.4159; remove_bottom=0.4537
+H4 n_kept=8 ordering top<random<bottom,holds,,,,remove_top=0.4075; remove_random=0.4452; remove_bottom=0.4694
+H4 n_kept=10 ordering top<random<bottom,holds,,,,remove_top=0.4450; remove_bottom=0.4747
+H4 n_kept=12 ordering top<random<bottom,holds,,,,remove_top=0.4551; remove_random=0.4779; remove_bottom=0.4853
+H4 n_kept=14 ordering top<random<bottom,holds,,,,remove_top=0.4874; remove_bottom=0.4912
+Bipolar k=6 delta vs k=8 (unrounded),-0.037630695216583354,BipDeltaKSix,-0.0376,True,
+Bipolar k=6 LCB (unrounded),-0.045604573961369424,BipDeltaKSixLCB,-0.0456,True,"decision uses LCB > -0.02, not raw mean F1"
+Bipolar k=7 delta vs k=8 (unrounded),-0.015452188419472209,BipDeltaKSeven,-0.0155,True,
+Bipolar k=7 LCB (unrounded),-0.0203224274370714,BipDeltaKSevenLCB,-0.0203,True,"decision uses LCB > -0.02, not raw mean F1"
+Bipolar raw mean F1 k=7 minus k=8 (NOT the decision quantity),-0.015452188419472213,,,,
+"DB5 k=12 LCB (unrounded, 6 dp)",-0.019994,DBFiveDeltaKTwelveLCB,-0.01999,True,n=10; > -0.02 ? True
+"DB5 k=13 LCB (unrounded, 6 dp)",-0.031186,DBFiveDeltaKThirteenLCB,-0.03119,True,n=10; > -0.02 ? False
+DB5 mean curve monotone non-decreasing in k,False,,,,Results text says 'same monotone shape'

@@ -1,0 +1,6 @@
+{
+  "source_sha256": "856ccee84e006dd3ba4915ee993927fc5014cf5928e1f63579565f2a4f8e01cf",
+  "runner_sha256": "e11c854228cb83fadeda2007ef8292a841a2bef21f91b9f96592b8de234f9809",
+  "protocol_sha256": "1c8ad17e20870eca79f5c453d5b7cff08cbc04de25e0f9b87f50dbc3c00ac854",
+  "interpretation": "numerical decision stability only; original bootstrap seed retained"
+}

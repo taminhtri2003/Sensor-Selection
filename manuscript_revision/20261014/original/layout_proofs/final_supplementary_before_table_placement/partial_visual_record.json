@@ -1,0 +1,43 @@
+{
+  "pdfs": {
+    "main": {
+      "sha256": "b63b28fef44d8e38bca6e62a3f74313a2db83e2cde2979315266f9c29d18363c",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "status": "PASS",
+      "pages": 13,
+      "render_folder": "C:/Users/Minh Tri SHC/.codex/visualizations/2026/09/22/01a0c89f-1b02-7750-9a24-74a484af5a6d/review20261014/final_pdf_pages_v1"
+    },
+    "supplementary": {
+      "sha256": "b14963662765407f9359e88641439c0cab11832e92ca503c58e2525236f1a549",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "status": "IN_PROGRESS",
+      "pages": 15,
+      "render_folder": "C:/Users/Minh Tri SHC/.codex/visualizations/2026/09/22/01a0c89f-1b02-7750-9a24-74a484af5a6d/review20261014/final_pdf_pages_v1"
+    }
+  },
+  "note": "Page list is updated only after actual visual inspection; rendering alone is not acceptance."
+}

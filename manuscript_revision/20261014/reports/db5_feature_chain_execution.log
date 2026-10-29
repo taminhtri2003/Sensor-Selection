@@ -1,0 +1,11 @@
+DB5 participant1: all1881 raw-derived feature rows match
+DB5 participant10: all2340 raw-derived feature rows match
+DB5 participant2: all2372 raw-derived feature rows match
+DB5 participant3: all1817 raw-derived feature rows match
+DB5 participant4: all2273 raw-derived feature rows match
+DB5 participant5: all1890 raw-derived feature rows match
+DB5 participant6: all2426 raw-derived feature rows match
+DB5 participant7: all2096 raw-derived feature rows match
+DB5 participant8: all2002 raw-derived feature rows match
+DB5 participant9: all1992 raw-derived feature rows match
+PASS: complete DB5 feature reconstruction and actual89Hz upper cutoff verified

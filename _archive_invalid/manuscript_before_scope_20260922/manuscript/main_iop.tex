@@ -1,0 +1,82 @@
+% Physiological Measurement submission, IOP Publishing template (iopjournal.cls, 2025 release,
+% from publishingsupport.iopscience.iop.org). References: Harvard (author-year), as required by
+% the journal. Supplementary material is compiled separately from supplementary_iop.tex.
+\documentclass{iopjournal}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{makecell}
+\usepackage{microtype}
+\usepackage[round]{natbib}
+\usepackage[section]{placeins}
+\hypersetup{hidelinks}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.8}
+\setcounter{topnumber}{3}
+
+% running head without the template's placeholder journal details
+\fancyhead[L]{\small Subject-independent surface EMG electrode reduction}
+\fancyhead[C]{}
+\fancyhead[R]{\small Ta \textit{et al}}
+
+% kept so that generated tables compile; renders plain text
+\newcommand{\rev}[1]{#1}
+
+\input{generated/results_macros.tex}
+
+\begin{document}
+
+\title{Subject-independent surface EMG electrode reduction using cross-fitted attribution: a prespecified non-inferiority study}
+
+\author{Minh-Tri Ta$^1$, Hoang-Khang Phan$^{2,3}$ and Le-Giang Tran$^{4,*}$}
+
+\affil{$^1$College of Engineering and Computer Science, VinUniversity, Hanoi, Vietnam}
+
+\affil{$^2$Department of Biomedical Engineering, Faculty of Applied Science, Ho Chi Minh City University of Technology (HCMUT), 268 Ly Thuong Kiet Street, District 10, Ho Chi Minh City, Vietnam}
+
+\affil{$^3$Vietnam National University Ho Chi Minh City, Linh Trung Ward, Thu Duc City, Ho Chi Minh City, Vietnam}
+
+\affil{$^4$Faculty of Electronics Technology, Industrial University of Ho Chi Minh City, Ho Chi Minh City, Vietnam}
+
+\affil{$^*$Author to whom any correspondence should be addressed.}
+
+\email{tranlegiang@iuh.edu.vn}
+
+\keywords{surface electromyography, gesture recognition, electrode selection, SHAP, cross-fitting, non-inferiority, leave-one-subject-out}
+
+\begin{abstract}
+\textit{Objective.} To test, under prespecified decision rules, whether electrode selection guided by model attribution can reduce a forearm surface electromyography (EMG) array without meaningful loss of subject-independent gesture recognition.
+\textit{Approach.} We analysed 43 GRABMyo participants (16 monopolar forearm electrodes, 16 active gestures) with leave-one-subject-out evaluation. Electrodes were ranked by TreeSHAP attributions cross-fitted over participant-disjoint training groups, with and without a stability penalty. Retrained subsets of top-ranked electrodes were compared with the full array against a prespecified non-inferiority margin of 0.02 Macro-F1, using participant-level cluster-bootstrap confidence intervals (CI).
+\textit{Main results.} The full array reached a Macro-F1 of \FullXGB\ (95\% CI \FullXGBLCB--\FullXGBUCB). The smallest non-inferior subset contained \KStar\ electrodes (mean difference $\DeltaKTwelve$, 95\% CI $\DeltaKTwelveLCB$ to $\DeltaKTwelveUCB$), unchanged after Holm correction; eleven electrodes were not non-inferior. Attribution-ranked subsets exceeded the mean of random subsets at 4, 6, 8 and 12 electrodes, and deletion with retraining supported the faithfulness of the ranking. The stability penalty produced no measurable improvement. In exploratory comparisons, no statistically detectable difference was observed between attribution and an evenly spaced, data-free layout at 4, 8 and 12 electrodes. In an exploratory replication on putEMG (44 participants), a subset of \PutKStarPtTwo\ of 24 electrodes was non-inferior (\PutKStarHolmPtTwo\ with Holm correction).
+\textit{Significance.} For offline, subject-independent recognition with this two-ring monopolar montage, about a quarter of the electrodes could be removed within a prespecified engineering tolerance, but not more; the advantage of attribution over even spatial coverage was detectable only at six electrodes.
+\end{abstract}
+
+\input{sections/01_introduction.tex}
+\input{sections/02_related_work.tex}
+\input{sections/03_methods.tex}
+\input{sections/04_results.tex}
+\input{sections/05_discussion.tex}
+\input{sections/06_conclusion.tex}
+
+\ack{[AUTHOR INPUT REQUIRED: acknowledgements, if any.]}
+
+\funding{[AUTHOR INPUT REQUIRED: funding source and grant number, or `This research received no specific grant from any funding agency in the public, commercial or not-for-profit sectors.' only if true.]}
+
+\roles{[AUTHOR INPUT REQUIRED: contributions of Minh-Tri Ta, Hoang-Khang Phan and Le-Giang Tran using CRediT roles.]}
+
+\section*{Conflict of interest}
+The authors declare no conflicts of interest.
+
+\data{GRABMyo v1.1.0 is available from PhysioNet \citep{jiang2024grabmyo} (\url{https://doi.org/10.13026/89dm-f662}); NinaPro DB5 from the NinaPro repository (\url{https://ninapro.hevs.ch}); and putEMG from its authors under a CC BY-NC 4.0 licence (\url{https://www.biolab.put.poznan.pl/putemg-dataset/}). The statistical analysis plan, the record of analysis decisions, the analysis code, the environment specification and all result files from which the numbers in this paper are computed are archived at [AUTHOR INPUT REQUIRED: INSERT PERMANENT REPOSITORY DOI].}
+
+\suppdata{Supplementary methods S1--S5 (departures from the analysis plan, threshold checks, deletion-analysis consistency, fixed-layout and feature-redundancy analyses) and supplementary tables S1--S6 are provided in a separate file.}
+
+\bibliographystyle{jphysicsB}
+\bibliography{references}
+
+\end{document}

@@ -1,0 +1,66 @@
+outer folds=43 inner=5 workers=1 device=cuda pending=43
+[1/43] participant 01 top4(lam=0)=['6', '4', '14', '7'] 194.0s  elapsed=3.3m eta=139.0m
+[2/43] participant 02 top4(lam=0)=['4', '14', '6', '7'] 181.5s  elapsed=6.3m eta=130.0m
+[3/43] participant 03 top4(lam=0)=['4', '6', '14', '7'] 179.0s  elapsed=9.3m eta=124.4m
+[4/43] participant 04 top4(lam=0)=['4', '6', '14', '7'] 173.2s  elapsed=12.2m eta=119.2m
+[5/43] participant 05 top4(lam=0)=['4', '6', '14', '7'] 174.2s  elapsed=15.1m eta=115.0m
+[6/43] participant 06 top4(lam=0)=['4', '6', '14', '7'] 173.9s  elapsed=18.0m eta=111.2m
+[7/43] participant 07 top4(lam=0)=['4', '6', '14', '7'] 173.0s  elapsed=20.9m eta=107.6m
+[8/43] participant 08 top4(lam=0)=['6', '4', '14', '7'] 173.1s  elapsed=23.8m eta=104.2m
+[9/43] participant 09 top4(lam=0)=['4', '6', '14', '7'] 172.0s  elapsed=26.7m eta=100.8m
+[10/43] participant 10 top4(lam=0)=['4', '6', '14', '7'] 171.2s  elapsed=29.5m eta=97.5m
+[11/43] participant 11 top4(lam=0)=['4', '6', '14', '7'] 172.5s  elapsed=32.4m eta=94.3m
+[12/43] participant 12 top4(lam=0)=['4', '6', '14', '7'] 175.8s  elapsed=35.4m eta=91.3m
+[13/43] participant 13 top4(lam=0)=['4', '6', '14', '7'] 173.0s  elapsed=38.2m eta=88.3m
+[14/43] participant 14 top4(lam=0)=['4', '14', '6', '7'] 171.1s  elapsed=41.1m eta=85.1m
+[15/43] participant 15 top4(lam=0)=['4', '6', '14', '7'] 173.3s  elapsed=44.0m eta=82.1m
+[16/43] participant 16 top4(lam=0)=['4', '6', '14', '7'] 170.2s  elapsed=46.8m eta=79.0m
+[17/43] participant 17 top4(lam=0)=['4', '6', '14', '8'] 169.7s  elapsed=49.7m eta=76.0m
+[18/43] participant 18 top4(lam=0)=['4', '6', '14', '7'] 163.1s  elapsed=52.4m eta=72.8m
+[19/43] participant 19 top4(lam=0)=['6', '4', '14', '7'] 162.8s  elapsed=55.1m eta=69.6m
+[20/43] participant 20 top4(lam=0)=['4', '6', '14', '7'] 163.5s  elapsed=57.8m eta=66.5m
+[21/43] participant 21 top4(lam=0)=['6', '14', '4', '7'] 164.4s  elapsed=60.6m eta=63.5m
+[22/43] participant 22 top4(lam=0)=['6', '4', '14', '7'] 164.2s  elapsed=63.3m eta=60.5m
+[23/43] participant 23 top4(lam=0)=['6', '4', '14', '7'] 164.2s  elapsed=66.1m eta=57.5m
+[24/43] participant 24 top4(lam=0)=['6', '14', '4', '7'] 163.9s  elapsed=68.8m eta=54.5m
+[25/43] participant 25 top4(lam=0)=['4', '6', '14', '8'] 164.2s  elapsed=71.5m eta=51.5m
+[26/43] participant 26 top4(lam=0)=['4', '6', '14', '7'] 164.2s  elapsed=74.3m eta=48.6m
+[27/43] participant 27 top4(lam=0)=['6', '4', '14', '7'] 163.9s  elapsed=77.0m eta=45.6m
+[28/43] participant 28 top4(lam=0)=['4', '6', '14', '7'] 164.4s  elapsed=79.8m eta=42.7m
+[29/43] participant 29 top4(lam=0)=['4', '6', '14', '7'] 164.2s  elapsed=82.5m eta=39.8m
+[30/43] participant 30 top4(lam=0)=['4', '6', '14', '7'] 164.2s  elapsed=85.3m eta=36.9m
+[31/43] participant 31 top4(lam=0)=['4', '6', '14', '8'] 164.6s  elapsed=88.0m eta=34.1m
+[32/43] participant 32 top4(lam=0)=['14', '6', '4', '7'] 164.5s  elapsed=90.8m eta=31.2m
+[33/43] participant 33 top4(lam=0)=['4', '14', '6', '8'] 164.2s  elapsed=93.5m eta=28.3m
+[34/43] participant 34 top4(lam=0)=['4', '6', '14', '8'] 164.0s  elapsed=96.2m eta=25.5m
+[35/43] participant 35 top4(lam=0)=['6', '4', '14', '7'] 164.1s  elapsed=99.0m eta=22.6m
+[36/43] participant 36 top4(lam=0)=['4', '6', '14', '7'] 165.4s  elapsed=101.7m eta=19.8m
+[37/43] participant 37 top4(lam=0)=['4', '6', '14', '8'] 166.4s  elapsed=104.5m eta=16.9m
+[38/43] participant 38 top4(lam=0)=['4', '6', '14', '8'] 163.9s  elapsed=107.2m eta=14.1m
+[39/43] participant 39 top4(lam=0)=['4', '6', '14', '7'] 164.0s  elapsed=110.0m eta=11.3m
+[40/43] participant 40 top4(lam=0)=['4', '6', '14', '7'] 163.8s  elapsed=112.7m eta=8.5m
+[41/43] participant 41 top4(lam=0)=['4', '6', '14', '7'] 163.9s  elapsed=115.5m eta=5.6m
+[42/43] participant 42 top4(lam=0)=['4', '6', '14', '7'] 163.9s  elapsed=118.2m eta=2.8m
+[43/43] participant 43 top4(lam=0)=['4', '14', '6', '7'] 164.3s  elapsed=120.9m eta=0.0m
+
+mean A_c across outer folds (population view):
+channel
+4     0.090294
+6     0.088859
+14    0.086482
+7     0.074914
+8     0.073369
+10    0.069594
+5     0.062437
+13    0.057932
+15    0.056504
+2     0.055859
+1     0.053520
+3     0.053020
+16    0.050014
+11    0.044317
+12    0.041937
+9     0.041293
+
+ASSERTION PASSED: 43 outer folds x 16 channels
+wall clock: 120.9 min

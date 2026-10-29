@@ -1,0 +1,1 @@
+These are the repository metadata as found. The historical lock differs from the executed environment; use reproducibility/requirements_current.txt and environment.json for this revision. Placeholder package-author metadata is not an author declaration.

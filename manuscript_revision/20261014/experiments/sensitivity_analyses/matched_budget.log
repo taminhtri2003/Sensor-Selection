@@ -1,0 +1,259 @@
+participant 1: inner fold 1/5 complete
+participant 1: inner fold 2/5 complete
+participant 1: inner fold 3/5 complete
+participant 1: inner fold 4/5 complete
+participant 1: inner fold 5/5 complete
+1/43: matched-budget methods evaluated; shared training=136.4s SHAP=4.3s permutation=11.5s
+participant 2: inner fold 1/5 complete
+participant 2: inner fold 2/5 complete
+participant 2: inner fold 3/5 complete
+participant 2: inner fold 4/5 complete
+participant 2: inner fold 5/5 complete
+2/43: matched-budget methods evaluated; shared training=120.6s SHAP=4.2s permutation=12.1s
+participant 3: inner fold 1/5 complete
+participant 3: inner fold 2/5 complete
+participant 3: inner fold 3/5 complete
+participant 3: inner fold 4/5 complete
+participant 3: inner fold 5/5 complete
+3/43: matched-budget methods evaluated; shared training=120.3s SHAP=4.2s permutation=13.3s
+participant 4: inner fold 1/5 complete
+participant 4: inner fold 2/5 complete
+participant 4: inner fold 3/5 complete
+participant 4: inner fold 4/5 complete
+participant 4: inner fold 5/5 complete
+4/43: matched-budget methods evaluated; shared training=120.2s SHAP=4.2s permutation=11.9s
+participant 5: inner fold 1/5 complete
+participant 5: inner fold 2/5 complete
+participant 5: inner fold 3/5 complete
+participant 5: inner fold 4/5 complete
+participant 5: inner fold 5/5 complete
+5/43: matched-budget methods evaluated; shared training=119.8s SHAP=4.3s permutation=12.4s
+participant 6: inner fold 1/5 complete
+participant 6: inner fold 2/5 complete
+participant 6: inner fold 3/5 complete
+participant 6: inner fold 4/5 complete
+participant 6: inner fold 5/5 complete
+6/43: matched-budget methods evaluated; shared training=120.5s SHAP=4.2s permutation=11.7s
+participant 7: inner fold 1/5 complete
+participant 7: inner fold 2/5 complete
+participant 7: inner fold 3/5 complete
+participant 7: inner fold 4/5 complete
+participant 7: inner fold 5/5 complete
+7/43: matched-budget methods evaluated; shared training=120.4s SHAP=4.2s permutation=12.8s
+participant 8: inner fold 1/5 complete
+participant 8: inner fold 2/5 complete
+participant 8: inner fold 3/5 complete
+participant 8: inner fold 4/5 complete
+participant 8: inner fold 5/5 complete
+8/43: matched-budget methods evaluated; shared training=120.6s SHAP=4.3s permutation=12.3s
+participant 9: inner fold 1/5 complete
+participant 9: inner fold 2/5 complete
+participant 9: inner fold 3/5 complete
+participant 9: inner fold 4/5 complete
+participant 9: inner fold 5/5 complete
+9/43: matched-budget methods evaluated; shared training=120.2s SHAP=4.2s permutation=11.4s
+participant 10: inner fold 1/5 complete
+participant 10: inner fold 2/5 complete
+participant 10: inner fold 3/5 complete
+participant 10: inner fold 4/5 complete
+participant 10: inner fold 5/5 complete
+10/43: matched-budget methods evaluated; shared training=120.1s SHAP=4.2s permutation=13.0s
+participant 11: inner fold 1/5 complete
+participant 11: inner fold 2/5 complete
+participant 11: inner fold 3/5 complete
+participant 11: inner fold 4/5 complete
+participant 11: inner fold 5/5 complete
+11/43: matched-budget methods evaluated; shared training=121.1s SHAP=4.3s permutation=13.2s
+participant 12: inner fold 1/5 complete
+participant 12: inner fold 2/5 complete
+participant 12: inner fold 3/5 complete
+participant 12: inner fold 4/5 complete
+participant 12: inner fold 5/5 complete
+12/43: matched-budget methods evaluated; shared training=118.5s SHAP=4.0s permutation=10.4s
+participant 13: inner fold 1/5 complete
+participant 13: inner fold 2/5 complete
+participant 13: inner fold 3/5 complete
+participant 13: inner fold 4/5 complete
+participant 13: inner fold 5/5 complete
+13/43: matched-budget methods evaluated; shared training=115.5s SHAP=3.8s permutation=10.1s
+participant 14: inner fold 1/5 complete
+participant 14: inner fold 2/5 complete
+participant 14: inner fold 3/5 complete
+participant 14: inner fold 4/5 complete
+participant 14: inner fold 5/5 complete
+14/43: matched-budget methods evaluated; shared training=115.4s SHAP=3.8s permutation=10.1s
+participant 15: inner fold 1/5 complete
+participant 15: inner fold 2/5 complete
+participant 15: inner fold 3/5 complete
+participant 15: inner fold 4/5 complete
+participant 15: inner fold 5/5 complete
+15/43: matched-budget methods evaluated; shared training=115.3s SHAP=3.8s permutation=10.1s
+participant 16: inner fold 1/5 complete
+participant 16: inner fold 2/5 complete
+participant 16: inner fold 3/5 complete
+participant 16: inner fold 4/5 complete
+participant 16: inner fold 5/5 complete
+16/43: matched-budget methods evaluated; shared training=114.7s SHAP=3.9s permutation=10.0s
+participant 17: inner fold 1/5 complete
+participant 17: inner fold 2/5 complete
+participant 17: inner fold 3/5 complete
+participant 17: inner fold 4/5 complete
+participant 17: inner fold 5/5 complete
+17/43: matched-budget methods evaluated; shared training=115.3s SHAP=4.0s permutation=10.0s
+participant 18: inner fold 1/5 complete
+participant 18: inner fold 2/5 complete
+participant 18: inner fold 3/5 complete
+participant 18: inner fold 4/5 complete
+participant 18: inner fold 5/5 complete
+18/43: matched-budget methods evaluated; shared training=115.3s SHAP=3.9s permutation=10.1s
+participant 19: inner fold 1/5 complete
+participant 19: inner fold 2/5 complete
+participant 19: inner fold 3/5 complete
+participant 19: inner fold 4/5 complete
+participant 19: inner fold 5/5 complete
+19/43: matched-budget methods evaluated; shared training=115.8s SHAP=3.9s permutation=10.2s
+participant 20: inner fold 1/5 complete
+participant 20: inner fold 2/5 complete
+participant 20: inner fold 3/5 complete
+participant 20: inner fold 4/5 complete
+participant 20: inner fold 5/5 complete
+20/43: matched-budget methods evaluated; shared training=115.5s SHAP=3.8s permutation=10.0s
+participant 21: inner fold 1/5 complete
+participant 21: inner fold 2/5 complete
+participant 21: inner fold 3/5 complete
+participant 21: inner fold 4/5 complete
+participant 21: inner fold 5/5 complete
+21/43: matched-budget methods evaluated; shared training=115.2s SHAP=3.8s permutation=10.1s
+participant 22: inner fold 1/5 complete
+participant 22: inner fold 2/5 complete
+participant 22: inner fold 3/5 complete
+participant 22: inner fold 4/5 complete
+participant 22: inner fold 5/5 complete
+22/43: matched-budget methods evaluated; shared training=114.8s SHAP=3.8s permutation=10.0s
+participant 23: inner fold 1/5 complete
+participant 23: inner fold 2/5 complete
+participant 23: inner fold 3/5 complete
+participant 23: inner fold 4/5 complete
+participant 23: inner fold 5/5 complete
+23/43: matched-budget methods evaluated; shared training=114.7s SHAP=3.8s permutation=9.8s
+participant 24: inner fold 1/5 complete
+participant 24: inner fold 2/5 complete
+participant 24: inner fold 3/5 complete
+participant 24: inner fold 4/5 complete
+participant 24: inner fold 5/5 complete
+24/43: matched-budget methods evaluated; shared training=115.1s SHAP=3.9s permutation=10.1s
+participant 25: inner fold 1/5 complete
+participant 25: inner fold 2/5 complete
+participant 25: inner fold 3/5 complete
+participant 25: inner fold 4/5 complete
+participant 25: inner fold 5/5 complete
+25/43: matched-budget methods evaluated; shared training=115.8s SHAP=3.9s permutation=10.0s
+participant 26: inner fold 1/5 complete
+participant 26: inner fold 2/5 complete
+participant 26: inner fold 3/5 complete
+participant 26: inner fold 4/5 complete
+participant 26: inner fold 5/5 complete
+26/43: matched-budget methods evaluated; shared training=115.7s SHAP=3.9s permutation=10.1s
+participant 27: inner fold 1/5 complete
+participant 27: inner fold 2/5 complete
+participant 27: inner fold 3/5 complete
+participant 27: inner fold 4/5 complete
+participant 27: inner fold 5/5 complete
+27/43: matched-budget methods evaluated; shared training=115.2s SHAP=3.8s permutation=10.0s
+participant 28: inner fold 1/5 complete
+participant 28: inner fold 2/5 complete
+participant 28: inner fold 3/5 complete
+participant 28: inner fold 4/5 complete
+participant 28: inner fold 5/5 complete
+28/43: matched-budget methods evaluated; shared training=115.8s SHAP=3.9s permutation=10.1s
+participant 29: inner fold 1/5 complete
+participant 29: inner fold 2/5 complete
+participant 29: inner fold 3/5 complete
+participant 29: inner fold 4/5 complete
+participant 29: inner fold 5/5 complete
+29/43: matched-budget methods evaluated; shared training=115.6s SHAP=3.8s permutation=10.0s
+participant 30: inner fold 1/5 complete
+participant 30: inner fold 2/5 complete
+participant 30: inner fold 3/5 complete
+participant 30: inner fold 4/5 complete
+participant 30: inner fold 5/5 complete
+30/43: matched-budget methods evaluated; shared training=115.7s SHAP=3.9s permutation=10.1s
+participant 31: inner fold 1/5 complete
+participant 31: inner fold 2/5 complete
+participant 31: inner fold 3/5 complete
+participant 31: inner fold 4/5 complete
+participant 31: inner fold 5/5 complete
+31/43: matched-budget methods evaluated; shared training=115.4s SHAP=3.8s permutation=10.1s
+participant 32: inner fold 1/5 complete
+participant 32: inner fold 2/5 complete
+participant 32: inner fold 3/5 complete
+participant 32: inner fold 4/5 complete
+participant 32: inner fold 5/5 complete
+32/43: matched-budget methods evaluated; shared training=115.7s SHAP=3.9s permutation=10.0s
+participant 33: inner fold 1/5 complete
+participant 33: inner fold 2/5 complete
+participant 33: inner fold 3/5 complete
+participant 33: inner fold 4/5 complete
+participant 33: inner fold 5/5 complete
+33/43: matched-budget methods evaluated; shared training=115.1s SHAP=3.8s permutation=10.2s
+participant 34: inner fold 1/5 complete
+participant 34: inner fold 2/5 complete
+participant 34: inner fold 3/5 complete
+participant 34: inner fold 4/5 complete
+participant 34: inner fold 5/5 complete
+34/43: matched-budget methods evaluated; shared training=115.2s SHAP=3.9s permutation=10.0s
+participant 35: inner fold 1/5 complete
+participant 35: inner fold 2/5 complete
+participant 35: inner fold 3/5 complete
+participant 35: inner fold 4/5 complete
+participant 35: inner fold 5/5 complete
+35/43: matched-budget methods evaluated; shared training=115.3s SHAP=3.9s permutation=10.0s
+participant 36: inner fold 1/5 complete
+participant 36: inner fold 2/5 complete
+participant 36: inner fold 3/5 complete
+participant 36: inner fold 4/5 complete
+participant 36: inner fold 5/5 complete
+36/43: matched-budget methods evaluated; shared training=115.7s SHAP=3.9s permutation=10.1s
+participant 37: inner fold 1/5 complete
+participant 37: inner fold 2/5 complete
+participant 37: inner fold 3/5 complete
+participant 37: inner fold 4/5 complete
+participant 37: inner fold 5/5 complete
+37/43: matched-budget methods evaluated; shared training=115.5s SHAP=3.9s permutation=9.9s
+participant 38: inner fold 1/5 complete
+participant 38: inner fold 2/5 complete
+participant 38: inner fold 3/5 complete
+participant 38: inner fold 4/5 complete
+participant 38: inner fold 5/5 complete
+38/43: matched-budget methods evaluated; shared training=115.6s SHAP=3.9s permutation=10.1s
+participant 39: inner fold 1/5 complete
+participant 39: inner fold 2/5 complete
+participant 39: inner fold 3/5 complete
+participant 39: inner fold 4/5 complete
+participant 39: inner fold 5/5 complete
+39/43: matched-budget methods evaluated; shared training=115.9s SHAP=3.9s permutation=10.1s
+participant 40: inner fold 1/5 complete
+participant 40: inner fold 2/5 complete
+participant 40: inner fold 3/5 complete
+participant 40: inner fold 4/5 complete
+participant 40: inner fold 5/5 complete
+40/43: matched-budget methods evaluated; shared training=115.7s SHAP=3.9s permutation=10.0s
+participant 41: inner fold 1/5 complete
+participant 41: inner fold 2/5 complete
+participant 41: inner fold 3/5 complete
+participant 41: inner fold 4/5 complete
+participant 41: inner fold 5/5 complete
+41/43: matched-budget methods evaluated; shared training=115.6s SHAP=3.9s permutation=10.0s
+participant 42: inner fold 1/5 complete
+participant 42: inner fold 2/5 complete
+participant 42: inner fold 3/5 complete
+participant 42: inner fold 4/5 complete
+participant 42: inner fold 5/5 complete
+42/43: matched-budget methods evaluated; shared training=115.9s SHAP=3.9s permutation=10.0s
+participant 43: inner fold 1/5 complete
+participant 43: inner fold 2/5 complete
+participant 43: inner fold 3/5 complete
+participant 43: inner fold 4/5 complete
+participant 43: inner fold 5/5 complete
+43/43: matched-budget methods evaluated; shared training=115.5s SHAP=3.9s permutation=9.9s
+PASS: all matched-budget folds complete

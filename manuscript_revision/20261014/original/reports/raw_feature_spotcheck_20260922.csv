@@ -1,0 +1,4 @@
+participant,session,gesture,trial,n_windows,max_absolute_difference,passed
+1,1,1,1,39,0.0,True
+22,2,9,1,39,0.0,True
+43,3,16,1,39,0.0,True

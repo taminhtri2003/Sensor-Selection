@@ -1,0 +1,49 @@
+{
+  "pdfs": {
+    "main": {
+      "sha256": "8288e78691402f88493b377cf44eefa40094430be5e94018cea606d55b9c6306",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "status": "PASS",
+      "pages": 13,
+      "render_folder": "C:/Users/Minh Tri SHC/.codex/visualizations/2026/09/22/01a0c89f-1b02-7750-9a24-74a484af5a6d/review20261014/final_pdf_pages_v3",
+      "inspection_note": "Every page is byte-identical as a rendered PNG to the corresponding v1 page already inspected at full resolution; this comparison checks the final compiled PDF, not only source text."
+    },
+    "supplementary": {
+      "sha256": "4c3d78a6543ea025685001da0392726abe967d7cf4f846143ca07bd4593a601a",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "status": "PASS",
+      "pages": 14,
+      "render_folder": "C:/Users/Minh Tri SHC/.codex/visualizations/2026/09/22/01a0c89f-1b02-7750-9a24-74a484af5a6d/review20261014/final_pdf_pages_v3",
+      "inspection_note": "Every final supplementary page inspected at full resolution, including all seventeen tables; page8 additionally inspected as top/bottom crops."
+    }
+  }
+}

@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "semg-sparse"
+version = "1.0.0"
+description = "Explainability-guided sparse sEMG sensor selection for subject-independent hand-gesture recognition"
+authors = [{ name = "Research Engineer", email = "reproducible.research@physionet.org" }]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "pandas>=2.0",
+    "scikit-learn>=1.2",
+    "xgboost>=1.7",
+    "torch>=2.0",
+    "shap>=0.41",
+    "captum>=0.6",
+    "optuna>=3.1",
+    "wfdb>=4.1",
+    "h5py>=3.8",
+    "pyarrow>=11.0",
+    "matplotlib>=3.7",
+    "seaborn>=0.12",
+    "statsmodels>=0.14",
+    "pingouin>=0.5",
+    "boto3>=1.26",
+    "awscli>=1.27"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "black", "flake8"]

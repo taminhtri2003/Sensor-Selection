@@ -1,0 +1,870 @@
+Cross-fitted forearm electrode reduction                                                                                       Ta et al
+
+
+
+                   Subject-independent forearm sEMG electrode reduction with
+                   cross-fitted attribution and non-inferiority testing
+                   Minh-Tri Ta1 , Hoang-Khang Phan2,3 and Le-Giang Tran4,∗
+                  1 College of Engineering and Computer Science, VinUniversity, Hanoi, Vietnam
+                  2 Department of Biomedical Engineering, Faculty of Applied Science, Ho Chi Minh City University of Technology
+
+                  (HCMUT), 268 Ly Thuong Kiet Street, District 10, Ho Chi Minh City, Vietnam
+                  3 Vietnam National University Ho Chi Minh City, Linh Trung Ward, Thu Duc City, Ho Chi Minh City, Vietnam
+                  4 Faculty of Electronics Technology, Industrial University of Ho Chi Minh City, Ho Chi Minh City, Vietnam
+                  ∗ Author to whom any correspondence should be addressed.
+
+
+
+                   E-mail: tranlegiang@iuh.edu.vn
+
+                  Keywords: surface electromyography, electrode selection, cross-fitting, SHAP, non-inferiority, participant-independent
+                  validation
+
+
+                  Abstract
+                  Objective. Determine how many forearm surface electromyography electrodes can be removed
+                  while preserving mean gesture recognition for unseen participants, and assess the additional
+                  value of attribution-based selection. Approach. We analyzed 43 GRABMyo participants
+                  using sixteen monopolar electrodes and sixteen active gestures. Participant-disjoint inner
+                  cross-fitting estimated TreeSHAP rankings within each outer leave-one-subject-out fold.
+                  Reduced models were retrained and compared with full16 using participant-bootstrap
+                  intervals and a predefined 0.02 Macro-F1 engineering tolerance. Exploratory analyses
+                  included primary-budget geometric selection, paired gesture predictions, shared-resource
+                  permutation selection, and task, window and classifier sensitivities. Main results. SHAP12
+                  achieved mean Macro-F1 0.528 versus 0.541 for full16; its change was -0.0133 (95% CI
+                  -0.0160 to -0.0106). The smallest qualifying count was 12. Nevertheless, 11 participants lost
+                  more than 0.02 and 4 gestures showed corrected declines. Geometric12 did not establish
+                  non-inferiority, and the direct SHAP12 mean advantage remained uncertain (+0.0060; 95%
+                  CI -0.0010 to +0.0127). Attribution outperformed mean random subsets with the
+                  reduced-budget classifier. Shared-resource SHAP outperformed grouped permutation at six
+                  electrodes, but its twelve-electrode advantage remained uncertain. Stability regularization
+                  did not establish an improvement. Significance. One quarter of this monopolar array could
+                  be removed within the mean tolerance under offline participant-independent evaluation.
+                  This validates a selection procedure rather than one locked physical layout; individual losses
+                  and uncertain transfer require independent validation before device claims.
+
+                  1 Introduction
+                  Surface electromyography (sEMG) provides a non-invasive signal for gesture recognition and my-
+                  oelectric control, but the recording interface must balance spatial information against the burden
+                  of additional electrodes (Scheme and Englehart, 2011; Farina et al., 2014; Vujaklija et al., 2016).
+                  Fewer recording sites could simplify an interface. Whether that reduction preserves recognition for an
+                  unseen participant is an empirical question, and offline recognition alone does not establish a usable
+                  control interface.
+                      Channel selection has been studied with feature filters, wrappers and spatial criteria (Phinyomark
+                  et al., 2012; Stango et al., 2015; Qu et al., 2021). SHAP-guided EMG channel and feature optimization
+                  is also established (Rani et al., 2025); related work uses Shapley explanations for similar sEMG
+                  gestures (Wang et al., 2024) and explainable feature selection with fusion (Gehlot et al., 2024). These
+                  contributions make attribution-based reduction a relevant comparator rather than a new algorithmic
+                  premise. Their performance estimates cannot be directly compared with this study across different
+                  tasks, sensors and validation protocols.
+                      For a system intended to work across people, selection must exclude the eventual test participant.
+                  Using that participant to standardize features, estimate importance or choose a subset can produce
+                  optimistic estimates. Participant-disjoint inner evaluation also avoids measuring attribution solely
+                  on observations used to fit the attributing model. This motivates an outer leave-one-subject-out
+                  (LOSO) evaluation in which each entire selection procedure is reconstructed from the outer training
+                  participants.
+
+
+                                                                 1
+Cross-fitted forearm electrode reduction                                                                                        Ta et al
+
+
+
+                      Attribution magnitude describes predictive reliance of a fitted model, not a direct measurement of
+                  muscle activation. TreeSHAP distributes a model’s prediction over its input features (Lundberg and
+                  Lee, 2017; Lundberg et al., 2020); aggregation over an electrode’s features offers a ranking, but does
+                  not turn it into a coalition-level Shapley value for that electrode. Correlated features and variation
+                  across participants can affect this ranking. Attribution stability has already motivated resampling
+                  and regularization methods (Visani et al., 2022; Xiang et al., 2026); a stability penalty therefore
+                  requires validation rather than a novelty claim.
+                      Electrode count requires an explicit tolerance for performance loss. Non-inferiority asks whether
+                  a reduced system remains within such a tolerance, whereas a non-significant superiority test does
+                  not establish preservation (Schuirmann, 1987; Walker and Nowacki, 2011). A mean tolerance is also
+                  different from preserving every participant or gesture. Reporting only an aggregate curve could hide
+                  losses that matter to an intended application.
+                      We evaluate cross-fitted electrode reduction on GRABMyo and separately examine NinaPro DB5.
+                  The primary question is the minimum count supported by a specified engineering margin. Secondary
+                  questions concern utility beyond random and spatial selection, stability regularization, and deletion
+                  with retraining. Exploratory analyses use a geometric subset under the primary training protocol,
+                  paired participant and gesture predictions, and shared-resource SHAP and grouped permutation
+                  rankings. Sensitivities and split-derived layouts delimit the claim: the LOSO experiment evaluates a
+                  selection procedure, not a prospectively validated common physical layout.
+
+                    A Recording sites                                            B Topology and task
+                                   Elbow / proximal                           Circumferential position (arbitrary origin)
+
+
+                                                                                    1     2     3     4     5     6     7     8
+
+
+
+                                                       F1-F8: proximal ring         9     10    11    12    13    14    15    16
+                            2 cm
+
+
+
+
+                                                                                    Aligned pairs: F1/F9, ..., F8/F16
+                                                       F9-F16: distal ring
+                                                                                     43 participants | 3 sessions
+                                                                                 16 active gestures | 250 ms windows
+                    Schematic only; no muscle registration                             10 features per electrode
+                                     Wrist / distal
+
+
+                   Figure 1. Recording topology and task. The source montage places F1–F8 in the proximal ring and F9–F16 in the
+                   distal ring, separated by 2 cm. Corresponding circumferential positions are aligned. The forearm outline is schematic;
+                   recording sites were not registered to individual muscles. The unwrapped map preserves electrode numbers without
+                   assigning an absolute anatomical angle.
+
+
+
+                  2 Methods
+                  2.1 Datasets, selection units and signal processing
+                  GRABMyo v1.1.0 contains 43 able-bodied participants recorded over 3 days with an EMGUSB2+
+                  amplifier at 2048 Hz (Pradhan et al., 2022; Jiang et al., 2024). Source-reported demographics were
+                  23 male and 20 female, age 26.4 ± 2.9 years. The forearm montage has sixteen monopolar sites
+                  in two rings (figure 1); each site supplies one channel, so electrode and channel selection coincide
+                  here. Counts refer only to these signal recording sites; reference and ground requirements are not
+                  evaluated. The primary task uses sixteen active gestures, excluding rest. All 30,715 distributed files
+                  matched published checksums, and 15,351 records were processed. Source demographics and the
+                  official gesture dictionary are provided with the reproducibility package.
+                      Signals were filtered at 20–450 Hz using a Butterworth band-pass with SciPy order argument 4
+                  (eight poles per pass), applied forward and backward for zero phase, followed by a forward–backward
+                  50 Hz notch (Q = 30). They were then divided into 250 ms windows with 50% overlap within trial
+                  boundaries. The non-causal filter limits the analysis to offline use. Each channel supplied mean
+                  absolute value, RMS, variance, waveform length, zero crossings, slope sign changes, integrated EMG,
+
+
+                                                                  2
+Cross-fitted forearm electrode reduction                                                                          Ta et al
+
+
+
+                  Willison amplitude, mean frequency and median frequency. The active-task cache contains 563,472
+                  windows with 160 features each.
+                      Count-feature thresholds followed a common rule: 1.15 times the median absolute signal first
+                  difference, rounded to one significant figure. The monopolar threshold (10−2 mV) was calibrated from
+                  54 unfiltered records from six participants before participant partitioning. Excluding each participant
+                  left the rounded threshold unchanged in all 43 folds. Threshold calibration therefore involved pooled
+                  development data, although its value was invariant to participant exclusion. Fold-specific feature
+                  means and standard deviations, classifier fitting and attribution ranking exclude the outer test
+                  participant.
+                      NinaPro DB5 was analyzed separately: 10 participants, two Myo armbands, sixteen channels
+                  sampled at 200 Hz and exercise 1’s twelve finger movements (Pizzolato et al., 2017). Refined labels
+                  determine movement segments. Filtering used an effective passband of 10–89 Hz without a notch. The
+                  250 ms windows contain 50 samples. The threshold is seven quantization steps in the stored integer
+                  representation; every participant-exclusion check reproduced it. Source-reported DB5 demographics
+                  were 8 male and 2 female, age 28.0 ± 4.0 years. Sex is reported as recorded in the source datasets; no
+                  sex-specific effect is estimated. No anatomical correspondence between DB5 and GRABMyo channel
+                  numbers is assumed.
+
+                   Ethics This is a secondary analysis of publicly distributed, de-identified recordings, with no
+                   new recruitment or recording. Original study approvals and consent are described in the dataset
+                   publications.
+
+                  2.2 Outer evaluation and classifier budgets
+                  Each outer LOSO fold reserves all observations of one participant p. For cross-fitted attribution,
+                  an inner five-fold GroupKFold partitions only the other participants (figure 2). Inner feature
+                  standardization uses inner-training observations only; final reduced models use the corresponding
+                  outer-training statistics. No outer test observations enter fitting or rankings.
+                      The primary reduction curve uses XGBoost with 300 boosting rounds, maximum depth 6, learning
+                  rate 0.1, row and column subsampling 0.8, histogram tree construction. Its multiclass soft-probability
+                  objective produces probabilities whose argmax gives the predicted class. For the primary curve, final
+                  models across all counts and fixed penalty rankings within an outer fold use the same stratified
+                  sample of 200,000 outer-training windows. Models are retrained from scratch on the selected features.
+                  Selected features retain their original column order.
+                      Training budgets differ across comparisons: the full-array XGBoost classifier context uses all
+                  training windows, the primary curve uses 200,000, and the random-selection comparison uses 50
+                  boosting rounds and 150,000. The full-array SVM uses 40,000 windows; random forest uses 200,000.
+                  These are budget-limited comparators, not proven lower bounds or matched classifier-capacity
+                  experiments. Budgets were calibrated using two outer-fold outcomes. The analysis design followed
+                  pilot work and was not independently preregistered. This development exposure limits prospective
+                  interpretation.
+
+                   2.3 Cross-fitted attribution and its participant-level extension
+                   Inner XGBoost models use at most 200,000 training windows sampled uniformly without replacement
+                   after participant splitting. Their standardization statistics use the full inner-training pool, not the
+                   capped model-fit sample. Exact tree-path-dependent TreeSHAP contributions are computed on raw
+                   class margins for at most 20,000 inner-held-out windows. For window i and electrode c, absolute
+                   contributions are averaged across classes g and its ten features f :
+                                                                        G    F
+                                                                    1 ∑︂ ∑︂
+                                                          Φi,c =            |ϕi,g,c,f |.                               (1)
+                                                                   GF g=1
+                                                                            f =1
+
+                  The mean over inner-held-out windows is normalized across electrodes to give the inner-fold score
+                  Ij,c . The central magnitude and unscaled median absolute deviation are
+                                    Ac = medianj Ij,c ,   Uc = medianj |Ij,c − Ac |,       Qc (λ) = Ac − λUc .         (2)
+                  All fixed penalties λ ∈ {0, 0.25, 0.5, 1} are reported, with lower electrode index breaking ties. No
+                  penalty is chosen using outer scores. The unpenalized ranking is called cross-fitted SHAP; the positive
+                  penalties assess stability regularization.
+                      Pooling people within five inner folds can suppress person-level heterogeneity. A post-hoc extension
+                  therefore computes the median and MAD over normalized individual attribution vectors of all 42
+
+
+                                                              3
+Cross-fitted forearm electrode reduction                                                                                           Ta et al
+
+
+
+
+                                                                    Other 42 participants
+                                                                                                         Inner-held-out attributions
+                         Participant p                              5 inner grouped folds
+                                                                                                         Normalize electrode scores
+                        Outer test only                             Training-only scaling
+                                                                                                           Median / MAD ranking
+                                                                    Train inner XGBoost
+
+
+
+
+                                 Select top k -> retrain reduced model on outer training participants -> test only on p
+
+
+
+
+                                Orange: attribution only; blue: training
+
+                                                    1                                       Electrode magnitude: mean |TreeSHAP|
+                                Attributing model
+
+
+
+
+                                                                                            Fold score: normalize across electrodes
+                                                    2                                       A = median normalized magnitude
+                                                    3                                       U = median absolute deviation
+                                                                                            Q(lambda) = A - lambda U
+                                                    4
+                                                    5                                       Report every fixed lambda; do not tune on p
+
+                                                       1 2 3 4 5
+                                                    Inner participant group
+
+                  Figure 2. Participant access in the nested procedure. Each inner attributing model excludes the participants on
+                  whom its attributions are evaluated. The outer participant is reserved until final reduced-model testing. This diagram
+                  describes fold-specific scaling, fitting and ranking; pooled threshold calibration and budget calibration are separate
+                  development exposures documented in the text.
+
+
+                  outer-training participants. These vectors share five fitted inner models; their dispersion is descriptive
+                  heterogeneity, not a standard error. All penalties and counts are evaluated under the primary protocol.
+                  A post-hoc descriptive analysis compared selected physical site sets and Jaccard similarity at every
+                  fixed penalty and count. It assesses whether penalties change the physical inputs and does not select
+                  a penalty.
+
+                   2.4 Primary endpoint and participant-level inference
+                   Macro-F1 is the unweighted mean of the gesture F1 scores for each held-out participant. For count k,
+                   the paired change is ∆p,k = F1p,k − F1p,16 . The predefined primary engineering tolerance is δ = 0.02
+                   on the 0–1 scale. The primary decision rule requires the lower 95% percentile-bootstrap bound on the
+                   participant mean change to exceed −δ; k ∗ is the smallest qualifying count below sixteen. Sensitivity
+                   margins are 0.01 and 0.03. This criterion concerns mean recognition performance, has no established
+                   clinical interpretation and does not imply equivalence or individual preservation.
+                       The participant is the statistical unit: 43 for GRABMyo, ten for DB5 and 21 or 22 test participants
+                   for split-layout checks. Bootstrap intervals use 10,000 resamples of paired participant scores. They
+                   are conditional on the observed fitted LOSO models. Overlapping training cohorts and the lack
+                   of refitting within every bootstrap mean these intervals do not capture all new-cohort training
+                   uncertainty (Bengio and Grandvalet, 2004).
+                       The percentile-tail Holm procedure uses the fraction of unshifted bootstrap mean differences at
+                   or below −δ, with a Monte Carlo floor. This is a percentile-tail quantity rather than a bootstrap
+                   distribution generated under the null. An exploratory sensitivity uses a null-centred studentized
+                   bootstrap (Davison and Hinkley, 1997). For dp√ = ∆p,k , residuals dp − d¯ are resampled, their
+                   studentized means are compared with (d¯+ δ)/(sd / n), and the upper-tail probability uses a plus-one
+                   correction. Holm adjustment covers the fifteen reduced-count tests at one-sided α = 0.025, separately
+                   for each condition, margin and penalty.
+                       Paired secondary contrasts use Wilcoxon signed-rank tests and participant mean-change percentile
+                   intervals. These address different estimands: signed ranks are not a test of the mean. Holm families
+
+
+
+                                                                              4
+Cross-fitted forearm electrode reduction                                                                         Ta et al
+
+
+
+                   are stated explicitly; a non-significant contrast is not evidence of equivalence. The secondary test
+                   families are post-hoc and are not prospectively confirmatory.
+
+                  2.5 Selection comparators and attribution diagnostics
+                  Reduced-budget comparisons use random subsets, cross-fitted SHAP, stability-regularized SHAP
+                  (λ = 0.5), feature-wise permutation, mutual information and geometric farthest-point selection.
+                  Random selection uses 100 subsets per participant at counts 4, 6 and 8, and 500 at count 12. Eight
+                  attribution-versus-mean-random contrasts receive Holm correction. Feature-wise permutation uses one
+                  model fitted on 20,000 windows and three feature-wise permutations on 8,000 non-overlapping windows
+                  from the same outer-training participant pool. Its 40,000-window ranking pool was standardized
+                  before the window split; this was not participant-disjoint inner validation. The outer test participant
+                  remained excluded. SHAP instead uses the participant-disjoint cross-fitting above. Thus shared final
+                  evaluation does not equalize their selection resources or validation designs.
+                      Exploratory geometric selection uses the primary 300-round, 200,000-window protocol, the same
+                  outer training sample and full16 reference. Geometric selection uses the fixed two-ring topology,
+                  nominal 24 cm circumference and 2 cm separation, starts at F1 and successively maximizes distance
+                  from selected sites; ties favor the lower index. It is not tuned to participant outcomes. The complete
+                  geometric count curve evaluates this ordering under the primary protocol. It is a post-hoc analysis
+                  motivated by the twelve-electrode comparison.
+                      A separate exploratory resource-matched comparison shares five inner models between SHAP and
+                  grouped-electrode permutation, with up to 200,000 uniformly sampled training and 2,000 validation
+                  windows per fold. Equal validation quotas represent every inner-held-out participant. All ten features
+                  of one electrode are permuted jointly within each participant, three repeats, scoring the equally
+                  weighted mean participant Macro-F1 loss. Signed losses are retained, normalized by their summed
+                  absolute magnitude, and aggregated by the median across inner folds. SHAP uses the identical
+                  observations and normalizes absolute contribution magnitudes. Final models at counts 6 and 12
+                  use the primary protocol; two contrasts receive Holm correction. Measured training and selection
+                  times are reported separately. Runtime measurements include concurrent workstation load and are
+                  descriptive rather than an isolated benchmark. Because permutation grouping, participant-disjoint
+                  validation, scaler isolation and resources all differ from feature-wise permutation, this experiment
+                  does not isolate a budget effect.
+                      Deletion with retraining uses the unpenalized primary ordering and compares removal of high-
+                  ranked, random and low-ranked electrodes using the lighter model. Its fifteen contrasts form one
+                  Holm family. This diagnostic tests predictive ranking relevance; it cannot identify causal muscles or
+                  validate an online controller.
+
+                   2.6 Participant and gesture degradation
+                   Primary full16, SHAP12 and geometry12 predictions are indexed to identical outer-test observations.
+                   Participant losses, quantiles, worst loss and the number exceeding the primary margin are descriptive.
+                   Gesture-specific F1 differences are paired over all participants, with Holm correction across sixteen
+                   gestures. Confusion changes average row-normalized confusion matrices within participants so people,
+                   rather than windows, receive equal weight. Gesture names follow the explicit numeric ordering in
+                   MotionSequence.txt.
+
+                  2.7 Sensitivity, transfer and fixed-layout scope
+                  Rest-inclusive recognition and 150/500 ms windows use raw-signal re-extraction and complete count
+                  curves with the primary 250 ms ranking held fixed. The 150 ms window is 307 samples with stride
+                  153; 250/500 ms use 512/1024 samples and half-window strides. The same 200,000-window count
+                  does not equate recording duration across windows. A random-forest sensitivity uses a 200-tree,
+                  minimum-leaf-size-2 configuration at counts 12 and 16, the unchanged XGBoost ranking and the same
+                  training sample. It tests those counts only and cannot establish a random-forest minimum count.
+                      DB5 applies the procedure separately with its own sixteen-channel reference. Derived bipolar
+                  signals Bj = Fj − Fj+8 use eight aligned pairs, re-extracted features and the eight-pair reference;
+                  they are not physical bipolar-sensor measurements. Full-array cross-session analyses compare training
+                  on session 1 with testing on sessions 1–3, and training on sessions 1–2 with testing on session 3. They
+                  do not test a reduced layout under displacement, and the latter comparison confounds data quantity
+                  with session diversity.
+                      Fixed-layout checks use odd-ID development/even-ID testing and the reverse, each deriving a
+                  layout using development participants only and the five-fold median/MAD aggregation rule. Their
+                  inner and final models use all development windows with training-only standardization and the
+
+
+                                                            5
+Cross-fitted forearm electrode reduction                                                                                   Ta et al
+
+
+
+                   same 300-round classifier, rather than the primary curve’s 200,000-window cap. The pooled feature
+                   thresholds also apply to these checks. The count of twelve had already been selected using the
+                   full cohort, so neither direction independently validates count selection. The layouts differ and
+                   must be reported separately. A post-hoc Monte Carlo sensitivity analysis repeated the percentile
+                   bootstrap under 200 fixed randomizations, with 10,000 resamples per repetition. The distribution
+                   of decisions quantifies numerical sensitivity near the boundary; it does not estimate the probability
+                   that non-inferiority is true. No fresh, independently collected cohort with this montage was available.
+                   Feature redundancy and ranking-agreement diagnostics are documented in the Supplementary; high
+                   outer-fold agreement is qualified by extensive training-set overlap.
+
+                  3 Results
+                  3.1 How many electrodes meet the mean performance tolerance?
+                  Under the primary curve protocol, full16 achieved mean Macro-F1 0.541 and SHAP12 achieved 0.528.
+                  The smallest count meeting the 0.02 margin was 12, with paired change -0.0133 (95% CI -0.0160
+                  to -0.0106). Eleven did not meet this criterion: change -0.0204 (-0.0246 to -0.0162). The primary
+                  percentile decision and the exploratory null-centred, Holm-adjusted sensitivity gave the same primary
+                  minimum count: 14, 12 and 11 at margins 0.01, 0.02 and 0.03, respectively. The four penalty curves
+                  did not change these count decisions (figure 3; full results in the Supplementary).
+                      Mean preservation did not extend uniformly to individuals. For SHAP12 minus full16, the median
+                  change was -0.0125 and participant SD was +0.0093. 1 participant improved, while 11 lost more than
+                  0.02. The worst observed change was -0.0361 (participant 27), and the best was +0.0144. The margin
+                  is a mean-level engineering criterion, so these counts do not redefine individual non-inferiority.
+
+                  Table 1. Matched primary protocol: reduced subset minus full16. Each row uses all 43 paired participants, 300
+                  boosting rounds and 200,000 training windows.
+                                         Subset         Mean F1     ¯
+                                                                    ∆          95% CI               NI at 0.02
+                                         SHAP12         0.528       -0.0133    [-0.0160, -0.0106]   yes
+                                         Geometry12     0.522       -0.0193    [-0.0254, -0.0132]   no
+
+
+
+                  3.2 What does attribution add beyond random and spatial selection?
+                  With the reduced-budget classifier, attribution-ranked subsets outperformed the participant’s mean
+                  random-subset baseline at all four tested counts after correction. For the stability-regularized ranking,
+                  the mean advantages at counts 4, 6, 8 and 12 were +0.0172, +0.0370, +0.0243 and +0.0074. These
+                  absolute scores belong to the lighter comparison model and should not be substituted for the primary
+                  non-inferiority curve.
+                      With the primary model and training budget matched, geometric12 scored 0.522, with change
+                  -0.0193 (95% CI -0.0254 to -0.0132) from full16. Its lower bound crossed the 0.02 tolerance. The
+                  direct SHAP12-minus-geometric12 mean contrast was +0.0060 (-0.0010 to +0.0127), whose interval
+                  included zero. The nominal signed-rank p = 0.024 addresses ranks rather than the mean; it does not
+                  establish a positive mean advantage. The full fixed geometric curve had minimum qualifying counts
+                  of 15 under the percentile rule and 15 under the null-centred Holm sensitivity at the 0.02 margin; the
+                  full curve and decision table are provided in the Supplementary. Different non-inferiority decisions do
+                  not establish a difference between methods (Gelman and Stern, 2006).
+                      The shared-model comparison is reported separately in table 2 and figure 4(C). At counts 6 and 12,
+                  SHAP-minus-grouped-permutation mean changes were +0.0309 (+0.0211 to +0.0410) and +0.0002
+                  (-0.0029 to +0.0034), with Holm p < 0.001 and p = 0.976. Mean measured per-outer-fold times were
+                  117.1 s for shared inner training, 4.0 s for SHAP selection and 10.6 s for grouped permutation. These
+                  hardware-dependent measurements describe the executed comparison rather than online latency.
+                      At k = 6, the mean interval supports a positive SHAP advantage; the corrected signed-rank
+                  contrast is significant. At k = 12, the mean advantage remains uncertain because its interval crosses
+                  zero; the corrected signed-rank contrast is not statistically detectable.
+
+                  Table 2. Exploratory SHAP minus grouped-electrode permutation. The two methods share the same five inner
+                  models and validation observations per outer fold. Holm correction covers the two contrasts.
+                                     k      SHAP      Permutation    ¯
+                                                                     ∆           95% CI                   pHolm
+                                     6      0.480     0.449          +0.0309     [+0.0211, +0.0410]       < 0.001
+                                     12     0.528     0.528          +0.0002     [-0.0029, +0.0034]       0.976
+
+
+
+                                                                6
+Cross-fitted forearm electrode reduction                                                                                                                                                      Ta et al
+
+
+
+                                                                           A Mean reduction curve                                                           B Mean non-inferiority
+
+
+
+
+                                         Participant mean Macro-F1
+                                                                                                                                                     0.00
+
+
+
+
+                                                                                                                         Difference to full array
+                                                                     0.5
+                                                                                                                                                    −0.01
+                                                                     0.4
+                                                                                                        lambda=0                                    −0.02
+                                                                     0.3                                lambda=0.25
+                                                                                                        lambda=0.5                                  −0.03
+                                                                     0.2                                lambda=1
+                                                                                                                                                    −0.04
+                                                                            1       4          8         12        16                                        10    11     12    13     14       15
+                                                                                        Retained electrodes                                                        Retained selection units
+                                                                           C Individual losses at twelve electrodes
+                   SHAP12 minus full16
+
+
+
+
+                                                            0.00
+
+
+
+                                               −0.02
+
+
+
+                                                                                1                  10                   20                 30                                                 43
+                                                                                                              Participants ordered by change
+
+
+                   Figure 3. Count reduction and its limits. (A) Participant mean curves for all fixed penalties; shading shows the 95%
+                   participant-bootstrap interval for the unpenalized curve. (B) Mean paired change against the same curve’s full16
+                   reference, with 95% intervals and the 0.02 tolerance. (C) All participant changes at SHAP12, ordered by change;
+                   orange identifies observed losses larger than 0.02. The horizontal tolerance in C is a descriptive reference, not an
+                   individual inference threshold.
+
+
+                  3.3 Which predictive information is lost, and does regularization help?
+                  Attribution has consistent spatial preferences but does not register sites to individual muscles
+                  (figure 5(A)). The same top-four set (4, 6, 7, 14) occurred in 36 outer folds. Outer-fold agreement is
+                  descriptive because training cohorts overlap heavily.
+                      The gesture analysis found 4 corrected losses among sixteen active gestures. The largest mean
+                  decline was gesture 14, forearm pronation: -0.0456 (95% CI -0.0594 to -0.0323). Gestures 2 (thumb
+                  adduction), 9 (index finger extension) and 10 (thumb finger extension) also showed corrected declines.
+                  These paired gesture-F1 results expose task-specific losses hidden by the global mean; no anatomical
+                  cause is inferred from them. Gesture IDs are distinct from electrode indices.
+                      Deletion with retraining produced the expected ordering for the common random-comparison
+                  counts: removing highly ranked electrodes gave lower performance than random removal, which gave
+                  lower performance than removal of weakly ranked electrodes. At six electrodes retained, Remove-Top
+                  minus Remove-Bottom was -0.0775 (-0.0921 to -0.0627; Holm p < 0.001). This supports predictive
+                  relevance under retraining, rather than a causal physiological interpretation.
+                      None of the 12 penalty contrasts showed corrected improvement over magnitude alone. The
+                  participant-level extension, which exposes individual heterogeneity instead of pooling it into five
+                  groups, yielded 0 corrected beneficial and 0 corrected harmful penalty contrasts across the twelve
+                  fixed comparisons (the Supplementary penalty table). All penalties remain reported; outer-test
+                  performance was not used to choose one.
+                      At twelve electrodes, every fixed participant-level penalty selected the same physical site set as its
+                  unpenalized counterpart in all 43 outer folds. These identical inputs give identical scores under the
+                  fixed classifier protocol; this is not an equivalence test of different layouts.
+
+                  3.4 Where does the electrode-count conclusion stop generalizing?
+                  The two split-derived fixed layouts gave different results. Odd-ID development/even-ID testing
+                  removed 3, 9, 11, 12, with change -0.0124 (-0.0179 to -0.0077), meeting the 0.02 criterion. The reverse
+                  removed 9, 11, 12, 13, with change -0.0135 (-0.020020 to -0.0066), whose lower bound missed the
+
+
+                                                                                                              7
+Cross-fitted forearm electrode reduction                                                                                                                 Ta et al
+
+
+
+                                          A Lighter-model curves
+
+
+                                   0.45
+
+
+                   Mean Macro-F1   0.40
+
+
+                                   0.35
+
+                                                                       SHAP                                             Permutation               Geometry
+                                   0.30                                Penalized SHAP                                   Mutual information        Random
+
+                                             4                  6                    8                                                                    12
+                                                                            Retained electrodes
+                                          B SHAP12 - geometry12                                                       C Shared inner models
+
+
+
+
+                                                                                  SHAP - grouped permutation
+                                                                                                               k=12
+
+
+
+
+                                                                                                                k=6
+
+
+
+                                           0.000      0.005         0.010                                              0.00     0.01   0.02      0.03     0.04
+                                                Mean Macro-F1 difference                                                      Mean Macro-F1 difference
+
+                  Figure 4. Incremental selection utility under distinct protocols. (A) Six-method comparison with a common lighter
+                  final classifier (50 boosting rounds, 150,000 training windows); selection-stage resources and validation designs differed,
+                  and penalized SHAP uses λ = 0.5. (B) Direct SHAP12-minus-geometric12 mean contrast under the primary protocol
+                  (300 boosting rounds, 200,000 windows). (C) SHAP-minus-grouped-permutation contrasts with shared inner models
+                  and validation observations and primary-protocol final models. Error bars in B–C are participant mean-change
+                  bootstrap intervals. Panels are not a common absolute-score benchmark.
+
+
+                  criterion. The reverse split met the percentile criterion in 90 of 200 Monte Carlo repetitions (45%),
+                  indicating numerical decision fragility rather than a probability that non-inferiority is true. These are
+                  two layouts rather than one layout validated twice; the count had already been chosen using the full
+                  cohort. Neither is an independent prospective validation.
+                      Rest-inclusive, window-length and fixed-count random-forest sensitivities compare reduced systems
+                  with their own full arrays (table 3; figure 6(B)). Complete window and rest curves appear in the
+                  Supplementary. They reuse the primary ranking and test robustness of reduced-model evaluation; they
+                  do not show that newly estimated rankings would be invariant to those changes. The random-forest
+                  check has no estimated minimum count because only twelve and sixteen were tested.
+                      DB5 provided a small, separate-data test. Its count-12 lower bound under the percentile criterion
+                  was -0.019994, close to the 0.02 boundary, and no count met the percentile-tail Holm rule at that
+                  margin. The exploratory null-centred Holm analysis likewise supported no reduced count, even at the
+                  looser 0.03 margin. With only 10 participants and different hardware/tasks, it offers an uncertain
+                  boundary assessment rather than confirmation of the GRABMyo count. Derived bipolar pairs likewise
+                  failed to support a reduction from eight to seven at the primary margin. This representation cannot
+                  validate an equivalent reduction in physical bipolar sensors.
+                      Full-array cross-session comparisons did not isolate placement displacement or reduced-layout
+                  robustness. Their participant results are retained in the Supplementary. A future independently
+                  collected same-montage cohort would be needed to validate a locked common layout, electrode count
+                  and online performance.
+
+                  4 Discussion
+                  The study supports removing one quarter of the GRABMyo monopolar recording sites within a
+                  defined mean recognition tolerance under this offline LOSO protocol. It does not show that every
+                  participant or gesture is preserved. The observed individual losses and corrected gesture declines
+
+
+                                                                        8
+Cross-fitted forearm electrode reduction                                                                                                                                            Ta et al
+
+
+
+
+                                                                                   A Predictive electrode attribution
+
+
+
+
+                                                                                                                                                                                             Magnitude (%)
+                                           Proximal                                  F1      F2      F3         F4                    F5                    F6       F7      F8          8
+
+
+                                                                                                                                                                                         6
+                                                                   Distal            F9      F10     F11       F12              F13                         F14     F15      F16
+
+                                                                                      1       2       3         4         5        6                                  7       8
+                                                                                                          Circumferential position
+
+
+
+                                                                                   B Which gestures lose performance?
+
+                      G7: Index-middle Extension
+                            G11: Wrist Extension
+                      G3: Thumb-little Opposition
+                      G5: Thumb-index Extension
+                                  G15: Hand Open
+                     G4: Thumb-index Opposition
+                        G13: Forearm Supination
+                       G8: Little Finger Extension
+                                G12: Wrist Flexion
+                       G6: Thumb-little Extension
+                          G1: Lateral Prehension
+                                 G16: Hand Close
+                    G10: Thumb Finger Extension
+                            G2: Thumb Adduction
+                      G9: Index Finger Extension
+                         G14: Forearm Pronation
+                                                                                   −0.06    −0.05     −0.04   −0.03       −0.02     −0.01                                   0.00        0.01
+                                                                                                          SHAP12 - full16 gesture F1
+
+
+                                                                                   C Deletion with retraining                                               D Participant-level penalty
+                                            Mean Macro-F1 (lighter model)
+
+
+
+
+                                                                            0.50                                                                    0.006
+                                                                                                                       Penalized - unpenalized F1
+
+
+
+
+                                                                                                                                                                            lambda=0.25
+                                                                            0.45                                                                                            lambda=0.5
+                                                                                                                                                    0.004                   lambda=1
+                                                                            0.40
+                                                                                                                                                    0.002
+                                                                            0.35
+                                                                                               remove top
+                                                                            0.30               remove random                                        0.000
+                                                                                               remove bottom
+
+                                                                                 2        6       10        14                                               4      6      8             12
+                                                                              Electrodes remaining after deletion                                                 Retained electrodes
+
+
+                   Figure 5. What the ranking represents and what reduction loses. (A) Mean fold-median normalized absolute
+                   attribution over outer folds on the documented topology; the scale is in percent and measures model relevance, not
+                   muscle activation. (B) Gesture-specific mean F1 changes with participant-bootstrap intervals; orange marks
+                   Holm-adjusted signed-rank p < 0.05 across sixteen gestures. Names follow MotionSequence.txt, with paired-finger
+                   names shortened for display. (C) Deletion with retraining under the lighter model. (D) Participant-level aggregation,
+                   penalized minus unpenalized selection, with unadjusted 95% paired mean-change intervals. Corrected signed-rank
+                   decisions are reported separately; a positive unadjusted mean interval is not a family-corrected penalty claim.
+                   Statistical families and differing model budgets are specified in Methods.
+
+
+
+
+                                                                                              9
+Cross-fitted forearm electrode reduction                                                                                                                                       Ta et al
+
+
+
+
+                  Table 3. Within-condition reduced minus full-array comparisons at the 0.02 margin. Null denotes the exploratory
+                  null-centred studentized bootstrap with Holm correction across tested counts. The RF experiment tests only 12 and 16
+                  electrodes, so it estimates no minimum count.
+                            Condition                                    n    k    ¯
+                                                                                   ∆         95% CI                                           ∗
+                                                                                                                                             kCI                ∗
+                                                                                                                                                               knull
+                            Primary 250 ms                               43   12   -0.0133   [-0.0160, -0.0106]                              12                12
+                            Rest included                                43   12   -0.0139   [-0.0166, -0.0111]                              12                12
+                            150 ms                                       43   12   -0.0119   [-0.0145, -0.0093]                              12                12
+                            500 ms                                       43   12   -0.0126   [-0.0161, -0.0091]                              12                12
+                            NinaPro DB5                                  10   12   -0.0126   [-0.0200, -0.0056]                              12                none
+                            Derived bipolar                              43   7    -0.0158   [-0.0203, -0.0113]                              none              none
+                            Random forest                                43   12   -0.0078   [-0.0104, -0.0052]                              not estimated     not estimated
+
+
+                                                                  A Two different fixed layouts                                                     B Twelve-electrode sensitivities
+                                                                                                        Random forest
+
+
+                    Even dev / odd test                                                                              500 ms
+
+
+                                                                                                                     150 ms
+
+                    Odd dev / even test                                                                  Rest included
+
+
+                                                                                                                     250 ms
+                                                                 −0.02       −0.01           0.00                                                  −0.02       −0.01           0.00
+                                                                     Mean Macro-F1 difference                                                          Mean Macro-F1 difference
+
+
+                                                                  C DB5: ten participants                                                           D Derived bipolar pairs
+                                                          0.00                                                                                0.0
+                              Difference to full array
+
+
+
+
+                                                                                                                  Difference to full array
+
+
+
+                                                         −0.05
+                                                                                                                                             −0.1
+                                                         −0.10
+                                                                                                                                             −0.2
+                                                         −0.15
+
+                                                         −0.20                                                                               −0.3
+
+                                                                          5         10         15                                                        2        4          6
+                                                                      Retained selection units                                                          Retained selection units
+
+
+                  Figure 6. Boundaries of transfer. (A) Mean changes and intervals for two distinct split-derived layouts, using 21 and
+                  22 test participants and all development windows for fitting. (B) Twelve-electrode changes for task, window and
+                  classifier sensitivities, with each condition’s own sixteen-electrode reference. (C) DB5 reduction versus its
+                  sixteen-channel reference (n = 10). (D) Derived bipolar reduction versus its eight-pair reference (n = 43). The dashed
+                  line is the 0.02 margin. Every interval resamples participants; scores are not pooled across hardware or representations.
+
+
+                  make this distinction practically relevant: count selection for a real interface should include task
+                  priorities and user-specific failure criteria rather than relying solely on a pooled mean.
+                      Attribution supplied predictive information beyond the mean random-subset baseline, and deletion
+                  with retraining supported its ranking relevance. Spatial coverage was a more competitive comparator.
+                  The matched primary experiment places geometric12’s mean loss near the tolerance boundary; the
+                  direct mean advantage of SHAP12 remains uncertain. The full geometric curve required 15 retained
+                  sites under the primary margin and decision rule, but only one deterministic geometric ordering
+                  was tested. These results motivate attribution as one evaluated selection procedure, with additional
+                  computational cost, rather than establishing a universal advantage over spatial selection. The
+                  shared-model experiment found a positive SHAP mean advantage over grouped permutation at six
+                  retained electrodes, but no established mean advantage at twelve. The gain under more aggressive
+                  reduction does not mean that six electrodes met the primary tolerance. It changes permutation
+
+
+
+                                                                                        10
+Cross-fitted forearm electrode reduction                                                                           Ta et al
+
+
+
+                  grouping, participant-disjoint validation, scaler isolation and resources together, so it cannot attribute
+                  differences solely to computational budget.
+                      Stability regularization was not an established improvement. Five-fold pooling obscures some
+                  person heterogeneity, which motivated the participant-level extension, but more descriptive dispersion
+                  does not imply that subtracting it improves classification. All penalty settings were fixed and
+                  disclosed rather than selected on outer scores. Correlated electrode features, normalization and shared
+                  attributing models complicate physiological interpretation; high attribution is model reliance and can
+                  reflect redundancy, task discrimination or montage geometry without identifying a particular muscle.
+                      The inference has two distinct limits. First, the tolerance is an engineering choice, not a clinically
+                  validated equivalence bound; tighter or looser tolerances support different counts. Second, participant
+                  bootstrap intervals are conditional on fitted models with strongly overlapping training sets. The
+                  null-centred sensitivity corrects how the bootstrap test distribution is constructed, but cannot remove
+                  training-set dependence or development exposure. A nested development cohort, independently
+                  locked tolerance and external validation would strengthen future inference.
+                      Several aspects restrict transfer. Only able-bodied public datasets were analyzed, not target
+                  clinical users. Zero-phase filtering is non-causal. Complete rest/window curves retain the primary
+                  ranking; the classifier sensitivity also retains it and samples only two counts. DB5 uses different
+                  sensors, sampling, labels and a small cohort, and derived bipolar pairs are constructed signals. The
+                  two split layouts differ and count selection had already seen the cohort. Full-array cross-session
+                  results do not demonstrate reduced-layout displacement robustness. No real-time accuracy, latency,
+                  energy, hardware cost reduction or clinical benefit was measured. Clinical channel-count experiments
+                  provide a further reason to keep this scope narrow: real-time prosthesis control can benefit from
+                  additional channels even when offline reduction appears promising (Simon et al., 2024). Such evidence
+                  uses a different cohort, interface and endpoint and cannot validate or refute the present offline mean
+                  tolerance.
+                      A prospective follow-up should fix a single geometry and count using development data only,
+                  record new participants with the documented montage, and define participant- and gesture-level
+                  loss criteria before testing. It should evaluate causal preprocessing and a closed-loop task, recording
+                  prediction latency and electrode failures as measured outcomes.
+
+                   5 Conclusion
+                   Cross-fitted attribution supported reduction of the GRABMyo monopolar array to 12 electrodes at
+                   a 0.02 mean Macro-F1 tolerance under participant-independent offline evaluation. Utility beyond
+                   random selection was supported. Under shared resources, SHAP exceeded grouped permutation at
+                   six electrodes; its twelve-electrode mean advantage remained uncertain, as did the primary SHAP12–
+                   geometry12 contrast. Stability regularization did not establish an improvement. Participant losses,
+                   gesture-specific degradation, distinct fixed layouts and representation-dependent results restrict the
+                   claim to an evaluated reduction procedure. Independent validation is still required for a locked
+                   physical interface.
+
+                   Data availability
+                   Public GRABMyo v1.1.0 recordings are available from PhysioNet (https://doi.org/10.13026/
+                   89dm-f662); NinaPro DB5 recordings are available from https://ninapro.hevs.ch.
+
+                  Supplementary data
+                  The Supplementary contains signal-processing and inference details, exploratory analyses, complete
+                  result tables and additional figures.
+
+                   References
+                   Yoshua Bengio and Yves Grandvalet. No unbiased estimator of the variance of k-fold cross-validation.
+                     Journal of Machine Learning Research, 5:1089–1105, 2004. URL https://www.jmlr.org/papers/v5/
+                     grandvalet04a.html.
+                   A. C. Davison and D. V. Hinkley. Bootstrap Methods and their Application. Cambridge University Press,
+                     1997. doi: 10.1017/cbo9780511802843.
+                   Dario Farina, Ning Jiang, Hubertus Rehbaum, Ales Holobar, Bernhard Graimann, Hans Dietl, and Oskar C.
+                     Aszmann. The Extraction of Neural Information from the Surface EMG for the Control of Upper-Limb
+                     Prostheses: Emerging Avenues and Challenges. IEEE Transactions on Neural Systems and Rehabilitation
+                     Engineering, 22(4):797–809, 2014. doi: 10.1109/tnsre.2014.2305111.
+
+
+
+
+                                                            11
+Cross-fitted forearm electrode reduction                                                                                 Ta et al
+
+
+
+                   Naveen Gehlot, Ashutosh Jena, Ankit Vijayvargiya, and Rajesh Kumar. Surface electromyography based
+                      explainable Artificial Intelligence fusion framework for feature selection of hand gesture recognition.
+                     Engineering Applications of Artificial Intelligence, 137:109119, 2024. doi: 10.1016/j.engappai.2024.109119.
+                   Andrew Gelman and Hal Stern. The difference between significant and not significant is not itself statistically
+                      significant. The American Statistician, 60:328–331, 2006. doi: 10.1198/000313006X152649.
+                   Ning Jiang, Ashirbad Pradhan, and Jiayuan He. Gesture Recognition and Biometrics ElectroMyogram
+                     (GRABMyo) (version 1.1.0). PhysioNet, 2024.
+                   Scott Lundberg and Su-In Lee. A Unified Approach to Interpreting Model Predictions. In Advances in Neural
+                     Information Processing Systems, volume 30, 2017.
+                   Scott M. Lundberg, Gabriel Erion, Hugh Chen, Alex DeGrave, Jordan M. Prutkin, Bala Nair, Ronit Katz,
+                     Jonathan Himmelfarb, Nisha Bansal, and Su-In Lee. From local explanations to global understanding with
+                      explainable AI for trees. Nature Machine Intelligence, 2(1):56–67, 2020. doi: 10.1038/s42256-019-0138-9.
+                   Angkoon Phinyomark, Pornchai Phukpattaranont, and Chusak Limsakul. Feature reduction and selection for
+                      EMG signal classification. Expert Systems with Applications, 39(8):7420–7431, 2012. doi: 10.1016/j.eswa.
+                     2012.01.102.
+                   Stefano Pizzolato, Luca Tagliapietra, Matteo Cognolato, Monica Reggiani, Henning Müller, and Manfredo
+                     Atzori. Comparison of six electromyography acquisition setups on hand movement classification tasks.
+                     PLOS ONE, 12(10):e0186132, 2017. doi: 10.1371/journal.pone.0186132.
+                   Ashirbad Pradhan, Jiayuan He, and Ning Jiang. Multi-day dataset of forearm and wrist electromyogram for
+                      hand gesture recognition and biometrics. Scientific Data, 9(1):733, 2022. doi: 10.1038/s41597-022-01836-y.
+                   Yali Qu, Haoyan Shang, Jing Li, and Shenghua Teng. Reduce Surface Electromyography Channels for Gesture
+                      Recognition by Multitask Sparse Representation and Minimum Redundancy Maximum Relevance. Journal
+                     of Healthcare Engineering, 2021:1–9, 2021. doi: 10.1155/2021/9929684.
+                   Parul Rani, Sidharth Pancholi, Vikash Shaw, Suraj Pandey, Manfredo Atzori, and Sanjeev Kumar. Explainable
+                     AI-Guided Optimization of EMG Channels and Features for Precise Hand Gesture Classification: A
+                      SHAP-Based Study. IEEE Transactions on Medical Robotics and Bionics, 7(1):368–376, 2025. doi:
+                     10.1109/tmrb.2024.3504007.
+                   Erik Scheme and Kevin Englehart. Electromyogram pattern recognition for control of powered upper-limb
+                      prostheses: State of the art and challenges for clinical use. The Journal of Rehabilitation Research and
+                     Development, 48(6):643, 2011. doi: 10.1682/jrrd.2010.09.0177.
+                   Donald J. Schuirmann. A comparison of the Two One-Sided Tests Procedure and the Power Approach for
+                      assessing the equivalence of average bioavailability. Journal of Pharmacokinetics and Biopharmaceutics, 15
+                     (6):657–680, 1987. doi: 10.1007/bf01068419.
+                   Ann M. Simon, Keira Newkirk, Laura A. Miller, Kristi L. Turner, Kevin Brenner, Michael Stephens, and
+                      Levi J. Hargrove. Implications of EMG channel count: enhancing pattern recognition online prosthetic
+                      testing. Frontiers in Rehabilitation Sciences, 5:1345364, 2024. doi: 10.3389/fresc.2024.1345364.
+                   Antonietta Stango, Francesco Negro, and Dario Farina. Spatial Correlation of High Density EMG Signals
+                      Provides Features Robust to Electrode Number and Shift in Pattern Recognition for Myocontrol. IEEE
+                     Transactions on Neural Systems and Rehabilitation Engineering, 23(2):189–198, 2015. doi: 10.1109/tnsre.
+                     2014.2366752.
+                   Giorgio Visani, Enrico Bagli, Federico Chesani, Alessandro Poluzzi, and Davide Capuzzo. Statistical stability
+                      indices for LIME: Obtaining reliable explanations for machine learning models. Journal of the Operational
+                     Research Society, 73(1):91–101, 2022. doi: 10.1080/01605682.2020.1865846.
+                   Ivan Vujaklija, Dario Farina, and Oskar Aszmann. New developments in prosthetic arm systems. Orthopedic
+                     Research and Reviews, 8:31–39, 2016. doi: 10.2147/orr.s71468.
+                   Esteban Walker and Amy S. Nowacki. Understanding Equivalence and Noninferiority Testing. Journal of
+                     General Internal Medicine, 26(2):192–196, 2011. doi: 10.1007/s11606-010-1513-8.
+                   Feng Wang, Xiaohu Ao, Min Wu, Seiichi Kawata, and Jinhua She. Explainable deep learning for sEMG-based
+                      similar gesture recognition: A Shapley-value-based solution. Information Sciences, 672:120667, 2024. doi:
+                     10.1016/j.ins.2024.120667.
+                   Lanxin Xiang, Liang Shi, Youhui Ye, Boyu Jiang, Dawei Zhou, and Feng Guo. RoSHAP: A Distributional
+                      Framework and Robust Metric for Stable Feature Attribution. arXiv preprint arXiv:2605.15154, 2026.
+
+
+
+
+                                                               12
+

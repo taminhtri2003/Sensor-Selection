@@ -1,0 +1,8 @@
+output,source,derivation
+participant_extension_results.tex,artifacts/participant_attribution/paired_comparisons.csv,"counts of all comparisons, any changed person, positive/negative mean difference with p_holm < 0.05"
+tab_participant_extension.tex,artifacts/participant_attribution/report_summary.csv,"all four penalties; smallest passing reduced k, paired k12 difference and interval"
+participant_extension_results.tex,artifacts/participant_attribution/penalty_gate.csv,counts of benefit and harm under the complete corrected penalty family
+participant_extension_abstract.tex,artifacts/participant_attribution/penalty_gate.csv,conditional interpretation from corrected benefit and harm flags; all candidates retained
+participant_extension_discussion.tex,artifacts/participant_attribution/penalty_gate.csv,conditional interpretation from corrected benefit and harm flags; all candidates retained
+participant_extension_results.tex,artifacts/participant_attribution/aggregation_diagnostics.csv,"descriptive median of U/A across validated outer-fold/electrode cells, not inferential sample size"
+tab_gesture_audit.tex,artifacts/prediction_audit/gesture_summary.csv,"participant-level F1 for each active gesture, reconstructed from saved predictions"

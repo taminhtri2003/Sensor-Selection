@@ -1,0 +1,8 @@
+aggregation  lambda  k  n  n_changed_subset  n_unchanged_subset  mean_jaccard  n_changed_macro_f1
+       fold    0.25 12 43                 0                  43      1.000000                   0
+       fold    0.50 12 43                 0                  43      1.000000                   0
+       fold    1.00 12 43                 1                  42      0.996422                   1
+participant    0.25 12 43                 0                  43      1.000000                   0
+participant    0.50 12 43                 0                  43      1.000000                   0
+participant    1.00 12 43                 0                  43      1.000000                   0
+PASS: all fixed-penalty/count site-set changes recorded

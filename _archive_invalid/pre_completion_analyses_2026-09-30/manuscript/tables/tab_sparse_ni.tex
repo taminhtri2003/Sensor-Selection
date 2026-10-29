@@ -1,0 +1,31 @@
+\begin{table*}[t]
+\centering
+\small
+\caption{\chg{Electrode-count performance curve and primary non-inferiority decision on GRABMyo (cross-fitted ranking, $\lambda = 0$; 43 participants; every $k$ retrained from scratch on the same 200,000 training windows of each fold). $\Delta_k$: mean paired difference from the $k = 16$ model of the same curve, with 95\% participant cluster-bootstrap confidence interval (CI). Non-inferior: lower bound above $-\delta$ with the primary margin $\delta = 0.02$; Holm: the same decision after Holm correction over the 15 subset sizes. The smallest non-inferior subset ($k^*$) is in bold; the rule below it marks the boundary. Decisions at the sensitivity margins $\delta = 0.01$ and 0.03 are given in supplementary table S3.}}
+\label{tab:sparse_ni}
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{rccccc}
+\toprule
+$k$ & Macro-F1 (mean $\pm$ SD) & $\Delta_k$ & 95\% CI & Non-inferior & Non-inferior (Holm) \\
+\midrule
+16 & 0.541 $\pm$ 0.084 & reference &  &  &  \\
+15 & 0.538 $\pm$ 0.083 & $-$0.0036 & $-$0.0056 to $-$0.0017 & yes & yes \\
+14 & 0.535 $\pm$ 0.083 & $-$0.0060 & $-$0.0081 to $-$0.0039 & yes & yes \\
+13 & 0.530 $\pm$ 0.083 & $-$0.0109 & $-$0.0133 to $-$0.0085 & yes & yes \\
+\textbf{12} & \textbf{0.528 $\pm$ 0.084} & \textbf{$-$0.0133} & \textbf{$-$0.0160 to $-$0.0106} & \textbf{yes} & \textbf{yes} \\
+\midrule 11 & 0.521 $\pm$ 0.084 & $-$0.0204 & $-$0.0246 to $-$0.0162 & no & no \\
+10 & 0.515 $\pm$ 0.083 & $-$0.0259 & $-$0.0311 to $-$0.0205 & no & no \\
+9 & 0.510 $\pm$ 0.086 & $-$0.0318 & $-$0.0387 to $-$0.0246 & no & no \\
+8 & 0.505 $\pm$ 0.085 & $-$0.0366 & $-$0.0440 to $-$0.0289 & no & no \\
+7 & 0.500 $\pm$ 0.085 & $-$0.0413 & $-$0.0489 to $-$0.0333 & no & no \\
+6 & 0.480 $\pm$ 0.084 & $-$0.0610 & $-$0.0713 to $-$0.0507 & no & no \\
+5 & 0.428 $\pm$ 0.075 & $-$0.1133 & $-$0.1277 to $-$0.0993 & no & no \\
+4 & 0.397 $\pm$ 0.071 & $-$0.1444 & $-$0.1590 to $-$0.1306 & no & no \\
+3 & 0.340 $\pm$ 0.057 & $-$0.2015 & $-$0.2212 to $-$0.1822 & no & no \\
+2 & 0.299 $\pm$ 0.057 & $-$0.2420 & $-$0.2603 to $-$0.2230 & no & no \\
+1 & 0.181 $\pm$ 0.040 & $-$0.3603 & $-$0.3832 to $-$0.3369 & no & no \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table*}

@@ -1,0 +1,5 @@
+participants=43 features=160 workers=4 models=['XGB', 'SVM']
+[1/43] participant 04 {'XGBoost': 0.5042, 'SVM': 0.5084}  elapsed=10.7m eta=451.0m
+[2/43] participant 03 {'XGBoost': 0.4316, 'SVM': 0.4369}  elapsed=10.7m eta=220.2m
+[3/43] participant 02 {'XGBoost': 0.4284, 'SVM': 0.4262}  elapsed=10.7m eta=143.3m
+[4/43] participant 01 {'XGBoost': 0.5635, 'SVM': 0.5911}  elapsed=10.8m eta=105.5m

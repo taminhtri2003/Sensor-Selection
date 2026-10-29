@@ -1,0 +1,14 @@
+{
+  "scientific_release": {
+    "files_checked": 1160,
+    "failures": []
+  },
+  "publication_release": {
+    "files_checked": 96,
+    "failures": []
+  },
+  "gate_source_files_unchanged": 129,
+  "current_pdf_exports_match_sources": true,
+  "figure1_embedded_dependency_matches_supplied_pdf": true,
+  "errors": []
+}

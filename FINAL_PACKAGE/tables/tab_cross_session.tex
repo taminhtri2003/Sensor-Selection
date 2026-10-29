@@ -1,0 +1,20 @@
+\begin{table*}[t]
+\centering
+\small
+\caption{Cross-session evaluation (exploratory). All conditions are also subject-independent: the test participant is never in training.}
+\label{tab:cross_session}
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lcccc}
+\toprule
+Design & Train sessions & Test session & Train windows & Macro-F1 \\
+\midrule
+CS1 & 1 & 1 & 183{,}456 & 0.492 $\pm$ 0.101 \\
+CS1 & 1 & 2 & 183{,}456 & 0.528 $\pm$ 0.088 \\
+CS1 & 1 & 3 & 183{,}456 & 0.510 $\pm$ 0.090 \\
+CS2 & 1+2 & 3 & 366{,}912 & 0.530 $\pm$ 0.095 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\parbox{0.95\linewidth}{\footnotesize Paired contrasts (exploratory, uncorrected): CS1: test S2 $-$ test S1: +0.0355 (95\% CI +0.0091 to +0.0621), $p$ = 0.024; CS1: test S3 $-$ test S1: +0.0172 (95\% CI $-$0.0038 to +0.0391), $p$ = 0.272; S3 test: CS2 (train S1+S2) $-$ CS1 (train S1): +0.0210 (95\% CI +0.0146 to +0.0274), $p$ $<$ 0.001.}
+\end{table*}

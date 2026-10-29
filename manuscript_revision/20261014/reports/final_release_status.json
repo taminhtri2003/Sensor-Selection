@@ -1,0 +1,20 @@
+{
+  "status": "computational/editorial draft complete; author declarations pending",
+  "gate": "PASS",
+  "visual": "PASS",
+  "pdfs": [
+    {
+      "stem": "main",
+      "pages": 13,
+      "sha256": "8288e78691402f88493b377cf44eefa40094430be5e94018cea606d55b9c6306",
+      "author_placeholders": 6
+    },
+    {
+      "stem": "supplementary",
+      "pages": 14,
+      "sha256": "4c3d78a6543ea025685001da0392726abe967d7cf4f846143ca07bd4593a601a",
+      "author_placeholders": 0
+    }
+  ],
+  "author_inputs": "reports/unresolved_author_inputs.md"
+}

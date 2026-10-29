@@ -1,0 +1,1 @@
+Layout proof only, using completed analyses and excluding the unfinished geometric count curve. No final numerical gate or release acceptance is claimed. The adapted output generator is retained here; final sources remain in the dated manuscript folder.

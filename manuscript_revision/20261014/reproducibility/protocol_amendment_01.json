@@ -1,0 +1,7 @@
+{
+  "date": "2026-10-14",
+  "stage": "before any 150-ms outcome is available",
+  "amends": "E.window150 in exploratory_protocol.json",
+  "window150": "Execute the complete primary lambda0 curve, all 43 participants and k=1..16, using Decision24c with no method tuning; a full count curve is computationally feasible on the available GPU.",
+  "reason": "Complete the original exploratory plan and avoid inferring a minimum supported count from a two-point check."
+}

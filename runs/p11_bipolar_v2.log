@@ -1,0 +1,57 @@
+bipolar active data: 563472 windows, 80 features, 43 participants
+resuming 25 complete bipolar participants
+[26/43] participant 26 full=0.5353 top4=['6', '7', '4', '5'] elapsed=4.6m
+[27/43] participant 27 full=0.4766 top4=['6', '7', '5', '4'] elapsed=8.5m
+[28/43] participant 28 full=0.4759 top4=['6', '7', '5', '4'] elapsed=12.4m
+[29/43] participant 29 full=0.3707 top4=['6', '7', '5', '4'] elapsed=16.3m
+[30/43] participant 30 full=0.5338 top4=['6', '7', '5', '4'] elapsed=20.1m
+[31/43] participant 31 full=0.5091 top4=['6', '7', '5', '4'] elapsed=23.7m
+[32/43] participant 32 full=0.3607 top4=['6', '7', '5', '4'] elapsed=27.8m
+[33/43] participant 33 full=0.5100 top4=['6', '7', '5', '4'] elapsed=31.6m
+[34/43] participant 34 full=0.5348 top4=['6', '7', '5', '4'] elapsed=35.5m
+[35/43] participant 35 full=0.5678 top4=['6', '7', '5', '4'] elapsed=39.4m
+[36/43] participant 36 full=0.5701 top4=['6', '7', '4', '5'] elapsed=43.1m
+[37/43] participant 37 full=0.5233 top4=['6', '7', '4', '5'] elapsed=46.8m
+[38/43] participant 38 full=0.5493 top4=['6', '7', '4', '5'] elapsed=50.9m
+[39/43] participant 39 full=0.4709 top4=['6', '7', '4', '5'] elapsed=54.8m
+[40/43] participant 40 full=0.5372 top4=['6', '7', '4', '5'] elapsed=58.8m
+[41/43] participant 41 full=0.6078 top4=['6', '7', '5', '4'] elapsed=62.8m
+[42/43] participant 42 full=0.4933 top4=['6', '7', '4', '5'] elapsed=66.7m
+[43/43] participant 43 full=0.2198 top4=['6', '7', '5', '4'] elapsed=70.5m
+
+    model  lambda  channels_k  n_participants  mean_macro_f1  sd_macro_f1  mean_accuracy
+M_XGBoost    0.00           1              43       0.174064     0.042551       0.198379
+M_XGBoost    0.00           2              43       0.239408     0.048954       0.259837
+M_XGBoost    0.00           3              43       0.308532     0.069079       0.330588
+M_XGBoost    0.00           4              43       0.354241     0.078702       0.374288
+M_XGBoost    0.00           5              43       0.405072     0.081632       0.425388
+M_XGBoost    0.00           6              43       0.441151     0.085909       0.459712
+M_XGBoost    0.00           7              43       0.463330     0.085333       0.480748
+M_XGBoost    0.00           8              43       0.478782     0.089471       0.495789
+M_XGBoost    0.25           1              43       0.174064     0.042551       0.198379
+M_XGBoost    0.25           2              43       0.239408     0.048954       0.259837
+M_XGBoost    0.25           3              43       0.308739     0.070632       0.330721
+M_XGBoost    0.25           4              43       0.354241     0.078702       0.374288
+M_XGBoost    0.25           5              43       0.406725     0.078949       0.426948
+M_XGBoost    0.25           6              43       0.441151     0.085909       0.459712
+M_XGBoost    0.25           7              43       0.463330     0.085333       0.480748
+M_XGBoost    0.25           8              43       0.478782     0.089471       0.495789
+M_XGBoost    0.50           1              43       0.174064     0.042551       0.198379
+M_XGBoost    0.50           2              43       0.239408     0.048954       0.259837
+M_XGBoost    0.50           3              43       0.309184     0.070505       0.331390
+M_XGBoost    0.50           4              43       0.354241     0.078702       0.374288
+M_XGBoost    0.50           5              43       0.407137     0.079550       0.427464
+M_XGBoost    0.50           6              43       0.441151     0.085909       0.459712
+M_XGBoost    0.50           7              43       0.463330     0.085333       0.480748
+M_XGBoost    0.50           8              43       0.478782     0.089471       0.495789
+M_XGBoost    1.00           1              43       0.174064     0.042551       0.198379
+M_XGBoost    1.00           2              43       0.239408     0.048954       0.259837
+M_XGBoost    1.00           3              43       0.310029     0.071392       0.331484
+M_XGBoost    1.00           4              43       0.354241     0.078702       0.374288
+M_XGBoost    1.00           5              43       0.407808     0.078970       0.428286
+M_XGBoost    1.00           6              43       0.441151     0.085909       0.459712
+M_XGBoost    1.00           7              43       0.463330     0.085333       0.480748
+M_XGBoost    1.00           8              43       0.478782     0.089471       0.495789
+
+ASSERTION PASSED: 43 participants x 8 k x 4 lambda; wall clock 70.5 min
+exit=0

@@ -1,0 +1,9 @@
+{
+  "date": "2026-09-22",
+  "status": "post-hoc diagnostic specified while extension fitting was incomplete",
+  "purpose": "Evaluate whether the participant-level stability penalty resolves the original G2/H3 failure.",
+  "comparison": "Within participant aggregation, each positive lambda minus lambda zero at k in 4,6,8,12.",
+  "unit": "43 paired GRABMyo participants",
+  "inference": "Wilcoxon signed-rank, participant bootstrap, Holm over all 12 comparisons.",
+  "gate": "Evidence of penalty benefit requires a positive mean difference and Holm p below 0.05. Report every comparison and any harm; do not choose a winning lambda for headline reporting."
+}

@@ -1,0 +1,3 @@
+resuming 1 completed participant/lambda jobs from F:\grabmyo_data\artifacts\metrics\sparse_curve_subject_metrics.csv
+model=XGB participants=43 lambdas=[0.0, 0.25, 0.5, 1.0] k=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16] jobs=171 workers=1
+[1/171] participant 01 lam=0.25 k16=0.5678 elapsed=5.6m eta=948.6m

@@ -1,0 +1,23 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{\chg{H2: attribution-ranked subsets versus the mean of random subsets of the same size (GRABMyo, 43 participants; secondary family of 8 tests, Holm-corrected; the detailed test family was specified after the underlying results were available). All subsets were evaluated with one comparison model (XGBoost, 50 boosting rounds, 150,000 training windows per fold), these scores use a different protocol from table~\ref{tab:sparse_ni}. Random: participant's mean over 100 random subsets (500 at $k = 12$). Difference: mean paired difference (attribution minus random) with 95\% participant cluster-bootstrap confidence interval (CI). Higher/lower: participants for whom the attribution subset scored above/below their random mean. $p_{\mathrm{Holm}}$: Wilcoxon signed-rank, Holm-corrected; $r_{rb}$: matched-pairs rank-biserial correlation.}}
+\label{tab:h2}
+\setlength{\tabcolsep}{4pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{rlccccccc}
+\toprule
+$k$ & Ranking & Attribution & Random & Difference & 95\% CI & Higher/lower & $p_{\mathrm{Holm}}$ & $r_{rb}$ \\
+\midrule
+4 & Cross-fitted SHAP ($\lambda = 0$) & 0.382 & 0.366 & +0.0163 & +0.0060 to +0.0267 & 29/14 & 0.007 & +0.47 \\
+ & Penalized SHAP ($\lambda = 0.5$) & 0.383 & 0.366 & +0.0172 & +0.0071 to +0.0274 & 30/13 & 0.007 & +0.50 \\
+\midrule 6 & Cross-fitted SHAP ($\lambda = 0$) & 0.453 & 0.416 & +0.0370 & +0.0286 to +0.0452 & 37/6 & $<$0.001 & +0.92 \\
+ & Penalized SHAP ($\lambda = 0.5$) & 0.453 & 0.416 & +0.0370 & +0.0286 to +0.0452 & 37/6 & $<$0.001 & +0.92 \\
+\midrule 8 & Cross-fitted SHAP ($\lambda = 0$) & 0.468 & 0.445 & +0.0230 & +0.0161 to +0.0298 & 36/7 & $<$0.001 & +0.82 \\
+ & Penalized SHAP ($\lambda = 0.5$) & 0.469 & 0.445 & +0.0243 & +0.0176 to +0.0308 & 37/6 & $<$0.001 & +0.86 \\
+\midrule 12 & Cross-fitted SHAP ($\lambda = 0$) & 0.485 & 0.478 & +0.0074 & +0.0046 to +0.0103 & 35/8 & $<$0.001 & +0.71 \\
+ & Penalized SHAP ($\lambda = 0.5$) & 0.485 & 0.478 & +0.0074 & +0.0046 to +0.0103 & 35/8 & $<$0.001 & +0.71 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

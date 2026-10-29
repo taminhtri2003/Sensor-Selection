@@ -1,0 +1,13 @@
+{
+  "runner_sha256": "6a3846e11cffcb73470269bfcb5903dfbf8192b08ff9f13451d4d50a7738e1bb",
+  "protocol_sha256": "e21fe14db4485124c89fd313db7de570594795ad1d83201f005d59534b71a3cc",
+  "inputs": {
+    "data/cache/loso_X.npy": "d70fddd9ab0542bca0f1e1efae044292804da89e33e997f5a56f98b13f121f94",
+    "data/cache/loso_y.npy": "83dbcfbf2f232f370c7adad7aeb247860a776ac42a28766fc3ef47f646503708",
+    "data/cache/loso_subj.npy": "b149ecc74b63ea0d77e925b356b4e8de2e37675202067934012255c67bcfc969",
+    "artifacts/rankings/cross_fitted_rankings.csv": "7c610dde149d86c45212b6c87f143b76c0254782b186db33f5a7631bd0744660",
+    "artifacts/metrics/sparse_curve_subject_metrics.csv": "9a100fb2fc64c1b67ae9d1ac59146380bb78240ab33245861a5defc1237972f1",
+    "scripts/26_sparse_sensor_curve.py": "e4763b722dea6d571670a0878bbea379da721bc7d64f1c77d0fa925cf2881cbf",
+    "scripts/27_selection_baselines.py": "e8c705eabd5e1eab0eb3201834754c09057fe3dc39274203b7db660df3f7cfc4"
+  }
+}

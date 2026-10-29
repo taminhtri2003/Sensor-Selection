@@ -1,0 +1,53 @@
+
+=================================== ERRORS ====================================
+____________ ERROR collecting tests/test_attribution_validation.py ____________
+import file mismatch:
+imported module 'test_attribution_validation' has this __file__ attribute:
+  F:\grabmyo_data\manuscript_revision\20261014\reproducibility\code\tests\test_attribution_validation.py
+which is not the same as the test file we want to collect:
+  F:\grabmyo_data\tests\test_attribution_validation.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+___________ ERROR collecting tests/test_cross_fitted_attribution.py ___________
+import file mismatch:
+imported module 'test_cross_fitted_attribution' has this __file__ attribute:
+  F:\grabmyo_data\manuscript_revision\20261014\reproducibility\code\tests\test_cross_fitted_attribution.py
+which is not the same as the test file we want to collect:
+  F:\grabmyo_data\tests\test_cross_fitted_attribution.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+___________________ ERROR collecting tests/test_leakage.py ____________________
+import file mismatch:
+imported module 'test_leakage' has this __file__ attribute:
+  F:\grabmyo_data\manuscript_revision\20261014\reproducibility\code\tests\test_leakage.py
+which is not the same as the test file we want to collect:
+  F:\grabmyo_data\tests\test_leakage.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+_______________ ERROR collecting tests/test_non_inferiority.py ________________
+import file mismatch:
+imported module 'test_non_inferiority' has this __file__ attribute:
+  F:\grabmyo_data\manuscript_revision\20261014\reproducibility\code\tests\test_non_inferiority.py
+which is not the same as the test file we want to collect:
+  F:\grabmyo_data\tests\test_non_inferiority.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+___________________ ERROR collecting tests/test_pipeline.py ___________________
+import file mismatch:
+imported module 'test_pipeline' has this __file__ attribute:
+  F:\grabmyo_data\manuscript_revision\20261014\reproducibility\code\tests\test_pipeline.py
+which is not the same as the test file we want to collect:
+  F:\grabmyo_data\tests\test_pipeline.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+_____________ ERROR collecting tests/test_revision_statistics.py ______________
+import file mismatch:
+imported module 'test_revision_statistics' has this __file__ attribute:
+  F:\grabmyo_data\manuscript_revision\20261014\reproducibility\code\tests\test_revision_statistics.py
+which is not the same as the test file we want to collect:
+  F:\grabmyo_data\tests\test_revision_statistics.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+=========================== short test summary info ===========================
+ERROR tests/test_attribution_validation.py
+ERROR tests/test_cross_fitted_attribution.py
+ERROR tests/test_leakage.py
+ERROR tests/test_non_inferiority.py
+ERROR tests/test_pipeline.py
+ERROR tests/test_revision_statistics.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 6 errors during collection !!!!!!!!!!!!!!!!!!!
+6 errors in 15.87s

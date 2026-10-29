@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-14",
+  "classification": "new exploratory classifier-transfer sensitivity, before its reduced-model outcomes exist",
+  "model": "Pre-existing random-forest parameters from scripts/26_sparse_sensor_curve.py: 200 trees, max_depth None, min_samples_leaf2, seed20260728; n_jobs2 on CPU.",
+  "selection_reason": "Available validated CPU implementation allows this additional sensitivity without adding a GPU model-selection search.",
+  "layout": "Reuse primary outer-training XGBoost lambda0 rankings; k12 and k16 only; do not rerank for RF or claim a minimum RF count.",
+  "budget": "Stratified200000 training windows, same fold-specific scaling and 43 LOSO participants; save predictions.",
+  "statistics": "Participant paired RF12-minus-RF16 percentile confidence interval and null-centred bootstrap p at delta0.02; delta0.01 and0.03 as labelled sensitivity; no outer tuning."
+}

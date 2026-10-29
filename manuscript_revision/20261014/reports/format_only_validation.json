@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "legacy_tables_scientific_content_unchanged": [
+    "tab_full_channel.tex",
+    "tab_sparse_ni.tex",
+    "tab_h1_holm.tex",
+    "tab_h2.tex",
+    "tab_selection_explor.tex",
+    "tab_faithfulness.tex",
+    "tab_stability.tex",
+    "tab_lambda.tex",
+    "tab_replication.tex",
+    "tab_cross_session.tex",
+    "tab_bipolar.tex"
+  ],
+  "all_other_generated_files_byte_identical": true,
+  "final_main_pages_pixel_identical_to_inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ]
+}

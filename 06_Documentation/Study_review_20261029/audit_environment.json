@@ -1,0 +1,7 @@
+{
+  "original_root": "E:\\grabmyo_data",
+  "isolated_workspace": "E:\\Temp\\codex-chatgpt\\grabmyo_review_20261029",
+  "scientific_gate": "scripts/16_verify_results.py --revision-dir manuscript_revision/20261014",
+  "data_access": "Separate byte-identical copies of gate inputs (canonical arrays, DB5 E1 raw/features, metadata/manifests); no links to originals",
+  "release_policy": "dated scientific and publication releases are unchanged"
+}

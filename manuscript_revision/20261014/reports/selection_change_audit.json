@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "summary_rows": 96,
+  "participant_rows": 4128,
+  "source_hashes": {
+    "scripts/86_selection_change_audit.py": "0020732bf261b48ef425e8ec028bdf38de0b4313de458a4e0513236ca557f30c",
+    "manuscript_revision/20261014/reproducibility/protocol_amendment_08.json": "43074a484ca6f514aaf1bfd54665982e355f6aaafb880c84168032d071a6cd5a",
+    "artifacts/metrics/sparse_curve_subject_metrics.csv": "9a100fb2fc64c1b67ae9d1ac59146380bb78240ab33245861a5defc1237972f1",
+    "manuscript_revision/20261014/experiments/attribution_extension/sparse_curve.csv": "47a810136fdda58ce1133f403120abf591c38c1ce51e777ca846c059ab4244e2"
+  },
+  "classification": "post-hoc descriptive diagnostic; no new model or tuning"
+}

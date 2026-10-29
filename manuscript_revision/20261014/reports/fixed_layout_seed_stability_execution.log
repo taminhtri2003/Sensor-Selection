@@ -1,0 +1,4 @@
+            split  n  n_seeds  n_pass  fraction_pass  min_lcb95  max_lcb95  median_lcb95
+dev_even_test_odd 22      200      90           0.45  -0.020274  -0.019799     -0.020013
+dev_odd_test_even 21      200     200           1.00  -0.018189  -0.017674     -0.017912
+PASS: all fixed-layout seed outcomes reported

@@ -1,0 +1,8 @@
+bipolar active data: 563472 windows, 80 features, 43 participants
+[1/43] participant 01 full=0.4964 top4=['6', '7', '4', '5'] elapsed=4.3m
+[2/43] participant 02 full=0.3603 top4=['6', '7', '4', '5'] elapsed=8.7m
+[3/43] participant 03 full=0.4500 top4=['6', '7', '4', '5'] elapsed=12.8m
+[4/43] participant 04 full=0.3966 top4=['6', '7', '5', '4'] elapsed=16.8m
+[5/43] participant 05 full=0.3117 top4=['6', '7', '4', '5'] elapsed=20.8m
+[6/43] participant 06 full=0.3770 top4=['6', '7', '4', '5'] elapsed=24.8m
+[7/43] participant 07 full=0.6375 top4=['6', '7', '5', '4'] elapsed=29.1m

@@ -1,0 +1,15 @@
+{
+  "analysis_checks": "PASS",
+  "pdf_build": "PASS",
+  "submission_ready": false,
+  "reason": "Author declarations require author input.",
+  "pdf_visual_review": "PASS",
+  "completed_at": "2026-09-22T20:12:16.127817+07:00",
+  "scientific_G2": "NOT_SUPPORTED",
+  "unexecuted_analyses": [
+    "conditional CNN/integrated gradients",
+    "window-length sensitivity",
+    "rest-inclusive task",
+    "mRMR selection baseline"
+  ]
+}
