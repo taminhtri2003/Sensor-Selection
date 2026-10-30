@@ -1,8 +1,0 @@
-{
-  "model_random_seed": 20260728,
-  "bootstrap_random_seed": 20260728,
-  "bootstrap_resamples": 10000,
-  "fixed_layout_monte_carlo_repetitions": 200,
-  "fixed_layout_generator_seed": 20260728,
-  "complete_executable_record": "manuscript_revision/20261014/reproducibility"
-}

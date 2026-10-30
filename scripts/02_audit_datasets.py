@@ -16,7 +16,7 @@ from pathlib import Path
 
 def audit_grabmyo():
     print("[1/2] Auditing GRABMyo raw dataset...")
-    grabmyo_dir = Path("data/raw/grabmyo")
+    grabmyo_dir = Path("data/grabmyo")
     report_path = Path("reports/dataset_audit/grabmyo_audit.md")
     report_path.parent.mkdir(parents=True, exist_ok=True)
 

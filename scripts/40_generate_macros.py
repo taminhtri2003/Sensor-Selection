@@ -102,7 +102,7 @@ def main():
         m.add("GRABMyoWindows", intc(ok.n_windows.sum()), rel)
         m.add("GRABMyoRecords", intc(len(ok)), rel)
         m.add("GRABMyoRecordsFailed", str(int((qc.status != "OK").sum())), rel)
-    rel = "subject-info.csv"
+    rel = "data/grabmyo/subject-info.csv"
     si = m.csv(rel)
     if si is not None:
         si = si[si.ID.astype(str).str.startswith("participant")]

@@ -59,7 +59,7 @@ def main():
   for path in (ROOT/folder).rglob('*'):
    if path.is_file() and (path.suffix=='.json' or (folder=='data/manifests' and path.suffix=='.csv')) and 'putemg' not in str(path).lower():source_paths.add(str(path.relative_to(ROOT)))
  for name in ('SHA256SUMS.txt','RECORDS','LICENSE.txt','readme.txt','subject-info.csv','MotionSequence.txt'):
-  if (ROOT/name).is_file():source_paths.add(name)
+  if (ROOT/'data/grabmyo'/name).is_file():source_paths.add('data/grabmyo/'+name)
  for relative in sorted(source_paths):
   path=ROOT/relative
   if path.is_relative_to(REV):continue

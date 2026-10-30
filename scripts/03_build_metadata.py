@@ -18,7 +18,7 @@ import scipy.io as sio
 
 def build_grabmyo_metadata():
     print("[1/2] Building GRABMyo recordings metadata...", flush=True)
-    grabmyo_dir = Path("data/raw/grabmyo")
+    grabmyo_dir = Path("data/grabmyo")
     records = []
 
     # Look for files matching SessionX / SubjectX pattern
