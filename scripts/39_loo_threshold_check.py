@@ -28,6 +28,7 @@ import scipy.io as sio
 import wfdb
 
 ROOT = Path(__file__).resolve().parent.parent
+GRABMYO = ROOT / "data" / "grabmyo"          # dataset root: Session1-3 and its metadata files
 OUT = ROOT / "artifacts" / "sensitivity"
 PROBES = [(s, p, g, t) for s in (1, 2, 3) for p in (1, 7, 15, 23, 31, 43)
           for g, t in ((1, 1), (9, 3), (17, 7))]
@@ -44,7 +45,7 @@ def rule(median):
 def main():
     mono, bip = [], []
     for s, p, g, t in PROBES:
-        rec = wfdb.rdrecord(str(ROOT / f"Session{s}" / f"session{s}_participant{p}"
+        rec = wfdb.rdrecord(str(GRABMYO / f"Session{s}" / f"session{s}_participant{p}"
                                 / f"session{s}_participant{p}_gesture{g}_trial{t}"))
         sig = np.asarray(rec.p_signal, float)
         names = list(rec.sig_name)

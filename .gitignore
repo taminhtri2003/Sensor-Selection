@@ -1,7 +1,6 @@
 # Downloaded recordings and derived datasets (kept locally, never committed).
-/Session1
-/Session2
-/Session3
+/data/grabmyo/Session*/
+/data/grabmyo/*.zip
 /DESTINATION/
 /data/raw/
 /data/processed/

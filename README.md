@@ -1,28 +1,43 @@
 # GRABMyo electrode-selection study
 
-The [GitHub repository](https://github.com/taminhtri2003/Sensor-Selection) contains code, figures, manuscripts, results and verification records. Downloaded datasets, feature caches and local environments are excluded; see [repository contents and restoration notes](06_Documentation/GITHUB_CONTENTS.md).
+Code, results and manuscript for a study of how few forearm EMG electrodes are needed for gesture recognition on [GRABMyo 1.1.0](https://physionet.org/content/grabmyo/1.1.0/), with a replication on [NinaPro DB5](https://zenodo.org/records/1000116). Analyses use leave-one-participant-out evaluation, and all statistics are computed per participant (N = 43).
 
-Start with the numbered folders below. Open the figure guide to find a plot by topic, or the code index to find a script by task.
+- [Main article](publication/Main_article.pdf) and [supplement](publication/Supplementary_material.pdf): current review draft, recompiled 2026-10-29.
+- [Whole-study review](docs/Study_review_20261029/REVIEW.md): fresh numerical verification, design limitations and the Figure 1 corrections needed before submission.
+- [Downloading the datasets](docs/DATA_DOWNLOAD.md) and [reproducing the study](docs/REPRODUCE.md).
 
-- [Figure guide](02_Figures/README.md): Figures 1-6 and S1-S7 in PDF, SVG and PNG.
-- [Code guide](03_Code/README.md) and [complete code index](03_Code/CODE_INDEX.md): analysis, plotting, checks and manuscript scripts.
-- [Main article](01_Publication/Main_article.pdf) and [supplement](01_Publication/Supplementary_material.pdf): current review copies recompiled on 2026-10-29, with the updated Figure 1.
-- [Whole-study review](06_Documentation/Study_review_20261029/REVIEW.md): fresh numerical verification, design limitations and Figure 1 corrections required before submission.
+## Layout
 
-| Folder | Contents |
+| Path | Contents |
 | --- | --- |
-| [01_Publication](01_Publication/) | Main article, supplementary article, editable LaTeX, data and complete publication ZIP |
-| [02_Figures](02_Figures/) | All 13 figures in PDF, SVG and PNG, with source data and a figure guide |
-| [03_Code](03_Code/) | Analysis scripts, Python package, configurations, tests, environment files and dataset utilities |
-| [04_Results](04_Results/) | Publication tables, complete statistics, participant results, rankings and experiments |
-| [05_Data](05_Data/) | Raw GRABMyo sessions, downloaded datasets, caches, metadata and dataset documentation |
-| [06_Documentation](06_Documentation/) | Study reports, reproducibility instructions, literature and author information |
-| [90_Archive](90_Archive/) | Older manuscripts, previous packages, historical reports and working records |
+| [src/](src/) | `semg_sparse` package: features, models, statistics, checkpoints, execution safety |
+| [scripts/](scripts/) | Numbered pipeline scripts, audits and manuscript builders |
+| [tests/](tests/) | Regression tests (`python -m pytest`) |
+| [configs/](configs/) | Statistical analysis configuration |
+| [data/](data/) | `grabmyo/`: dataset documents, checksums and tools (raw sessions go here, not in Git); `manifests/`, `metadata/` |
+| [artifacts/](artifacts/) | Result files: metrics, rankings, predictions, statistics |
+| [publication/](publication/) | Article, supplement, LaTeX source, supplementary data |
+| [figures/](figures/) | Figures 1–6 and S1–S7 in PDF, SVG and PNG, with source data |
+| [manuscript/](manuscript/) | Manuscript build used by the pipeline scripts |
+| [manuscript_revision/](manuscript_revision/20261014/) | Frozen 2026-10-14 revision: reports, reproducibility snapshot |
+| [docs/](docs/) | Reports, reproduction and download guides, literature, author materials |
+| [reports/](reports/), [audit/](audit/), [runs/](runs/) | Analysis reports, audits and run logs, including the [2026-10-29 rerun](reports/rerun_20261029/STATUS.md) |
+| [reproducibility/](reproducibility/) | Recorded execution environments |
 
-The numbered folders are the browsing layout. Windows folder shortcuts open the canonical code, results and data in this checkout (`E:\grabmyo_data`). These working locations remain in place because scripts and dataset manifests depend on them; earlier root folders are hidden in the normal Windows Explorer view. Enable **View > Show > Hidden items** to inspect them directly.
+Raw recordings, feature caches and local environments are not in the repository; see [docs/GITHUB_CONTENTS.md](docs/GITHUB_CONTENTS.md). Superseded folders removed on 2026-10-30 remain in the Git history.
 
-Use the root `scripts/` and `src/` paths for execution. Environment files and dataset utilities in `03_Code/` are reference copies. Some historical scripts contain absolute paths to the former `F:` drive; see the [code guide](03_Code/README.md) before rebuilding outputs.
+## Quick start
 
-The [folder map and cleanup record](06_Documentation/Folder_layout/README.md) explain where everything lives. No experiments were rerun as part of the folder cleanup.
+```bash
+conda create -n sensor-selection python=3.10 pip
+conda activate sensor-selection
+python -m pip install -r reproducibility/requirements_execution_20260922.txt
+# download the data: docs/DATA_DOWNLOAD.md
+python scripts/audit_grabmyo_integrity.py
+make test
+make verify
+```
 
-Institutional ethics determination, funding, conflicts, contributions and the public archive link still require author confirmation. They are recorded separately under `06_Documentation/Author_materials/author_declarations.md`.
+Research-integrity rules for contributors and agents are in [AGENTS.md](AGENTS.md). Author declarations (ethics, funding, conflicts, contributions) still need confirmation; see [docs/Author_materials/](docs/Author_materials/).
+
+[LICENSE.txt](LICENSE.txt) is the GRABMyo dataset licence (CC BY 4.0), copied from the dataset. The repository has no separate code licence.

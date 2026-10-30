@@ -74,7 +74,7 @@ def main():
     extension = require("artifacts/participant_attribution/report_summary.csv")
     penalty_gate = require("artifacts/participant_attribution/penalty_gate.csv")
     extension_pairs = require("artifacts/participant_attribution/paired_comparisons.csv")
-    literature_path = ROOT / "literature" / "literature_matrix.csv"
+    literature_path = ROOT / "docs" / "literature" / "literature_matrix.csv"
     literature_count = len(pd.read_csv(literature_path)) if literature_path.exists() else 0
     budget_path = ROOT / "artifacts" / "selection_baselines" / "compute_budget.json"
     budget = json.loads(budget_path.read_text(encoding="utf-8"))

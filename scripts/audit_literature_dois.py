@@ -1,4 +1,4 @@
-"""Audit every DOI in literature/literature_matrix.csv against Crossref (arXiv for arXiv ids).
+"""Audit every DOI in docs/literature/literature_matrix.csv against Crossref (arXiv for arXiv ids).
 
 A DOI that returns 404, or resolves to a record whose title does not match the recorded citation,
 is flagged. Writes reports/literature_doi_audit.csv. Nothing is corrected automatically: a flagged
@@ -41,7 +41,7 @@ def fetch(doi):
 
 
 def main():
-    lm = pd.read_csv(ROOT / "literature" / "literature_matrix.csv")
+    lm = pd.read_csv(ROOT / "docs" / "literature" / "literature_matrix.csv")
     rows = []
     for _, r in lm.iterrows():
         ref = str(r.get("doi_or_url", ""))

@@ -34,6 +34,7 @@ import pandas as pd
 import wfdb
 
 ROOT = Path(__file__).resolve().parent.parent
+GRABMYO = ROOT / "data" / "grabmyo"          # dataset root: Session1-3 and its metadata files
 sys.path.insert(0, str(ROOT))
 
 from src.semg_sparse.features.handcrafted import (  # noqa: E402
@@ -78,7 +79,7 @@ FEAT_NAMES, _, _ = get_feature_mapping(N_BIPOLAR)
 
 
 def record_base(sess, pid, gesture, trial):
-    return (ROOT / f"Session{sess}" / f"session{sess}_participant{pid}"
+    return (GRABMYO / f"Session{sess}" / f"session{sess}_participant{pid}"
             / f"session{sess}_participant{pid}_gesture{gesture}_trial{trial}")
 
 

@@ -1,2 +1,0 @@
-comparison,n,mean_diff,lcb95,ucb95,p_raw,n_positive,n_negative,n_tied
-primary SHAP12 minus geometry12,43,0.006042816298044939,-0.0010192586926532545,0.012736858952475406,0.024032899709254707,30,13,0

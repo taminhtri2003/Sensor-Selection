@@ -16,6 +16,7 @@ import wfdb
 from scipy.signal import welch
 
 ROOT = Path(__file__).resolve().parent.parent
+GRABMYO = ROOT / "data" / "grabmyo"          # dataset root: Session1-3 and its metadata files
 OUT = ROOT / "reports" / "signal_properties_audit.md"
 
 # Spread the probe across sessions and participants rather than sampling one corner.
@@ -27,7 +28,7 @@ for sess in (1, 2, 3):
 
 
 def record_path(sess, pid, gesture, trial):
-    d = ROOT / f"Session{sess}" / f"session{sess}_participant{pid}"
+    d = GRABMYO / f"Session{sess}" / f"session{sess}_participant{pid}"
     return d / f"session{sess}_participant{pid}_gesture{gesture}_trial{trial}"
 
 

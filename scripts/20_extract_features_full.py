@@ -5,7 +5,7 @@ Replaces scripts/05_extract_features_fast.py, which read a partial mirror
 with `except Exception: pass`, silently reducing the cohort to 15 participants.
 
 Design rules enforced here:
-  1. Read from the checksum-verified root trees Session1/, Session2/, Session3/ only.
+  1. Read from the checksum-verified trees data/grabmyo/Session1-3/ only.
   2. Every record produces a QC row. A record may only be dropped with a recorded reason.
   3. The realised cohort is asserted against the expected cohort; any shortfall is a hard failure.
   4. Channel selection is validated per record against the header signal names (F1..F16),
@@ -27,6 +27,7 @@ import pandas as pd
 import wfdb
 
 ROOT = Path(__file__).resolve().parent.parent
+GRABMYO = ROOT / "data" / "grabmyo"          # dataset root: Session1-3 and its metadata files
 sys.path.insert(0, str(ROOT))
 
 from src.semg_sparse.preprocessing.filters import bandpass_filter, notch_filter  # noqa: E402
@@ -52,7 +53,7 @@ FEAT_NAMES, _, _ = get_feature_mapping(16)
 
 
 def record_base(sess, pid, gesture, trial):
-    return (ROOT / f"Session{sess}" / f"session{sess}_participant{pid}"
+    return (GRABMYO / f"Session{sess}" / f"session{sess}_participant{pid}"
             / f"session{sess}_participant{pid}_gesture{gesture}_trial{trial}")
 
 

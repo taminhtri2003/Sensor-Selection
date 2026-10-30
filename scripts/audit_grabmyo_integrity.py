@@ -11,7 +11,8 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SUMS = ROOT / "SHA256SUMS.txt"
+GRABMYO = ROOT / "data" / "grabmyo"
+SUMS = GRABMYO / "SHA256SUMS.txt"
 OUT_CSV = ROOT / "data" / "manifests" / "grabmyo_integrity.csv"
 OUT_MD = ROOT / "reports" / "grabmyo_integrity.md"
 CHUNK = 1 << 20
@@ -51,7 +52,7 @@ def main():
     rows = []
 
     for i, (expected, rel) in enumerate(entries, 1):
-        path = ROOT / rel
+        path = GRABMYO / rel
         if not path.exists():
             status, actual, size = "MISSING", "", ""
             n_missing += 1

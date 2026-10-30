@@ -1,1 +1,0 @@
-Participant 2 had inconsistent evaluations of identical electrode subsets across lambdas. Its entire curve was recomputed under the shared-subset P3 protocol. This original file is retained for audit and must not enter the current manuscript.

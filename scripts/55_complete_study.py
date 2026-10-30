@@ -78,7 +78,7 @@ def main():
             for path in paths:
                 if 'putemg' not in path.name:
                     z.write(path,path.relative_to(manuscript))
-        shutil.copy2(ROOT/'reports/final_study_report.md',ROOT/'FINAL_STUDY_REPORT.md')
+        shutil.copy2(ROOT/'reports/final_study_report.md',ROOT/'docs/FINAL_STUDY_REPORT.md')
         with zipfile.ZipFile(package/'participant_attribution_results.zip','w',zipfile.ZIP_DEFLATED) as z:
             for path in (ROOT/'artifacts/participant_attribution').iterdir():
                 if path.is_file() and path.suffix in ('.csv','.json'):
