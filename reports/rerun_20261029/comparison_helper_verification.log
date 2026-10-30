@@ -1,0 +1,6 @@
+     analysis  participant_cells  published_mean_macro_f1  rerun_mean_macro_f1  mean_delta  max_abs_delta  cells_different_over_1e_12                                                        source
+     full_xgb                 43                 0.542313             0.542313         0.0            0.0                           0   artifacts/metrics/loso_full_channel_subject_metrics_xgb.csv
+   full_svmrf                 86                 0.519661             0.519661         0.0            0.0                           0 artifacts/metrics/loso_full_channel_subject_metrics_svmrf.csv
+primary_curve               2752                 0.459288             0.459288         0.0            0.0                           0            artifacts/metrics/sparse_curve_subject_metrics.csv
+    db5_curve                160                 0.227386             0.227386         0.0            0.0                           0                            artifacts/db5/db5_sparse_curve.csv
+bipolar_curve               1376                 0.359057             0.359057         0.0            0.0                           0                    artifacts/bipolar/bipolar_sparse_curve.csv

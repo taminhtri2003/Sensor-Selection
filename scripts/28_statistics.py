@@ -34,12 +34,52 @@ from src.semg_sparse.statistics.non_inferiority import (  # noqa: E402
     bootstrap_participant_metrics,
     evaluate_non_inferiority,
 )
+from src.semg_sparse.xai.validation import finite_values, require_grid
 
 PLAN = ROOT / "configs" / "statistics" / "frozen_analysis_plan.yaml"
 METRICS = ROOT / "artifacts" / "metrics"
 OUT = ROOT / "artifacts" / "statistics"
 METRIC = "macro_f1"
 EXPECTED_PARTICIPANTS = 43   # GRABMyo cohort; set to 0 to disable the check
+FULL_MODELS = ('M_XGBoost', 'M_SVM', 'M_RandomForest')
+LAMBDAS = (0., .25, .5, 1.)
+
+
+def full_input_paths(directory):
+    """Only the two primary files may enter the confirmatory model family."""
+    return [directory / name for name in ('loso_full_channel_subject_metrics_svmrf.csv',
+                                          'loso_full_channel_subject_metrics_xgb.csv')
+            if (directory / name).exists()]
+
+
+def validate_inputs(full, curve, allow_partial=False):
+    """Reject invalid rows always; incomplete grids are provisional only when requested."""
+    participants = list(range(1, EXPECTED_PARTICIPANTS + 1))
+    problems = []
+    for label, frame, keys, levels in (
+        ('full baselines', full, ['participant_id', 'model', 'channels_k'],
+         [participants, FULL_MODELS, [16]]),
+        ('primary sparse curve', curve, ['participant_id', 'model', 'lambda', 'channels_k'],
+         [participants, ['M_XGB'], LAMBDAS, range(1, 17)]),
+    ):
+        if frame is None or frame.empty:
+            problems.append(f'{label}: missing input')
+            continue
+        if not set(keys + [METRIC]).issubset(frame.columns):
+            raise ValueError(f'{label}: missing required columns')
+        if frame.duplicated(keys).any():
+            raise ValueError(f'{label}: duplicate participant result keys')
+        finite_values(frame, [METRIC], label, bounded=True)
+        for column, allowed in zip(keys, levels):
+            if not frame[column].isin(allowed).all():
+                raise ValueError(f'{label}: unexpected {column}')
+        try:
+            require_grid(frame, keys, levels, label)
+        except ValueError as exc:
+            problems.append(str(exc))
+    if problems and not allow_partial:
+        raise ValueError('; '.join(problems))
+    return problems
 
 
 def load_plan():
@@ -110,16 +150,22 @@ def main():
     allow_partial = args.allow_partial
     suffix = '_PARTIAL' if allow_partial else ''
     plan = load_plan()
-    OUT.mkdir(parents=True, exist_ok=True)
     n_boot = plan["n_resamples"]
     margin = plan["primary_margin"]
 
-    full_files = sorted(METRICS.glob("loso_full_channel_subject_metrics*.csv"))
+    full_files = full_input_paths(METRICS)
     if not full_files:
         print("FATAL: no full-channel metrics found. Run scripts/24 first.")
         return 2
     full = pd.concat([pd.read_csv(f) for f in full_files], ignore_index=True)
-    full = full.drop_duplicates(subset=["participant_id", "model", "channels_k"])
+    primary_curve = METRICS / 'sparse_curve_subject_metrics.csv'
+    curve_files = [primary_curve] if primary_curve.exists() else []
+    curve = pd.read_csv(primary_curve) if curve_files else None
+    try:
+        input_problems = validate_inputs(full, curve, allow_partial=allow_partial)
+    except ValueError as exc:
+        print(f'INVALID OR INCOMPLETE INPUT — refusing confirmatory statistics: {exc}')
+        return 3
     n_participants = full.participant_id.nunique()
     print(f"full-channel: {len(full)} rows, {n_participants} participants, "
           f"models={sorted(full.model.unique())}", flush=True)
@@ -131,7 +177,7 @@ def main():
     # superseded study came to report 43 participants while having computed 15.
     per_model = full[full.channels_k == 16].groupby("model").participant_id.nunique()
     sets = {m: set(g.participant_id) for m, g in full[full.channels_k == 16].groupby("model")}
-    problems = []
+    problems = list(input_problems)
     if EXPECTED_PARTICIPANTS and n_participants != EXPECTED_PARTICIPANTS:
         problems.append(f"cohort has {n_participants} participants, expected {EXPECTED_PARTICIPANTS}")
     if per_model.nunique() > 1:
@@ -151,6 +197,7 @@ def main():
             return 3
         print("\n--allow-partial set: writing PROVISIONAL values only.", flush=True)
 
+    OUT.mkdir(parents=True, exist_ok=True)
     master = []
 
     # --- Per-model full-channel performance with participant-level bootstrap CIs ---------------
@@ -192,11 +239,8 @@ def main():
     # The confirmatory run is the untagged primary file.  Tagged files are
     # reserved for benchmarks/partial reruns and must not silently enter the
     # participant-level paired analysis.
-    primary_curve = METRICS / "sparse_curve_subject_metrics.csv"
-    curve_files = [primary_curve] if primary_curve.exists() else []
     ni_rows, k_star_by_margin = [], {}
     if curve_files:
-        curve = pd.concat([pd.read_csv(f) for f in curve_files], ignore_index=True)
         for model in sorted(curve.model.unique()):
             for lam in sorted(curve["lambda"].unique()):
                 sel = curve[(curve.model == model) & (np.isclose(curve["lambda"], lam))]
@@ -209,7 +253,7 @@ def main():
                     for k in sorted(sel.channels_k.unique()):
                         sk = paired_frame(sel, model, k)
                         common = sk.index.intersection(ref.index)
-                        if set(sk.index) != set(ref.index) or len(common) != EXPECTED_PARTICIPANTS:
+                        if set(sk.index) != set(ref.index) or (not allow_partial and len(common) != EXPECTED_PARTICIPANTS):
                             raise ValueError(f"incomplete paired cohort at lambda={lam}, k={k}")
                         res = evaluate_non_inferiority(
                             sk.loc[common].to_numpy(), ref.loc[common].to_numpy(),

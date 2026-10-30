@@ -15,6 +15,7 @@ Outputs:
 """
 
 import argparse
+import importlib.metadata
 import json
 import sys
 import time
@@ -30,6 +31,9 @@ from sklearn.svm import SVC
 import xgboost as xgb
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+from src.semg_sparse.xai.validation import finite_values, require_grid
+from src.semg_sparse.checkpoints import atomic_csv, sha256, ensure_protocol
 CACHE = ROOT / "data" / "cache"
 RANKINGS = ROOT / "artifacts" / "rankings" / "cross_fitted_rankings.csv"
 OUT = ROOT / "artifacts" / "metrics"
@@ -43,6 +47,57 @@ RF_PARAMS = dict(n_estimators=200, max_depth=None, min_samples_leaf=2, random_st
 SVM_PARAMS = dict(C=1.0, kernel="rbf", gamma="scale", random_state=SEED)
 SVM_SUBSAMPLE = 40000
 RF_SUBSAMPLE = 200000
+
+
+def protocol_fingerprint(args, cache):
+    """Bind reuse to the actual fit inputs, scientific code and library versions."""
+    inputs = [cache / name for name in ('loso_X.npy', 'loso_y.npy', 'loso_subj.npy', 'loso_features.json')]
+    return {
+        'version': 1, 'model': args.model, 'device': args.device,
+        'train_subsample': args.train_subsample, 'seed': SEED,
+        'model_params': {'XGB': XGB_PARAMS, 'RF': RF_PARAMS, 'SVM': SVM_PARAMS}[args.model],
+        'svm_subsample': SVM_SUBSAMPLE, 'rf_subsample': RF_SUBSAMPLE,
+        'n_channels': N_CHANNELS, 'features_per_channel': N_FPC,
+        'inputs': {p.name: sha256(p) for p in inputs},
+        'rankings_sha256': sha256(args.rankings),
+        'source_sha256': {p.name: sha256(p) for p in (
+            Path(__file__), ROOT / 'src/semg_sparse/xai/validation.py',
+            ROOT / 'src/semg_sparse/checkpoints.py')},
+        'versions': {name: importlib.metadata.version(name)
+                     for name in ('xgboost', 'scikit-learn', 'numpy')},
+    }
+
+
+def validated_resume_rows(previous, participants, lambdas, ks, model, rankings):
+    """Reject corrupt checkpoints; only complete jobs survive a partial-job retry."""
+    keys = ['participant_id', 'lambda', 'channels_k']
+    required = keys + ['model', 'channels', 'macro_f1', 'accuracy',
+                       'balanced_accuracy', 'weighted_f1', 'n_train_windows', 'n_test_windows']
+    if not set(required).issubset(previous.columns):
+        raise ValueError('checkpoint is missing required columns')
+    if previous.duplicated(keys).any():
+        raise ValueError('checkpoint contains duplicate participant/lambda/k rows')
+    for column, allowed in zip(keys, (participants, lambdas, ks)):
+        if not previous[column].isin(allowed).all():
+            raise ValueError(f'checkpoint contains unexpected {column}')
+    if not previous.model.eq(f'M_{model}').all():
+        raise ValueError('checkpoint model differs from requested model')
+    finite_values(previous, ['macro_f1', 'accuracy', 'balanced_accuracy', 'weighted_f1'],
+                  'checkpoint metrics', bounded=True)
+    counts = previous[['n_train_windows', 'n_test_windows']].to_numpy(float)
+    if not np.isfinite(counts).all() or (counts <= 0).any() or (counts != np.floor(counts)).any():
+        raise ValueError('checkpoint window counts must be finite positive integers')
+    for _, row in previous.iterrows():
+        actual = [int(c) for c in str(row.channels).split(';')]
+        expected = rankings[int(row.participant_id), float(row['lambda'])][:int(row.channels_k)]
+        if actual != expected:
+            raise ValueError('checkpoint subset differs from its outer-training ranking')
+    complete = { (int(pid), float(lam))
+                 for (pid, lam), group in previous.groupby(['participant_id', 'lambda'])
+                 if set(group.channels_k) == set(ks) }
+    keep = [(int(p), float(lam)) in complete
+            for p, lam in zip(previous.participant_id, previous['lambda'])]
+    return previous.loc[keep].copy(), complete
 
 
 def channel_columns(channels_1based):
@@ -238,6 +293,10 @@ def main():
 
     lams = [float(x) for x in args.lambdas.split(",")]
     ks = [int(x) for x in args.k_values.split(",")]
+    if (not lams or len(set(lams)) != len(lams) or not np.isfinite(lams).all()
+            or any(lam < 0 for lam in lams) or not ks or len(set(ks)) != len(ks)
+            or any(k < 1 or k > N_CHANNELS for k in ks) or args.train_subsample < 0):
+        raise ValueError('invalid lambda, k or training-budget arguments')
     out_dir.mkdir(parents=True, exist_ok=True)
 
     rank_df = pd.read_csv(args.rankings)
@@ -253,11 +312,12 @@ def main():
             return 2
 
     jobs = []
+    rankings = {}
     for pid in participants:
         for lam in lams:
             sel = rank_df[(rank_df.outer_participant == pid) &
                           (np.isclose(rank_df["lambda"], lam))]
-            if sel.empty:
+            if len(sel) != 1:
                 print(f"FATAL: no ranking for participant {pid}, lambda {lam}")
                 return 2
             ranking = [int(c) for c in sel.iloc[0]["ranking"].split(";")]
@@ -267,16 +327,16 @@ def main():
             jobs.append((pid, lam, ranking, ks, (str(xp), str(yp), str(sp)),
                          args.model, args.device, args.train_subsample or None, args.rf_jobs,
                          args.k_workers))
+            rankings[int(pid), float(lam)] = ranking
 
     result_path = out_dir / f"sparse_curve_subject_metrics{args.tag}.csv"
+    ensure_protocol(result_path, protocol_fingerprint(args, cache), args.resume)
     rows = []
     completed = set()
     if args.resume and result_path.exists():
         previous = pd.read_csv(result_path)
-        expected_k = set(ks)
-        for key, g in previous.groupby(["participant_id", "lambda"]):
-            if set(g.channels_k.astype(int)) == expected_k:
-                completed.add((int(key[0]), float(key[1])))
+        previous, completed = validated_resume_rows(previous, participants, lams, ks,
+                                                    args.model, rankings)
         rows = previous.to_dict("records")
         jobs = [j for j in jobs if (int(j[0]), float(j[1])) not in completed]
         print(f"resuming {len(completed)} completed participant/lambda jobs from {result_path}",
@@ -309,7 +369,7 @@ def main():
         done += 1
         el = time.time() - t0
         df = pd.DataFrame(rows)
-        df.to_csv(result_path, index=False)
+        atomic_csv(df, result_path)
         last = rows[-1]
         print(f"[{done}/{len(jobs)}] participant {last['participant_id']:02d} "
               f"lam={last['lambda']} k16={df[(df.participant_id==last['participant_id'])&(df.channels_k==16)].macro_f1.max():.4f} "
@@ -330,13 +390,16 @@ def main():
                 record(fut.result())
 
     df = pd.DataFrame(rows)
+    validated_resume_rows(df, participants, lams, ks, args.model, rankings)
+    require_grid(df, ['participant_id', 'lambda', 'channels_k'],
+                 [participants, lams, ks], 'sparse curve')
     summary = (df.groupby(["model", "lambda", "channels_k"])
                .agg(n_participants=("participant_id", "nunique"),
                     mean_macro_f1=("macro_f1", "mean"),
                     sd_macro_f1=("macro_f1", "std"),
                     mean_accuracy=("accuracy", "mean"))
                .reset_index())
-    summary.to_csv(out_dir / f"sparse_curve_summary{args.tag}.csv", index=False)
+    atomic_csv(summary, out_dir / f"sparse_curve_summary{args.tag}.csv")
     print("\n" + summary.to_string(index=False), flush=True)
 
     bad = df.groupby(["lambda", "channels_k"]).participant_id.nunique().ne(len(participants))

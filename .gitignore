@@ -1,7 +1,7 @@
 # Downloaded recordings and derived datasets (kept locally, never committed).
-/Session1/
-/Session2/
-/Session3/
+/Session1
+/Session2
+/Session3
 /DESTINATION/
 /data/raw/
 /data/processed/
@@ -22,6 +22,8 @@
 
 # Local runtimes, tool settings, credentials and disposable working files.
 .venv/
+/.tmp/
+/outputs/rerun_*/
 .test_dependencies/
 __pycache__/
 *.py[cod]

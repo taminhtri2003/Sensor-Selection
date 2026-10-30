@@ -1,0 +1,28 @@
+{
+  "status": "FAILED",
+  "completed": [],
+  "active": {},
+  "failed": [
+    {
+      "stage": "00_tests",
+      "returncode": 1
+    }
+  ],
+  "workspace": "/home/26tri.tm/Sensor-Selection/outputs/rerun_20261029/workspace",
+  "gpus": [
+    "GPU-5af07131-9c1a-5580-9c0e-72627919ae5c",
+    "GPU-348760e3-a208-8c1c-9605-06cfab811c5c"
+  ],
+  "cpus": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "tmux_session": "sensor-study-20261029",
+  "study_complete": false,
+  "updated_utc": "2026-10-29T09:15:39Z",
+  "error": "00_tests failed with exit 1; see its stage log"
+}

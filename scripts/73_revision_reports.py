@@ -1,10 +1,23 @@
 """Evidence-based reports for the completed revision; no inference from pending folds."""
 from pathlib import Path
 import json
+import sys
+import shutil
 import pandas as pd
 ROOT=Path(__file__).resolve().parent.parent;REV=ROOT/'manuscript_revision/20261014';S=REV/'experiments/statistics';R=REV/'reports'
+sys.path.insert(0,str(ROOT))
+from src.semg_sparse.reporting import runtime_evidence,write_independent_reports
 def md(df):return df.to_markdown(index=False,floatfmt='.6f')
 def main():
+ evidence=runtime_evidence(ROOT)
+ if evidence['scope']=='independent rerun':
+  verification=json.loads((R/'verification.json').read_text())
+  if verification.get('status')!='PASS':raise RuntimeError('Current numerical verification must pass before reporting')
+  names=('primary_matched_noninferiority','primary_selection_comparison','kstar_audit','gesture_degradation','matched_budget_comparisons','extension_penalty','alternative_classifier_noninferiority','matched_budget_cost_summary')
+  write_independent_reports(R,{name:pd.read_csv(S/(name+'.csv')) for name in names},evidence)
+  shutil.copy2(R/'claim_evidence_matrix.csv',REV/'reproducibility/claim_evidence_matrix.csv')
+  print('PASS: reports generated from independent rerun evidence; manuscript narrative review remains required',flush=True)
+  return
  a=pd.read_csv(S/'primary_matched_noninferiority.csv');geo=pd.read_csv(S/'primary_selection_comparison.csv');ni=pd.read_csv(S/'kstar_audit.csv');gest=pd.read_csv(S/'gesture_degradation.csv');person=json.loads((S/'participant_degradation_summary.json').read_text());matched=pd.read_csv(S/'matched_budget_comparisons.csv');penalty=pd.read_csv(S/'extension_penalty.csv');rf=pd.read_csv(S/'alternative_classifier_noninferiority.csv');cost=pd.read_csv(S/'matched_budget_cost_summary.csv')
  (R/'04_statistical_validation.md').write_text('''# Statistical validation
 

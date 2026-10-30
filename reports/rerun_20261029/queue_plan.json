@@ -1,0 +1,538 @@
+[
+  {
+    "name": "00_tests",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "-m",
+      "pytest",
+      "tests",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp=/home/26tri.tm/Sensor-Selection/.tmp/pytest-isolated"
+    ],
+    "gpu": "GPU-5af07131-9c1a-5580-9c0e-72627919ae5c"
+  },
+  {
+    "name": "01_grabmyo_integrity",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/audit_grabmyo_integrity.py"
+    ],
+    "gpu": null
+  },
+  {
+    "name": "02_download_db5",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/22_acquire_db5.py"
+    ],
+    "gpu": null
+  },
+  {
+    "name": "03_db5_cohort",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/23_audit_db5_task.py"
+    ],
+    "gpu": null
+  },
+  {
+    "name": "04_db5_signal",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/32_audit_db5_signal.py"
+    ],
+    "gpu": null
+  },
+  {
+    "name": "05_cuda_gpu6",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "/home/26tri.tm/Sensor-Selection/.tmp/study_cuda_smoke.py"
+    ],
+    "gpu": "GPU-5af07131-9c1a-5580-9c0e-72627919ae5c"
+  },
+  {
+    "name": "06_cuda_gpu0",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "/home/26tri.tm/Sensor-Selection/.tmp/study_cuda_smoke.py"
+    ],
+    "gpu": "GPU-348760e3-a208-8c1c-9605-06cfab811c5c"
+  },
+  {
+    "name": "07_features250",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/20_extract_features_full.py"
+    ],
+    "gpu": null
+  },
+  {
+    "name": "08_build_cache",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "-c",
+      "import importlib.util; s=importlib.util.spec_from_file_location('cache','scripts/24_full_channel_loso_parallel.py'); m=importlib.util.module_from_spec(s); s.loader.exec_module(m); print(m.build_cache())"
+    ],
+    "gpu": null
+  },
+  {
+    "name": "09_full_xgb",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/24_full_channel_loso_parallel.py",
+      "--models",
+      "XGB",
+      "--device",
+      "cuda",
+      "--workers",
+      "1",
+      "--tag",
+      "_xgb"
+    ],
+    "gpu": "GPU-5af07131-9c1a-5580-9c0e-72627919ae5c"
+  },
+  {
+    "name": "10_rankings",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/25_cross_fitted_ranking.py",
+      "--device",
+      "cuda",
+      "--workers",
+      "1",
+      "--inner-folds",
+      "5",
+      "--max-attrib",
+      "20000",
+      "--max-train",
+      "200000",
+      "--resume"
+    ],
+    "gpu": "GPU-348760e3-a208-8c1c-9605-06cfab811c5c"
+  },
+  {
+    "name": "11_primary_curve",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/26_sparse_sensor_curve.py",
+      "--model",
+      "XGB",
+      "--device",
+      "cuda",
+      "--group-lambdas",
+      "--lambdas",
+      "0.0,0.25,0.5,1.0",
+      "--train-subsample",
+      "200000",
+      "--workers",
+      "1",
+      "--k-workers",
+      "1",
+      "--resume"
+    ],
+    "gpu": "GPU-5af07131-9c1a-5580-9c0e-72627919ae5c"
+  },
+  {
+    "name": "12_full_svmrf",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/24_full_channel_loso_parallel.py",
+      "--models",
+      "SVM,RF",
+      "--workers",
+      "2",
+      "--rf-jobs",
+      "2",
+      "--tag",
+      "_svmrf"
+    ],
+    "gpu": null
+  },
+  {
+    "name": "13_db5_features",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/33_db5_features.py"
+    ],
+    "gpu": null
+  },
+  {
+    "name": "14_bipolar_features",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/35_extract_bipolar_features.py"
+    ],
+    "gpu": null
+  },
+  {
+    "name": "15_db5_fits",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/34_db5_replication.py",
+      "--device",
+      "cuda",
+      "--resume"
+    ],
+    "gpu": "GPU-5af07131-9c1a-5580-9c0e-72627919ae5c"
+  },
+  {
+    "name": "16_bipolar_fits",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/36_bipolar_sensitivity.py",
+      "--device",
+      "cuda",
+      "--train-subsample",
+      "200000",
+      "--k-workers",
+      "1",
+      "--resume"
+    ],
+    "gpu": "GPU-348760e3-a208-8c1c-9605-06cfab811c5c"
+  },
+  {
+    "name": "17_selection_baselines",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/27_selection_baselines.py",
+      "--device",
+      "cuda",
+      "--workers",
+      "1",
+      "--k-values",
+      "4,6,8,12",
+      "--k-star",
+      "12",
+      "--n-random",
+      "100",
+      "--n-random-at-k-star",
+      "500",
+      "--srcfa-lambda",
+      "0.5",
+      "--fit-workers",
+      "1",
+      "--resume"
+    ],
+    "gpu": "GPU-5af07131-9c1a-5580-9c0e-72627919ae5c"
+  },
+  {
+    "name": "18_cross_session",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/30_cross_session.py",
+      "--device",
+      "cuda",
+      "--resume"
+    ],
+    "gpu": "GPU-348760e3-a208-8c1c-9605-06cfab811c5c"
+  },
+  {
+    "name": "19_stability",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/29_stability.py"
+    ],
+    "gpu": null
+  },
+  {
+    "name": "20_faithfulness",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/31_faithfulness.py",
+      "--device",
+      "cuda",
+      "--srcfa-lambda",
+      "0.0",
+      "--keep-sizes",
+      "2,4,6,8,10,12,14",
+      "--fit-workers",
+      "1",
+      "--resume"
+    ],
+    "gpu": "GPU-5af07131-9c1a-5580-9c0e-72627919ae5c"
+  },
+  {
+    "name": "21_original_fixed_layout",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/audit_fixed_population_layout.py"
+    ],
+    "gpu": "GPU-348760e3-a208-8c1c-9605-06cfab811c5c"
+  },
+  {
+    "name": "22_fixed_layout_lambdas",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/61_fixed_layout_lambda.py"
+    ],
+    "gpu": "GPU-5af07131-9c1a-5580-9c0e-72627919ae5c"
+  },
+  {
+    "name": "23_redundancy",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/38_feature_redundancy.py"
+    ],
+    "gpu": "GPU-348760e3-a208-8c1c-9605-06cfab811c5c"
+  },
+  {
+    "name": "24_thresholds",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/39_loo_threshold_check.py"
+    ],
+    "gpu": null
+  },
+  {
+    "name": "25_participant_extension",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/53_participant_attribution.py",
+      "--device",
+      "cuda"
+    ],
+    "gpu": "GPU-5af07131-9c1a-5580-9c0e-72627919ae5c"
+  },
+  {
+    "name": "26_features150",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/20_extract_features_full.py",
+      "--window-ms",
+      "150"
+    ],
+    "gpu": null
+  },
+  {
+    "name": "27_features500",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/20_extract_features_full.py",
+      "--window-ms",
+      "500"
+    ],
+    "gpu": null
+  },
+  {
+    "name": "28_completion_caches",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/62_completion_caches.py"
+    ],
+    "gpu": null
+  },
+  {
+    "name": "29_curve_rest17",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/26_sparse_sensor_curve.py",
+      "--model",
+      "XGB",
+      "--device",
+      "cuda",
+      "--group-lambdas",
+      "--lambdas",
+      "0.0",
+      "--train-subsample",
+      "200000",
+      "--workers",
+      "1",
+      "--k-workers",
+      "1",
+      "--cache-dir",
+      "data/cache/rest17",
+      "--out-dir",
+      "artifacts/completion_analyses/rest17",
+      "--resume"
+    ],
+    "gpu": "GPU-5af07131-9c1a-5580-9c0e-72627919ae5c"
+  },
+  {
+    "name": "29_curve_w150",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/26_sparse_sensor_curve.py",
+      "--model",
+      "XGB",
+      "--device",
+      "cuda",
+      "--group-lambdas",
+      "--lambdas",
+      "0.0",
+      "--train-subsample",
+      "200000",
+      "--workers",
+      "1",
+      "--k-workers",
+      "1",
+      "--cache-dir",
+      "data/cache/w150",
+      "--out-dir",
+      "artifacts/completion_analyses/w150",
+      "--resume"
+    ],
+    "gpu": "GPU-348760e3-a208-8c1c-9605-06cfab811c5c"
+  },
+  {
+    "name": "29_curve_w500",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/26_sparse_sensor_curve.py",
+      "--model",
+      "XGB",
+      "--device",
+      "cuda",
+      "--group-lambdas",
+      "--lambdas",
+      "0.0",
+      "--train-subsample",
+      "200000",
+      "--workers",
+      "1",
+      "--k-workers",
+      "1",
+      "--cache-dir",
+      "data/cache/w500",
+      "--out-dir",
+      "artifacts/completion_analyses/w500",
+      "--resume"
+    ],
+    "gpu": "GPU-5af07131-9c1a-5580-9c0e-72627919ae5c"
+  },
+  {
+    "name": "30_feature_chain",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/59_audit_feature_chain.py"
+    ],
+    "gpu": null
+  },
+  {
+    "name": "31_primary_statistics",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/28_statistics.py"
+    ],
+    "gpu": null
+  },
+  {
+    "name": "32_secondary_statistics",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/37_secondary_statistics.py",
+      "h2",
+      "h3",
+      "h4",
+      "cs",
+      "ni",
+      "h1holm",
+      "bipolar"
+    ],
+    "gpu": null
+  },
+  {
+    "name": "33_penalty_diagnostic",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/57_penalty_gate.py"
+    ],
+    "gpu": null
+  },
+  {
+    "name": "34_revision_predictions",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/64_revision_predictions.py",
+      "--resume"
+    ],
+    "gpu": "GPU-5af07131-9c1a-5580-9c0e-72627919ae5c"
+  },
+  {
+    "name": "35_revision_matched_budget",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/65_revision_matched_budget.py"
+    ],
+    "gpu": "GPU-348760e3-a208-8c1c-9605-06cfab811c5c"
+  },
+  {
+    "name": "36_revision_extension",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/53_participant_attribution.py",
+      "--device",
+      "cuda",
+      "--out-dir",
+      "manuscript_revision/20261014/experiments/attribution_extension"
+    ],
+    "gpu": "GPU-5af07131-9c1a-5580-9c0e-72627919ae5c"
+  },
+  {
+    "name": "37_revision_geometry",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/79_primary_geometric_curve.py"
+    ],
+    "gpu": "GPU-348760e3-a208-8c1c-9605-06cfab811c5c"
+  },
+  {
+    "name": "37b_revision_penalty",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "/home/26tri.tm/Sensor-Selection/.tmp/study_extension_penalty.py",
+      "manuscript_revision/20261014/experiments/attribution_extension"
+    ],
+    "gpu": null
+  },
+  {
+    "name": "38_revision_rf",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/71_revision_random_forest.py"
+    ],
+    "gpu": null
+  },
+  {
+    "name": "39_revision_rf_scheduling",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/75_revision_rf_parallel.py"
+    ],
+    "gpu": null
+  },
+  {
+    "name": "40_seed_diagnostic",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/81_fixed_layout_seed_stability.py"
+    ],
+    "gpu": null
+  },
+  {
+    "name": "41_current_raw_integrity",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/78_current_raw_integrity.py"
+    ],
+    "gpu": null
+  },
+  {
+    "name": "42_build_verified_revision",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "scripts/69_build_revision.py"
+    ],
+    "gpu": null
+  },
+  {
+    "name": "43_compare_delivered_results",
+    "command": [
+      "/home/26tri.tm/miniconda3/envs/sensor-selection/bin/python",
+      "/home/26tri.tm/Sensor-Selection/.tmp/compare_study_rerun.py"
+    ],
+    "gpu": null
+  }
+]

@@ -5,6 +5,8 @@ from pathlib import Path
 import importlib.metadata as metadata
 import pandas as pd
 ROOT=Path(__file__).resolve().parent.parent;REV=ROOT/'manuscript_revision/20261014';BASE=REV/'manuscript';REP=REV/'reports'
+sys.path.insert(0, str(ROOT))
+from src.semg_sparse.reporting import snapshot_run_provenance
 def run(args,log,cwd=ROOT):
  if log.exists():
   history=REP/'build_history';history.mkdir(exist_ok=True);destination=history/(datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')+'_'+log.name)
@@ -84,7 +86,8 @@ def main():
   gpu=subprocess.run(['nvidia-smi','--query-gpu=name,memory.total,driver_version','--format=csv,noheader'],capture_output=True,text=True)
   hardware['GPU_query']=gpu.stdout.strip() if gpu.returncode==0 else 'query unavailable'
  except FileNotFoundError:hardware['GPU_query']='nvidia-smi unavailable'
- (REV/'reproducibility/environment.json').write_text(json.dumps({'python':sys.version,'executable':sys.executable,'platform':platform.platform(),'packages':packages,'hardware':hardware,'RF_parallelism':'3participant processes,2threads each','GPU_queue':'one experiment track at a time'},indent=2),encoding='utf-8')
+ execution=snapshot_run_provenance(ROOT,REV/'reproducibility/execution')
+ (REV/'reproducibility/environment.json').write_text(json.dumps({'python':sys.version,'executable':sys.executable,'platform':platform.platform(),'packages':packages,'hardware':hardware,'execution':execution},indent=2),encoding='utf-8')
  with (REV/'reproducibility/pip_freeze.txt').open('w',encoding='utf-8') as f:subprocess.run([python,'-m','pip','freeze'],stdout=f,check=True)
  for path in ROOT.glob('environment*'):
   if path.is_file():shutil.copy2(path,REV/'reproducibility'/path.name)
@@ -94,6 +97,6 @@ def main():
  for p in sorted(code.rglob('*')):
   if p.is_file():rows.append({'path':str(p.relative_to(REV)),'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'bytes':p.stat().st_size})
  pd.DataFrame(rows).to_csv(REV/'reproducibility/source_manifest.csv',index=False)
- (REP/'build_status.json').write_text(json.dumps({'status':'compiled, awaiting explicit visual inspection','abstract_words':word_count,'pdfs':['manuscript/main.pdf','manuscript/supplementary.pdf'],'strict_gate':'PASS','source_snapshot':'reproducibility/code'},indent=2),encoding='utf-8')
- print('PASS: numerical verification and PDF compilation complete; inspect every rendered page before final release',flush=True)
+ (REP/'build_status.json').write_text(json.dumps({'status':'compiled, awaiting visual and narrative inspection','narrative_review':'PENDING: compare interpretation with current independent results','abstract_words':word_count,'pdfs':['manuscript/main.pdf','manuscript/supplementary.pdf'],'strict_gate':'PASS','source_snapshot':'reproducibility/code'},indent=2),encoding='utf-8')
+ print('PASS: numerical verification and PDF compilation complete; review current-result interpretation and every rendered page before release',flush=True)
 if __name__=='__main__':main()
