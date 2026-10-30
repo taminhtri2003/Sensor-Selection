@@ -1,0 +1,190 @@
+FFF                                                                      [100%]
+=================================== FAILURES ===================================
+_____________ test_fresh_or_partial_resume_reaches_fit[existing0] ______________
+
+tmp_path = PosixPath('/home/26tri.tm/Sensor-Selection/.tmp/pytest-db5-review/test_fresh_or_partial_resume_r0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f8d23b4a080>
+existing = ()
+
+    @pytest.mark.parametrize('existing', [(), ('db5_full_channel_metrics.csv',),
+                                         ('db5_full_channel_metrics.csv', 'db5_rankings.csv')])
+    def test_fresh_or_partial_resume_reaches_fit(tmp_path, monkeypatch, existing):
+        spec = importlib.util.spec_from_file_location('db5_resume_test', Path(__file__).parents[1] / 'scripts/34_db5_replication.py')
+        m = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(m)
+        feature_file = tmp_path / 'features.parquet'
+        pd.DataFrame({'dataset': ['unit-test'] * 2, 'participant_id': [1, 2],
+                      'session_id': [1, 1], 'gesture_id': [1, 1], 'trial_id': [1, 1],
+                      'window_idx': [0, 0], 'ch1_MAV': [.1, .2]}).to_parquet(feature_file)
+        out = tmp_path / 'results'
+        out.mkdir()
+        for name in existing:
+            key = 'outer_participant' if name == 'db5_rankings.csv' else 'participant_id'
+            pd.DataFrame({key: [1]}).to_csv(out / name, index=False)
+        monkeypatch.setattr(m, 'FEATURES', feature_file)
+        monkeypatch.setattr(m, 'OUT', out)
+        monkeypatch.setattr(sys, 'argv', ['34_db5_replication.py', '--resume'])
+        def fit_boundary(*args, **kwargs):
+            raise RuntimeError('fit boundary reached')
+        monkeypatch.setattr(m, 'fit_eval', fit_boundary)
+        with pytest.raises(RuntimeError, match='fit boundary reached'):
+>           m.main()
+
+tests/test_db5_resume.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/34_db5_replication.py:113: in main
+    f = full_df[full_df.participant_id == pid]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = Empty DataFrame
+Columns: []
+Index: [], name = 'participant_id'
+
+    @final
+    def __getattr__(self, name: str):
+        """
+        After regular attribute access, try looking up the name
+        This allows simpler access to columns for interactive use.
+        """
+        # Note: obj.x will always call obj.__getattribute__('x') prior to
+        # calling obj.__getattr__('x').
+        if (
+            name not in self._internal_names_set
+            and name not in self._metadata
+            and name not in self._accessors
+            and self._info_axis._can_hold_identifiers_and_holds_name(name)
+        ):
+            return self[name]
+>       return object.__getattribute__(self, name)
+E       AttributeError: 'DataFrame' object has no attribute 'participant_id'
+
+../miniconda3/envs/sensor-selection/lib/python3.10/site-packages/pandas/core/generic.py:6321: AttributeError
+----------------------------- Captured stdout call -----------------------------
+DB5: 2 windows, 1 features, 1 classes, 2 subjects
+_____________ test_fresh_or_partial_resume_reaches_fit[existing1] ______________
+
+tmp_path = PosixPath('/home/26tri.tm/Sensor-Selection/.tmp/pytest-db5-review/test_fresh_or_partial_resume_r1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f8ccf027a00>
+existing = ('db5_full_channel_metrics.csv',)
+
+    @pytest.mark.parametrize('existing', [(), ('db5_full_channel_metrics.csv',),
+                                         ('db5_full_channel_metrics.csv', 'db5_rankings.csv')])
+    def test_fresh_or_partial_resume_reaches_fit(tmp_path, monkeypatch, existing):
+        spec = importlib.util.spec_from_file_location('db5_resume_test', Path(__file__).parents[1] / 'scripts/34_db5_replication.py')
+        m = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(m)
+        feature_file = tmp_path / 'features.parquet'
+        pd.DataFrame({'dataset': ['unit-test'] * 2, 'participant_id': [1, 2],
+                      'session_id': [1, 1], 'gesture_id': [1, 1], 'trial_id': [1, 1],
+                      'window_idx': [0, 0], 'ch1_MAV': [.1, .2]}).to_parquet(feature_file)
+        out = tmp_path / 'results'
+        out.mkdir()
+        for name in existing:
+            key = 'outer_participant' if name == 'db5_rankings.csv' else 'participant_id'
+            pd.DataFrame({key: [1]}).to_csv(out / name, index=False)
+        monkeypatch.setattr(m, 'FEATURES', feature_file)
+        monkeypatch.setattr(m, 'OUT', out)
+        monkeypatch.setattr(sys, 'argv', ['34_db5_replication.py', '--resume'])
+        def fit_boundary(*args, **kwargs):
+            raise RuntimeError('fit boundary reached')
+        monkeypatch.setattr(m, 'fit_eval', fit_boundary)
+        with pytest.raises(RuntimeError, match='fit boundary reached'):
+>           m.main()
+
+tests/test_db5_resume.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/34_db5_replication.py:114: in main
+    r = rank_df[rank_df.outer_participant == pid]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = Empty DataFrame
+Columns: []
+Index: [], name = 'outer_participant'
+
+    @final
+    def __getattr__(self, name: str):
+        """
+        After regular attribute access, try looking up the name
+        This allows simpler access to columns for interactive use.
+        """
+        # Note: obj.x will always call obj.__getattribute__('x') prior to
+        # calling obj.__getattr__('x').
+        if (
+            name not in self._internal_names_set
+            and name not in self._metadata
+            and name not in self._accessors
+            and self._info_axis._can_hold_identifiers_and_holds_name(name)
+        ):
+            return self[name]
+>       return object.__getattribute__(self, name)
+E       AttributeError: 'DataFrame' object has no attribute 'outer_participant'
+
+../miniconda3/envs/sensor-selection/lib/python3.10/site-packages/pandas/core/generic.py:6321: AttributeError
+----------------------------- Captured stdout call -----------------------------
+DB5: 2 windows, 1 features, 1 classes, 2 subjects
+_____________ test_fresh_or_partial_resume_reaches_fit[existing2] ______________
+
+tmp_path = PosixPath('/home/26tri.tm/Sensor-Selection/.tmp/pytest-db5-review/test_fresh_or_partial_resume_r2')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f8ccf027610>
+existing = ('db5_full_channel_metrics.csv', 'db5_rankings.csv')
+
+    @pytest.mark.parametrize('existing', [(), ('db5_full_channel_metrics.csv',),
+                                         ('db5_full_channel_metrics.csv', 'db5_rankings.csv')])
+    def test_fresh_or_partial_resume_reaches_fit(tmp_path, monkeypatch, existing):
+        spec = importlib.util.spec_from_file_location('db5_resume_test', Path(__file__).parents[1] / 'scripts/34_db5_replication.py')
+        m = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(m)
+        feature_file = tmp_path / 'features.parquet'
+        pd.DataFrame({'dataset': ['unit-test'] * 2, 'participant_id': [1, 2],
+                      'session_id': [1, 1], 'gesture_id': [1, 1], 'trial_id': [1, 1],
+                      'window_idx': [0, 0], 'ch1_MAV': [.1, .2]}).to_parquet(feature_file)
+        out = tmp_path / 'results'
+        out.mkdir()
+        for name in existing:
+            key = 'outer_participant' if name == 'db5_rankings.csv' else 'participant_id'
+            pd.DataFrame({key: [1]}).to_csv(out / name, index=False)
+        monkeypatch.setattr(m, 'FEATURES', feature_file)
+        monkeypatch.setattr(m, 'OUT', out)
+        monkeypatch.setattr(sys, 'argv', ['34_db5_replication.py', '--resume'])
+        def fit_boundary(*args, **kwargs):
+            raise RuntimeError('fit boundary reached')
+        monkeypatch.setattr(m, 'fit_eval', fit_boundary)
+        with pytest.raises(RuntimeError, match='fit boundary reached'):
+>           m.main()
+
+tests/test_db5_resume.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/34_db5_replication.py:115: in main
+    c = curve_df[curve_df.participant_id == pid]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = Empty DataFrame
+Columns: []
+Index: [], name = 'participant_id'
+
+    @final
+    def __getattr__(self, name: str):
+        """
+        After regular attribute access, try looking up the name
+        This allows simpler access to columns for interactive use.
+        """
+        # Note: obj.x will always call obj.__getattribute__('x') prior to
+        # calling obj.__getattr__('x').
+        if (
+            name not in self._internal_names_set
+            and name not in self._metadata
+            and name not in self._accessors
+            and self._info_axis._can_hold_identifiers_and_holds_name(name)
+        ):
+            return self[name]
+>       return object.__getattribute__(self, name)
+E       AttributeError: 'DataFrame' object has no attribute 'participant_id'
+
+../miniconda3/envs/sensor-selection/lib/python3.10/site-packages/pandas/core/generic.py:6321: AttributeError
+----------------------------- Captured stdout call -----------------------------
+DB5: 2 windows, 1 features, 1 classes, 2 subjects
+=========================== short test summary info ============================
+FAILED tests/test_db5_resume.py::test_fresh_or_partial_resume_reaches_fit[existing0]
+FAILED tests/test_db5_resume.py::test_fresh_or_partial_resume_reaches_fit[existing1]
+FAILED tests/test_db5_resume.py::test_fresh_or_partial_resume_reaches_fit[existing2]
+3 failed in 1.88s

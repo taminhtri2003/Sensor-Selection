@@ -22,6 +22,7 @@ Outputs:
 """
 
 import argparse
+import importlib.metadata
 import sys
 import time
 from pathlib import Path
@@ -35,6 +36,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from src.semg_sparse.xai.cross_fitted import compute_cross_fitted_attribution  # noqa: E402
+from src.semg_sparse.checkpoints import atomic_csv, ensure_protocol, sha256  # noqa: E402
 
 FEATURES = ROOT / "data" / "features" / "db5_features.parquet"
 OUT = ROOT / "artifacts" / "db5"
@@ -70,6 +72,20 @@ def fit_eval(Xtr, ytr, Xte, yte, device, cols=None):
     }
 
 
+def protocol_for(inner_folds, ks, device='cuda'):
+    """Fingerprint semantic settings and source data before any DB5 checkpoint reuse."""
+    return {
+        'experiment': 'NinaPro DB5 E1', 'seed': SEED, 'inner_folds': inner_folds, 'device': device,
+        'k_values': sorted(ks), 'lambdas': list(LAMBDAS), 'xgb_params': XGB_PARAMS,
+        'features_sha256': sha256(FEATURES),
+        'sources': {name: sha256(ROOT / name) for name in (
+            'scripts/34_db5_replication.py', 'src/semg_sparse/checkpoints.py',
+            'src/semg_sparse/xai/cross_fitted.py')},
+        'versions': {name: importlib.metadata.version(name) for name in (
+            'numpy', 'pandas', 'scikit-learn', 'xgboost')},
+    }
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--device", default="cuda")
@@ -100,6 +116,11 @@ def main():
     curve_path = OUT / "db5_sparse_curve.csv"
     score_path = OUT / "db5_scores.csv"
 
+    if args.resume and any(p.exists() for p in (full_path, rank_path, curve_path, score_path)):
+        if not curve_path.with_suffix('.protocol.json').exists():
+            raise ValueError('DB5 checkpoints have no protocol fingerprint; use a new output directory')
+    ensure_protocol(curve_path, protocol_for(args.inner_folds, ks, device=args.device), args.resume)
+
     def read(path):
         return pd.read_csv(path) if path.exists() else pd.DataFrame()
 
@@ -110,19 +131,25 @@ def main():
     finished = set()
     if args.resume:
         for pid in participants:
+            if any(frame.empty for frame in (full_df, rank_df, curve_df, score_df)):
+                break
             f = full_df[full_df.participant_id == pid]
             r = rank_df[rank_df.outer_participant == pid]
             c = curve_df[curve_df.participant_id == pid]
             s = score_df[score_df.outer_participant == pid]
-            if (len(f) >= 1 and set(np.round(r["lambda"].astype(float), 8)) == set(LAMBDAS)
+            if (len(f) == 1 and len(r) == len(LAMBDAS)
+                    and set(np.round(r["lambda"].astype(float), 8)) == set(LAMBDAS)
                     and len(c) == len(ks) and set(c.channels_k.astype(int)) == set(ks)
-                    and len(s) == N_CHANNELS):
+                    and not c.duplicated(['participant_id', 'channels_k']).any()
+                    and len(s) == N_CHANNELS and set(s.channel) == set(range(1, N_CHANNELS + 1))
+                    and np.isfinite(f[['macro_f1', 'accuracy', 'balanced_accuracy', 'weighted_f1']]).all().all()
+                    and np.isfinite(c[['macro_f1', 'accuracy', 'balanced_accuracy', 'weighted_f1']]).all().all()):
                 finished.add(int(pid))
         print(f"resuming {len(finished)} complete DB5 subjects", flush=True)
-        full_df = full_df[full_df.participant_id.isin(finished)]
-        rank_df = rank_df[rank_df.outer_participant.isin(finished)]
-        curve_df = curve_df[curve_df.participant_id.isin(finished)]
-        score_df = score_df[score_df.outer_participant.isin(finished)]
+        full_df = full_df[full_df.participant_id.isin(finished)] if not full_df.empty else full_df
+        rank_df = rank_df[rank_df.outer_participant.isin(finished)] if not rank_df.empty else rank_df
+        curve_df = curve_df[curve_df.participant_id.isin(finished)] if not curve_df.empty else curve_df
+        score_df = score_df[score_df.outer_participant.isin(finished)] if not score_df.empty else score_df
 
     full_rows = full_df.to_dict("records")
     rank_rows = rank_df.to_dict("records")
@@ -168,16 +195,16 @@ def main():
                                "channels_k": int(k),
                                "channels": ";".join(map(str, ranking[:k])), **r})
 
-        pd.DataFrame(full_rows).to_csv(full_path, index=False)
-        pd.DataFrame(rank_rows).to_csv(rank_path, index=False)
-        pd.DataFrame(score_rows).to_csv(score_path, index=False)
-        pd.DataFrame(curve_rows).to_csv(curve_path, index=False)
+        atomic_csv(pd.DataFrame(full_rows), full_path)
+        atomic_csv(pd.DataFrame(rank_rows), rank_path)
+        atomic_csv(pd.DataFrame(score_rows), score_path)
+        atomic_csv(pd.DataFrame(curve_rows), curve_path)
         el = time.time() - t0
         print(f"[{i}/{len(participants)}] subject {pid} full={res['macro_f1']:.4f} "
               f"top4={ranking[:4]} elapsed={el/60:.1f}m", flush=True)
 
-    pd.DataFrame(rank_rows).to_csv(rank_path, index=False)
-    pd.DataFrame(score_rows).to_csv(score_path, index=False)
+    atomic_csv(pd.DataFrame(rank_rows), rank_path)
+    atomic_csv(pd.DataFrame(score_rows), score_path)
 
     full = pd.DataFrame(full_rows)
     curve = pd.DataFrame(curve_rows)

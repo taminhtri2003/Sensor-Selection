@@ -2,6 +2,16 @@
 
 This document specifies instructions for autonomous AI coding and research agents working in this repository.
 
+## Execution resources (user request, 2026-10-29)
+
+- The full-study rerun is authorized. It supersedes the older one-GPU next-step limit for this study.
+- Use at most **two physical GPUs total across this user's concurrent jobs and hosts**. Check live usage before allocating; specify GPU UUIDs in `CUDA_VISIBLE_DEVICES`. Use at most two GPU workers. Do not occupy another user's active GPU without authorization.
+- Use at most **eight CPU cores total** across concurrent compute workloads, enforced through inherited CPU affinity and thread limits. The initial allocation used CPUs 2-7 while downloading on 0-1. Following the user's speedup request, after verifying that download had ended, this study may use CPUs 0-7 with disjoint per-task allocations; recheck concurrent workloads before allocation.
+- User decision 2026-10-30: all compute runs on vishc-server-2. `17_selection_baselines` restarted from participant 1 on both study GPUs, one process per GPU with **3 concurrent subset fits per process** (measured identical Macro-F1 to one fit at a time), all 8 cores. The two-GPU total still applies. Later the same day the user raised this stage's CPU budget to **16 cores** (CPUs 0-7 and 32-39 on vishc-server-2, set by live affinity).
+- Run training in a named detached `tmux` session with persistent console and per-stage logs. Verify the session and workload process after launch.
+- This checkout is on Linux at `/home/26tri.tm/Sensor-Selection`; no Windows E: mount is available. Keep scratch files and controllable caches in this project's `.tmp/`, and deliverables in `reports/` or `outputs/`. Explicitly set `TEMP`, `TMP`, `TMPDIR`, and cache paths in each writing subprocess invocation. Do not relocate authentication or live application state.
+- Preserve the delivered study results and historical fingerprints. Full raw-data reruns belong in a separate workspace under `outputs/`; new results must never be represented as historical results. New runs create their own provenance manifests, retaining the published manifests separately for comparison.
+
 ---
 
 ## Core Rules

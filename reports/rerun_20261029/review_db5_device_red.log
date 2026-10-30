@@ -1,0 +1,22 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+___________________ test_db5_resume_cannot_mix_cpu_and_cuda ____________________
+
+tmp_path = PosixPath('/home/26tri.tm/Sensor-Selection/.tmp/pytest-db5-device/test_db5_resume_cannot_mix_cpu0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f2f17f5bf40>
+
+    def test_db5_resume_cannot_mix_cpu_and_cuda(tmp_path, monkeypatch):
+        spec = importlib.util.spec_from_file_location('db5_device_test', Path(__file__).parents[1] / 'scripts/34_db5_replication.py')
+        m = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(m)
+        features = tmp_path / 'features.parquet'
+        features.write_bytes(b'unit-test input')
+        monkeypatch.setattr(m, 'FEATURES', features)
+        path = tmp_path / 'db5_sparse_curve.csv'
+>       m.ensure_protocol(path, m.protocol_for(5, [1, 16], device='cuda'), True)
+E       TypeError: protocol_for() got an unexpected keyword argument 'device'
+
+tests/test_db5_resume.py:60: TypeError
+=========================== short test summary info ============================
+FAILED tests/test_db5_resume.py::test_db5_resume_cannot_mix_cpu_and_cuda - Ty...
+1 failed in 1.13s

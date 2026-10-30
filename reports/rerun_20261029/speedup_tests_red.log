@@ -1,0 +1,35 @@
+FFF
+======================================================================
+FAIL: test_completed_work_is_not_selected_and_dependencies_are_enforced (__main__.SpeedupChecks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/26tri.tm/Sensor-Selection/.tmp/test_study_speedup.py", line 42, in test_completed_work_is_not_selected_and_dependencies_are_enforced
+    m = self.load()
+  File "/home/26tri.tm/Sensor-Selection/.tmp/test_study_speedup.py", line 17, in load
+    self.assertTrue((Path(__file__).parent / 'study_speedup.py').exists(), 'Missing operational scheduler')
+AssertionError: False is not true : Missing operational scheduler
+
+======================================================================
+FAIL: test_ready_cpu_work_overlaps_two_gpu_ranking_without_exceeding_budget (__main__.SpeedupChecks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/26tri.tm/Sensor-Selection/.tmp/test_study_speedup.py", line 33, in test_ready_cpu_work_overlaps_two_gpu_ranking_without_exceeding_budget
+    m = self.load()
+  File "/home/26tri.tm/Sensor-Selection/.tmp/test_study_speedup.py", line 17, in load
+    self.assertTrue((Path(__file__).parent / 'study_speedup.py').exists(), 'Missing operational scheduler')
+AssertionError: False is not true : Missing operational scheduler
+
+======================================================================
+FAIL: test_two_workers_have_disjoint_single_device_assignments (__main__.SpeedupChecks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/26tri.tm/Sensor-Selection/.tmp/test_study_speedup.py", line 21, in test_two_workers_have_disjoint_single_device_assignments
+    m = self.load()
+  File "/home/26tri.tm/Sensor-Selection/.tmp/test_study_speedup.py", line 17, in load
+    self.assertTrue((Path(__file__).parent / 'study_speedup.py').exists(), 'Missing operational scheduler')
+AssertionError: False is not true : Missing operational scheduler
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (failures=3)

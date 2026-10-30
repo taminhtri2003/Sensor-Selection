@@ -1,0 +1,64 @@
+FFF                                                                      [100%]
+=================================== FAILURES ===================================
+_____________ test_runtime_metadata_uses_matching_scheduler_state ______________
+
+tmp_path = PosixPath('/home/26tri.tm/Sensor-Selection/.tmp/pytest-reporting/test_runtime_metadata_uses_mat0')
+
+    def test_runtime_metadata_uses_matching_scheduler_state(tmp_path):
+>       m = reporting()
+
+tests/test_rerun_reporting.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def reporting():
+        path = Path(__file__).parents[1] / 'src/semg_sparse/reporting.py'
+>       assert path.exists(), 'Rerun-aware reporting is missing'
+E       AssertionError: Rerun-aware reporting is missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/home/26tri.tm/Sensor-Selection/src/semg_sparse/reporting.py').exists
+
+tests/test_rerun_reporting.py:11: AssertionError
+____________ test_foreign_runtime_state_is_not_attributed_to_build _____________
+
+tmp_path = PosixPath('/home/26tri.tm/Sensor-Selection/.tmp/pytest-reporting/test_foreign_runtime_state_is_0')
+
+    def test_foreign_runtime_state_is_not_attributed_to_build(tmp_path):
+>       m = reporting()
+
+tests/test_rerun_reporting.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def reporting():
+        path = Path(__file__).parents[1] / 'src/semg_sparse/reporting.py'
+>       assert path.exists(), 'Rerun-aware reporting is missing'
+E       AssertionError: Rerun-aware reporting is missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/home/26tri.tm/Sensor-Selection/src/semg_sparse/reporting.py').exists
+
+tests/test_rerun_reporting.py:11: AssertionError
+____________ test_independent_claims_follow_current_ni_and_interval ____________
+
+tmp_path = PosixPath('/home/26tri.tm/Sensor-Selection/.tmp/pytest-reporting/test_independent_claims_follow0')
+
+    def test_independent_claims_follow_current_ni_and_interval(tmp_path):
+>       m = reporting()
+
+tests/test_rerun_reporting.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def reporting():
+        path = Path(__file__).parents[1] / 'src/semg_sparse/reporting.py'
+>       assert path.exists(), 'Rerun-aware reporting is missing'
+E       AssertionError: Rerun-aware reporting is missing
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/home/26tri.tm/Sensor-Selection/src/semg_sparse/reporting.py').exists
+
+tests/test_rerun_reporting.py:11: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_rerun_reporting.py::test_runtime_metadata_uses_matching_scheduler_state
+FAILED tests/test_rerun_reporting.py::test_foreign_runtime_state_is_not_attributed_to_build
+FAILED tests/test_rerun_reporting.py::test_independent_claims_follow_current_ni_and_interval
+3 failed in 0.53s

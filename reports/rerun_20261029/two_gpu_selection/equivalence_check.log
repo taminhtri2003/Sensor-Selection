@@ -1,0 +1,48 @@
+{"n_subsets_by_k": {"4": 3, "6": 4}, "n_subsets_per_k": 3, "n_subsets_at_k_star": 4}
+NOTE: random-subset coverage is below at least one frozen-plan count
+[1/4] elapsed=0.5m eta=1.6m
+[2/4] elapsed=1.1m eta=1.1m
+[3/4] elapsed=1.6m eta=0.5m
+[4/4] elapsed=2.2m eta=0.0m
+
+   method  channels_k  n  mean_macro_f1       sd
+       MI           4  4       0.809660 0.003862
+     PERM           4  4       0.793267 0.005052
+SHAP_lam0           4  4       0.739574 0.034842
+   RANDOM           4  4       0.731783 0.012839
+     GEOM           4  4       0.720580 0.003707
+    SRCFA           4  4       0.717494 0.064845
+     PERM           6  4       0.840210 0.001513
+       MI           6  4       0.830799 0.004960
+SHAP_lam0           6  4       0.797420 0.021608
+    SRCFA           6  4       0.777521 0.042891
+   RANDOM           6  4       0.771750 0.010250
+     GEOM           6  4       0.751270 0.005491
+
+wall clock: 2.2 min
+SCHEDULING ONLY: per-process GPU UUIDs ['GPU-fbddd075-d688-2766-7b74-a1581585e228', 'GPU-348760e3-a208-8c1c-9605-06cfab811c5c'] CPU set [0, 1, 2, 3, 4, 5, 6, 7] argv ['--device', 'cuda', '--workers', '2', '--k-values', '4,6', '--k-star', '6', '--n-random', '3', '--n-random-at-k-star', '4', '--srcfa-lambda', '0.5', '--fit-workers', '3', '--resume']
+{"n_subsets_by_k": {"4": 3, "6": 4}, "n_subsets_per_k": 3, "n_subsets_at_k_star": 4}
+NOTE: random-subset coverage is below at least one frozen-plan count
+[1/4] elapsed=0.5m eta=1.5m
+[2/4] elapsed=0.5m eta=0.5m
+[3/4] elapsed=1.0m eta=0.3m
+[4/4] elapsed=1.0m eta=0.0m
+
+   method  channels_k  n  mean_macro_f1       sd
+       MI           4  4       0.809660 0.003862
+     PERM           4  4       0.793267 0.005052
+SHAP_lam0           4  4       0.739574 0.034842
+   RANDOM           4  4       0.731783 0.012839
+     GEOM           4  4       0.720580 0.003707
+    SRCFA           4  4       0.717494 0.064845
+     PERM           6  4       0.840210 0.001513
+       MI           6  4       0.830799 0.004960
+SHAP_lam0           6  4       0.797420 0.021608
+    SRCFA           6  4       0.777521 0.042891
+   RANDOM           6  4       0.771750 0.010250
+     GEOM           6  4       0.751270 0.005491
+
+wall clock: 1.0 min
+IDENTICAL selection_baseline_metrics.csv 48 rows
+IDENTICAL random_subsets_raw.csv 28 rows
+PASS two-process selection equivalence
